@@ -803,6 +803,8 @@ else:
 
 try:
     configFile = '%s/userdata/addon_data/service.libreelec.settings/oe_settings.xml' % XBMC_USER_HOME
+    if os.path.exists('%s/userdata/addon_data/service.openelec.settings' % XBMC_USER_HOME):
+        os.rename(('%s/userdata/addon_data/service.openelec.settings' % XBMC_USER_HOME), ('%s/userdata/addon_data/service.libreelec.settings' % XBMC_USER_HOME))
     if not os.path.exists('%s/userdata/addon_data/service.libreelec.settings' % XBMC_USER_HOME):
         os.makedirs('%s/userdata/addon_data/service.libreelec.settings' % XBMC_USER_HOME)
     if not os.path.exists('%s/services' % CONFIG_CACHE):
