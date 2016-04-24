@@ -3,8 +3,8 @@
     <allowoverlay>no</allowoverlay>
     <controls>
         <control type="group">
-            <left>440</left>
-            <top>260</top>
+            <left>650</left>
+            <top>390</top>
             <animation type="WindowOpen" reversible="false">
                 <effect type="zoom" start="80" end="100" center="640,360" easing="out" tween="back" time="300" />
                 <effect type="fade" start="0" end="100" time="300" />
@@ -18,14 +18,7 @@
                 <top>5</top>
                 <width>600</width>
                 <height>174</height>
-                <texture border="15">default/ContentPanel.png</texture>
-            </control>
-            <control type="image">
-                <left>5</left>
-                <top>5</top>
-                <width>600</width>
-                <height>174</height>
-                <texture border="15">default/ContentPanel.png</texture>
+                <texture border="15">default/dialog-bg-solid.png</texture>
             </control>
             <control type="group">
                 <left>17</left>
@@ -47,7 +40,7 @@
                     <top>50</top>
                     <width>560</width>
                     <height>30</height>
-                    <font>font24_title</font>
+                    <font>font23_title</font>
                     <textcolor>blue</textcolor>
                     <label></label>
                     <align>center</align>
@@ -58,7 +51,7 @@
                     <top>70</top>
                     <width>560</width>
                     <height>30</height>
-                    <font>font24_title</font>
+                    <font>font23_title</font>
                     <textcolor>blue</textcolor>
                     <label></label>
                     <align>center</align>
@@ -69,7 +62,7 @@
                     <top>90</top>
                     <width>560</width>
                     <height>30</height>
-                    <font>font24_title</font>
+                    <font>font23_title</font>
                     <textcolor>blue</textcolor>
                     <label></label>
                     <align>center</align>
