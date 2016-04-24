@@ -62,21 +62,6 @@ class mainWindow(xbmcgui.WindowXMLDialog):
                 'modul': '',
                 'action': '',
                 },
-            3: {
-                'id': 1502,
-                'modul': '',
-                'action': '',
-                },
-            4: {
-                'id': 1503,
-                'modul': '',
-                'action': '',
-                },
-            5: {
-                'id': 1504,
-                'modul': '',
-                'action': '',
-                },
             }
 
         self.isChild = False
@@ -121,7 +106,7 @@ class mainWindow(xbmcgui.WindowXMLDialog):
                             self.addMenuItem(module.menu[men]['name'], dictProperties)
             self.setFocusId(self.guiMenList)
             self.onFocus(self.guiMenList)
-            self.oe.set_busy(0)
+            self.oe.set_busy(0)	
         except Exception, e:
             self.oe.set_busy(0)
             self.oe.dbg_log('oeWindows.mainWindow::onInit', 'ERROR: (' + repr(e) + ')')
@@ -251,7 +236,7 @@ class mainWindow(xbmcgui.WindowXMLDialog):
                     self.getControl(focusId).selectItem(newPos)
                     self.setProperty('InfoText', nextItem.getProperty('InfoText'))
             if focusId == self.guiMenList:
-                self.setFocusId(focusId)
+                self.setFocusId(focusId)					
         except Exception, e:
             self.oe.dbg_log('oeWindows.mainWindow::onAction(' + unicode(action) + ')', 'ERROR: (' + repr(e) + ')')
             if actionId in self.oe.CANCEL:
@@ -403,18 +388,15 @@ class mainWindow(xbmcgui.WindowXMLDialog):
                     for btn in self.buttons:
                         self.getControl(self.buttons[btn]['id']).setVisible(False)
                     strMenuLoader = selectedMenuItem.getProperty('menuLoader')
-                    if int(selectedMenuItem.getProperty('listTyp')) == self.guiOther:
-                        self.getControl(controlID).controlRight(self.getControl(self.buttons[1]['id']))
-                    else:
-                        objList = self.getControl(int(selectedMenuItem.getProperty('listTyp')))
-                        self.getControl(controlID).controlRight(objList)
+                    objList = self.getControl(int(selectedMenuItem.getProperty('listTyp')))
+                    self.getControl(controlID).controlRight(objList)
                     if strMenuLoader != '':
                         if hasattr(self.oe.dictModules[selectedMenuItem.getProperty('modul')], strMenuLoader):
                             getattr(self.oe.dictModules[selectedMenuItem.getProperty('modul')], strMenuLoader)(selectedMenuItem)
                     self.getControl(int(selectedMenuItem.getProperty('listTyp'))).setAnimations([('conditional',
-                            'effect=fade start=0 end=100 time=100 condition=true')])
+                            'effect=fade start=0 end=100 time=100 condition=true')])						
         except Exception, e:
-            self.oe.dbg_log('oeWindows.mainWindow::onFocus(' + unicode(controlID) + ')', 'ERROR: (' + repr(e) + ')')
+            self.oe.dbg_log('oeWindows.mainWindow::onFocus(' + repr(controlID) + ')', 'ERROR: (' + repr(e) + ')')
 
     def emptyButtonLabels(self):
         for btn in self.buttons:

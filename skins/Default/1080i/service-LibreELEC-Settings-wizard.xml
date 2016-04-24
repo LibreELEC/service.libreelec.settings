@@ -1,19 +1,10 @@
 <window id="5535">
     <defaultcontrol always="true">1500</defaultcontrol>
     <allowoverlay>no</allowoverlay>
-    <controls>
-        <control type="image">
-            <left>0</left>
-            <top>100r</top>
-            <width>1280</width>
-            <height>100</height>
-            <texture>default/floor.png</texture>
-            <animation effect="fade" time="300">Visible</animation>
-            <animation effect="fade" time="300">Hidden</animation>
-        </control>		
+    <controls>	
         <control type="group">
-            <left>90</left>
-            <top>30</top>
+            <left>300</left>
+            <top>200</top>
             <animation type="WindowOpen" reversible="false">
                 <effect type="zoom" start="80" end="100" center="640,360" easing="out" tween="back" time="300" />
                 <effect type="fade" start="0" end="100" time="300" />
@@ -23,83 +14,59 @@
                 <effect type="fade" start="100" end="0" time="300" />
             </animation>	
             <control type="image">
-                <left>5</left>
-                <top>5</top>
-                <width>1090</width>
-                <height>630</height>
-                <texture border="15">default/ContentPanel.png</texture>
+                <left>0</left>
+                <top>0</top>
+                <width>1320</width>
+                <height>680</height>
+                <texture border="15">default/dialog-bg-solid.png</texture>
             </control>
             <control type="image">
-                <left>265</left>
-                <top>5</top>
-                <width>830</width>
-                <height>630</height>
-                <texture border="15">default/ContentPanel.png</texture>
-            </control>
+                <left>0</left>
+                <top>0</top>
+                <width>270</width>
+                <height>680</height>
+                <texture border="15">default/floor.png</texture>
+            </control>            
             <control type="image">
-                <left>10</left>
-                <top>10</top>
-                <width>260</width>
-                <height>621</height>
+                <left>2</left>
+                <top>2</top>
+                <width>270</width>
+                <height>676</height>
                 <texture>default/wizard.png</texture>
-            </control>
-            <control type="image">
-                <left>5</left>
-                <top>625</top>
-                <width>1090</width>
-                <height>64</height>
-                <texture border="15">default/ContentPanelMirror.png</texture>
-            </control>			
+            </control>		
             <control type="image">
                 <left>268</left>
-                <top>10</top>
-                <width>804</width>
+                <top>0</top>
+                <width>1052</width>
                 <height>50</height>
                 <texture border="5">default/black-back2.png</texture>
             </control>
-            <control type="image">
-                <left>268</left>
-                <top>10</top>
-                <width>804</width>
-                <height>70</height>
-                <aspectratio>stretch</aspectratio>
-                <texture>default/dialogheader.png</texture>
-            </control>
             <control type="label" id="32300">
-                <description>header label</description>
                 <left>300</left>
-                <top>20</top>
+                <top>10</top>
                 <width>740</width>
                 <height>30</height>
                 <font>font16caps</font>
-                <label>
-                </label>
+                <label></label>
                 <align>left</align>
                 <aligny>center</aligny>
                 <textcolor>white</textcolor>
                 <shadowcolor>black</shadowcolor>
             </control>
             <control type="image">
-                <left>270</left>
-                <top>60</top>
-                <width>800</width>
-                <height>450</height>
-                <texture border="5">default/button-nofocus.png</texture>
-            </control>
-            <control type="image">
-                <left>12</left>
-                <top>11</top>
-                <width>258</width>
-                <height>618</height>
-                <texture border="5">default/button-nofocus.png</texture>
-            </control>					
-            <control type="image">
-                <left>272</left>
-                <top>509</top>
-                <width>799</width>
-                <height>120</height>
+                <left>268</left>
+                <top>550</top>
+                <width>1051</width>
+                <height>131</height>
                 <texture border="5">default/black-back2.png</texture>
             </control>
+			<control type="image">
+				<left>269</left>
+				<top>549</top>
+				<width>1050</width>
+				<height>3</height>
+				<texture colordiffuse="button_focus" border="2">default/separator-grey.png</texture>
+			</control> 
             <control type="group" id="1398">
                 <visible>IsEmpty(Control.GetLabel(1390))</visible>
                 <animation type="Visible" reversible="false">
@@ -113,30 +80,27 @@
                     <top>120</top>
                     <width>1</width>
                     <height>1</height>
-                    <label>
-                    </label>
+                    <label></label>
                     <visible>false</visible>
                 </control>				  
                 <control type="label" id="1399">
                     <left>300</left>
-                    <top>120</top>
-                    <width>750</width>
+                    <top>66</top>
+                    <width>990</width>
                     <height>40</height>
                     <font>font24_title</font>
-                    <label>
-                    </label>
+                    <label></label>
                     <align>left</align>
                     <textcolor>blue</textcolor>
                     <shadowcolor>black</shadowcolor>
                 </control>			
                 <control type="textbox" id="1400">
                     <left>300</left>
-                    <top>180</top>
-                    <width>750</width>
-                    <height>280</height>
+                    <top>124</top>
+                    <width>900</width>
+                    <height>500</height>
                     <font>font12</font>
-                    <label>
-                    </label>
+                    <label></label>
                     <align>left</align>
                     <textcolor>white</textcolor>
                     <shadowcolor>black</shadowcolor>
@@ -154,57 +118,47 @@
                         <shadowcolor>black</shadowcolor>
                     </control>
                     <control type="radiobutton" id="1406">
-                        <left>300</left>
+                        <left>280</left>
                         <top>440</top>
-                        <width>230</width>
-                        <height>40</height>
-                        <label>
-                        </label>                                    
-                        <textcolor>FF999999</textcolor>
-                        <focusedcolor>white</focusedcolor>
-                        <texturefocus border="5">default/button-focus2.png</texturefocus>
+                        <width>300</width>
+                        <height>75</height>
+                        <label></label>   
+                        <textoffsetx>45</textoffsetx>                              
+                        <texturefocus border="40" colordiffuse="FF12B2E7">default/button-fo.png</texturefocus>
+                        <texturenofocus colordiffuse="71FFFFFF" border="40">default/button-alt-nofo.png</texturenofocus>
                     </control>		
                     <control type="radiobutton" id="1407">
-                        <left>550</left>
+                        <left>570</left>
                         <top>440</top>
-                        <width>230</width>
-                        <height>40</height>
-                        <label>
-                        </label>                                    
-                        <textcolor>FF999999</textcolor>
-                        <focusedcolor>white</focusedcolor>
-                        <texturefocus border="5">default/button-focus2.png</texturefocus>
+                        <width>300</width>
+                        <height>75</height>
+                        <label></label>   
+                        <textoffsetx>45</textoffsetx>                               
+                        <texturefocus border="40" colordiffuse="FF12B2E7">default/button-fo.png</texturefocus>
+                        <texturenofocus colordiffuse="71FFFFFF" border="40">default/button-alt-nofo.png</texturenofocus>
                     </control>			      	            
                     <control type="button" id="1401">
-                        <left>300</left>
+                        <left>280</left>
                         <top>440</top>
-                        <width>230</width>
-                        <height>40</height>
-                        <visible>true</visible>
-                        <colordiffuse>FFFFFFFF</colordiffuse>
-                        <texturefocus>default/button-focus.png</texturefocus>
-                        <texturenofocus>default/button-nofocus.png</texturenofocus>
-                        <label>
-                        </label>
-                        <font>font12</font>
-                        <textcolor>FFFFFFFF</textcolor>
-                        <disabledcolor>80FFFFFF</disabledcolor>
-                        <align>center</align>
+                        <width>300</width>
+                        <height>75</height>
+                        <texturefocus border="40" colordiffuse="FF12B2E7">default/button-fo.png</texturefocus>
+                        <texturenofocus colordiffuse="71FFFFFF" border="40">default/button-alt-nofo.png</texturenofocus>
+                        <label></label>
+                        <font>font13_title</font>
+                        <textcolor>white</textcolor>
+                        <align>center</align>                        
                     </control>	
                     <control type="button" id="1402">
-                        <left>550</left>
+                        <left>570</left>
                         <top>440</top>
-                        <width>230</width>
-                        <height>40</height>
-                        <visible>true</visible>
-                        <colordiffuse>FFFFFFFF</colordiffuse>
-                        <texturefocus>default/button-focus.png</texturefocus>
-                        <texturenofocus>default/button-nofocus.png</texturenofocus>
-                        <label>
-                        </label>
-                        <font>font12</font>
-                        <textcolor>FFFFFFFF</textcolor>
-                        <disabledcolor>80FFFFFF</disabledcolor>
+                        <width>300</width>
+                        <height>75</height>
+                        <texturefocus border="40" colordiffuse="FF12B2E7">default/button-fo.png</texturefocus>
+                        <texturenofocus colordiffuse="71FFFFFF" border="40">default/button-alt-nofo.png</texturenofocus>
+                        <label></label>
+                        <font>font13_title</font>
+                        <textcolor>white</textcolor>
                         <align>center</align>
                     </control>	
                 </control>			  		  
@@ -212,31 +166,30 @@
                     <visible>!IsEmpty(Control.GetLabel(1391))</visible>
                     <control type="label" id="1391">
                         <left>300</left>
-                        <top>120</top>
+                        <top>140</top>
                         <width>1</width>
                         <height>1</height>
-                        <label>
-                        </label>
+                        <label></label>
                         <visible>false</visible>
                     </control>  
                     <control type="label" id="1404">
                         <left>300</left>
-                        <top>305</top>
+                        <top>315</top>
                         <width>750</width>
                         <height>20</height>
-                        <label>
-                        </label>
+                        <label></label>
                         <align>left</align>
                         <textcolor>blue</textcolor>
                         <shadowcolor>black</shadowcolor>
                     </control>
                     <control type="image">
-                        <left>287</left>
-                        <top>330</top>
-                        <width>768</width>
-                        <height>170</height>
-                        <texture border="15">default/ContentPanel.png</texture>
-                    </control>			     			          
+                        <left>278</left>
+                        <top>350</top>
+                        <width>1020</width>
+                        <height>200</height>
+                        <texture border="22">default/dialog-bg.png</texture>
+                    </control>	
+	     			          
                     <!-- Main Menu (left) -->	    
                     <control type="list" id="1000">
                         <visible>false</visible>
@@ -247,20 +200,18 @@
                         <onleft>1500</onleft>
                         <pagecontrol>-</pagecontrol>
                         <scrolltime>300</scrolltime>
-                        <itemlayout height="54" width="260">
-                        </itemlayout>
-                        <focusedlayout height="54" width="260">
-                        </focusedlayout>
+                        <itemlayout height="54" width="260"></itemlayout>
+                        <focusedlayout height="54" width="260"></focusedlayout>
                     </control> 
+                    
                     <!-- Network Menu Content -->
                     <control type="list" id="1200">
                         <left>300</left>
-                        <top>340</top>
-                        <width>750</width>
+                        <top>372</top>
+                        <width>1050</width>
                         <height>150</height>
                         <ondown>1500</ondown>
-                        <onright>121</onright>
-                        <pagecontrol>121</pagecontrol>
+                        <onright>1500</onright>
                         <scrolltime>300</scrolltime>    
                         <itemlayout height="50">
                             <left>0</left>
@@ -268,9 +219,9 @@
                             <control type="image">
                                 <left>0</left>
                                 <top>2</top>
-                                <width>727</width>
+                                <width>974</width>
                                 <height>48</height>
-                                <texture border="5">default/button-nofocus.png</texture>
+                                <texture border="2">default/separator.png</texture>
                             </control>
                             <!-- Icon ethernet -->
                             <control type="image">
@@ -295,10 +246,11 @@
                             <!-- Connection Name -->
                             <control type="label">
                                 <left>70</left>
-                                <top>10</top>
-                                <width>390</width>
-                                <height>30</height>							
-                                <font>font24_title</font>
+                                <top>0</top>
+                                <width>200</width>
+                                <height>50</height>	
+                                <aligny>center</aligny>						
+                                <font>font13_title</font>
                                 <textcolor>blue</textcolor>
                                 <info>ListItem.Label</info>
                                 <visible>true</visible>
@@ -306,9 +258,10 @@
                             <!-- Connection Address -->
                             <control type="label">
                                 <left>300</left>
-                                <top>16</top>
-                                <width>250</width>
-                                <height>15</height>									
+                                <top>0</top>
+                                <width>350</width>
+                                <height>50</height>	
+                                <aligny>center</aligny>									
                                 <font>font12</font>
                                 <textcolor>blue</textcolor>
                                 <visible>StringCompare(ListItem.Property(State), online) | StringCompare(ListItem.Property(State), ready)</visible>
@@ -316,27 +269,33 @@
                             </control>
                             <!-- State -->
                             <control type="label">
-                                <left>560</left>
-                                <top>16</top>
-                                <width>150</width>
-                                <height>20</height>									
+                                <left>680</left>
+                                <top>0</top>
+                                <width>170</width>
+                                <height>50</height>	
+                                <aligny>center</aligny>									
                                 <font>font12</font>
                                 <textcolor>blue</textcolor>
                                 <label>$ADDON[service.libreelec.settings 604]: [COLOR=white]$INFO[ListItem.Property(State)][/COLOR]</label>
                             </control>						  					    
                             <!-- Signal strength -->
                             <control type="progress">
-                                <left>62</left>
-                                <top>38</top>
-                                <width>655</width>
-                                <height>8</height>
+                                <left>10</left>
+                                <top>40</top>
+                                <width>952</width>
+                                <height>2</height>
                                 <info>ListItem.Property(Strength)</info>
                                 <visible>StringCompare(ListItem.Property(netType), wifi)</visible>
-                            </control>
+                                <texturebg></texturebg>
+                                <lefttexture></lefttexture>
+                                <righttexture></righttexture>
+                                <overlaytexture></overlaytexture>  
+                                <midtexture colordiffuse="FF12B2E7">default/separator-grey.png</midtexture>                          
+                            </control> 
                             <!-- Secure Symbol (bottom right) -->
                             <control type="image">
-                                <left>700</left>
-                                <top>10</top>
+                                <left>930</left>
+                                <top>15</top>
                                 <width>20</width>
                                 <height>20</height>
                                 <aspectratio>keep</aspectratio>
@@ -350,17 +309,17 @@
                             <control type="image">
                                 <left>0</left>
                                 <top>2</top>
-                                <width>727</width>
+                                <width>974</width>
                                 <height>48</height>
-                                <texture border="5">default/button-nofocus.png</texture>
+                                <texture border="2">lists/separator.png</texture>
                             </control>						
                             <control type="image">
                                 <left>0</left>
                                 <top>2</top>
-                                <width>727</width>
+                                <width>974</width>
                                 <height>48</height>
                                 <visible>Control.HasFocus(1200)</visible>
-                                <texture border="5">default/button-focus2.png</texture>
+                                <texture colordiffuse="FF12B2E7">default/focus.png</texture>
                                 <animation type="Visible" reversible="false">
                                     <effect type="fade" start="0" end="100" time="300" />
                                 </animation>			        							
@@ -388,10 +347,11 @@
                             <!-- Connection Name -->
                             <control type="label">
                                 <left>70</left>
-                                <top>10</top>
-                                <width>390</width>
-                                <height>30</height>							
-                                <font>font24_title</font>
+                                <top>0</top>
+                                <width>200</width>
+                                <height>50</height>	
+                                <aligny>center</aligny>						
+                                <font>font13_title</font>
                                 <textcolor>blue</textcolor>
                                 <info>ListItem.Label</info>
                                 <visible>true</visible>
@@ -399,9 +359,10 @@
                             <!-- Connection Address -->
                             <control type="label">
                                 <left>300</left>
-                                <top>16</top>
-                                <width>250</width>
-                                <height>15</height>									
+                                <top>0</top>
+                                <width>350</width>
+                                <height>50</height>	
+                                <aligny>center</aligny>								
                                 <font>font12</font>
                                 <textcolor>blue</textcolor>
                                 <visible>StringCompare(ListItem.Property(State), online) | StringCompare(ListItem.Property(State), ready)</visible>
@@ -409,27 +370,33 @@
                             </control>
                             <!-- State -->
                             <control type="label">
-                                <left>560</left>
-                                <top>16</top>
-                                <width>150</width>
-                                <height>20</height>									
+                                <left>680</left>
+                                <top>0</top>
+                                <width>170</width>
+                                <height>50</height>	
+                                <aligny>center</aligny>									
                                 <font>font12</font>
                                 <textcolor>blue</textcolor>
                                 <label>$ADDON[service.libreelec.settings 604]: [COLOR=white]$INFO[ListItem.Property(State)][/COLOR]</label>
                             </control>						  					    
                             <!-- Signal strength -->
                             <control type="progress">
-                                <left>62</left>
-                                <top>38</top>
-                                <width>655</width>
-                                <height>8</height>
+                                <left>10</left>
+                                <top>40</top>
+                                <width>952</width>
+                                <height>2</height>
                                 <info>ListItem.Property(Strength)</info>
                                 <visible>StringCompare(ListItem.Property(netType), wifi)</visible>
-                            </control>
+                                <texturebg></texturebg>
+                                <lefttexture></lefttexture>
+                                <righttexture></righttexture>
+                                <overlaytexture></overlaytexture>  
+                                <midtexture colordiffuse="FF12B2E7">default/separator-grey.png</midtexture>                          
+                            </control>                            
                             <!-- Secure Symbol (bottom right) -->
                             <control type="image">
-                                <left>700</left>
-                                <top>10</top>
+                                <left>930</left>
+                                <top>15</top>
                                 <width>20</width>
                                 <height>20</height>
                                 <aspectratio>keep</aspectratio>
@@ -437,44 +404,25 @@
                                 <texture>icons/Key.png</texture>
                             </control>	
                         </focusedlayout> 
-                    </control>
-                    <control type="scrollbar" id="121">
-                        <description>scroll bar indicator for lists</description>
-                        <left>1025</left>
-                        <top>335</top>
-                        <width>24</width>
-                        <height>162</height>
-                        <onright>1500</onright>
-                        <onleft>1200</onleft>
-                        <texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
-                        <texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
-                        <texturesliderbarfocus border="0,14,0,14">ScrollBarV_bar_focus.png</texturesliderbarfocus>
-                        <textureslidernib>ScrollBarNib.png</textureslidernib>
-                        <textureslidernibfocus>ScrollBarNib.png</textureslidernibfocus>
-                        <orientation>vertical</orientation>
-                        <showonepage>false</showonepage>
-                    </control>			    
+                    </control>		    
                 </control>
             </control>		
             <control type="button" id="1500">
-                <left>825</left>
-                <top>575</top>
-                <width>230</width>
-                <height>40</height>
+                <left>970</left>
+                <top>576</top>
+                <width>300</width>
+                <height>75</height>
                 <visible>true</visible>
-                <colordiffuse>FFFFFFFF</colordiffuse>
-                <texturefocus>default/button-focus.png</texturefocus>
-                <texturenofocus>default/button-nofocus.png</texturenofocus>
-                <label>
-                </label>
-                <font>font12</font>
-                <textcolor>FFFFFFFF</textcolor>
-                <disabledcolor>80FFFFFF</disabledcolor>
+				<texturefocus border="40" colordiffuse="FF12B2E7">default/button-fo.png</texturefocus>
+				<texturenofocus colordiffuse="71FFFFFF" border="40">default/button-alt-nofo.png</texturenofocus>
+                <label></label>
+                <font>font13_title</font>
+                <textcolor>white</textcolor>
                 <align>center</align>
                 <onup>1000</onup>
                 <onleft>1000</onleft>
                 <visible>!IsEmpty(Control.GetLabel(1500))</visible>
-            </control>
+            </control>            
         </control>							
     </controls>
 </window>
