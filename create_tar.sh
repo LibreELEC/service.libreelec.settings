@@ -1,3 +1,11 @@
 #!/bin/sh
 
-git archive --format=tar.gz --prefix=OpenELEC-settings-$1/ tags/$1 -o OpenELEC-settings-$1.tar.gz
+# to use you need to set the xz command to use
+# git config --global tar.tar.xz.command "xz -c"
+
+if [ -z "$1" ]; then
+  echo "Usage: $0 <tag|commit-sha|HEAD>"
+  exit 0
+fi
+
+git archive --format=tar.xz --prefix=LibreELEC-settings-$1/ $1 -o LibreELEC-settings-$1.tar.xz
