@@ -125,12 +125,12 @@ msgid "Restore a tar archive backup previously created using the backup option a
 msgstr "Restore a tar archive backup previously created using the backup option above"
 
 msgctxt "#724"
-msgid "[COLOR FF00FF00]SOFT RESET[/COLOR]\nPermanently reset @DISTRONAME@ configuration to defaults (resets also Kodi to default including your library. your media - music/videos/etc are not touched)"
-msgstr "[COLOR FF00FF00]SOFT RESET[/COLOR]\nPermanently reset @DISTRONAME@ configuration to defaults (resets also Kodi to default including your library. your media - music/videos/etc are not touched)"
+msgid "[COLOR FF00FF00]SOFT RESET[/COLOR]\nPermanently reset @DISTRONAME@ configuration to defaults. (This will also reset some Kodi settings such as library configuration to default. Your media is not touched.)"
+msgstr "[COLOR FF00FF00]SOFT RESET[/COLOR]\nPermanently reset @DISTRONAME@ configuration to defaults. (This will also reset some Kodi settings such as library configuration to default. Your media is not touched.)"
 
 msgctxt "#725"
-msgid "[COLOR FFFF0000]HARD RESET[/COLOR]\nPermanently reset @DISTRONAME@ and Kodi configuration to defaults (everything in your storage partition will be deleted)"
-msgstr "[COLOR FFFF0000]HARD RESET[/COLOR]\nPermanently reset @DISTRONAME@ and Kodi configuration to defaults (everything in your storage partition will be deleted)"
+msgid "[COLOR FFFF0000]HARD RESET[/COLOR]\nPermanently reset @DISTRONAME@ and Kodi configuration to defaults. (The entire system, including your media configuration will be reset. The storage partition will be erased.)"
+msgstr "[COLOR FFFF0000]HARD RESET[/COLOR]\nPermanently reset @DISTRONAME@ and Kodi configuration to defaults. (The entire system, including your media configuration will be reset. The storage partition will be erased.)"
 
 msgctxt "#726"
 msgid "Enable or disable support for Wireless (WLAN) networks"

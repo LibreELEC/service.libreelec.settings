@@ -117,7 +117,7 @@ msgid "Restore a tar archive backup previously created using the backup option a
 msgstr ""
 
 msgctxt "#724"
-msgid "[COLOR FF00FF00]SOFT RESET[/COLOR]\nPermanently reset @DISTRONAME@ configuration to defaults (resets also Kodi to default including your library. your media - music/videos/etc are not touched)"
+msgid "[COLOR FF00FF00]SOFT RESET[/COLOR]\nPermanently reset @DISTRONAME@ configuration to defaults. (This will also reset some Kodi settings such as library configuration to default. Your media is not touched.)"
 msgstr ""
 
 msgctxt "#725"
