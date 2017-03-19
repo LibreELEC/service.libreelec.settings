@@ -63,8 +63,8 @@ bluetooth = {
 services = {
     'ENABLED': True,
     'KERNEL_CMD': '/proc/cmdline',
-    'SAMBA_NMDB': '/usr/bin/nmbd',
-    'SAMBA_SMDB': '/usr/bin/smbd',
+    'SAMBA_NMDB': '/usr/sbin/nmbd',
+    'SAMBA_SMDB': '/usr/sbin/smbd',
     'D_SAMBA_SECURE': '0',
     'D_SAMBA_USERNAME': 'libreelec',
     'D_SAMBA_PASSWORD': 'libreelec',
