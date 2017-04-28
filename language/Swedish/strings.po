@@ -2,14 +2,14 @@
 # Addon Name: @DISTRONAME@ Configuration
 # Addon id: service.libreelec.settings
 # Addon Provider: LibreELEC
+# Translators:
+# Andreas Hallberg <halle1976@gmail.com>, 2016
 msgid ""
 msgstr ""
-"Project-Id-Version: XBMC Addons\n"
-"Report-Msgid-Bugs-To: alanwww1@xbmc.org\n"
-"POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Kodi Translation Team\n"
-"Language-Team: Swedish (http://www.transifex.com/projects/p/xbmc-addons/language/sv/)\n"
+"Project-Id-Version: LibreELEC Settings Add-on\n"
+"PO-Revision-Date: 2017-03-11 16:19+0100\n"
+"Last-Translator: Andreas Hallberg <halle1976@gmail.com>\n"
+"Language-Team: Swedish (http://www.transifex.com/libreelec/service_libreelec_settings/language/sv/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -53,92 +53,100 @@ msgid "Architecture: "
 msgstr "Arkitektur:"
 
 msgctxt "#609"
-msgid "Libre Embedded Linux Entertainment Center (LibreELEC) is a minimal Linux distribution purpose built for Kodi media center. LibreELEC is designed to boot fast with an installation process simple enough for anyone to convert a bare HTPC into a fully configured media machine in under 15 minutes."
-msgstr "Libre Embedded Linux Entertainment Center (LibreELEC) är en minimal Linux-distribution som är byggd uttryckligen för Kodi media center. LibreELEC är designad för att starta snabbt och med en installationsprocess som är enkel nog för vem som helst att konvertera en enkel HTPC till en fullfjädrad mediamaskin på mindre än 15 minuter."
+msgid "LibreELEC is a minimal Linux distribution purpose built for Kodi media center. LibreELEC is designed to boot fast with an installation process simple enough for anyone to convert a bare HTPC into a fully configured media machine in under 15 minutes."
+msgstr "LibreELEC är en minimal Linuxdistribution vars syfte är att köra Kodi media center. LibreELEC är designat för att boota snabbt och ha en installationsprocess som är enkel för nog för att alla skall kunna förvandla sin enhet till en fullt fungerande mediaspelare på under 15 minuter."
 
 msgctxt "#610"
-msgid "[B]Support:[/B][CR]Web: http://libreelec.tv[CR]Forum: http://forum.libreelec.tv/[CR]Wiki: http://wiki.libreelec.tv[CR][CR][B]Social Media:[/B][CR]IRC: #libreelec on freenode.net (web-based chat is also available from the website)[CR]Twitter: https://twitter.com/libreelec[CR]Facebook: http://www.facebook.com/LibreELEC[CR]Google+: https://plus.google.com/+libreelec"
-msgstr "[B]Support:[/B][CR]Webb: http://libreelec.tv[CR]Forum: http://forum.libreelec.tv/[CR]Wiki: http://wiki.libreelec.tv[CR][CR][B]Social media:[/B][CR]IRC: #libreelec på freenode.net (webb-baserad chat finns också tillgänglig på webbsidan)[CR]Twitter: https://twitter.com/libreelec[CR]Facebook: http://www.facebook.com/LibreELEC[CR]Google+: https://plus.google.com/+libreelec"
+msgid "[B]Support:[/B][CR]Web: http://libreelec.tv[CR]Forum: http://forum.libreelec.tv/[CR]Wiki: http://wiki.libreelec.tv[CR][CR][B]Social Media:[/B][CR]IRC: #libreelec on freenode.net (web-based chat is also available from the website)[CR]Twitter: https://twitter.com/libreelec[CR]Facebook: http://www.facebook.com/LibreELEC"
+msgstr "[B]Support:[/B][CR]Webb: http://libreelec.tv[CR]Forum: http://forum.libreelec.tv/[CR]Wiki: http://wiki.libreelec.tv[CR][CR][B]Sociala medier:[/B][CR]IRC: #libreelec på freenode.net (webb-baserad chat finns också tillgänglig från webbplatsen)[CR]Twitter: https://twitter.com/libreelec[CR]Facebook: http://www.facebook.com/LibreELEC"
 
 msgctxt "#700"
 msgid "Configure a hostname, keyboard type, perform a reset, update, or backups and restores"
-msgstr "Ställ in ett värdnamn, tangentbordstyp, nollställ inställningar, uppdatera eller skapa/återställ backup"
+msgstr "Konfigurera hostname, tangentbordstyp, återställ allt, uppdatera eller hantera backup och återställning"
 
 msgctxt "#701"
 msgid "Configure network startup options, NTP and VPNs"
-msgstr "Konfigurera startinställningar för nätverk, NTP och VPN"
+msgstr "Konfigurera nätverkstjänster, NTP och VPN"
 
 msgctxt "#702"
 msgid "Manage the Ethernet, Wireless and VPN connections available to the system"
-msgstr "Hantera trådade-, trådlösa- och VPN-anslutningar tillgängliga för systemet"
+msgstr "Hantera Trådbundna nätverk, Trådlösa nätverk och VPN-anslutningar"
 
 msgctxt "#703"
 msgid "Configure system services like Samba, SSH, Cron, Avahi and Syslog"
-msgstr "Ställ in systemtjänster som Samba, SSH, Cron, Avahi och Syslog"
+msgstr "Konfigurera systemtjänster såsom Samba, SSH, Cron, Avahi och Syslog"
 
 msgctxt "#704"
 msgid "Configure and pair Bluetooth devices"
-msgstr "Konfigurera och para blåtandsenheter"
+msgstr "Konfigurera och para Blåtandsenheter"
 
 msgctxt "#705"
 msgid "Useful information like version and architecture details, support and social media links, and how to make a donation to the project"
-msgstr "Användbar information så som versions- och arkitekturdetaljer, länkar till support och sociala medier, samt information om hur man donerar till projektet"
+msgstr "Användbar information såsom version och arkitektur, support och länkar till sociala medier samt hur du kan donera till projektet"
 
 msgctxt "#710"
 msgid "Configure the Hostname of your @DISTRONAME@ system. This will be used for the HTPC \\\\hostname in Windows and SMB server name in the Mac OS Finder"
-msgstr "Ange värdnamnet för ditt @DISTRONAME@-system. Detta kommer att användas för HTPC:n's \\\\värdnamn i Windows och SMB-servernamn i Mac OS Finder"
+msgstr "Ange värdnamnet för ditt @DISTRONAME@-system. Detta kommer användas för enhetems \\\\värnamn i Windows och SMB-servernamn i Mac OS Finder"
 
 msgctxt "#711"
 msgid "Configure the 1st keyboard software layout"
-msgstr "Konfigurera layouten för det 1:a mjukvaru-tangentbordet"
+msgstr "Konfigurera 1a tangentbordslayouten"
 
 msgctxt "#712"
 msgid "Configure the 2nd keyboard software layout"
-msgstr "Konfigurera layouten för det 2:a mjkvaru-tangentbordet"
+msgstr "Konfigurera 2a tangentbordslayouten"
 
 msgctxt "#713"
 msgid "Configure the physical keyboard type"
-msgstr "Konfigurera den fysiska tangentbordslayouten"
+msgstr "Konfigurera den fysiska tangentbordstypen"
 
 msgctxt "#714"
 msgid "@DISTRONAME@ can be configured for automatic or manual updates. Automatic updates are available on stable releases and stable release candidates. Automatic update self-disables on beta and development builds"
-msgstr "@DISTRONAME@ kan konfigureras för automatiska eller manuella uppdateringar. Automatiska uppdateringar tillåts för stabila slutversioner och stabila förversioner men är avaktiverade för beta- och utvecklingsversioner"
+msgstr "@DISTRONAME@ kan konfigureras för att uppdateras automatiskt eller manuellt. Automatiska uppdateringar är tillgängliga för stabila releaser samt releasekandidater. Automatiska uppdateringar är inte tillgängliga för beta- och utvecklarversioner."
 
 msgctxt "#715"
 msgid "Set to ON and an on-screen notification will be displayed when a new update is available"
-msgstr "Om PÅ så visas en notifiering på skärmen när det finns en ny uppdatering tillgänglig"
+msgstr "När inställningen är PÅ kommer en notis visas när en ny uppdatering finns tillgänglig"
 
-msgctxt "#716"
-msgid "Click to manually check the @DISTRONAME@ servers for an updated release"
-msgstr "Välj för att manuellt fråga @DISTRONAME@-servrarna efter en uppdaterad utgåva"
+msgctxt "#718"
+msgid "Send config.txt, cmdline.txt, shutdown.sh, autostart.sh, and kodi.log to http://sprunge.us and display the short URL"
+msgstr "Skicka config.txt, cmdline.txt, shutdown.sh, autostart.sh, och kodi.log till http://sprunge.us och visa den korta URL:en"
 
 msgctxt "#720"
 msgid "Set to ON and Bluetooth devices will be disabled during power-saving modes"
-msgstr "Om PÅ så kommer blåtandsenheter att avaktiveras i strömsparläge"
+msgstr "När inställningen är PÅ och kommer blåtandsenheter inaktiveras vid strömsparläge"
 
 msgctxt "#722"
 msgid "Create a tar archive containing all @DISTRONAME@ and Kodi configuration settings, databases and thumbnail content. Backup files will be stored in /storage/backups"
-msgstr "Skapa ett tar-arkiv med alla @DISTRONAME@- och Kodi-inställningar, databaser och miniatyrbilder. Backuparkiv sparas i /storage/backups"
+msgstr "Skapa ett tar-arkiv som innehåller alla @DISTRONAME@- och Kodi-inställningar, databaser och miniatyrbilder. Backupfilerna lagras i /storage/backups"
 
 msgctxt "#723"
 msgid "Restore a tar archive backup previously created using the backup option above"
-msgstr "Återställ från ett tar-arkiv som skapats tidigare med hjälp av säkerhetskopieringsalternativet ovan"
+msgstr "Återställer ett tidigare skapas tar-arkiv som är skapad med backup-alternativet ovan."
 
 msgctxt "#724"
-msgid "[COLOR FF00FF00]SOFT RESET[/COLOR]\nPermanently reset @DISTRONAME@ configuration to defaults (resets also Kodi to default including your library. your media - music/videos/etc are not touched)"
-msgstr "[COLOR FF00FF00]MJUK ÅTERSTÄLLNING[/COLOR]\nNollställer @DISTRONAME@-inställningarna till grundinställningarna (nollställer även Kodi till grundinställningarna inklusive bibliotek. Dina media - musik/videor/etc påverkas inte)"
+msgid ""
+"[COLOR FF00FF00]SOFT RESET[/COLOR]\n"
+"Permanently reset @DISTRONAME@ configuration to defaults (resets also Kodi to default including your library. your media - music/videos/etc are not touched)"
+msgstr ""
+"[COLOR FF00FF00]MJUK ÅTERSTÄLLNING[/COLOR]\n"
+"Nollställer @DISTRONAME@-inställningar till standardinställningar (Nollställer även Kodi till standardinställningar inklusive bibliotek. Dina media såsom musik/videos/etc påverkas inte)"
 
 msgctxt "#725"
-msgid "[COLOR FFFF0000]HARD RESET[/COLOR]\nPermanently reset @DISTRONAME@ and Kodi configuration to defaults (everything in your storage partition will be deleted)"
-msgstr "[COLOR FFFF0000]HÅRD ÅTERSTÄLLNING[/COLOR]\nNollställer @DISTRONAME@- och Kodi-inställningarna till grundinställningarna (allt i din storage-partition kommer att raderas)"
+msgid ""
+"[COLOR FFFF0000]HARD RESET[/COLOR]\n"
+"Permanently reset @DISTRONAME@ and Kodi configuration to defaults (everything in your storage partition will be deleted)"
+msgstr ""
+"[COLOR FFFF0000]HÅRD ÅTERSTÄLLNING[/COLOR]\n"
+"Nollställer @DISTRONAME@- och Kodi-inställningar till standardinställningar. (Allt som är lagrat i din storage-partition kommer att raderas!)"
 
 msgctxt "#726"
 msgid "Enable or disable support for Wireless (WLAN) networks"
-msgstr "Aktivera eller inaktivera support för trådlösa (WLAN) nätverk"
+msgstr "Aktivera eller inaktivera stöd för trådlöst (WLAN) nätverk"
 
 msgctxt "#727"
 msgid "Enable a 'tethered' Wireless Access Point. This requires your wireless card (and driver) to support bridging and access point mode. Not all cards are capable."
-msgstr "Aktivera en trådlös accesspunkt (tethering). Detta kräver att din hårdvara för trådlösa nätverk och dess drivrutin stödjer bryggat läge och åtkomstpunktläge. Det är inte alla trådlösa nätverkskort som klarar detta. "
+msgstr "Aktivera 'tethered' Trådlös Accespunkt. Denna funktion kräver att trådlöst nätverkskort (och drivrutin) stödjer bryggning. Vissa kort stödjer inte funtionen."
 
 msgctxt "#728"
 msgid "Configure the Access Point SSID"
@@ -150,23 +158,23 @@ msgstr "Konfigurera accesspunktens lösenordsfras"
 
 msgctxt "#730"
 msgid "Enable or disable support for Wired (Ethernet) networks"
-msgstr "Aktivera eller inaktivera support för trådat (Ethernet) nätverk"
+msgstr "Aktivera eller inaktivera stöd för trådanslutet (Ethernet) nätverk"
 
 msgctxt "#732"
 msgid "Configure the 1st time (NTP) server"
-msgstr "Konfigurera den 1:a tidservern (NTP)"
+msgstr "Konfigurera 1:a (NTP) tidsserver"
 
 msgctxt "#733"
 msgid "Configure the 2nd time (NTP) server"
-msgstr "Konfigurera den 2:a tidsservern (NTP)"
+msgstr "Konfigurera 2:e (NTP) tidsserver"
 
 msgctxt "#734"
 msgid "Configure the 3rd time (NTP) server"
-msgstr "Konfigurera den 3:e tidsservern (NTP)"
+msgstr "Konfigurera 3:e (NTP) tidsserver"
 
 msgctxt "#736"
 msgid "Set to ON to delay Kodi startup until the network is available. Use this if the OS is booting into Kodi before the network is up and central MySQL databases are accessible."
-msgstr "Om PÅ kommer uppstarten av Kodi att fördröjas tills dess att nätverket är tillgängligt. Använd denna funktion om operativsystemet startar Kodi innan centrala databaser är tillgängliga via nätverket."
+msgstr "När inställningen är PÅ fördröjs uppstarten av Kodi tills dess att nätverket är tillgängligt. Använd funktionen om operativsystemet startar Kodi innan centrala databaser är tillgängliga via nätverket."
 
 msgctxt "#737"
 msgid "737"
@@ -174,35 +182,39 @@ msgstr "737"
 
 msgctxt "#738"
 msgid "Set to ON to enable the embedded Samba (SMB) filesharing service"
-msgstr "Sätt PÅ för att aktivera den inbyggda Samba (SMB) fildelningstjänsten"
+msgstr "När inställningen är PÅ aktiveras inbyggd Samba (SMB) fildelningstjänst"
 
 msgctxt "#739"
 msgid "Set to ON to require username/password access to local Samba fileshares"
-msgstr "Om PÅ kommer användarnamn/lösenord att krävas för åtkomst till till lokala Sambautdelningar"
+msgstr "När inställningen är PÅ krävs användarnamn/lösenord för att ge åtkomst till lokala Samba-utdelningar"
 
 msgctxt "#740"
 msgid "Set the username for Samba sharing"
-msgstr "Ange användarnamn för Sambautdelning"
+msgstr "Ange användarnamnet för Samba-utdelning"
 
 msgctxt "#741"
 msgid "Set the password for Samba sharing"
-msgstr "Ange lösenord för Sambautdelning"
+msgstr "Ange lösenordet för Samba-utdelning"
 
 msgctxt "#742"
 msgid "Set to ON to enable the embedded SSH server. The SSH console can be accessed with username 'root' and password '@ROOT_PASSWORD@'."
-msgstr "Aktivera för att starta den inbyggda SSH-servern. SSH-konsolen kan nås med användarnamn 'root' och lösenord '@ROOT_PASSWORD@'."
+msgstr "När inställningen är PÅ aktiveras inbyggd SSH server. SSH konsollen kan nås med användarnamnet 'root' och lösenordet '@ROOT_PASSWORD@'."
 
 msgctxt "#743"
 msgid "Set to ON if you have copied private SSH keys to your HTPC and would like to improve security by disabling SSH username and password authentication."
-msgstr "Sätt PÅ om du har kopierat publika SSH-nycklar till din HTPC och vill öka säkerheten genom att avaktivera inloggning med hjälp av användarnamn och lösenord."
+msgstr "Välj PÅ om du har kopierat din privata SSH-nyckel till din HTPC och vill öka säkerheten genom att stänga SSH-autentisering via användarnamn och lösenord."
 
 msgctxt "#744"
 msgid "Set to ON to enable the Avahi (Zeroconf/Bonjour) network discovery service"
-msgstr "Sätt PÅ för att aktivera nätverksupptäckaren för Avahi (Zeroconf/Bonjour) ."
+msgstr "När inställningen är PÅ aktiveras Avahi (Zeroconf/Bonjour) discovery tjänst"
 
 msgctxt "#745"
 msgid "Set to ON to enable the cron daemon"
-msgstr "Sätt PÅ för att aktivera crontjänsten"
+msgstr "Välj PÅ för att aktivera Cron-tjänsten"
+
+msgctxt "#746"
+msgid "Set to ON to enable the lirc daemon"
+msgstr "När inställningen är PÅ aktiveras lirc-tjänsten"
 
 msgctxt "#750"
 msgid "750"
@@ -210,23 +222,39 @@ msgstr "750"
 
 msgctxt "#751"
 msgid "With OBEX filetransfer you can send files, for example movies or pictures over bluetooth to @DISTRONAME@."
-msgstr "Med OBEX-filöverföring kan du skicka filer, t.ex filmer eller bilder över bluetooth till @DISTRONAME@."
+msgstr "Med OBEX filöverföring kan du skicka filer, till exempel filmer eller bilder, via Bluetooth till @DISTRONAME@."
 
 msgctxt "#752"
 msgid "Here you can set the folder location where OBEX file transfer should store incoming files"
-msgstr "Här kan du ange mappen där inkommande filer överförda via OBEX skall sparas"
+msgstr "Ställ in vilken mapp som skall användas för att lagra filer som skickas via OBEX"
 
 msgctxt "#753"
 msgid "Configure the 1st keyboard software Variant"
-msgstr "Konfigurera den 1:a layouten för mjukvarutangentbordet"
+msgstr "Konfigurera 1a tangentbordsvarianten"
 
 msgctxt "#754"
 msgid "Configure the 2nd keyboard software Variant"
-msgstr "Konfigurera den 2:a layouten för mjukvarutangentbordet"
+msgstr "Konfigurera 2a tangentbordsvarianten"
 
 msgctxt "#755"
 msgid "Auto share external drives / partitions"
-msgstr "Dela ut externa enheter / partitioner automatiskt"
+msgstr "Dela ut externa enheter/partitioner automatiskt"
+
+msgctxt "#760"
+msgid "Select an update channel"
+msgstr "Välj kanal för uppdateringar"
+
+msgctxt "#761"
+msgid "Enable to allow entering a custom update url"
+msgstr "Aktivera möjlighet att ange en egen URL för uppdateringar"
+
+msgctxt "#762"
+msgid "Enter a custom update url (url should be the root of the update files)"
+msgstr "Ange egen URL för updateringar (URL skall peka på rooten för filerna)"
+
+msgctxt "#770"
+msgid "Select an available version"
+msgstr "Välj en version"
 
 msgctxt "#32001"
 msgid "Services"
@@ -238,7 +266,7 @@ msgstr "System"
 
 msgctxt "#32003"
 msgid "Interface"
-msgstr "Gränssnitt"
+msgstr "Interface"
 
 msgctxt "#32009"
 msgid "Keyboard"
@@ -260,6 +288,30 @@ msgctxt "#32014"
 msgid "Automatic Updates"
 msgstr "Automatiska uppdateringar"
 
+msgctxt "#32015"
+msgid "Update Channel"
+msgstr "Kanal för uppdateringar"
+
+msgctxt "#32016"
+msgid "Show Custom Channels"
+msgstr "Visa alternativa kanaler"
+
+msgctxt "#32017"
+msgid "  - Custom Channel 1"
+msgstr "- Alternativ kanal 1"
+
+msgctxt "#32018"
+msgid "  - Custom Channel 2"
+msgstr "- Alternativ kanal 2"
+
+msgctxt "#32019"
+msgid "  - Custom Channel 3"
+msgstr "- Alternativ kanal 3"
+
+msgctxt "#32020"
+msgid "Available Versions"
+msgstr "Tillgängliga versioner"
+
 msgctxt "#32100"
 msgid "Connections"
 msgstr "Anslutningar"
@@ -274,11 +326,11 @@ msgstr "Trådlösa nätverk"
 
 msgctxt "#32103"
 msgid "Wired Networks"
-msgstr "Trådade nätverk"
+msgstr "Trådanslutet nätverk"
 
 msgctxt "#32105"
 msgid "Active"
-msgstr "Aktiv"
+msgstr "Aktiverad"
 
 msgctxt "#32106"
 msgid "Username"
@@ -290,7 +342,7 @@ msgstr "Lösenordsfras"
 
 msgctxt "#32108"
 msgid "Enable 'tethered' Wireless Access Point"
-msgstr "Aktivera 'uppbunden' trådlös accesspunkt"
+msgstr "Aktivera 'utdelad' trådlös accesspunkt"
 
 msgctxt "#32109"
 msgid "Connect Automatically"
@@ -318,11 +370,11 @@ msgstr "IP-adress"
 
 msgctxt "#32115"
 msgid "Subnet Mask"
-msgstr "Nätmask"
+msgstr "Subnätmask"
 
 msgctxt "#32116"
 msgid "Default Gateway"
-msgstr "Standardgateway"
+msgstr "Standard-gateway"
 
 msgctxt "#32117"
 msgid "Prefix Length"
@@ -330,7 +382,7 @@ msgstr "Prefixlängd"
 
 msgctxt "#32118"
 msgid "Privacy"
-msgstr "Integritet"
+msgstr "Privat"
 
 msgctxt "#32119"
 msgid "DNS Servers"
@@ -354,19 +406,19 @@ msgstr "NTP-servrar"
 
 msgctxt "#32124"
 msgid "Timeserver #1"
-msgstr "Tidsserver #1"
+msgstr "Tidserver #1"
 
 msgctxt "#32125"
 msgid "Timeserver #2"
-msgstr "Tidsserver #2"
+msgstr "Tidserver #2"
 
 msgctxt "#32126"
 msgid "Timeserver #3"
-msgstr "Tidsserver #3"
+msgstr "Tidserver #3"
 
 msgctxt "#32127"
 msgid "DNS Domains"
-msgstr "DNS-domäner"
+msgstr "DNS Domäner"
 
 msgctxt "#32128"
 msgid "Domain #1"
@@ -400,21 +452,25 @@ msgctxt "#32144"
 msgid "Connect"
 msgstr "Anslut"
 
+msgctxt "#32145"
+msgid "Pair"
+msgstr "Para"
+
 msgctxt "#32146"
 msgid "Hidden Network Name"
 msgstr "Dolt nätverksnamn"
 
 msgctxt "#32147"
 msgid "Wireless Network Passphrase"
-msgstr "Lösenordsfras för trådlöst nätverk"
+msgstr "Trådlöst nätverk lösenordsfras"
 
 msgctxt "#32148"
 msgid "Wireless Network Username"
-msgstr "Användarnamn för trådlöst nätverk"
+msgstr "Trådlöst nätverk användarnamn"
 
 msgctxt "#32150"
 msgid "Edit"
-msgstr "Redigera"
+msgstr "Ändra"
 
 msgctxt "#32180"
 msgid "Would you like to update @DISTRONAME@ now?"
@@ -442,11 +498,11 @@ msgstr "Extraheringshastighet"
 
 msgctxt "#32186"
 msgid "Initialize Archive File"
-msgstr "Initialisera arkivfil"
+msgstr "Initierar arkivfil"
 
 msgctxt "#32187"
-msgid "Latest Version"
-msgstr "Senaste versionen"
+msgid "New Version"
+msgstr "Ny version"
 
 msgctxt "#32188"
 msgid "Current Version"
@@ -454,11 +510,15 @@ msgstr "Nuvarande version"
 
 msgctxt "#32189"
 msgid "Identification"
-msgstr "Identifiering"
+msgstr "Identifikation"
 
 msgctxt "#32190"
 msgid "System Name"
 msgstr "Systemnamn"
+
+msgctxt "#32191"
+msgid "Invalid URL"
+msgstr "Ogiltig URL"
 
 msgctxt "#32196"
 msgid "About"
@@ -510,11 +570,11 @@ msgstr "Avbryt"
 
 msgctxt "#32216"
 msgid "Auto-Share External Drives"
-msgstr "Dela ut externa enheter automatiskt"
+msgstr "Dela ut externa diskenheter med automatik"
 
 msgctxt "#32300"
 msgid "Welcome to @DISTRONAME@"
-msgstr "Välkommen till @DISTRONAME@"
+msgstr "Välkommern till @DISTRONAME@"
 
 msgctxt "#32301"
 msgid "Welcome"
@@ -522,7 +582,7 @@ msgstr "Välkommen"
 
 msgctxt "#32302"
 msgid "This wizard will guide you through the process of setting up your new @DISTRONAME@ installation - setting your location, timezone and connecting you to the internet.[CR][CR]These settings can be changed later by navigating to Programs > @DISTRONAME@ Settings."
-msgstr "Denna guide tar dig genom inställningsprocessen för ditt nya @DISTRONAME@-installation - ställer in din plats, tidszon och ansluter dig till internet.[CR][CR]Dessa inställningar kan ändras senare genom att navigera till Program > @DISTRONAME@-inställningar."
+msgstr "Denna guide kommer hjälpa dig att ställa in din nya @DISTRONAME@-installation - välj plats, tidszon och ansluter systemet till internet.[CR][CR]Dessa inställningar kan ändras senare genom att navigera till Program > @DISTRONAME@-inställningar."
 
 msgctxt "#32303"
 msgid "Next"
@@ -530,7 +590,7 @@ msgstr "Nästa"
 
 msgctxt "#32304"
 msgid "To be identified easily on the network, your new @DISTRONAME@ machine needs a name.[CR][CR]Try to choose something meaningful - like the room it's in - so you'll know what it is when you see it on the network.[CR][CR]This name is used when configuring network services, like file sharing using samba."
-msgstr "För att enkelt kunna identifieras på nätverket behöver din nya @DISTRONAME@-enhet ett namn.[CR][CR]Försök välja något meningsfullt - som rummet den står i - så du vet vad det är för något när du ser den på nätverket.[CR][CR]Namnet används vid nätverksinställningar och andra tjänster, t.ex fildelning med samba."
+msgstr "Genom att ge din nya @DISTRONAME@-maskin ett namn kan du enkelt identifiera den på ditt nätverk.[CR][CR]Försök att välja ett meningsfullt namn, såsom namnet på rummet, när du namnger den.[CR][CR]Namnet används sedan av nätverkstjänsterna såsom Samba."
 
 msgctxt "#32305"
 msgid "Networking"
@@ -538,15 +598,15 @@ msgstr "Nätverk"
 
 msgctxt "#32306"
 msgid "In order to download backdrops, banners and thumbnails for your movies and TV shows and to stream online content from sites like YouTube, @DISTRONAME@ needs to be connected the Internet.[CR][CR]An Internet connection is also required for @DISTRONAME@ to automatically update itself."
-msgstr "För att kunna ladda ner bakgrunder, banderoller och miniatyrer till dina filmer och TV-serier samt strömma innehåll från sidor som YouTube, behöver @DISTRONAME@ en internetuppkoppling.[CR][CR]En internetuppkoppling krävs också för att @DISTRONAME@ skall kunna uppdatera sig automatiskt."
+msgstr "För att ladda ned bakgrundsbilder, banners och miniatyrer  till dina TV-serier och filmer, samt kunna streama innehåll från tjänster som YouTube behöver @DISTRONAME@ en anslutning till Internet.[CR][CR]Internetanslutning krävs också för att @DISTRONAME@ automatiskt skall kunna uppdatera sig själv."
 
 msgctxt "#32308"
 msgid "Hostname:"
-msgstr "Värdnamn:"
+msgstr "Hostnamn:"
 
 msgctxt "#32309"
 msgid "The following Networks are currently available:"
-msgstr "Följande nätverk är tillgängliga:"
+msgstr "Följande nätverk finns för närvarande tillgängliga:"
 
 msgctxt "#32311"
 msgid "Sharing and Remote Access"
@@ -554,11 +614,11 @@ msgstr "Delning och fjärråtkomst"
 
 msgctxt "#32312"
 msgid "@DISTRONAME@ also supports SSH for remote access. This is for advanced users who wish to interact with @DISTRONAME@'s underlying operating system. The default user is [COLOR blue]root[/COLOR] and the default password is [COLOR blue]@ROOT_PASSWORD@[/COLOR]."
-msgstr "@DISTRONAME@ stöder även SHH för fjärrstyrning. Detta är för avancerade användare som vill interagera med @DISTRONAME@'s underliggande operativsystem. Standardanvändarnamnet är [COLOR blue]root[/COLOR] och standardlösenordet är [COLOR blue]@ROOT_PASSWORD@[/COLOR]."
+msgstr "@DISTRONAME@ stödjer SSH för fjärranslutning. Detta är för avancerade användare som vill interagera med @DISTRONAME@'s underliggande operativsystem. Standars användarnamn är [COLOR blue]root[/COLOR] och standars lösenord är [COLOR blue]@ROOT_PASSWORD@[/COLOR]."
 
 msgctxt "#32313"
 msgid "In order to share your files between your computers @DISTRONAME@ has incorporated a samba server. This samba server can be integrated into your local network by accessing it in a familiar way with Finder or Windows Explorer."
-msgstr "För att kunna dela dina filer mellan datorer, har @DISTRONAME@ en inbyggd samba-server. Denna server kan nås i ditt lokala nätverk genom att använda Mac OS Finder eller Windows Explorer."
+msgstr "För att kunan dela filer mellan datorer har @DISTRONAME@ en integrerad Samba server. Detta kan du använda för att enkelt bläddra dig fram med Mac OS Finder eller Windows utforskare."
 
 msgctxt "#32316"
 msgid "Configure Services:"
@@ -566,11 +626,12 @@ msgstr "Konfigurera tjänster:"
 
 msgctxt "#32317"
 msgid "Thank you"
-msgstr "Tack"
+msgstr "Tack!"
 
 msgctxt "#32318"
-msgid "Your @DISTRONAME@ installation is now complete and you'll now enter Kodi when you can set up your media libraries. For help with this, there is a guide available at wiki.kodi.tv[CR][CR]@DISTRONAME@ is developed by a dedicated team of developers who work purely in their spare time. Even as a volunteer project, we still have to pay for our internet bandwidth and development resources so if you find @DISTRONAME@ useful, we will always appreciate a donation of any amount.[CR][CR]Finally, we hope you enjoy using @DISTRONAME@ as much as we've enjoying building it. If you need any more help, you can find links to get help along with latest news at our website"
-msgstr "Din @DISTRONAME@-installation är nu färdig och du kommer nu att fortsätta till Kodi där du kan konfigurera dina mediabibliotek. Det finns en guide på wiki.kodi.tv för att hjälpa dig med detta.[CR][CR]@DISTRONAME@ är utvecklat av ett dedikerat team med utvecklare som arbetar med detta på sin fritid. Även fast vi är ett frivilligt projekt behöver vi ändå betala för vår internetbandbredd och utvecklingsresurser, så om du finner @DISTRONAME@ användbart, är vi tacksamma för en donation av valfri summa.[CR][CR]Slutligen hoppas vi att du finner användandet av @DISTRONAME@ lika trevligt som vi tyckte det var när vi skapade det. Om du behöver ytterligare hjälp, kan du hitta länkar, hjälp och de senaste nyheterna på vår hemsida"
+msgid ""
+"Your @DISTRONAME@ installation is now complete and you'll now enter Kodi when you can set up your media libraries. For help with this, there is a guide available at wiki.kodi.tv[CR][CR]@DISTRONAME@ is developed by a dedicated team of developers who work purely in their spare time. Even as a volunteer project, we still have to pay for our internet bandwidth and development resources so if you find @DISTRONAME@ useful, we will always appreciate a donation of any amount.[CR][CR]Finally, we hope you enjoy using @DISTRONAME@ as much as we've enjoying building it. If you need any more help, you can find links to get help along with latest news at our website"
+msgstr "Din @DISTRONAME@-installation är nu slutförd och Kodi kommer strax starta, där du kan hantera dina mediebibliotek. Om du behöver mer hjälp med det finns det en guide på wiki.kodi.tv[CR][CR]@DISTRONAME@ är utvecklat av ett hängivet team utvecklare som ägnar sin fritid till projektet. Även om vi frivilligt, måste vi betala för vår internetanslutning och andra utvecklingstjänster, så om du tycker att @DISTRONAME@ är användbart hoppas vi att du vill donera en valfri summa.[CR][CR]Slutligen hoppas vi att du tycker om att använda  @DISTRONAME@ lika mycket som gillar att bygga det. Behöver du mer hjälp finns det nyhetsartiklar och länkar på vår webbplats."
 
 msgctxt "#32319"
 msgid "Cron"
@@ -582,11 +643,11 @@ msgstr "Aktivera Cron"
 
 msgctxt "#32323"
 msgid "Reset to Defaults"
-msgstr "Återställ till standard"
+msgstr "Systemåterställning"
 
 msgctxt "#32324"
 msgid "Reset System Settings to defaults"
-msgstr "Återställ systeminställningar till standard"
+msgstr "Återställer systeminställningar till standard"
 
 msgctxt "#32325"
 msgid "Reset @DISTRONAME@ to defaults"
@@ -598,19 +659,19 @@ msgstr "Är du säker?"
 
 msgctxt "#32328"
 msgid "The system must reboot."
-msgstr "Systemet måste starta om."
+msgstr "Systemet måste startas om."
 
 msgctxt "#32329"
 msgid "Rebooting in %d seconds"
-msgstr "%d sekunder till omstart"
+msgstr "Omstart sker om %d sekunder"
 
 msgctxt "#32330"
 msgid "Keyboard Type"
-msgstr "Tangentbordstyp"
+msgstr "Tangenrbordstyp"
 
 msgctxt "#32331"
 msgid "Bluetooth"
-msgstr "Blåtand"
+msgstr "Bluetooth"
 
 msgctxt "#32333"
 msgid "Connected: "
@@ -626,23 +687,23 @@ msgstr "Nej"
 
 msgctxt "#32338"
 msgid "No Bluetooth adapter found."
-msgstr "Inga blåtandsadaptrar hittades."
+msgstr "Hittade ingen Bluetooth-adapter"
 
 msgctxt "#32339"
 msgid "No Bluetooth device found. Please put your Bluetooth device into discovery mode[CR]and start the scan"
-msgstr "Inga blåtandsenheter hittades. Gör din blåtandsenhet möjlig att upptäcka[CR]och starta skanningen"
+msgstr "Ingen Bluetooth-enhet hittades. Vänligen sätt din Bluetooth-enhet i kopplingsläge [CR] och försök igen"
 
 msgctxt "#32343"
 msgid "Enter the following Key on your Device."
-msgstr "Ange följande nyckel på din enhet."
+msgstr "Ange följande kod på din enhet."
 
 msgctxt "#32344"
 msgid "Enable Bluetooth"
-msgstr "Aktivera blåtand"
+msgstr "Aktivera Bluetooth"
 
 msgctxt "#32346"
 msgid "Bluetooth is disabled"
-msgstr "Blåtand är inaktiverat"
+msgstr "Bluetooth är inaktiverad"
 
 msgctxt "#32358"
 msgid "Trust and Connect"
@@ -650,27 +711,27 @@ msgstr "Lita på och anslut"
 
 msgctxt "#32362"
 msgid "Check for updates now:"
-msgstr "Kontrollera uppdateringar nu:"
+msgstr "Sök efter uppdateringar nu:"
 
 msgctxt "#32363"
 msgid "@DISTRONAME@"
-msgstr "@DISTRONAME@"
+msgstr "@DISTRNAME@"
 
 msgctxt "#32364"
 msgid "Update available"
-msgstr "Uppdatering tillgänglig"
+msgstr "Uppdatering finns tillgänglig"
 
 msgctxt "#32365"
 msgid "Show Update Notifications"
-msgstr "Visa meddelanden om uppdateringar"
+msgstr "Visa meddelande om uppdateringar"
 
 msgctxt "#32366"
 msgid "Update Download Completed"
-msgstr "Uppdatering nedladdad"
+msgstr "Nedladdning av uppdatering klar."
 
 msgctxt "#32367"
 msgid "Update Extract Complete"
-msgstr "Uppdatering extraherad"
+msgstr "Extrahering av uppdatering är klar"
 
 msgctxt "#32368"
 msgid "Advanced Network Settings"
@@ -678,15 +739,15 @@ msgstr "Avancerade nätverksinställningar"
 
 msgctxt "#32369"
 msgid "Wait for network before starting Kodi"
-msgstr "Invänta nätverk innan Kodi startas"
+msgstr "Invänta nätverksanslutning innan Kodi startas"
 
 msgctxt "#32370"
 msgid "Maximum Wait Time (Sec.)"
-msgstr "Maximal tid att vänta (sek)"
+msgstr "Maximal väntetid (sekunder)"
 
 msgctxt "#32371"
 msgid "Backup"
-msgstr "Säkerhetskopia"
+msgstr "Backup"
 
 msgctxt "#32372"
 msgid "Create System and Kodi Backup"
@@ -698,19 +759,27 @@ msgstr "Återställ backup"
 
 msgctxt "#32375"
 msgid "Backup Progress"
-msgstr "Framsteg för säkerhetskopiering"
+msgstr "Backup pågår"
+
+msgctxt "#32376"
+msgid "Submit Log"
+msgstr "Skicka Logg"
+
+msgctxt "#32377"
+msgid "Pastebin system logs and get short URL"
+msgstr "Pastebin systemlogg och få kort URL"
 
 msgctxt "#32379"
 msgid "There is not enough free storage space to continue!"
-msgstr "Det finns inte tillräckligt med ledigt utrymme att fortsätta!"
+msgstr "Det saknas ledigt lagringutrymme för att fortsätta!"
 
 msgctxt "#32380"
 msgid "Restoring system settings requires a reboot. Are you sure you want to restore?"
-msgstr "Det krävs en omstart för att återställa systeminställningarna. Är du säker på att du vill återställa?"
+msgstr "Återställning av systeminställningar kräver en omstart. Är du säker att du vill återställa?"
 
 msgctxt "#32381"
 msgid "Accept incoming Bluetooth Filetransfer ?"
-msgstr "Acceptera inkommande filöverföring via blåtand?"
+msgstr "Acceptera inkommande Bluetooth-filöverföring"
 
 msgctxt "#32382"
 msgid "Speed"
@@ -718,15 +787,15 @@ msgstr "Hastighet"
 
 msgctxt "#32383"
 msgid "Play Files ?"
-msgstr "Spela upp filer? "
+msgstr "Spela upp filer?"
 
 msgctxt "#32384"
 msgid "OBEX Enabled"
-msgstr "OBEX aktiverat"
+msgstr "OBEX Aktiverat"
 
 msgctxt "#32385"
 msgid "OBEX Upload Folder"
-msgstr "Uppladdningsmapp för OBEX"
+msgstr "OBEX Uppladdningsmapp"
 
 msgctxt "#32386"
 msgid "Keyboard Layout Variant #1"
@@ -738,13 +807,20 @@ msgstr "Tangentbordslayout variant #2"
 
 msgctxt "#32388"
 msgid "Enable Standby"
-msgstr "Aktivera viloläge"
+msgstr "Aktivera Standby"
 
 msgctxt "#32389"
 msgid "Disable Standby"
-msgstr "Avaktivera viloläge"
+msgstr "Inaktivera Standby"
 
 msgctxt "#32390"
 msgid "Settings addon is not yet ready, please try again later."
-msgstr "Inställningstillägget är ännu inte redo, vänligen försök igen senare. "
+msgstr "Inställnings-tillägget är inte redo, försök igen senare."
 
+msgctxt "#32391"
+msgid "Lirc"
+msgstr "Lirc"
+
+msgctxt "#32392"
+msgid "Enable Lirc"
+msgstr "Aktivera Lirc"

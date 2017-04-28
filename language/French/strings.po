@@ -2,14 +2,15 @@
 # Addon Name: @DISTRONAME@ Configuration
 # Addon id: service.libreelec.settings
 # Addon Provider: LibreELEC
+# Translators:
+# Antoine H <nin2jardin@gmail.com>, 2016
+# Chinchon Translate <chinchon@live.fr>, 2016
 msgid ""
 msgstr ""
-"Project-Id-Version: XBMC Addons\n"
-"Report-Msgid-Bugs-To: alanwww1@xbmc.org\n"
-"POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Kodi Translation Team\n"
-"Language-Team: French (http://www.transifex.com/projects/p/xbmc-addons/language/fr/)\n"
+"Project-Id-Version: LibreELEC Settings Add-on\n"
+"PO-Revision-Date: 2017-03-11 16:19+0100\n"
+"Last-Translator: Antoine H <nin2jardin@gmail.com>\n"
+"Language-Team: French (http://www.transifex.com/libreelec/service_libreelec_settings/language/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -53,120 +54,128 @@ msgid "Architecture: "
 msgstr "Architecture :"
 
 msgctxt "#609"
-msgid "Libre Embedded Linux Entertainment Center (LibreELEC) is a minimal Linux distribution purpose built for Kodi media center. LibreELEC is designed to boot fast with an installation process simple enough for anyone to convert a bare HTPC into a fully configured media machine in under 15 minutes."
-msgstr "Libre Embedded Linux Entertainment Center (LibreELEC) est un système Linux minimal construit pour Kodi. LibreELEC a été pensé pour démarrer rapidement, avec un processus d'installation suffisamment simple pour que n'importe qui puisse convertir un ordinateur en machine multimédia en moins de 15 minutes."
+msgid "LibreELEC is a minimal Linux distribution purpose built for Kodi media center. LibreELEC is designed to boot fast with an installation process simple enough for anyone to convert a bare HTPC into a fully configured media machine in under 15 minutes."
+msgstr "LibreELEC est une distribution Linux minimaliste créée spécifiquement pour exécuter Kodi. LibreELEC a été créé dans le but de démarrer rapidement sur un processus d'installation simple pour que n'importe qui puisse convertir un HTPC en un centre multimédia totalement configuré en moins de 15 minutes."
 
 msgctxt "#610"
-msgid "[B]Support:[/B][CR]Web: http://libreelec.tv[CR]Forum: http://forum.libreelec.tv/[CR]Wiki: http://wiki.libreelec.tv[CR][CR][B]Social Media:[/B][CR]IRC: #libreelec on freenode.net (web-based chat is also available from the website)[CR]Twitter: https://twitter.com/libreelec[CR]Facebook: http://www.facebook.com/LibreELEC[CR]Google+: https://plus.google.com/+libreelec"
-msgstr "[B]Support :[/B][CR]Internet : http://libreelec.tv[CR]Forum : http://forum.libreelec.tv/[CR]Wiki : http://wiki.libreelec.tv[CR][CR][B]Médias sociaux :[/B][CR]IRC : #libreelec sur freenode.net (client web aussi disponible sur le site)[CR]Twitter : https://twitter.com/libreelec[CR]Facebook : http://www.facebook.com/LibreELEC[CR]Google+ : https://plus.google.com/+libreelec"
+msgid "[B]Support:[/B][CR]Web: http://libreelec.tv[CR]Forum: http://forum.libreelec.tv/[CR]Wiki: http://wiki.libreelec.tv[CR][CR][B]Social Media:[/B][CR]IRC: #libreelec on freenode.net (web-based chat is also available from the website)[CR]Twitter: https://twitter.com/libreelec[CR]Facebook: http://www.facebook.com/LibreELEC"
+msgstr "[B]Support :[/B][CR]Web : http://libreelec.tv[CR]Forum : http://forum.libreelec.tv/[CR]Wiki : http://wiki.libreelec.tv[CR][CR][B]Médias sociaux :[/B][CR]IRC: #libreelec sur freenode.net (un système de chat est également disponible sur le site web)[CR]Twitter : https://twitter.com/libreelec[CR]Facebook : http://www.facebook.com/LibreELEC"
 
 msgctxt "#700"
 msgid "Configure a hostname, keyboard type, perform a reset, update, or backups and restores"
-msgstr "Configurer un nom d’hôte, le type de clavier, réinitialiser, mettre à jour, sauvegarder et restaurer"
+msgstr "Configuration du nom d'hôte, le type de clavier, effectuer une remise à zéro, une mise à jour, une sauvegarde ou une restauration"
 
 msgctxt "#701"
 msgid "Configure network startup options, NTP and VPNs"
-msgstr "Configurer les options de démarrage réseau, NTP et VPNs"
+msgstr "Configuration des options de réseau au démarrage, NTP et VPNs"
 
 msgctxt "#702"
 msgid "Manage the Ethernet, Wireless and VPN connections available to the system"
-msgstr "Gérer les connexions Ethernet, Wi-Fi et VPN du système"
+msgstr "Gérer les connexions filaires, Wifi et les VPN accessibles au système"
 
 msgctxt "#703"
 msgid "Configure system services like Samba, SSH, Cron, Avahi and Syslog"
-msgstr "Configurer les services du système tels que Samba, SSH, Cron, Avahi et Syslog"
+msgstr "Configuration des services système tels que Samba, SSH, Cron, Avahi et Syslog"
 
 msgctxt "#704"
 msgid "Configure and pair Bluetooth devices"
-msgstr "Configurer et associer des périphériques Bluetooth"
+msgstr "Configuration et appairage des dispositifs Bluetooth"
 
 msgctxt "#705"
 msgid "Useful information like version and architecture details, support and social media links, and how to make a donation to the project"
-msgstr "Informations utiles comme les détails sur la version, l'architecture, les liens pour le support, les réseaux sociaux, et les manières de faire des dons au projet"
+msgstr "Informations utiles comme les détails de version et d'architecture, liens vers le support et les médias sociaux et comment effectuer une donation au projet"
 
 msgctxt "#710"
 msgid "Configure the Hostname of your @DISTRONAME@ system. This will be used for the HTPC \\\\hostname in Windows and SMB server name in the Mac OS Finder"
-msgstr "Configurer le nom d'hôte de votre système @DISTRONAME@. Celui-ci sera utilisé comme \\\\nom à partir de Windows et comme nom de serveur SMB dans le Finder Mac OS"
+msgstr "Configuration du nom d'hôte de votre système @DISTRONAME@. Utilisé pour atteindre le HTPC par \\\\hostname dans Windows et nom du serveur SMB dans le Finder Mac OS"
 
 msgctxt "#711"
 msgid "Configure the 1st keyboard software layout"
-msgstr "Configurer le 1er type de clavier"
+msgstr "Configuration de la 1ère disposition logicielle du clavier"
 
 msgctxt "#712"
 msgid "Configure the 2nd keyboard software layout"
-msgstr "Configurer le 2ème type de clavier"
+msgstr "Configuration de la 2de disposition logicielle du clavier"
 
 msgctxt "#713"
 msgid "Configure the physical keyboard type"
-msgstr "Configurer le type physique de clavier"
+msgstr "Configuration du type physique de clavier"
 
 msgctxt "#714"
 msgid "@DISTRONAME@ can be configured for automatic or manual updates. Automatic updates are available on stable releases and stable release candidates. Automatic update self-disables on beta and development builds"
-msgstr "@DISTRONAME@ peut être configuré pour être mis à jour manuellement ou automatiquement. Les mises à jours automatiques sont disponibles pour les versions stables et release candidates. La mise à jour automatique est désactivée pour les versions de test et les versions de développement"
+msgstr "@DISTRONAME@ peut être configuré pour une mise à jour automatique ou manuelle. Les mises à jour automatiques sont disponibles sur les versions stables et les versions candidates. Les mises à jour sont automatiquement désactivées sur les version beta et de développement"
 
 msgctxt "#715"
 msgid "Set to ON and an on-screen notification will be displayed when a new update is available"
-msgstr "Activer pour afficher une notification quand une nouvelle version est disponible"
+msgstr "Activer cette option affichera une notification à l'écran lorsqu'une mise à jour sera disponible"
 
-msgctxt "#716"
-msgid "Click to manually check the @DISTRONAME@ servers for an updated release"
-msgstr "Cliquer pour vérifier si une nouvelle version @DISTRONAME@ est disponible"
+msgctxt "#718"
+msgid "Send config.txt, cmdline.txt, shutdown.sh, autostart.sh, and kodi.log to http://sprunge.us and display the short URL"
+msgstr "Envoie config.txt, cmdline.txt, shutdown.sh, autostart.sh, et kodi.log à http://sprunge.us et affiche l'URL raccourcie"
 
 msgctxt "#720"
 msgid "Set to ON and Bluetooth devices will be disabled during power-saving modes"
-msgstr "Activer pour déconnecter les périphériques Bluetooth en mode économie d'énergie"
+msgstr "Activer cette option désactivera les périphériques bluetooth durant les phases d'économies d'énergie"
 
 msgctxt "#722"
 msgid "Create a tar archive containing all @DISTRONAME@ and Kodi configuration settings, databases and thumbnail content. Backup files will be stored in /storage/backups"
-msgstr "Créer une archive tar contenant les paramètres de configuration, les bases de données et les images pour @DISTRONAME@ et Kodi. Les fichiers de sauvegarde seront stockés dans « /storage/backups »."
+msgstr "Créer une archive tar qui contient tout les paramètres de configuration de @DISTRONAME@ et Kodi, ainsi que les bases de données et les miniatures. Les fichiers sont sauvegardés dans /storage/backups"
 
 msgctxt "#723"
 msgid "Restore a tar archive backup previously created using the backup option above"
-msgstr "Restaurer une archive tar précédemment créée en utilisant l'option de sauvegarde"
+msgstr "Restaure une archive tar précédemment créée en utilisant l'option de sauvegarde ci-dessus"
 
 msgctxt "#724"
-msgid "[COLOR FF00FF00]SOFT RESET[/COLOR]\nPermanently reset @DISTRONAME@ configuration to defaults (resets also Kodi to default including your library. your media - music/videos/etc are not touched)"
-msgstr "[COLOR FF00FF00]RÉINITIALISATION À CHAUD[/COLOR]\nRéinitialise définitivement la configuration de @DISTRONAME@ (réinitialise également Kodi, médiathèque comprise. les médias - musiques/vidéos/etc ne seront pas touchés)"
+msgid ""
+"[COLOR FF00FF00]SOFT RESET[/COLOR]\n"
+"Permanently reset @DISTRONAME@ configuration to defaults (resets also Kodi to default including your library. your media - music/videos/etc are not touched)"
+msgstr ""
+"[COLOR FF00FF00]REINITIALISATION PARTIELLE[/COLOR]\n"
+"Remise par défaut de la configuration de @DISTRONAME@ (réinitialise également les paramètres de Kodi y compris les bibliothèques. Vos fichiers - musique/vidéos/etc ne sont pas supprimés)"
 
 msgctxt "#725"
-msgid "[COLOR FFFF0000]HARD RESET[/COLOR]\nPermanently reset @DISTRONAME@ and Kodi configuration to defaults (everything in your storage partition will be deleted)"
-msgstr "[COLOR FFFF0000]RÉINITIALISATION À FROID[/COLOR]\nRéinitialise définitivement la configuration de @DISTRONAME@ et Kodi (tout le contenu de la partition de stockage sera supprimé)"
+msgid ""
+"[COLOR FFFF0000]HARD RESET[/COLOR]\n"
+"Permanently reset @DISTRONAME@ and Kodi configuration to defaults (everything in your storage partition will be deleted)"
+msgstr ""
+"[COLOR FFFF0000]REINITIALISATION COMPLETE[/COLOR]\n"
+"Remise par défaut de la configuration de @DISTRONAME@ et de Kodi (tout le contenu de votre espace de stockage sera supprimé)"
 
 msgctxt "#726"
 msgid "Enable or disable support for Wireless (WLAN) networks"
-msgstr "Activer ou désactiver le support des réseaux sans fil (WLAN)"
+msgstr "Activer ou désactiver le support du réseau sans fil (WiFi)"
 
 msgctxt "#727"
 msgid "Enable a 'tethered' Wireless Access Point. This requires your wireless card (and driver) to support bridging and access point mode. Not all cards are capable."
-msgstr "Activer le partage de connexion sans fil. Votre carte Wi-Fi (et le pilote) doit supporter le mode pont et le mode point d'accès. Toutes les cartes ne le peuvent pas."
+msgstr "Active le point d'accès sans fil. Cela nécessite que la carte WiFi (et son pilote) supporte le pontage et le mode \"point d'accès\". Toutes les cartes n'en sont pas capables."
 
 msgctxt "#728"
 msgid "Configure the Access Point SSID"
-msgstr "Configurer le SSID du point d'accès"
+msgstr "Configurer le point d'accès SSID"
 
 msgctxt "#729"
 msgid "Configure the Access Point Passphrase"
-msgstr "Configurer le mot de passe du point d'accès"
+msgstr "Configure le mot de passe du point d'accès"
 
 msgctxt "#730"
 msgid "Enable or disable support for Wired (Ethernet) networks"
-msgstr "Activer ou désactiver le support des réseaux filaires (Ethernet)"
+msgstr "Activer ou désactiver le support des réseaux câblés (Ethernet)"
 
 msgctxt "#732"
 msgid "Configure the 1st time (NTP) server"
-msgstr "Configurer le 1er serveur de temps (NTP)"
+msgstr "Configuration du 1er serveur de temps (NTP)"
 
 msgctxt "#733"
 msgid "Configure the 2nd time (NTP) server"
-msgstr "Configurer le 2ème serveur de temps (NTP)"
+msgstr "Configuration du 2nd serveur de temps (NTP)"
 
 msgctxt "#734"
 msgid "Configure the 3rd time (NTP) server"
-msgstr "Configurer le 3ème serveur de temps (NTP)"
+msgstr "Configuration du 3ème serveur de temps (NTP)"
 
 msgctxt "#736"
 msgid "Set to ON to delay Kodi startup until the network is available. Use this if the OS is booting into Kodi before the network is up and central MySQL databases are accessible."
-msgstr "Activer pour retarder le démarrage de Kodi jusqu’à ce que le réseau soit disponible. Utiliser cette option si le système démarre avant que le réseau ne soit activé et que la base centralisée MySQL ne soit accessible."
+msgstr "Activer cette option pour reporter le démarrage de Kodi jusqu'à ce que l'accès réseau soit disponible. Utilisez cette option si le système démarre Kodi avant que le réseau et la base MySQL ne soient disponibles."
 
 msgctxt "#737"
 msgid "737"
@@ -174,35 +183,39 @@ msgstr "737"
 
 msgctxt "#738"
 msgid "Set to ON to enable the embedded Samba (SMB) filesharing service"
-msgstr "Activer l'accès au partage de fichiers Samba (SMB)"
+msgstr "Activer cette option pour permettre l'utilisation du service de partage de fichiers Samba (SMB)"
 
 msgctxt "#739"
 msgid "Set to ON to require username/password access to local Samba fileshares"
-msgstr "Activer pour que l'accès aux partages Samba requière un identifiant et mot de passe"
+msgstr "Activer cette option pour demander un identifiant et un mot de passe pour accéder aux partages Samba locaux"
 
 msgctxt "#740"
 msgid "Set the username for Samba sharing"
-msgstr "Configurer le nom d'utilisateur pour le partage Samba"
+msgstr "Configurer l'utilisateur des partages Samba"
 
 msgctxt "#741"
 msgid "Set the password for Samba sharing"
-msgstr "Configurer le mot de passe pour le partage Samba"
+msgstr "Configurer le mot de passe des partages Samba"
 
 msgctxt "#742"
 msgid "Set to ON to enable the embedded SSH server. The SSH console can be accessed with username 'root' and password '@ROOT_PASSWORD@'."
-msgstr "Activer l'accès SSH. La console SSH sera accessible avec l'identifiant 'root' et le mot de passe '@ROOT_PASSWORD@'."
+msgstr "Activer cette option pour permettre l'utilisation du serveur SSH. La console SSH peut être atteinte avec le compte 'root' et le mot de passe '@ROOT_PASSWORD@'."
 
 msgctxt "#743"
 msgid "Set to ON if you have copied private SSH keys to your HTPC and would like to improve security by disabling SSH username and password authentication."
-msgstr "Activer si vous avez copié des clés privées sur votre système pour améliorer la sécurité en désactivant l’authentification SSH par identifiant et mot de passe."
+msgstr "Activer cette option si vous avez copié des clés privées SSH sur votre HTPC et que vous voulez améliorer la sécurité en désactivant l'accès par identifiant et mot de passe SSH."
 
 msgctxt "#744"
 msgid "Set to ON to enable the Avahi (Zeroconf/Bonjour) network discovery service"
-msgstr "Activer le service de découverte réseau Avahi (Zeroconf / Bonjour)"
+msgstr "Activer cette option pour utiliser le service de découverte réseau Avahi (Zeroconf/Bonjour)"
 
 msgctxt "#745"
 msgid "Set to ON to enable the cron daemon"
-msgstr "Activer le démon Cron"
+msgstr "Activer cette option pour utiliser le démon cron"
+
+msgctxt "#746"
+msgid "Set to ON to enable the lirc daemon"
+msgstr "Activer cette option pour utiliser le démon lirc"
 
 msgctxt "#750"
 msgid "750"
@@ -210,23 +223,39 @@ msgstr "750"
 
 msgctxt "#751"
 msgid "With OBEX filetransfer you can send files, for example movies or pictures over bluetooth to @DISTRONAME@."
-msgstr "Vous pouvez envoyer des fichiers en Bluetooth à @DISTRONAME@ avec le système OBEX, comme des films ou des images."
+msgstr "Avec le système de transfert OBEX, vous pouvez envoyer des fichiers, par exemple des films ou des images par bluetooth à @DISTRONAME@."
 
 msgctxt "#752"
 msgid "Here you can set the folder location where OBEX file transfer should store incoming files"
-msgstr "Saisir ici le dossier où OBEX doit enregistrer les fichiers arrivants."
+msgstr "Vous pouvez saisir ici le dossier dans lequel OBEX doit stocker les fichiers reçus"
 
 msgctxt "#753"
 msgid "Configure the 1st keyboard software Variant"
-msgstr "Configurer la variante du 1er type de clavier"
+msgstr "Configure la 1ère variante de clavier logiciel"
 
 msgctxt "#754"
 msgid "Configure the 2nd keyboard software Variant"
-msgstr "Configurer la variante du 2ème type de clavier"
+msgstr "Configure la 2de variante de clavier logiciel"
 
 msgctxt "#755"
 msgid "Auto share external drives / partitions"
-msgstr "Partage automatique des partitions / lecteurs externes"
+msgstr "Partage automatique des disques / partitions externes"
+
+msgctxt "#760"
+msgid "Select an update channel"
+msgstr "Sélectionne un canal de mise à jour"
+
+msgctxt "#761"
+msgid "Enable to allow entering a custom update url"
+msgstr "Activer pour permettre d'entrer une url personnalisée de mise à jour"
+
+msgctxt "#762"
+msgid "Enter a custom update url (url should be the root of the update files)"
+msgstr "Entrez une url personnalisée de mise à jour (l'url doit être la racine des fichiers de mise à jour)"
+
+msgctxt "#770"
+msgid "Select an available version"
+msgstr "Sélectionnez une version disponible"
 
 msgctxt "#32001"
 msgid "Services"
@@ -250,7 +279,7 @@ msgstr "Disposition du clavier"
 
 msgctxt "#32012"
 msgid "Select Action"
-msgstr "Choisir une Action"
+msgstr "Sélectionnez une action"
 
 msgctxt "#32013"
 msgid "Updates"
@@ -259,6 +288,30 @@ msgstr "Mises à jour"
 msgctxt "#32014"
 msgid "Automatic Updates"
 msgstr "Mises à jour automatiques"
+
+msgctxt "#32015"
+msgid "Update Channel"
+msgstr "Canal de mise à jour"
+
+msgctxt "#32016"
+msgid "Show Custom Channels"
+msgstr "Afficher les canaux personnalisés"
+
+msgctxt "#32017"
+msgid "  - Custom Channel 1"
+msgstr "- Canal personnalisé 1"
+
+msgctxt "#32018"
+msgid "  - Custom Channel 2"
+msgstr "- Canal personnalisé 2"
+
+msgctxt "#32019"
+msgid "  - Custom Channel 3"
+msgstr "- Canal personnalisé 3"
+
+msgctxt "#32020"
+msgid "Available Versions"
+msgstr "Versions disponibles"
 
 msgctxt "#32100"
 msgid "Connections"
@@ -270,7 +323,7 @@ msgstr "Réseau"
 
 msgctxt "#32102"
 msgid "Wireless Networks"
-msgstr "Réseaux sans fil"
+msgstr "Réseaux sans-fil"
 
 msgctxt "#32103"
 msgid "Wired Networks"
@@ -278,19 +331,19 @@ msgstr "Réseaux filaires"
 
 msgctxt "#32105"
 msgid "Active"
-msgstr "Active"
+msgstr "Actif"
 
 msgctxt "#32106"
 msgid "Username"
-msgstr "Identifiant"
+msgstr "Nom d'utilisateur"
 
 msgctxt "#32107"
 msgid "Passphrase"
-msgstr "Mot de passe"
+msgstr "Phrase de passe"
 
 msgctxt "#32108"
 msgid "Enable 'tethered' Wireless Access Point"
-msgstr "Activer le partage de connexion sans fil"
+msgstr "Activer le point d'accès sans fil"
 
 msgctxt "#32109"
 msgid "Connect Automatically"
@@ -310,7 +363,7 @@ msgstr "IPv6"
 
 msgctxt "#32113"
 msgid "IP Address Method"
-msgstr "Méthode d'adressage"
+msgstr "Méthode de récupération de l'adresse IP"
 
 msgctxt "#32114"
 msgid "IP Address"
@@ -318,7 +371,7 @@ msgstr "Adresse IP"
 
 msgctxt "#32115"
 msgid "Subnet Mask"
-msgstr "Masque de sous-réseau"
+msgstr "masque de sous-réseau"
 
 msgctxt "#32116"
 msgid "Default Gateway"
@@ -338,15 +391,15 @@ msgstr "Serveurs DNS"
 
 msgctxt "#32120"
 msgid "Nameserver #1"
-msgstr "DNS #1"
+msgstr "Serveur de nom #1"
 
 msgctxt "#32121"
 msgid "Nameserver #2"
-msgstr "DNS #2"
+msgstr "Serveur de nom #2"
 
 msgctxt "#32122"
 msgid "Nameserver #3"
-msgstr "DNS #3"
+msgstr "Serveur de nom #3"
 
 msgctxt "#32123"
 msgid "NTP Servers"
@@ -390,35 +443,39 @@ msgstr "Supprimer"
 
 msgctxt "#32142"
 msgid "Refresh"
-msgstr "Rafraîchir"
+msgstr "Rafraichir"
 
 msgctxt "#32143"
 msgid "Disconnect"
-msgstr "Déconnexion"
+msgstr "Déconnecter"
 
 msgctxt "#32144"
 msgid "Connect"
-msgstr "Connexion"
+msgstr "Connecter"
+
+msgctxt "#32145"
+msgid "Pair"
+msgstr "Appairer"
 
 msgctxt "#32146"
 msgid "Hidden Network Name"
-msgstr "Nom de réseau masqué"
+msgstr "Nom du réseau masqué"
 
 msgctxt "#32147"
 msgid "Wireless Network Passphrase"
-msgstr "Mot de passe du réseau sans fil"
+msgstr "Phrase de passe du réseau sans-fil"
 
 msgctxt "#32148"
 msgid "Wireless Network Username"
-msgstr "Identifiant du réseau sans fil"
+msgstr "Utilisateur du réseau sans-fil"
 
 msgctxt "#32150"
 msgid "Edit"
-msgstr "Éditer"
+msgstr "Modifier"
 
 msgctxt "#32180"
 msgid "Would you like to update @DISTRONAME@ now?"
-msgstr "Faut-il mettre @DISTRONAME@ à jour ?"
+msgstr "Voulez-vous mettre à jour @DISTRONAME@ maintenant ?"
 
 msgctxt "#32181"
 msgid "Filename"
@@ -434,7 +491,7 @@ msgstr "Temps restant"
 
 msgctxt "#32184"
 msgid "Extract file"
-msgstr "Extraction du fichier"
+msgstr "Fichier extrait"
 
 msgctxt "#32185"
 msgid "Extract speed"
@@ -442,11 +499,11 @@ msgstr "Vitesse d'extraction"
 
 msgctxt "#32186"
 msgid "Initialize Archive File"
-msgstr "Initialiser le fichier d'archivage"
+msgstr "Initialiser fichier d'archive"
 
 msgctxt "#32187"
-msgid "Latest Version"
-msgstr "Dernière version"
+msgid "New Version"
+msgstr "Nouvelle version"
 
 msgctxt "#32188"
 msgid "Current Version"
@@ -459,6 +516,10 @@ msgstr "Identification"
 msgctxt "#32190"
 msgid "System Name"
 msgstr "Nom du système"
+
+msgctxt "#32191"
+msgid "Invalid URL"
+msgstr "URL invalide"
 
 msgctxt "#32196"
 msgid "About"
@@ -478,7 +539,7 @@ msgstr "SSH"
 
 msgctxt "#32202"
 msgid "Use Samba Password Authentication"
-msgstr "Utiliser un mot de passe Samba"
+msgstr "Utiliser l'authentification par mot de passe pour Samba"
 
 msgctxt "#32203"
 msgid "Disable SSH Password"
@@ -502,7 +563,7 @@ msgstr "Avahi"
 
 msgctxt "#32208"
 msgid "Hidden Wlan"
-msgstr "Wlan masqué"
+msgstr "Réseau sans-fil caché"
 
 msgctxt "#32212"
 msgid "Cancel"
@@ -510,7 +571,7 @@ msgstr "Annuler"
 
 msgctxt "#32216"
 msgid "Auto-Share External Drives"
-msgstr "Partage automatique des lecteurs externes"
+msgstr "Partager automatiquement les disques externes"
 
 msgctxt "#32300"
 msgid "Welcome to @DISTRONAME@"
@@ -522,7 +583,7 @@ msgstr "Bienvenue"
 
 msgctxt "#32302"
 msgid "This wizard will guide you through the process of setting up your new @DISTRONAME@ installation - setting your location, timezone and connecting you to the internet.[CR][CR]These settings can be changed later by navigating to Programs > @DISTRONAME@ Settings."
-msgstr "Cet assistant va vous guider durant votre nouvelle installation du système @DISTRONAME@ pour configurer votre position, votre fuseau horaire et vous permettre de vous connecter à Internet.[CR][CR]Ces paramètres peuvent être modifiés ultérieurement en allant dans Programmes > Paramètres @DISTRONAME@."
+msgstr "Cet assistant va vous guider au travers du processus de configuration de votre nouvelle installation de @DISTRONAME@ - paramétrage de votre localisation, fuseau horaire et connecter votre appareil à Internet.[CR][CR]Ces réglages peuvent être changés plus tard en allant dans Programmes > Paramètres @DISTRONAME@"
 
 msgctxt "#32303"
 msgid "Next"
@@ -530,7 +591,7 @@ msgstr "Suivant"
 
 msgctxt "#32304"
 msgid "To be identified easily on the network, your new @DISTRONAME@ machine needs a name.[CR][CR]Try to choose something meaningful - like the room it's in - so you'll know what it is when you see it on the network.[CR][CR]This name is used when configuring network services, like file sharing using samba."
-msgstr "Afin d'être facilement identifiable sur le réseau, votre nouvelle machine @DISTRONAME@ a besoin d'un nom.[CR][CR]Essayer de choisir un nom significatif - comme le nom de la pièce - pour bien l'identifier.[CR][CR]Ce nom est utilisé pour la configuration des services réseau, comme le partage de fichiers Samba."
+msgstr "Pour être identifié facilement sur le réseau, votre nouvelle machine @DISTRONAME@ doits posséder un nom.[CR][CR]Essayez de choisir quelque chose de parlant - comme la pièce dans laquelle il se trouve - afin de savoir de quoi il s'agit lorsque vous le verrez sur le réseau.[CR][CR]Ce nom est utilisé lorsque vous configurez les services réseaux, comme le partage de fichiers samba."
 
 msgctxt "#32305"
 msgid "Networking"
@@ -538,7 +599,7 @@ msgstr "Réseau"
 
 msgctxt "#32306"
 msgid "In order to download backdrops, banners and thumbnails for your movies and TV shows and to stream online content from sites like YouTube, @DISTRONAME@ needs to be connected the Internet.[CR][CR]An Internet connection is also required for @DISTRONAME@ to automatically update itself."
-msgstr "@DISTRONAME@ a besoin d'être connecté à internet pour télécharger les fanarts, les bannières et les posters pour les films et les séries TV, ou pour accéder aux contenus en ligne tels que YouTube.[CR][CR]Une connexion à Internet est également nécessaire pour les mises à jours automatiques de @DISTRONAME@."
+msgstr "Afin de télécharger les fonds d'écran, bannières et miniatures de vos films et séries TV et pour afficher les flux de sites comme YouTube, @DISTRONAME@ a besoin de se connecter à Internet.[CR][CR]Une connexion à Internet est également requise pour que @DISTRONAME@ se mette à jour automatiquement."
 
 msgctxt "#32308"
 msgid "Hostname:"
@@ -550,19 +611,19 @@ msgstr "Les réseaux suivants sont disponibles :"
 
 msgctxt "#32311"
 msgid "Sharing and Remote Access"
-msgstr "Partage et accès distant"
+msgstr "Partages et accès distants"
 
 msgctxt "#32312"
 msgid "@DISTRONAME@ also supports SSH for remote access. This is for advanced users who wish to interact with @DISTRONAME@'s underlying operating system. The default user is [COLOR blue]root[/COLOR] and the default password is [COLOR blue]@ROOT_PASSWORD@[/COLOR]."
-msgstr "@DISTRONAME@ permet l'accès distant par SSH. Cet accès est destiné aux utilisateurs avancés qui souhaitent interagir avec le système sous-jacent de @DISTRONAME@. L'utilisateur par défaut est [COLOR blue]root[/COLOR] et le mot de passe par défaut est [COLOR blue]@ROOT_PASSWORD@.[/COLOR]"
+msgstr "@DISTRONAME@ supporte également SSH pour l'accès distant. Principalement utilisé par les utilisateurs avancés qui souhaitent interagir avec le sous-système de @DISTRONAME@. L'utilisateur par défaut est [COLOR blue]root[/COLOR] et le mot de passe par défaut est [COLOR blue]@ROOT_PASSWORD@[/COLOR]."
 
 msgctxt "#32313"
 msgid "In order to share your files between your computers @DISTRONAME@ has incorporated a samba server. This samba server can be integrated into your local network by accessing it in a familiar way with Finder or Windows Explorer."
-msgstr "Pour partager les fichiers entre vos ordinateurs, @DISTRONAME@ embarque un serveur Samba. Ce serveur Samba peut être intégré dans votre réseau local pour un accès facile à partir du Finder de MacOS ou de l'explorateur de Windows."
+msgstr "Pour pouvoir partager vos fichiers entre vos ordinateurs, @DISTRONAME@ embarque un serveur samba. Ce serveur samba peut être intégré à votre réseau local afin d'y accéder facilement via le Finder ou Windows Explorer."
 
 msgctxt "#32316"
 msgid "Configure Services:"
-msgstr "Configurer les services :"
+msgstr "Configuration des services :"
 
 msgctxt "#32317"
 msgid "Thank you"
@@ -570,7 +631,7 @@ msgstr "Merci"
 
 msgctxt "#32318"
 msgid "Your @DISTRONAME@ installation is now complete and you'll now enter Kodi when you can set up your media libraries. For help with this, there is a guide available at wiki.kodi.tv[CR][CR]@DISTRONAME@ is developed by a dedicated team of developers who work purely in their spare time. Even as a volunteer project, we still have to pay for our internet bandwidth and development resources so if you find @DISTRONAME@ useful, we will always appreciate a donation of any amount.[CR][CR]Finally, we hope you enjoy using @DISTRONAME@ as much as we've enjoying building it. If you need any more help, you can find links to get help along with latest news at our website"
-msgstr "Votre installation @DISTRONAME@ est terminée. Vous allez maintenant accéder à Kodi où vous pourrez configurer votre bibliothèque multimédia. Un guide est disponible pour vous aider sur wiki.kodi.tv.[CR][CR]@DISTRONAME@ est développé par une équipe dévouée qui travaille exclusivement sur son temps libre. Malgré cela, nous avons besoin de payer la bande passante et les ressources pour le développement. Si vous trouvez @DISTRONAME@ utile, n'hésitez pas un faire un don, quelqu'en soit le montant.[CR][CR]Nous espérons que vous aimerez utiliser @DISTRONAME@ autant que nous aimons le créer. Si vous avez besoin de plus d'aide, vous pouvez utiliser les liens où vous trouverez de l'aide ainsi que les dernières actualités sur notre site Internet"
+msgstr "Votre installation de @DISTRONAME@ est maintenant terminée et vous allez maintenant pouvoir configurer vos bibliothèques multimédia en entrant dans Kodi. Pour obtenir de l'aide sur cette partie, un guide est disponible sur wiki.kodi.tv[CR][CR]@DISTRONAME@ est développé par une équipe dévouée de développeurs qui travaillent uniquement sur leur temps libre. Même s'il s'agit d'un projet bénévole, nous avons toujours à payer notre accès Internet et nos ressources de développement. Si vous trouvez @DISTRONAME@ utile, nous apprécierons toujours un don quel qu'en soit le montant.[CR][CR]Enfin, nous espérons que vous appréciez d'utiliser @DISTRONAME@ autant que nous avons plaisir à le développer. Si vous avez besoin de plus d'informations, vous pouvez trouver des liens pour obtenir de l'aide ainsi que les dernières nouvelles sur notre site web"
 
 msgctxt "#32319"
 msgid "Cron"
@@ -582,23 +643,23 @@ msgstr "Activer Cron"
 
 msgctxt "#32323"
 msgid "Reset to Defaults"
-msgstr "Réinitialisation"
+msgstr "Réinitialiser les paramètres par défaut"
 
 msgctxt "#32324"
 msgid "Reset System Settings to defaults"
-msgstr "Restaurer les paramètres système par défaut"
+msgstr "Réinitialiser les paramètres système par défaut"
 
 msgctxt "#32325"
 msgid "Reset @DISTRONAME@ to defaults"
-msgstr "Réinitialiser @DISTRONAME@ à ses valeurs par défaut"
+msgstr "Réinitialiser les paramètres de @DISTRONAME@ par défaut"
 
 msgctxt "#32326"
 msgid "Are you sure?"
-msgstr "Le faut-il vraiment ?"
+msgstr "Êtes-vous sûr(e) ?"
 
 msgctxt "#32328"
 msgid "The system must reboot."
-msgstr "Le système doit redémarrer."
+msgstr "Le système doit être redémarré."
 
 msgctxt "#32329"
 msgid "Rebooting in %d seconds"
@@ -614,7 +675,7 @@ msgstr "Bluetooth"
 
 msgctxt "#32333"
 msgid "Connected: "
-msgstr "Connecté : "
+msgstr "Connecté :"
 
 msgctxt "#32334"
 msgid "Yes"
@@ -626,15 +687,15 @@ msgstr "Non"
 
 msgctxt "#32338"
 msgid "No Bluetooth adapter found."
-msgstr "Aucun adaptateur Bluetooth trouvé."
+msgstr "Pas d'adaptateur Bluetooth trouvé."
 
 msgctxt "#32339"
 msgid "No Bluetooth device found. Please put your Bluetooth device into discovery mode[CR]and start the scan"
-msgstr "Aucun périphérique Bluetooth trouvé. Mettre le périphérique Bluetooth en mode découverte[CR]et lancer l'analyse"
+msgstr "Aucun périphérique Bluetooth trouvé. Veuillez activer le mode découverte de votre périphérique[CR]et lancer la recherche"
 
 msgctxt "#32343"
 msgid "Enter the following Key on your Device."
-msgstr "Saisir la clé suivante sur le périphérique."
+msgstr "Entrez la clé suivante sur votre périphérique."
 
 msgctxt "#32344"
 msgid "Enable Bluetooth"
@@ -646,11 +707,11 @@ msgstr "Le Bluetooth est désactivé"
 
 msgctxt "#32358"
 msgid "Trust and Connect"
-msgstr "Approuver et connecter"
+msgstr "Faire confiance et connecter"
 
 msgctxt "#32362"
 msgid "Check for updates now:"
-msgstr "Vérifier les mises à jours :"
+msgstr "Rechercher des mises à jour maintenant :"
 
 msgctxt "#32363"
 msgid "@DISTRONAME@"
@@ -662,7 +723,7 @@ msgstr "Mise à jour disponible"
 
 msgctxt "#32365"
 msgid "Show Update Notifications"
-msgstr "Afficher les notifications de mises à jour"
+msgstr "Afficher les notifications de mise à jour"
 
 msgctxt "#32366"
 msgid "Update Download Completed"
@@ -678,11 +739,11 @@ msgstr "Paramètres réseau avancés"
 
 msgctxt "#32369"
 msgid "Wait for network before starting Kodi"
-msgstr "Attendre le réseau avant de lancer Kodi"
+msgstr "Attendre le réseau avant de démarrer Kodi"
 
 msgctxt "#32370"
 msgid "Maximum Wait Time (Sec.)"
-msgstr "Temps d'attente maximum (Secondes)"
+msgstr "Temps maximum d'attente (secondes)"
 
 msgctxt "#32371"
 msgid "Backup"
@@ -694,23 +755,31 @@ msgstr "Créer une sauvegarde du système et de Kodi"
 
 msgctxt "#32373"
 msgid "Restore Backup"
-msgstr "Restaurer la sauvegarde"
+msgstr "Restaurer une sauvegarde"
 
 msgctxt "#32375"
 msgid "Backup Progress"
 msgstr "Progression de la sauvegarde"
 
+msgctxt "#32376"
+msgid "Submit Log"
+msgstr "Soumettre des logs"
+
+msgctxt "#32377"
+msgid "Pastebin system logs and get short URL"
+msgstr "Envoyer sur Pastebin les logs système et récupérer l'URL raccourcie"
+
 msgctxt "#32379"
 msgid "There is not enough free storage space to continue!"
-msgstr "L'espace disque disponible est insuffisant pour continuer !"
+msgstr "Il n'y a pas assez d'espace libre pour continuer !"
 
 msgctxt "#32380"
 msgid "Restoring system settings requires a reboot. Are you sure you want to restore?"
-msgstr "Restaurer les paramètres système requiert un redémarrage. Faut-il vraiment restaurer ?"
+msgstr "Restaurer les paramètres système nécessite de redémarrer. Êtes-vous sûr(e) de vouloir restaurer ?"
 
 msgctxt "#32381"
 msgid "Accept incoming Bluetooth Filetransfer ?"
-msgstr "Accepter le transfert Bluetooth entrant ?"
+msgstr "Accepter le transfert de fichiers entrants par Bluetooth ?"
 
 msgctxt "#32382"
 msgid "Speed"
@@ -726,15 +795,15 @@ msgstr "OBEX activé"
 
 msgctxt "#32385"
 msgid "OBEX Upload Folder"
-msgstr "Dossier d'envoi OBEX"
+msgstr "Dossier de chargement OBEX"
 
 msgctxt "#32386"
 msgid "Keyboard Layout Variant #1"
-msgstr "Variante N°1 du clavier"
+msgstr "Variante de disposition du clavier #1"
 
 msgctxt "#32387"
 msgid "Keyboard Layout Variant #2"
-msgstr "Variante N°2 du clavier"
+msgstr "Variante de disposition du clavier #2"
 
 msgctxt "#32388"
 msgid "Enable Standby"
@@ -746,5 +815,12 @@ msgstr "Désactiver la mise en veille"
 
 msgctxt "#32390"
 msgid "Settings addon is not yet ready, please try again later."
-msgstr "L'extension Réglages n'est pas encore prête, merci de réessayer plus tard."
+msgstr "Le greffon des paramètres n'est pas encore prêt, veuillez ré-essayer plus tard."
 
+msgctxt "#32391"
+msgid "Lirc"
+msgstr "Lirc"
+
+msgctxt "#32392"
+msgid "Enable Lirc"
+msgstr "Activer Lirc"

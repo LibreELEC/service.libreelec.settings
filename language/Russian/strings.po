@@ -2,19 +2,19 @@
 # Addon Name: @DISTRONAME@ Configuration
 # Addon id: service.libreelec.settings
 # Addon Provider: LibreELEC
+# Translators:
+# Serge Rodionov <buzzzzer@gmail.com>, 2016
 msgid ""
 msgstr ""
-"Project-Id-Version: XBMC Addons\n"
-"Report-Msgid-Bugs-To: alanwww1@xbmc.org\n"
-"POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Kodi Translation Team\n"
-"Language-Team: Russian (http://www.transifex.com/projects/p/xbmc-addons/language/ru/)\n"
+"Project-Id-Version: LibreELEC Settings Add-on\n"
+"PO-Revision-Date: 2017-03-11 16:20+0100\n"
+"Last-Translator: Serge Rodionov <buzzzzer@gmail.com>\n"
+"Language-Team: Russian (Russia) (http://www.transifex.com/libreelec/service_libreelec_settings/language/ru_RU/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: ru\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Language: ru_RU\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n%100>=11 && n%100<=14)? 2 : 3);\n"
 
 msgctxt "#600"
 msgid "@DISTRONAME@ Settings"
@@ -53,20 +53,20 @@ msgid "Architecture: "
 msgstr "Архитектура:"
 
 msgctxt "#609"
-msgid "Libre Embedded Linux Entertainment Center (LibreELEC) is a minimal Linux distribution purpose built for Kodi media center. LibreELEC is designed to boot fast with an installation process simple enough for anyone to convert a bare HTPC into a fully configured media machine in under 15 minutes."
-msgstr "Libre Embedded Linux Entertainment Center (LibreELEC) — это минималистичный дистрибутив Linux, предназначенный для развертывания медиацентра на базе Kodi. LibreELEC быстро загружается и легко настраивается, позволяя превратить «голое железо» в полностью настроенный медиацентр менее чем за 15 минут."
+msgid "LibreELEC is a minimal Linux distribution purpose built for Kodi media center. LibreELEC is designed to boot fast with an installation process simple enough for anyone to convert a bare HTPC into a fully configured media machine in under 15 minutes."
+msgstr "LibreELEC — это минималистичный дистрибутив Linux, предназначенный для развертывания медиацентра на базе Kodi. LibreELEC быстро загружается и легко настраивается, позволяя превратить «голое железо» в полностью настроенный медиацентр менее чем за 15 минут."
 
 msgctxt "#610"
-msgid "[B]Support:[/B][CR]Web: http://libreelec.tv[CR]Forum: http://forum.libreelec.tv/[CR]Wiki: http://wiki.libreelec.tv[CR][CR][B]Social Media:[/B][CR]IRC: #libreelec on freenode.net (web-based chat is also available from the website)[CR]Twitter: https://twitter.com/libreelec[CR]Facebook: http://www.facebook.com/LibreELEC[CR]Google+: https://plus.google.com/+libreelec"
-msgstr "[B]Поддержка:[/B][CR]Веб: http://libreelec.tv[CR]Форум: http://forum.libreelec.tv/[CR]Вики: http://wiki.libreelec.tv[CR][CR][B]Социальные ресурсы:[/B][CR]IRC: #libreelec на freenode.net (веб-чат также доступен на сайте)[CR]Twitter: https://twitter.com/libreelec[CR]Facebook: http://www.facebook.com/LibreELEC[CR]Google+: https://plus.google.com/+libreelec"
+msgid "[B]Support:[/B][CR]Web: http://libreelec.tv[CR]Forum: http://forum.libreelec.tv/[CR]Wiki: http://wiki.libreelec.tv[CR][CR][B]Social Media:[/B][CR]IRC: #libreelec on freenode.net (web-based chat is also available from the website)[CR]Twitter: https://twitter.com/libreelec[CR]Facebook: http://www.facebook.com/LibreELEC"
+msgstr "[B]Поддержка:[/B][CR]Веб: http://libreelec.tv[CR]Форум: http://forum.libreelec.tv[CR]Вики: http://wiki.libreelec.tv[CR][CR][B]Социальные ресурсы:[/B][CR]IRC: #libreelec на freenode.net (веб-чат также доступен на сайте)[CR]Twitter: https://twitter.com/libreelec[CR]Facebook: http://www.facebook.com/LibrELEC"
 
 msgctxt "#700"
 msgid "Configure a hostname, keyboard type, perform a reset, update, or backups and restores"
-msgstr "Конфигурация имени хоста, типа клавиатуры, а также возможность сброса, обновления или резервного копирования и восстановления"
+msgstr "Настройки имени хоста, типа клавиатуры, а также возможности сброса, обновления или резервного копирования и восстановления"
 
 msgctxt "#701"
 msgid "Configure network startup options, NTP and VPNs"
-msgstr "Настройка параметров запуска сети, сетевого времени и виртуальных частных сетей"
+msgstr "Настройки параметров сети, серверов времени NTP и VPN"
 
 msgctxt "#702"
 msgid "Manage the Ethernet, Wireless and VPN connections available to the system"
@@ -78,7 +78,7 @@ msgstr "Конфигурация системных служб, таких ка�
 
 msgctxt "#704"
 msgid "Configure and pair Bluetooth devices"
-msgstr "Конфигурация и сопряжение устройств Bluetooth"
+msgstr "Настройка и сопряжение устройств Bluetooth"
 
 msgctxt "#705"
 msgid "Useful information like version and architecture details, support and social media links, and how to make a donation to the project"
@@ -86,19 +86,19 @@ msgstr "Полезная информация, такая как версия и
 
 msgctxt "#710"
 msgid "Configure the Hostname of your @DISTRONAME@ system. This will be used for the HTPC \\\\hostname in Windows and SMB server name in the Mac OS Finder"
-msgstr "Настройка имени хоста вашей системы @DISTRONAME@. Под этим именем Ваш HTPC будет виден в сети Windows, как \\\\имя_хоста, а также в проводнике Mac OS, как удаленный сервер с сетевыми дисками"
+msgstr "Настройка имени хоста вашей системы @DISTRONAME@. Под этим именем Ваш HTPC будет виден, как \\\\имя_хоста в сети Windows и SMB сервер проводнике Mac OS"
 
 msgctxt "#711"
 msgid "Configure the 1st keyboard software layout"
-msgstr "Конфигурация основной раскладки клавиатуры"
+msgstr "Настройка основной раскладки клавиатуры"
 
 msgctxt "#712"
 msgid "Configure the 2nd keyboard software layout"
-msgstr "Конфигурация дополнительной раскладки клавиатуры"
+msgstr "Настройка дополнительной раскладки клавиатуры"
 
 msgctxt "#713"
 msgid "Configure the physical keyboard type"
-msgstr "Конфигурация физического типа клавиатуры"
+msgstr "Выбор физического типа клавиатуры"
 
 msgctxt "#714"
 msgid "@DISTRONAME@ can be configured for automatic or manual updates. Automatic updates are available on stable releases and stable release candidates. Automatic update self-disables on beta and development builds"
@@ -106,15 +106,15 @@ msgstr "@DISTRONAME@ можно настроить для автоматичес
 
 msgctxt "#715"
 msgid "Set to ON and an on-screen notification will be displayed when a new update is available"
-msgstr "В положении ВКЛ на экране будут появляться уведомления о доступности нового ПО для обновления"
+msgstr "Включите, если хотите, чтобы на экране появлялись уведомления о доступности нового ПО для обновления"
 
-msgctxt "#716"
-msgid "Click to manually check the @DISTRONAME@ servers for an updated release"
-msgstr "Нажмите для ручной проверки обновлений на серверах @DISTRONAME@"
+msgctxt "#718"
+msgid "Send config.txt, cmdline.txt, shutdown.sh, autostart.sh, and kodi.log to http://sprunge.us and display the short URL"
+msgstr "Отправить config.txt, cmdline.txt, shutdown.sh, autostart.sh, and kodi.log на сайт http://sprunge.us и показать короткую URL ссылку"
 
 msgctxt "#720"
 msgid "Set to ON and Bluetooth devices will be disabled during power-saving modes"
-msgstr "Выберите ВКЛ для автоматического отключения Bluetooth устройств при простоях для экономии энергии"
+msgstr "Включите для автоматического отключения Bluetooth устройств при простоях для экономии энергии"
 
 msgctxt "#722"
 msgid "Create a tar archive containing all @DISTRONAME@ and Kodi configuration settings, databases and thumbnail content. Backup files will be stored in /storage/backups"
@@ -122,51 +122,59 @@ msgstr "Создание tar-архива со всеми настройками
 
 msgctxt "#723"
 msgid "Restore a tar archive backup previously created using the backup option above"
-msgstr "Восстановление резервной копии из tar-архива, созданной с помощью опции резервного копирования"
+msgstr "Восстановление резервной копии из tar-архива, созданной с помощью опции резервного копирования выше"
 
 msgctxt "#724"
-msgid "[COLOR FF00FF00]SOFT RESET[/COLOR]\nPermanently reset @DISTRONAME@ configuration to defaults (resets also Kodi to default including your library. your media - music/videos/etc are not touched)"
-msgstr "[COLOR FF00FF00]SOFT RESET[/COLOR]\nВосстанавливает параметры @DISTRONAME@ по умолчанию (также сбрасываются настройки Kodi, включая библиотеку; медиафайлы — музыка, видео и т.п. — остаются без изменений)"
+msgid ""
+"[COLOR FF00FF00]SOFT RESET[/COLOR]\n"
+"Permanently reset @DISTRONAME@ configuration to defaults (resets also Kodi to default including your library. your media - music/videos/etc are not touched)"
+msgstr ""
+"[COLOR FF00FF00]SOFT RESET[/COLOR]\n"
+"Восстанавливает параметры @DISTRONAME@ по умолчанию (также сбрасываются настройки Kodi, включая библиотеку; медиафайлы — музыка, видео и т.п. — остаются на месте)"
 
 msgctxt "#725"
-msgid "[COLOR FFFF0000]HARD RESET[/COLOR]\nPermanently reset @DISTRONAME@ and Kodi configuration to defaults (everything in your storage partition will be deleted)"
-msgstr "[COLOR FFFF0000]HARD RESET[/COLOR]\nВосстанавливает параметры для умолчанию для@DISTRONAME@ и Kodi (всё содержимое раздела с вашими данными будет удалено)"
+msgid ""
+"[COLOR FFFF0000]HARD RESET[/COLOR]\n"
+"Permanently reset @DISTRONAME@ and Kodi configuration to defaults (everything in your storage partition will be deleted)"
+msgstr ""
+"[COLOR FFFF0000]HARD RESET[/COLOR]\n"
+"Полный сброс @DISTRONAME@ и Kodi к параметрам по умолчанию (всё содержимое раздела с вашими данными будет удалено)"
 
 msgctxt "#726"
 msgid "Enable or disable support for Wireless (WLAN) networks"
-msgstr "Включить или выключить поддержку беспроводных сетей (WLAN)"
+msgstr "Включение или выключение поддержки беспроводных сетей (WLAN)"
 
 msgctxt "#727"
 msgid "Enable a 'tethered' Wireless Access Point. This requires your wireless card (and driver) to support bridging and access point mode. Not all cards are capable."
-msgstr "Включение режима Wireless Access Point. Эта опция подразумевает наличие поддержки режима моста и точки доступа Вашим беспроводным сетевым контроллером. Не все беспроводные адаптеры поддерживают данную опцию."
+msgstr "Включение режима Wireless Access Point. Эта опция подразумевает наличие поддержки режима моста и точки доступа Вашей сетевой картой (и драйвером) Не все беспроводные адаптеры поддерживают данную опцию."
 
 msgctxt "#728"
 msgid "Configure the Access Point SSID"
-msgstr "Конфигурация имени SSID точки доступа"
+msgstr "Настройка имени SSID точки доступа"
 
 msgctxt "#729"
 msgid "Configure the Access Point Passphrase"
-msgstr "Конфигурация пароля точки доступа"
+msgstr "Настройка пароля точки доступа"
 
 msgctxt "#730"
 msgid "Enable or disable support for Wired (Ethernet) networks"
-msgstr "Включить или выключить поддержку проводных (Ethernet) сетей"
+msgstr "Включение или отключение поддержки проводных (Ethernet) сетей"
 
 msgctxt "#732"
 msgid "Configure the 1st time (NTP) server"
-msgstr "Конфигурация первичного сервера времени (NTP)"
+msgstr "Настройка 1го сервера (NTP) времени"
 
 msgctxt "#733"
 msgid "Configure the 2nd time (NTP) server"
-msgstr "Конфигурация вторичного сервера времени (NTP)"
+msgstr "Настройка 2го сервера (NTP) времени"
 
 msgctxt "#734"
 msgid "Configure the 3rd time (NTP) server"
-msgstr "Конфигурация 3 сервера времени (NTP)"
+msgstr "Настройка 3го сервера (NTP) времени"
 
 msgctxt "#736"
 msgid "Set to ON to delay Kodi startup until the network is available. Use this if the OS is booting into Kodi before the network is up and central MySQL databases are accessible."
-msgstr "Выберите ВКЛ для задержки запуска Kodi до тех пор, пока не поднимется сеть. Используйте данную опцию в том случае, если загрузка Kodi требует доступ к внешним сетевым MySQL базам данных."
+msgstr "Включите для задержки запуска Kodi до тех пор, пока сеть не станет доступна. Используйте данную опцию в том случае, если загрузка Kodi требует доступ к внешним сетевым MySQL базам данных."
 
 msgctxt "#737"
 msgid "737"
@@ -174,35 +182,39 @@ msgstr "737"
 
 msgctxt "#738"
 msgid "Set to ON to enable the embedded Samba (SMB) filesharing service"
-msgstr "Выберите ВКЛ для включения встроенного сервиса Samba общего доступа к файлам (SMB)"
+msgstr "Включение встроенного сервиса Samba общего доступа к файлам (SMB)"
 
 msgctxt "#739"
 msgid "Set to ON to require username/password access to local Samba fileshares"
-msgstr "Выберите ВКЛ для предоставления доступа к локальным файловым ресурсам Samba с помощью имени пользователя и пароля"
+msgstr "Включите для предоставления доступа к локальным файловым ресурсам Samba с помощью имени пользователя и пароля"
 
 msgctxt "#740"
 msgid "Set the username for Samba sharing"
-msgstr "Задайте имя пользователя для доступа к файловым ресурсам Samba"
+msgstr "Укажите имя пользователя для доступа к файловым ресурсам Samba"
 
 msgctxt "#741"
 msgid "Set the password for Samba sharing"
-msgstr "Задайте пароль для доступа к файловым ресурсам Samba"
+msgstr "Укажите пароль для доступа к файловым ресурсам Samba"
 
 msgctxt "#742"
 msgid "Set to ON to enable the embedded SSH server. The SSH console can be accessed with username 'root' and password '@ROOT_PASSWORD@'."
-msgstr "Включите для включения встроенного SSH-сервера. Пользователь и пароли по-умолчанию для SSH:  пользователь: 'root', пароль: '@ROOT_PASSWORD@'."
+msgstr "Включение встроенного SSH-сервера. Пользователь и пароли по-умолчанию для SSH:  пользователь: 'root', пароль: '@ROOT_PASSWORD@'."
 
 msgctxt "#743"
 msgid "Set to ON if you have copied private SSH keys to your HTPC and would like to improve security by disabling SSH username and password authentication."
-msgstr "Выберите ВКЛ, если Вы скопировали Ваш публичный SSH-ключ на Ваш HTPC и хотите усилить безопасность путем выключения авторизации по паролю, оставив только авторизацию по ключу. "
+msgstr "Включите, если Вы скопировали Ваш публичный SSH-ключ на Ваш HTPC и хотите усилить безопасность путем выключения авторизации по паролю, оставив только авторизацию по ключу. "
 
 msgctxt "#744"
 msgid "Set to ON to enable the Avahi (Zeroconf/Bonjour) network discovery service"
-msgstr "Выберите ВКЛ для включения сервиса сетевого обнаружения Avahi (Zeroconf/Bonjour)"
+msgstr "Включение сервиса сетевого обнаружения Avahi (Zeroconf/Bonjour)"
 
 msgctxt "#745"
 msgid "Set to ON to enable the cron daemon"
-msgstr "Выберите ВКЛ для включения сервиса периодических заданий CRON"
+msgstr "Включение службы CRON для запуска задач по расписанию"
+
+msgctxt "#746"
+msgid "Set to ON to enable the lirc daemon"
+msgstr "Включение службы lirc "
 
 msgctxt "#750"
 msgid "750"
@@ -218,15 +230,31 @@ msgstr "Здесь можно указать папку, в которую бу�
 
 msgctxt "#753"
 msgid "Configure the 1st keyboard software Variant"
-msgstr "Конфигурация основной раскладки клавиатуры"
+msgstr "Настройка основной раскладки клавиатуры"
 
 msgctxt "#754"
 msgid "Configure the 2nd keyboard software Variant"
-msgstr "Конфигурация дополнительной раскладки клавиатуры"
+msgstr "Настройка дополнительной раскладки клавиатуры"
 
 msgctxt "#755"
 msgid "Auto share external drives / partitions"
 msgstr "Общий доступ к внешним дискам и разделам"
+
+msgctxt "#760"
+msgid "Select an update channel"
+msgstr "Выбор канала обновления"
+
+msgctxt "#761"
+msgid "Enable to allow entering a custom update url"
+msgstr "Включите, чтобы ввести ссылку url на пользовательский канал обновления"
+
+msgctxt "#762"
+msgid "Enter a custom update url (url should be the root of the update files)"
+msgstr "Введите ссылку url на канал обновления (ссылка должна указывать на корень обновляемых файлов)"
+
+msgctxt "#770"
+msgid "Select an available version"
+msgstr "Выберите версию из доступных"
 
 msgctxt "#32001"
 msgid "Services"
@@ -260,6 +288,30 @@ msgctxt "#32014"
 msgid "Automatic Updates"
 msgstr "Автоматические обновления"
 
+msgctxt "#32015"
+msgid "Update Channel"
+msgstr "Канал обновлений"
+
+msgctxt "#32016"
+msgid "Show Custom Channels"
+msgstr "Показывать пользовательские каналы"
+
+msgctxt "#32017"
+msgid "  - Custom Channel 1"
+msgstr "- Пользовательский канал 1"
+
+msgctxt "#32018"
+msgid "  - Custom Channel 2"
+msgstr "- Пользовательский канал 2"
+
+msgctxt "#32019"
+msgid "  - Custom Channel 3"
+msgstr "- Пользовательский канал 3"
+
+msgctxt "#32020"
+msgid "Available Versions"
+msgstr "Доступные версии"
+
 msgctxt "#32100"
 msgid "Connections"
 msgstr "Соединения"
@@ -286,7 +338,7 @@ msgstr "Пользователь"
 
 msgctxt "#32107"
 msgid "Passphrase"
-msgstr "Пароль WLAN"
+msgstr "Пароль"
 
 msgctxt "#32108"
 msgid "Enable 'tethered' Wireless Access Point"
@@ -326,7 +378,7 @@ msgstr "Шлюз по-умолчанию"
 
 msgctxt "#32117"
 msgid "Prefix Length"
-msgstr "Длина префиска"
+msgstr "Длина префикса"
 
 msgctxt "#32118"
 msgid "Privacy"
@@ -400,6 +452,10 @@ msgctxt "#32144"
 msgid "Connect"
 msgstr "Соединиться"
 
+msgctxt "#32145"
+msgid "Pair"
+msgstr "Сопряжение"
+
 msgctxt "#32146"
 msgid "Hidden Network Name"
 msgstr "Имя скрытой сети"
@@ -438,15 +494,15 @@ msgstr "Извлечь файл"
 
 msgctxt "#32185"
 msgid "Extract speed"
-msgstr "Скорость извлечения"
+msgstr "Скорость распаковки"
 
 msgctxt "#32186"
 msgid "Initialize Archive File"
 msgstr "Инициализация файла архива"
 
 msgctxt "#32187"
-msgid "Latest Version"
-msgstr "Последняя версия"
+msgid "New Version"
+msgstr "Новая версия"
 
 msgctxt "#32188"
 msgid "Current Version"
@@ -459,6 +515,10 @@ msgstr "Идентификация"
 msgctxt "#32190"
 msgid "System Name"
 msgstr "Имя системы"
+
+msgctxt "#32191"
+msgid "Invalid URL"
+msgstr "Неверная ссылка"
 
 msgctxt "#32196"
 msgid "About"
@@ -520,13 +580,25 @@ msgctxt "#32301"
 msgid "Welcome"
 msgstr "Добро пожаловать"
 
+msgctxt "#32302"
+msgid "This wizard will guide you through the process of setting up your new @DISTRONAME@ installation - setting your location, timezone and connecting you to the internet.[CR][CR]These settings can be changed later by navigating to Programs > @DISTRONAME@ Settings."
+msgstr "Этот мастер облегчит настройку при установке нового @DISTRONAME@ - определение вашего местоположения, часового пояса и подключения вас к Интернет.[CR][CR]Эти настройки можно изменить позже, перейдя в меню Программы > Настройки @DISTRONAME@."
+
 msgctxt "#32303"
 msgid "Next"
 msgstr "Следующ."
 
+msgctxt "#32304"
+msgid "To be identified easily on the network, your new @DISTRONAME@ machine needs a name.[CR][CR]Try to choose something meaningful - like the room it's in - so you'll know what it is when you see it on the network.[CR][CR]This name is used when configuring network services, like file sharing using samba."
+msgstr "Для того, чтобы легко идентифицировать вас в сети, вашей машине с @DISTRONAME@  нужно имя.[CR][CR]Попробуйте выбрать что-то осмысленное, чтобы понимать, что это такое, когда вы видите его в сети.[CR][CR]Это имя используется при настройке сетевых служб, таких как общий доступ к файлам с помощью Samba."
+
 msgctxt "#32305"
 msgid "Networking"
 msgstr "Сетевые настройки"
+
+msgctxt "#32306"
+msgid "In order to download backdrops, banners and thumbnails for your movies and TV shows and to stream online content from sites like YouTube, @DISTRONAME@ needs to be connected the Internet.[CR][CR]An Internet connection is also required for @DISTRONAME@ to automatically update itself."
+msgstr "Для того, чтобы загружать фанарт, баннеры и эскизы для ваших фильмов и сериалов и чтобы воспроизводить онлайн-контент с сайтов вроде YouTube, @DISTRONAME@ должен быть подключен к Интернет.[CR][CR]Подключение к Интернет также необходимо @DISTRONAME@  для автоматического обновления."
 
 msgctxt "#32308"
 msgid "Hostname:"
@@ -544,13 +616,21 @@ msgctxt "#32312"
 msgid "@DISTRONAME@ also supports SSH for remote access. This is for advanced users who wish to interact with @DISTRONAME@'s underlying operating system. The default user is [COLOR blue]root[/COLOR] and the default password is [COLOR blue]@ROOT_PASSWORD@[/COLOR]."
 msgstr "@DISTRONAME@ так же поддерживает SSH для удаленного доступа. Это необходимо опытным пользователям, которые хотят взаимодействовать с операционной системой @DISTRONAME@ напрямую. Пользователь по-умолчанию [COLOR blue]root[/COLOR] пароль по-умолчанию [COLOR blue]@ROOT_PASSWORD@[/COLOR]."
 
+msgctxt "#32313"
+msgid "In order to share your files between your computers @DISTRONAME@ has incorporated a samba server. This samba server can be integrated into your local network by accessing it in a familiar way with Finder or Windows Explorer."
+msgstr "Для того, чтобы обмениваться файлами между компьютерами в @DISTRONAME@ включен Samba сервер. Этот сервер может быть доступен в локальной сети обычным способом с помощью Finder или проводником Windows."
+
 msgctxt "#32316"
 msgid "Configure Services:"
-msgstr "Конфигурация служб:"
+msgstr "Настройка служб:"
 
 msgctxt "#32317"
 msgid "Thank you"
 msgstr "Спасибо Вам"
+
+msgctxt "#32318"
+msgid "Your @DISTRONAME@ installation is now complete and you'll now enter Kodi when you can set up your media libraries. For help with this, there is a guide available at wiki.kodi.tv[CR][CR]@DISTRONAME@ is developed by a dedicated team of developers who work purely in their spare time. Even as a volunteer project, we still have to pay for our internet bandwidth and development resources so if you find @DISTRONAME@ useful, we will always appreciate a donation of any amount.[CR][CR]Finally, we hope you enjoy using @DISTRONAME@ as much as we've enjoying building it. If you need any more help, you can find links to get help along with latest news at our website"
+msgstr "Установка @DISTRONAME@ завершена и теперь после входа в Kodi вы можете настроить свою медиатеку. Чтобы понять, как этим пользоваться, есть инструкция на сайте wiki.kodi.tv[CR][CR]@DISTRONAME@ разработан преданной командой разработчиков, которые работают исключительно в свое свободное время. Даже в качестве волонтерского проекта, мы всё равно вынуждены платить за каналы связи и ресурсы, необходимые для разработки и поддержки, так что если Вам интересен @DISTRONAME@, мы всегда будем рады пожертвованию любой суммы.[CR][CR]Мы надеемся, Вам понравится @DISTRONAME@  настолько, насколько нам нравится его создавать. Если вам нужна дополнительная помощь, заходите на наш сайт, где вы найдете ссылки, где её получить, а так же ознакомитесь с последними новостями"
 
 msgctxt "#32319"
 msgid "Cron"
@@ -574,11 +654,11 @@ msgstr "Сбросить @DISTRONAME@ в настройки по-умолчан�
 
 msgctxt "#32326"
 msgid "Are you sure?"
-msgstr "Вы уверены?"
+msgstr "Вы уверены ?"
 
 msgctxt "#32328"
 msgid "The system must reboot."
-msgstr "Система требует перезагрузки."
+msgstr "Систему необходимо перезагрузить."
 
 msgctxt "#32329"
 msgid "Rebooting in %d seconds"
@@ -606,15 +686,15 @@ msgstr "Нет"
 
 msgctxt "#32338"
 msgid "No Bluetooth adapter found."
-msgstr "Не найдены адаптеры Bluetooth."
+msgstr "Адаптеры Bluetooth не найдены."
 
 msgctxt "#32339"
 msgid "No Bluetooth device found. Please put your Bluetooth device into discovery mode[CR]and start the scan"
-msgstr "Не найдены устройства Bluetooth. Пожалуйста, переведите Ваше устройство Bluetooth в режим обнаружения[CR]и начните сканирование"
+msgstr "Устройства Bluetooth не найдены. Пожалуйста, переведите Ваше устройство Bluetooth в режим обнаружения[CR]и начните сканирование"
 
 msgctxt "#32343"
 msgid "Enter the following Key on your Device."
-msgstr "Введите следующий ключ в Ваше устройство."
+msgstr "Введите указанный ключ на Вашем устройстве."
 
 msgctxt "#32344"
 msgid "Enable Bluetooth"
@@ -631,6 +711,10 @@ msgstr "Доверять и подключиться"
 msgctxt "#32362"
 msgid "Check for updates now:"
 msgstr "Проверка обновлений:"
+
+msgctxt "#32363"
+msgid "@DISTRONAME@"
+msgstr "@DISTRONAME@"
 
 msgctxt "#32364"
 msgid "Update available"
@@ -658,7 +742,7 @@ msgstr "Oжидать включения сети перед запуском Ko
 
 msgctxt "#32370"
 msgid "Maximum Wait Time (Sec.)"
-msgstr "Максимальное время ожидания (секунды)"
+msgstr "Максимальное время ожидания (сек.)"
 
 msgctxt "#32371"
 msgid "Backup"
@@ -670,19 +754,27 @@ msgstr "Создать системную резервную копию (вкл�
 
 msgctxt "#32373"
 msgid "Restore Backup"
-msgstr "Восстановить резервную копию"
+msgstr "Восстановить из резервной копии"
 
 msgctxt "#32375"
 msgid "Backup Progress"
 msgstr "Прогресс создания резервной копии"
 
+msgctxt "#32376"
+msgid "Submit Log"
+msgstr "Отправить лог"
+
+msgctxt "#32377"
+msgid "Pastebin system logs and get short URL"
+msgstr "Скопировать системные логи и получить на них короткую ссылку"
+
 msgctxt "#32379"
 msgid "There is not enough free storage space to continue!"
-msgstr "На носителе информации недостаточно свободного места для продолжения!"
+msgstr "На носителе недостаточно свободного места для продолжения!"
 
 msgctxt "#32380"
 msgid "Restoring system settings requires a reboot. Are you sure you want to restore?"
-msgstr "Восстановление системных настроек потребует перезагрузку. Вы действительно хотите восстановить?"
+msgstr "Восстановление системных настроек потребует перезагрузку. Вы действительно хотите их восстановить?"
 
 msgctxt "#32381"
 msgid "Accept incoming Bluetooth Filetransfer ?"
@@ -706,11 +798,11 @@ msgstr "Папка загрузок OBEX"
 
 msgctxt "#32386"
 msgid "Keyboard Layout Variant #1"
-msgstr "Раскладка клавиатуры Вариант 1"
+msgstr "Раскладка клавиатуры Вариант #1"
 
 msgctxt "#32387"
 msgid "Keyboard Layout Variant #2"
-msgstr "Раскладка клавиатуры Вариант 2"
+msgstr "Раскладка клавиатуры Вариант #2"
 
 msgctxt "#32388"
 msgid "Enable Standby"
@@ -722,5 +814,12 @@ msgstr "Отключить режим ожидания"
 
 msgctxt "#32390"
 msgid "Settings addon is not yet ready, please try again later."
-msgstr "Дополнение настройки ещё не готово. Повторите попытку позже."
+msgstr "Настройки дополнения ещё не готовы. Повторите попытку позже."
 
+msgctxt "#32391"
+msgid "Lirc"
+msgstr "Lirc"
+
+msgctxt "#32392"
+msgid "Enable Lirc"
+msgstr "Включить Lirc"

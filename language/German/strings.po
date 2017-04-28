@@ -2,14 +2,15 @@
 # Addon Name: @DISTRONAME@ Configuration
 # Addon id: service.libreelec.settings
 # Addon Provider: LibreELEC
+# Translators:
+# David1977 <dvukovic@gmx.de>, 2016
+# Mario Siegmann <mario_siegmann@web.de>, 2016
 msgid ""
 msgstr ""
-"Project-Id-Version: XBMC Addons\n"
-"Report-Msgid-Bugs-To: alanwww1@xbmc.org\n"
-"POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Kodi Translation Team\n"
-"Language-Team: German (http://www.transifex.com/projects/p/xbmc-addons/language/de/)\n"
+"Project-Id-Version: LibreELEC Settings Add-on\n"
+"PO-Revision-Date: 2017-03-11 16:18+0100\n"
+"Last-Translator: Mario Siegmann <mario_siegmann@web.de>\n"
+"Language-Team: German (http://www.transifex.com/libreelec/service_libreelec_settings/language/de/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -53,12 +54,12 @@ msgid "Architecture: "
 msgstr "Architektur: "
 
 msgctxt "#609"
-msgid "Libre Embedded Linux Entertainment Center (LibreELEC) is a minimal Linux distribution purpose built for Kodi media center. LibreELEC is designed to boot fast with an installation process simple enough for anyone to convert a bare HTPC into a fully configured media machine in under 15 minutes."
-msgstr "Libre Embedded Linux Entertainment Center (LibreELEC) ist eine minimale Linux Distribution, die Ihren Computer in ein komplettes Kodi Mediacenter verwandelt. LibreELEC ist optimiert, Ihr System möglichst schnell zu starten und die Installation einfach genug zu gestalten, damit jeder seinen HTPC in ein vollständig konfiguriertes Media Center in unter 15 Minuten verwandeln kann."
+msgid "LibreELEC is a minimal Linux distribution purpose built for Kodi media center. LibreELEC is designed to boot fast with an installation process simple enough for anyone to convert a bare HTPC into a fully configured media machine in under 15 minutes."
+msgstr "LibreELEC ist eine minimale Linux Distribution, die Ihren Computer in ein komplettes Kodi-Mediacenter verwandelt. LibreELEC ist optimiert, Ihr System möglichst schnell zu starten und die Installation einfach genug zu gestalten, damit jeder seinen HTPC in ein vollständig konfiguriertes Media Center in unter 15 Minuten verwandeln kann."
 
 msgctxt "#610"
-msgid "[B]Support:[/B][CR]Web: http://libreelec.tv[CR]Forum: http://forum.libreelec.tv/[CR]Wiki: http://wiki.libreelec.tv[CR][CR][B]Social Media:[/B][CR]IRC: #libreelec on freenode.net (web-based chat is also available from the website)[CR]Twitter: https://twitter.com/libreelec[CR]Facebook: http://www.facebook.com/LibreELEC[CR]Google+: https://plus.google.com/+libreelec"
-msgstr "[B]Support:[/B][CR]Web: http://www.libreelec.tv[CR]Forum: http://forum.libreelec.tv[CR]Wiki: http://wiki.libreelec.tv[CR][CR][B]Be Social! Besuchen Sie unsere Community:[/B][CR]IRC: #libreelec bei freenode.net (auch verfügbar über Web Chat)[CR]Twitter: https://twitter.com/libreelec[CR]Facebook: http://www.facebook.com/LibreELEC[CR]Google+: https://plus.google.com/+libreelec\n  "
+msgid "[B]Support:[/B][CR]Web: http://libreelec.tv[CR]Forum: http://forum.libreelec.tv/[CR]Wiki: http://wiki.libreelec.tv[CR][CR][B]Social Media:[/B][CR]IRC: #libreelec on freenode.net (web-based chat is also available from the website)[CR]Twitter: https://twitter.com/libreelec[CR]Facebook: http://www.facebook.com/LibreELEC"
+msgstr "[B]Support:[/B][CR]Web: http://libreelec.tv[CR]Forum: http://forum.libreelec.tv/[CR]Wiki: http://wiki.libreelec.tv[CR][CR][B]Soziale Medien:[/B][CR]IRC: #libreelec auf freenode.net (Web-basierender Chat ist auch über die Webseite verfügbar)[CR]Twitter: https://twitter.com/libreelec[CR]Facebook: http://www.facebook.com/LibreELEC"
 
 msgctxt "#700"
 msgid "Configure a hostname, keyboard type, perform a reset, update, or backups and restores"
@@ -86,7 +87,7 @@ msgstr "Hilfreiche Informationen wie Systemversion und Architekturdetails, Suppo
 
 msgctxt "#710"
 msgid "Configure the Hostname of your @DISTRONAME@ system. This will be used for the HTPC \\\\hostname in Windows and SMB server name in the Mac OS Finder"
-msgstr "Konfigurieren Sie den Hostnamen Ihres @DISTRONAME@-Systems. Dies wird für den HTPC \\\\Hostnamen in Windows und für den SMB-Servernamen im Mac OS Finder verwendet werden."
+msgstr "Konfiguriere den Hostnamen deines @DISTRONAME@-Systems. Dies wird für den HTPC \\\\Hostnamen in Windows und für den SMB-Servernamen im Mac OS Finder verwendet werden."
 
 msgctxt "#711"
 msgid "Configure the 1st keyboard software layout"
@@ -108,9 +109,9 @@ msgctxt "#715"
 msgid "Set to ON and an on-screen notification will be displayed when a new update is available"
 msgstr "Auf EIN stellen und eine Bildschirm-Benachrichtigung wird angezeigt, sobald eine neue Aktualisierung verfügbar ist."
 
-msgctxt "#716"
-msgid "Click to manually check the @DISTRONAME@ servers for an updated release"
-msgstr "Klicken Sie, um die @DISTRONAME@-Server manuell auf eine aktualisierte Version zu überprüfen"
+msgctxt "#718"
+msgid "Send config.txt, cmdline.txt, shutdown.sh, autostart.sh, and kodi.log to http://sprunge.us and display the short URL"
+msgstr "config.txt, cmdline.txt, shutdown.sh, autostart.sh und kodi.log an http://sprunge.us übermitteln und die Kurz-URL anzeigen"
 
 msgctxt "#720"
 msgid "Set to ON and Bluetooth devices will be disabled during power-saving modes"
@@ -125,12 +126,20 @@ msgid "Restore a tar archive backup previously created using the backup option a
 msgstr "Wiederherstellung einer Datensicherung, die hier mit der Sicherungsoption erstellt wurde"
 
 msgctxt "#724"
-msgid "[COLOR FF00FF00]SOFT RESET[/COLOR]\nPermanently reset @DISTRONAME@ configuration to defaults (resets also Kodi to default including your library. your media - music/videos/etc are not touched)"
-msgstr "[COLOR FF00FF00]SOFT RESET[/COLOR]\nStandardeinstellungen von @DISTRONAME@ und Kodi dauerhaft wiederherstellen (inklusive Reset der Datenbank. Musik- und Video-Dateien etc. werden dabei aber nicht  verändert)."
+msgid ""
+"[COLOR FF00FF00]SOFT RESET[/COLOR]\n"
+"Permanently reset @DISTRONAME@ configuration to defaults (resets also Kodi to default including your library. your media - music/videos/etc are not touched)"
+msgstr ""
+"[COLOR FF00FF00]SOFT RESET[/COLOR]\n"
+"Standardeinstellungen von @DISTRONAME@ und Kodi dauerhaft wiederherstellen (inklusive Reset der Datenbank. Musik- und Video-Dateien etc. werden dabei aber nicht  verändert)."
 
 msgctxt "#725"
-msgid "[COLOR FFFF0000]HARD RESET[/COLOR]\nPermanently reset @DISTRONAME@ and Kodi configuration to defaults (everything in your storage partition will be deleted)"
-msgstr "[COLOR FFFF0000]HARD RESET[/COLOR]\nStandardeinstellungen von @DISTRONAME@ und Kodi dauerhaft wiederherstellen (die gesamte Partition \"storage\" wird gelöscht)."
+msgid ""
+"[COLOR FFFF0000]HARD RESET[/COLOR]\n"
+"Permanently reset @DISTRONAME@ and Kodi configuration to defaults (everything in your storage partition will be deleted)"
+msgstr ""
+"[COLOR FFFF0000]HARD RESET[/COLOR]\n"
+"Standardeinstellungen von @DISTRONAME@ und Kodi dauerhaft wiederherstellen (die gesamte Partition \"storage\" wird gelöscht)."
 
 msgctxt "#726"
 msgid "Enable or disable support for Wireless (WLAN) networks"
@@ -166,7 +175,7 @@ msgstr "Dritter Zeitserver (NTP)"
 
 msgctxt "#736"
 msgid "Set to ON to delay Kodi startup until the network is available. Use this if the OS is booting into Kodi before the network is up and central MySQL databases are accessible."
-msgstr "Auf EIN stellen, um den Start von Kodi zu verzögern, bis das Netzwerk verfügbar ist. Verwenden Sie dies, wenn das Betriebssystem Kodi startet, bevor das Netzwerk und MySQL-Datenbanken verfügbar sind."
+msgstr "Auf EIN stellen, um den Start von Kodi zu verzögern, bis das Netzwerk verfügbar ist. Verwende dies, wenn das Betriebssystem Kodi startet, bevor das Netzwerk und MySQL-Datenbanken verfügbar sind."
 
 msgctxt "#737"
 msgid "737"
@@ -194,7 +203,7 @@ msgstr "Auf EIN stellen, um den eingebetteten SSH-Server zu aktivieren. Auf die 
 
 msgctxt "#743"
 msgid "Set to ON if you have copied private SSH keys to your HTPC and would like to improve security by disabling SSH username and password authentication."
-msgstr "Auf EIN stellen, wenn Sie private SSH-Schlüssel auf Ihren HTPC kopiert haben und die Sicherheit durch Deaktivierung der SSH-Benutzernamen- und Passwort-Authentifizierung verbessern möchten."
+msgstr "Auf EIN stellen, wenn du private SSH-Schlüssel auf deinen HTPC kopiert haben und die Sicherheit durch Deaktivierung der SSH-Benutzernamen- und Passwort-Authentifizierung verbessern möchtest."
 
 msgctxt "#744"
 msgid "Set to ON to enable the Avahi (Zeroconf/Bonjour) network discovery service"
@@ -204,17 +213,21 @@ msgctxt "#745"
 msgid "Set to ON to enable the cron daemon"
 msgstr "Auf EIN stellen, um den Cron-Daemon zu aktivieren."
 
+msgctxt "#746"
+msgid "Set to ON to enable the lirc daemon"
+msgstr "Auf EIN stellen, um den Lirc-Daemon zu aktivieren"
+
 msgctxt "#750"
 msgid "750"
 msgstr "750"
 
 msgctxt "#751"
 msgid "With OBEX filetransfer you can send files, for example movies or pictures over bluetooth to @DISTRONAME@."
-msgstr "Mit OBEX-Dateiübertragung können Sie Dateien, zum Beispiel Filme oder Bilder, über Bluetooth an @DISTRONAME@ senden."
+msgstr "Mit OBEX-Dateiübertragung kannst du Dateien, zum Beispiel Filme oder Bilder, über Bluetooth an @DISTRONAME@ senden."
 
 msgctxt "#752"
 msgid "Here you can set the folder location where OBEX file transfer should store incoming files"
-msgstr "Hier können Sie den Speicherort auswählen, wo OBEX-Dateiübertragung die eingehenden Dateien abspeichert"
+msgstr "Hier kannst du den Speicherort auswählen, wo OBEX-Dateiübertragung die eingehenden Dateien abspeichert"
 
 msgctxt "#753"
 msgid "Configure the 1st keyboard software Variant"
@@ -228,9 +241,25 @@ msgctxt "#755"
 msgid "Auto share external drives / partitions"
 msgstr "Automatische Freigabe externer Laufwerke / Partitionen"
 
+msgctxt "#760"
+msgid "Select an update channel"
+msgstr "Update-Kanal auswählen"
+
+msgctxt "#761"
+msgid "Enable to allow entering a custom update url"
+msgstr "Aktiveren, um die Eingabe einer benutzerdefinierten URL zu erlauben"
+
+msgctxt "#762"
+msgid "Enter a custom update url (url should be the root of the update files)"
+msgstr "Benutzerdefinierte URL eingeben (URL sollte das Wurzelverzeichnis der Update-Dateien sein)"
+
+msgctxt "#770"
+msgid "Select an available version"
+msgstr "Eine verfügbare Version auswählen"
+
 msgctxt "#32001"
 msgid "Services"
-msgstr "Services"
+msgstr "Dienste"
 
 msgctxt "#32002"
 msgid "System"
@@ -259,6 +288,30 @@ msgstr "Aktualisierungen"
 msgctxt "#32014"
 msgid "Automatic Updates"
 msgstr "Automatische Aktualisierungen"
+
+msgctxt "#32015"
+msgid "Update Channel"
+msgstr "Update-Kanal"
+
+msgctxt "#32016"
+msgid "Show Custom Channels"
+msgstr "Benutzerdefinierte Kanäle anzeigen"
+
+msgctxt "#32017"
+msgid "  - Custom Channel 1"
+msgstr "- Benutzerdefinierter Kanal 1"
+
+msgctxt "#32018"
+msgid "  - Custom Channel 2"
+msgstr "- Benutzerdefinierter Kanal 1"
+
+msgctxt "#32019"
+msgid "  - Custom Channel 3"
+msgstr "- Benutzerdefinierter Kanal 1"
+
+msgctxt "#32020"
+msgid "Available Versions"
+msgstr "Verfügbare Versionen"
 
 msgctxt "#32100"
 msgid "Connections"
@@ -400,6 +453,10 @@ msgctxt "#32144"
 msgid "Connect"
 msgstr "Verbinden"
 
+msgctxt "#32145"
+msgid "Pair"
+msgstr "Verbinden (pairing)"
+
 msgctxt "#32146"
 msgid "Hidden Network Name"
 msgstr "Name des unsichtbaren Funknetzwerkes"
@@ -418,7 +475,7 @@ msgstr "Bearbeiten"
 
 msgctxt "#32180"
 msgid "Would you like to update @DISTRONAME@ now?"
-msgstr "Möchten Sie @DISTRONAME@ jetzt aktualisieren?"
+msgstr "Möchtest du @DISTRONAME@ jetzt aktualisieren?"
 
 msgctxt "#32181"
 msgid "Filename"
@@ -445,8 +502,8 @@ msgid "Initialize Archive File"
 msgstr "Entpacke Datei"
 
 msgctxt "#32187"
-msgid "Latest Version"
-msgstr "Letzte Version"
+msgid "New Version"
+msgstr "Neue Version"
 
 msgctxt "#32188"
 msgid "Current Version"
@@ -460,9 +517,13 @@ msgctxt "#32190"
 msgid "System Name"
 msgstr "Systemname"
 
+msgctxt "#32191"
+msgid "Invalid URL"
+msgstr "Ungültige URL"
+
 msgctxt "#32196"
 msgid "About"
-msgstr "About"
+msgstr "Über"
 
 msgctxt "#32198"
 msgid "SSID"
@@ -530,7 +591,7 @@ msgstr "Weiter"
 
 msgctxt "#32304"
 msgid "To be identified easily on the network, your new @DISTRONAME@ machine needs a name.[CR][CR]Try to choose something meaningful - like the room it's in - so you'll know what it is when you see it on the network.[CR][CR]This name is used when configuring network services, like file sharing using samba."
-msgstr "Damit die neue @DISTRONAME@ Installation im Netzwerk gefunden werden kann, wird ein Gerätename benötigt.[CR][CR]Wählen Sie eine möglichst aussagekräftigen Namen, wie z.B. den Raum, in dem das Gerät steht.[CR][CR]Dieser Name wird auch für die Konfiguration weiterer Netzwerkdienste, z.B. Dateifreigaben per Samba, benötigt."
+msgstr "Damit die neue @DISTRONAME@ Installation im Netzwerk gefunden werden kann, wird ein Gerätename benötigt.[CR][CR]Wähle eine möglichst aussagekräftigen Namen, wie z.B. den Raum, in dem das Gerät steht.[CR][CR]Dieser Name wird auch für die Konfiguration weiterer Netzwerkdienste, z.B. Dateifreigaben per Samba, benötigt."
 
 msgctxt "#32305"
 msgid "Networking"
@@ -538,7 +599,7 @@ msgstr "Netzwerk"
 
 msgctxt "#32306"
 msgid "In order to download backdrops, banners and thumbnails for your movies and TV shows and to stream online content from sites like YouTube, @DISTRONAME@ needs to be connected the Internet.[CR][CR]An Internet connection is also required for @DISTRONAME@ to automatically update itself."
-msgstr "@DISTRONAME@ muß mit dem Internet verbunden sein, um Hintergrundbilder, Banner und Vorschaubilder für Serien und Filme herunterladen zu können und um Online-Inhalte von z.B. Youtube streamen zu können.[CR][CR]Außerdem wird eine Internetverbindung auch für automatische Aktualisierungen von @DISTRONAME@ benötigt."
+msgstr "@DISTRONAME@ muss mit dem Internet verbunden sein, um Hintergrundbilder, Banner und Vorschaubilder für Serien und Filme herunterladen zu können und um Online-Inhalte von z.B. Youtube streamen zu können.[CR][CR]Außerdem wird eine Internetverbindung auch für automatische Aktualisierungen von @DISTRONAME@ benötigt."
 
 msgctxt "#32308"
 msgid "Hostname:"
@@ -570,7 +631,7 @@ msgstr "Danke"
 
 msgctxt "#32318"
 msgid "Your @DISTRONAME@ installation is now complete and you'll now enter Kodi when you can set up your media libraries. For help with this, there is a guide available at wiki.kodi.tv[CR][CR]@DISTRONAME@ is developed by a dedicated team of developers who work purely in their spare time. Even as a volunteer project, we still have to pay for our internet bandwidth and development resources so if you find @DISTRONAME@ useful, we will always appreciate a donation of any amount.[CR][CR]Finally, we hope you enjoy using @DISTRONAME@ as much as we've enjoying building it. If you need any more help, you can find links to get help along with latest news at our website"
-msgstr "Die Ersteinrichtung von @DISTRONAME@ ist nun beendet. Es können jetzt in Kodi Medienbibliotheken konfiguriert werden. Hierfür gibt es eine Anleitung auf wiki.kodi.org[CR][CR]@DISTRONAME@ wird von engagierten Entwicklern komplett in ihrer Freizeit entwickelt. Und obwohl wir ein Freiwilligenprojekt sind, müssen wir für Internetbandbreite und Entwicklungsressourcen zahlen. Wenn Sie @DISTRONAME@ nützlich finden, würden wir uns sehr über eine Spende freuen.[CR][CR]Wir hoffen, dass Ihnen die Benutzung von @DISTRONAME@ so viel Freude bereitet, wie uns dessen Entwicklung. Besuchen Sie auch gern unsere Webseite, wenn Sie weitergehende Hilfe benötigen oder an Neuigkeiten interessiert sind."
+msgstr "Die Ersteinrichtung von @DISTRONAME@ ist nun beendet. Es können jetzt in Kodi Medienbibliotheken konfiguriert werden. Hierfür gibt es eine Anleitung auf wiki.kodi.org[CR][CR]@DISTRONAME@ wird von engagierten Entwicklern komplett in ihrer Freizeit entwickelt. Und obwohl wir ein Freiwilligenprojekt sind, müssen wir für Internetbandbreite und Entwicklungsressourcen zahlen. Wenn du @DISTRONAME@ nützlich findest, würden wir uns sehr über eine Spende freuen.[CR][CR]Wir hoffen, dass dir die Benutzung von @DISTRONAME@ so viel Freude bereitet, wie uns dessen Entwicklung. Besuche auch gern unsere Webseite, wenn du weitergehende Hilfe benötigest oder an Neuigkeiten interessiert bist."
 
 msgctxt "#32319"
 msgid "Cron"
@@ -594,7 +655,7 @@ msgstr "@DISTRONAME@ auf Standardeinstellungen zurücksetzen"
 
 msgctxt "#32326"
 msgid "Are you sure?"
-msgstr "Sind Sie sicher?"
+msgstr "Bist du dir sicher?"
 
 msgctxt "#32328"
 msgid "The system must reboot."
@@ -630,11 +691,11 @@ msgstr "Kein Bluetooth-Adapter gefunden."
 
 msgctxt "#32339"
 msgid "No Bluetooth device found. Please put your Bluetooth device into discovery mode[CR]and start the scan"
-msgstr "Keine Bluetooth-Geräte gefunden. Aktivieren Sie im Bluetooth-Gerät den[CR]Verbindungsmodus und starten Sie die Suche erneut."
+msgstr "Keine Bluetooth-Geräte gefunden. Aktiviere im Bluetooth-Gerät den[CR]Verbindungsmodus und starte die Suche erneut."
 
 msgctxt "#32343"
 msgid "Enter the following Key on your Device."
-msgstr "Geben Sie folgenden Code auf Ihrem Gerät ein."
+msgstr "Gebe den folgenden Code auf deinem Gerät ein."
 
 msgctxt "#32344"
 msgid "Enable Bluetooth"
@@ -700,13 +761,21 @@ msgctxt "#32375"
 msgid "Backup Progress"
 msgstr "Fortschritt der Datensicherung"
 
+msgctxt "#32376"
+msgid "Submit Log"
+msgstr "Fehlerbericht (Log) übermitteln"
+
+msgctxt "#32377"
+msgid "Pastebin system logs and get short URL"
+msgstr "Systemmeldungen (Logs) auf Pastebin hochladen und die Kurz-URL erhalten"
+
 msgctxt "#32379"
 msgid "There is not enough free storage space to continue!"
 msgstr "Es ist nicht genügend freier Speicherplatz vorhanden!"
 
 msgctxt "#32380"
 msgid "Restoring system settings requires a reboot. Are you sure you want to restore?"
-msgstr "Die Wiederherstellung benötigt einen Neustart. Sind Sie sicher, dass Sie die Wiederherstellung durchführen möchten."
+msgstr "Die Wiederherstellung benötigt einen Neustart. Bist du dir sicher, dass du die Wiederherstellung durchführen möchten."
 
 msgctxt "#32381"
 msgid "Accept incoming Bluetooth Filetransfer ?"
@@ -748,3 +817,10 @@ msgctxt "#32390"
 msgid "Settings addon is not yet ready, please try again later."
 msgstr "Das Einstellungs-Addon ist nicht bereit. Versuch es später erneut."
 
+msgctxt "#32391"
+msgid "Lirc"
+msgstr "Lirc"
+
+msgctxt "#32392"
+msgid "Enable Lirc"
+msgstr "Lirc aktivieren"

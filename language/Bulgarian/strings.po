@@ -2,14 +2,15 @@
 # Addon Name: @DISTRONAME@ Configuration
 # Addon id: service.libreelec.settings
 # Addon Provider: LibreELEC
+# Translators:
+# clappingmonkey, 2016-2017
+# Kiril <neohidra@gmail.com>, 2016
 msgid ""
 msgstr ""
-"Project-Id-Version: XBMC Addons\n"
-"Report-Msgid-Bugs-To: alanwww1@xbmc.org\n"
-"POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Kodi Translation Team\n"
-"Language-Team: Bulgarian (http://www.transifex.com/projects/p/xbmc-addons/language/bg/)\n"
+"Project-Id-Version: LibreELEC Settings Add-on\n"
+"PO-Revision-Date: 2017-03-11 16:18+0100\n"
+"Last-Translator: clappingmonkey\n"
+"Language-Team: Bulgarian (http://www.transifex.com/libreelec/service_libreelec_settings/language/bg/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -18,7 +19,7 @@ msgstr ""
 
 msgctxt "#600"
 msgid "@DISTRONAME@ Settings"
-msgstr "Настройки на @DISTRONAME@"
+msgstr "@DISTRONAME@ Настройки"
 
 msgctxt "#601"
 msgid "Interface"
@@ -30,11 +31,11 @@ msgstr "Адрес"
 
 msgctxt "#603"
 msgid "Type"
-msgstr "Тип"
+msgstr "Вид"
 
 msgctxt "#604"
 msgid "State"
-msgstr "Област"
+msgstr "Състояние"
 
 msgctxt "#605"
 msgid "Address"
@@ -53,12 +54,12 @@ msgid "Architecture: "
 msgstr "Архитектура:"
 
 msgctxt "#609"
-msgid "Libre Embedded Linux Entertainment Center (LibreELEC) is a minimal Linux distribution purpose built for Kodi media center. LibreELEC is designed to boot fast with an installation process simple enough for anyone to convert a bare HTPC into a fully configured media machine in under 15 minutes."
-msgstr "Libre Embedded Linux Entertainment Center (LibreELEC) е минимална дистрибуция на Linux създадена специално за Kodi. Проектирана е да стартира бързо и да позволи на всеки, посредством лесен процес на инсталиране, да превърне един компютър в медиен център за не повече от 15 минути."
+msgid "LibreELEC is a minimal Linux distribution purpose built for Kodi media center. LibreELEC is designed to boot fast with an installation process simple enough for anyone to convert a bare HTPC into a fully configured media machine in under 15 minutes."
+msgstr "LibreELEC е минималистична дистрибуция на Linux създадена специално за Kodi. Проектирана е да стартира бързо и да позволи на всеки, посредством лесен процес на инсталиране, да превърне един компютър в медиен център за не повече от 15 минути."
 
 msgctxt "#610"
-msgid "[B]Support:[/B][CR]Web: http://libreelec.tv[CR]Forum: http://forum.libreelec.tv/[CR]Wiki: http://wiki.libreelec.tv[CR][CR][B]Social Media:[/B][CR]IRC: #libreelec on freenode.net (web-based chat is also available from the website)[CR]Twitter: https://twitter.com/libreelec[CR]Facebook: http://www.facebook.com/LibreELEC[CR]Google+: https://plus.google.com/+libreelec"
-msgstr "[B]Поддръжка:[/B][CR]Уеб сайт: www.libreelec.tv[CR]Форум: www.libreelec.tv/forum[CR]Уики: www.wiki.libreelec.tv[CR][CR][B]Социални мрежи:[/B][CR]IRC: #libreelec в freenode.net (уеб базиран чат е наличен на уеб сайта)[CR]Twitter: www.twitter.com/libreelec[CR]Facebook: www.facebook.com/LibreELEC[CR]Google+: www.plus.google.com/+libreelec"
+msgid "[B]Support:[/B][CR]Web: http://libreelec.tv[CR]Forum: http://forum.libreelec.tv/[CR]Wiki: http://wiki.libreelec.tv[CR][CR][B]Social Media:[/B][CR]IRC: #libreelec on freenode.net (web-based chat is also available from the website)[CR]Twitter: https://twitter.com/libreelec[CR]Facebook: http://www.facebook.com/LibreELEC"
+msgstr "[B]Поддръжка:[/B][CR]Уеб страница: http://libreelec.tv[CR]Форум: http://forum.libreelec.tv/[CR]Уики: http://wiki.libreelec.tv[CR][CR][B]Социални медии:[/B][CR]IRC: #libreelec във freenode.net (уеб базиран чат е наличен на сайта)[CR]Twitter: https://twitter.com/libreelec[CR]Facebook: http://www.facebook.com/LibreELEC"
 
 msgctxt "#700"
 msgid "Configure a hostname, keyboard type, perform a reset, update, or backups and restores"
@@ -108,9 +109,9 @@ msgctxt "#715"
 msgid "Set to ON and an on-screen notification will be displayed when a new update is available"
 msgstr "Включите ли опцията, ще бъдете известявани при наличие на нова актуализация"
 
-msgctxt "#716"
-msgid "Click to manually check the @DISTRONAME@ servers for an updated release"
-msgstr "Кликнете ако желаете те да проверите за нова версия на @DISTRONAME@"
+msgctxt "#718"
+msgid "Send config.txt, cmdline.txt, shutdown.sh, autostart.sh, and kodi.log to http://sprunge.us and display the short URL"
+msgstr "Изпрати config.txt, cmdline.txt, shutdown.sh, autostart.sh, и kodi.log на http://sprunge.us и покажи съкратен линк"
 
 msgctxt "#720"
 msgid "Set to ON and Bluetooth devices will be disabled during power-saving modes"
@@ -125,12 +126,20 @@ msgid "Restore a tar archive backup previously created using the backup option a
 msgstr "Възстановява резервни копия от .tar архиви, създадени с горната функция"
 
 msgctxt "#724"
-msgid "[COLOR FF00FF00]SOFT RESET[/COLOR]\nPermanently reset @DISTRONAME@ configuration to defaults (resets also Kodi to default including your library. your media - music/videos/etc are not touched)"
-msgstr "[COLOR FF00FF00]SOFT RESET[/COLOR]\nНулира настройките на @DISTRONAME@ и Kodi към стандартните стойности (включително и библиотеката, но файловете Ви, като музика, видео и др. ще останат непокътнати)"
+msgid ""
+"[COLOR FF00FF00]SOFT RESET[/COLOR]\n"
+"Permanently reset @DISTRONAME@ configuration to defaults (resets also Kodi to default including your library. your media - music/videos/etc are not touched)"
+msgstr ""
+"[COLOR FF00FF00]SOFT RESET[/COLOR]\n"
+"Нулира настройките на @DISTRONAME@ и Kodi към стандартните стойности (включително и библиотеката, но файловете Ви, като музика, видео и др. ще останат непокътнати)"
 
 msgctxt "#725"
-msgid "[COLOR FFFF0000]HARD RESET[/COLOR]\nPermanently reset @DISTRONAME@ and Kodi configuration to defaults (everything in your storage partition will be deleted)"
-msgstr "[COLOR FFFF0000]HARD RESET[/COLOR]\nНулира настройките на @DISTRONAME@ и Kodi към стандартните стойности (файлове Ви ще Бъдат Изтрити)"
+msgid ""
+"[COLOR FFFF0000]HARD RESET[/COLOR]\n"
+"Permanently reset @DISTRONAME@ and Kodi configuration to defaults (everything in your storage partition will be deleted)"
+msgstr ""
+"[COLOR FFFF0000]HARD RESET[/COLOR]\n"
+"Нулира настройките на @DISTRONAME@ и Kodi към стандартните стойности (файлове Ви ще Бъдат Изтрити)"
 
 msgctxt "#726"
 msgid "Enable or disable support for Wireless (WLAN) networks"
@@ -178,7 +187,7 @@ msgstr "Включете за да активирате вградената у�
 
 msgctxt "#739"
 msgid "Set to ON to require username/password access to local Samba fileshares"
-msgstr "Включете за да активирате изискването на потребителско име и парола преди да се предостави достъп до споделените ресурси"
+msgstr "Включете за да активирате изискването на потребителско име и парола преди да се предостави достъп до споделените файлове"
 
 msgctxt "#740"
 msgid "Set the username for Samba sharing"
@@ -194,15 +203,19 @@ msgstr "Включете за да активирате вграденият SSH
 
 msgctxt "#743"
 msgid "Set to ON if you have copied private SSH keys to your HTPC and would like to improve security by disabling SSH username and password authentication."
-msgstr "Включете ако сте копирали частните SSH ключове в LibreELEC системата и желаете да повишите нивото на сигурност, като избегнете ползването на потребителско име и парола"
+msgstr "Включете ако сте копирали частните SSH ключове в LibreELEC системата и желаете да повишите нивото на сигурност, като избегнете ползването на потребителско име и парола."
 
 msgctxt "#744"
 msgid "Set to ON to enable the Avahi (Zeroconf/Bonjour) network discovery service"
-msgstr "Включете за да активирате услугата Avahi (Zeroconf/Bonjour) за автоматично  откриване на устройства, част от мрежата към която сте свързани"
+msgstr "Включете за да активирате услугата Avahi (Zeroconf/Bonjour) за автоматично откриване на устройства, част от мрежата към която сте свързани"
 
 msgctxt "#745"
 msgid "Set to ON to enable the cron daemon"
 msgstr "Включете за да активирате Cron демона"
+
+msgctxt "#746"
+msgid "Set to ON to enable the lirc daemon"
+msgstr "Включете за да активирате lirc демона"
 
 msgctxt "#750"
 msgid "750"
@@ -227,6 +240,22 @@ msgstr "Задайте втора софтуерна подредба на кл�
 msgctxt "#755"
 msgid "Auto share external drives / partitions"
 msgstr "Споделяй автоматичното външните дискове/дялове"
+
+msgctxt "#760"
+msgid "Select an update channel"
+msgstr "Изберете канал за актуализацията"
+
+msgctxt "#761"
+msgid "Enable to allow entering a custom update url"
+msgstr "Включете за да позволите въвеждането на различен линк за актуализация"
+
+msgctxt "#762"
+msgid "Enter a custom update url (url should be the root of the update files)"
+msgstr "Въведете различен линк за актуализация (линка трябва да води към папката с файловете)"
+
+msgctxt "#770"
+msgid "Select an available version"
+msgstr "Изберете версия"
 
 msgctxt "#32001"
 msgid "Services"
@@ -259,6 +288,30 @@ msgstr "Актуализации"
 msgctxt "#32014"
 msgid "Automatic Updates"
 msgstr "Актуализиране"
+
+msgctxt "#32015"
+msgid "Update Channel"
+msgstr "Канал за актуализацията"
+
+msgctxt "#32016"
+msgid "Show Custom Channels"
+msgstr "Покажи персонализирани канали"
+
+msgctxt "#32017"
+msgid "  - Custom Channel 1"
+msgstr "- Персонализиран Канал 1"
+
+msgctxt "#32018"
+msgid "  - Custom Channel 2"
+msgstr "- Персонализиран Канал 2"
+
+msgctxt "#32019"
+msgid "  - Custom Channel 3"
+msgstr "- Персонализиран Канал 3"
+
+msgctxt "#32020"
+msgid "Available Versions"
+msgstr "Налични версии"
 
 msgctxt "#32100"
 msgid "Connections"
@@ -400,6 +453,10 @@ msgctxt "#32144"
 msgid "Connect"
 msgstr "Свързване"
 
+msgctxt "#32145"
+msgid "Pair"
+msgstr "Сдвои"
+
 msgctxt "#32146"
 msgid "Hidden Network Name"
 msgstr "Име на скритата мрежа"
@@ -418,7 +475,7 @@ msgstr "Редактиране"
 
 msgctxt "#32180"
 msgid "Would you like to update @DISTRONAME@ now?"
-msgstr "Would you like to update @DISTRONAME@ now?"
+msgstr "Да бъде ли актуализиран @DISTRONAME@ сега?"
 
 msgctxt "#32181"
 msgid "Filename"
@@ -434,7 +491,7 @@ msgstr "Оставащо време"
 
 msgctxt "#32184"
 msgid "Extract file"
-msgstr "Извлечи файл"
+msgstr "Извличане на файл"
 
 msgctxt "#32185"
 msgid "Extract speed"
@@ -445,8 +502,8 @@ msgid "Initialize Archive File"
 msgstr "Инициализиране на архивен файл"
 
 msgctxt "#32187"
-msgid "Latest Version"
-msgstr "Последна версия"
+msgid "New Version"
+msgstr "Нова версия"
 
 msgctxt "#32188"
 msgid "Current Version"
@@ -459,6 +516,10 @@ msgstr "Идентификация"
 msgctxt "#32190"
 msgid "System Name"
 msgstr "Име на системата"
+
+msgctxt "#32191"
+msgid "Invalid URL"
+msgstr "Невалиден линк"
 
 msgctxt "#32196"
 msgid "About"
@@ -650,7 +711,7 @@ msgstr "Довери се и се свържи"
 
 msgctxt "#32362"
 msgid "Check for updates now:"
-msgstr "Провери за актуализации"
+msgstr "Провери за актуализации:"
 
 msgctxt "#32363"
 msgid "@DISTRONAME@"
@@ -700,9 +761,19 @@ msgctxt "#32375"
 msgid "Backup Progress"
 msgstr "Прогрес за създаване на резервното копие"
 
+msgctxt "#32376"
+msgid "Submit Log"
+msgstr "Предай Log файл"
+
+msgctxt "#32377"
+msgid "Pastebin system logs and get short URL"
+msgstr "Копирай системните Log файлове в Pastebin и вземи съкратен линк"
+
 msgctxt "#32379"
 msgid "There is not enough free storage space to continue!"
-msgstr "Остатъчното свободно място\nне е достатъчно!"
+msgstr ""
+"Остатъчното свободно място\n"
+"не е достатъчно!"
 
 msgctxt "#32380"
 msgid "Restoring system settings requires a reboot. Are you sure you want to restore?"
@@ -748,3 +819,10 @@ msgctxt "#32390"
 msgid "Settings addon is not yet ready, please try again later."
 msgstr "Добавката за настройките не е в готовност. Моля, опитайте по-късно."
 
+msgctxt "#32391"
+msgid "Lirc"
+msgstr "Lirc"
+
+msgctxt "#32392"
+msgid "Enable Lirc"
+msgstr "Включи Lirc"

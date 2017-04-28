@@ -2,14 +2,14 @@
 # Addon Name: @DISTRONAME@ Configuration
 # Addon id: service.libreelec.settings
 # Addon Provider: LibreELEC
+# Translators:
+# Zapata11 <raimondas.duzinskas@gmail.com>, 2016
 msgid ""
 msgstr ""
-"Project-Id-Version: XBMC Addons\n"
-"Report-Msgid-Bugs-To: alanwww1@xbmc.org\n"
-"POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Kodi Translation Team\n"
-"Language-Team: Lithuanian (http://www.transifex.com/projects/p/xbmc-addons/language/lt/)\n"
+"Project-Id-Version: LibreELEC Settings Add-on\n"
+"PO-Revision-Date: 2017-03-11 16:19+0100\n"
+"Last-Translator: Zapata11 <raimondas.duzinskas@gmail.com>\n"
+"Language-Team: Lithuanian (http://www.transifex.com/libreelec/service_libreelec_settings/language/lt/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -30,11 +30,11 @@ msgstr "Adresas"
 
 msgctxt "#603"
 msgid "Type"
-msgstr "Rūšis"
+msgstr "Tipas"
 
 msgctxt "#604"
 msgid "State"
-msgstr "Valstybė"
+msgstr "Būsena"
 
 msgctxt "#605"
 msgid "Address"
@@ -53,100 +53,108 @@ msgid "Architecture: "
 msgstr "Architektūra:"
 
 msgctxt "#609"
-msgid "Libre Embedded Linux Entertainment Center (LibreELEC) is a minimal Linux distribution purpose built for Kodi media center. LibreELEC is designed to boot fast with an installation process simple enough for anyone to convert a bare HTPC into a fully configured media machine in under 15 minutes."
-msgstr "Libre Embedded Linux Entertainment Center (LibreELEC) yra minimali Linux distribucija, specialiai sukurta Kodi media centrui. LibreELEC sukurtas, kad greitai pasileistų su pakankamai paprastu diegimo procesu, tam kad kiekvienas galėtų pliką HTPC paversti pilnai sukonfigūruotu media centru per mažiau nei 15 minučių."
+msgid "LibreELEC is a minimal Linux distribution purpose built for Kodi media center. LibreELEC is designed to boot fast with an installation process simple enough for anyone to convert a bare HTPC into a fully configured media machine in under 15 minutes."
+msgstr "LibreELEC yra minimali Linux distribucija, skirta specialiai Kodi media centrui. LibreELEC yra sukurta greitam paleidimui su pakankamai paprastu diegimo procesu, kad kiekvienas galėtų paversti atliekamą HTPC į pilnai sukonfigūruotą media įrenginį per mažiau nei 15 minučių."
 
 msgctxt "#610"
-msgid "[B]Support:[/B][CR]Web: http://libreelec.tv[CR]Forum: http://forum.libreelec.tv/[CR]Wiki: http://wiki.libreelec.tv[CR][CR][B]Social Media:[/B][CR]IRC: #libreelec on freenode.net (web-based chat is also available from the website)[CR]Twitter: https://twitter.com/libreelec[CR]Facebook: http://www.facebook.com/LibreELEC[CR]Google+: https://plus.google.com/+libreelec"
-msgstr "[B]Palaikymas:[/B][CR]Žiniatinklis: http://libreelec.tv[CR]Forumas: http://forum.libreelec.tv/[CR]Wiki: http://wiki.libreelec.tv[CR][CR][B]Socialinė žiniasklaida:[/B][CR]IRC: #libreelec on freenode.net (žiniatinklio tikralaikiai pokalbiai taip pat prieinami ir tinklapyje)[CR]Twitter: https://twitter.com/libreelec[CR]Facebook: http://www.facebook.com/LibreELEC[CR]Google+: https://plus.google.com/+libreelec"
+msgid "[B]Support:[/B][CR]Web: http://libreelec.tv[CR]Forum: http://forum.libreelec.tv/[CR]Wiki: http://wiki.libreelec.tv[CR][CR][B]Social Media:[/B][CR]IRC: #libreelec on freenode.net (web-based chat is also available from the website)[CR]Twitter: https://twitter.com/libreelec[CR]Facebook: http://www.facebook.com/LibreELEC"
+msgstr "[B]Palaikymas:[/B][CR]Žiniatinklis: http://libreelec.tv[CR]Forumas: http://forum.libreelec.tv/[CR]Wiki: http://wiki.libreelec.tv[CR][CR][B]Socialiniai tinklai:[/B][CR]IRC: #libreelec on freenode.net (taip pat interneto svetainėje galima resti žiniatinklio pokalbių sistemą)[CR]Twitter: https://twitter.com/libreelec[CR]Facebook: http://www.facebook.com/LibreELEC"
 
 msgctxt "#700"
 msgid "Configure a hostname, keyboard type, perform a reset, update, or backups and restores"
-msgstr "Konfigūruoti pagrindinio kompiuterio vardą, klaviatūros tipą, atlikti atstatymą į pradinę būseną, atnaujinimą ar atsarginės kopijos sukūrimą ir atstatymą"
+msgstr "Sukonfigūruoti įrenginio vardą, klaviatūros tipą, atlikti sistemos atstatymą, atnaujinimą bei sukurti atsarginę kopiją ar atkurti sistemą iš jos"
 
 msgctxt "#701"
 msgid "Configure network startup options, NTP and VPNs"
-msgstr "Konfigūruoti tinklo paleidimo parinktis, NTP ir VPN"
+msgstr "Sukonfigūruoti tinklo paleidimo parinktis, NTP ir VPN"
 
 msgctxt "#702"
 msgid "Manage the Ethernet, Wireless and VPN connections available to the system"
-msgstr "Valdyti sistemoje prieinamus laidinio tinklo, bevielio tinklo ir VPN prisijungimus"
+msgstr "Tvarkyti prieinamus laidinius, bevielius ir VPN prisijungimus"
 
 msgctxt "#703"
 msgid "Configure system services like Samba, SSH, Cron, Avahi and Syslog"
-msgstr "Konfigūruoti sistemines paslaugas, tokias kaip Samba, SSH, Cron, Avahi ir Syslog"
+msgstr "Sukonfigūruoti sistemos paslaugas, tokias kaip Samba, SSH, Cron, Avahi ir Syslog"
 
 msgctxt "#704"
 msgid "Configure and pair Bluetooth devices"
-msgstr "Konfigūruoti ir poruoti Bluetooth įrenginius"
+msgstr "Sukonfigūruoti ir suporuoti Bluetooth įrenginius"
 
 msgctxt "#705"
 msgid "Useful information like version and architecture details, support and social media links, and how to make a donation to the project"
-msgstr "Nauding informacija, tokia kaip versija ir architektūros detalės, palaikymo ir socialinės žiniasklaidos nuorodos ir kaip paaukoti projektui"
+msgstr "Naudinga informacija, tokia kaip versijos ir architektūros duomenys, palaikymo ir socialinių tinklų nuorodos ar informacija kaip paaukoti projektui"
 
 msgctxt "#710"
 msgid "Configure the Hostname of your @DISTRONAME@ system. This will be used for the HTPC \\\\hostname in Windows and SMB server name in the Mac OS Finder"
-msgstr "Nustatykite savo @DISTRONAME@ sistemos kompiuterio vardą. Jis bus naudojamas kaip HTPC \\\\hostname Windows sistemoje ir SMB serverio vardas Mac OS Finder programoje"
+msgstr "Nustatykite savo @DISTRONAME@ sistemos įrenginio vardą. Jis bus naudojamas kaip HTPC įrenginio '\\\\hostname' Windows sistemoje ir SMB serverio vardas Mac OS Finder programoje"
 
 msgctxt "#711"
 msgid "Configure the 1st keyboard software layout"
-msgstr "Konfigūruoti 1-os klaviatūros programinės įrangos išdėstymą"
+msgstr "Nustatykite 1-ąjį klaviatūros programinį išdėstymą"
 
 msgctxt "#712"
 msgid "Configure the 2nd keyboard software layout"
-msgstr "Konfigūruoti 2-os klaviatūros programinės įrangos išdėstymą"
+msgstr "Nustatykite 2-ąjį klaviatūros programinį išdėstymą"
 
 msgctxt "#713"
 msgid "Configure the physical keyboard type"
-msgstr "Konfigūruoti fizinės klaviatūros tipą"
+msgstr "Nustatykite fizinį klaviatūros tipą"
 
 msgctxt "#714"
 msgid "@DISTRONAME@ can be configured for automatic or manual updates. Automatic updates are available on stable releases and stable release candidates. Automatic update self-disables on beta and development builds"
-msgstr "@DISTRONAME@ gali būti atnaujinamas automatiniu arba rankiniu būdu. Automatiniai atnaujinimai galimi stabiliems leidimams ir stabilioms kandidatinėms versijoms. Automatiniai atnaujinimai išjungiami beta ir kūrimo versijoms"
+msgstr "@DISTRONAME@ gali būti sukonfigūruotas gauti atnaujinimus automatiniu arba rankiniu būdu. Automatiniai atnaujinimai galimi stabilioms ir kandidatinėms versijoms. Automatiniai atnaujinimai išjungiami automatiškai beta ir kūrėjų versijose"
 
 msgctxt "#715"
 msgid "Set to ON and an on-screen notification will be displayed when a new update is available"
-msgstr "Įjunkite ir ekrane bus rodomas pranešimas, kai bus prieinamas naujas atnaujinimas"
+msgstr "Nustatykite ĮJUNGTA ir ekrane bus rodomas pranešimas, jei prieinama nauja versija"
 
-msgctxt "#716"
-msgid "Click to manually check the @DISTRONAME@ servers for an updated release"
-msgstr "Paspauskite, jei norite patikrinti ar yra atnaujintas leidimas @DISTRONAME@ serveriuose"
+msgctxt "#718"
+msgid "Send config.txt, cmdline.txt, shutdown.sh, autostart.sh, and kodi.log to http://sprunge.us and display the short URL"
+msgstr "Nusiųskite config.txt, cmdline.txt, shutdown.sh, autostart.sh ir kodi.log į http://sprunge.us ir pateikite trumpą URL adresą"
 
 msgctxt "#720"
 msgid "Set to ON and Bluetooth devices will be disabled during power-saving modes"
-msgstr "Nustatykite Įjungta ir Bluetooth įrenginiai bus atjungti, įjungus energijos taupymo režimą"
+msgstr "Nustatykite ĮJUNGTA ir Bluetooth įrenginiai bus atjungti energijos taupymo režimuose"
 
 msgctxt "#722"
 msgid "Create a tar archive containing all @DISTRONAME@ and Kodi configuration settings, databases and thumbnail content. Backup files will be stored in /storage/backups"
-msgstr "Sukurkite tar archyvą su visais @DISTRONAME@ ir Kodi konfigūracijos nustatymais, duomenų bazėmis ir miniatiūromis. Atsarginės kopijos failai bus saugomi /storage/backups aplanke"
+msgstr "Sukurkite tar archyvą su visais @DISTRONAME@ ir Kodi konfigūracijos nustatymais, duomenų bazėmis ir turinio miniatiūromis. Atsarginės kopijos failai bus išsaugoti /storage/backups aplanke"
 
 msgctxt "#723"
 msgid "Restore a tar archive backup previously created using the backup option above"
-msgstr "Atstatyti *.tar archyvo atsarginę kopiją, sukurtą naudojant aukščiau esančią atsarginės kopijos parinktį"
+msgstr "Atkurti atsarginę kopiją iš tar archyvo, kurį anksčiau sukūrėte pasinaudoję aukščiau esančia atsarginės kopijos parinktimi"
 
 msgctxt "#724"
-msgid "[COLOR FF00FF00]SOFT RESET[/COLOR]\nPermanently reset @DISTRONAME@ configuration to defaults (resets also Kodi to default including your library. your media - music/videos/etc are not touched)"
-msgstr "[COLOR FF00FF00]PROGRAMINIS ATSTATYMAS[/COLOR]\nNegrįžtamai atstatyti @DISTRONAME@ konfigūracijos numatytąsias reikšmes (taip pat atstato ir Kodi numatytąsias reikšmes, įskaitant biblioteką, media įrašai - muzika/vaizdo įrašai/kt. nebus paliesti)"
+msgid ""
+"[COLOR FF00FF00]SOFT RESET[/COLOR]\n"
+"Permanently reset @DISTRONAME@ configuration to defaults (resets also Kodi to default including your library. your media - music/videos/etc are not touched)"
+msgstr ""
+"[COLOR FF00FF00]DALINIS ATKŪRIMAS[/COLOR]\n"
+"Negrįžtamai atstatyti @DISTRONAME@ konfigūracijos numatytąsias reikšmes (taip pat atstato Kodi numatytąsias reikšmes, įskaitant jūsų biblioteką. Media įrašai - muzika/vaizdo įrašai/kt. nebus paliesti)"
 
 msgctxt "#725"
-msgid "[COLOR FFFF0000]HARD RESET[/COLOR]\nPermanently reset @DISTRONAME@ and Kodi configuration to defaults (everything in your storage partition will be deleted)"
-msgstr "[COLOR FFFF0000]APARATINIS ATSTATYMAS[/COLOR]\nNegrįžtamai atstatyti @DISTRONAME@ ir Kodi konfigūracijos numatytąsias reikšmes (viskas jūsų saugyklos skirsnyje bus ištrinta)"
+msgid ""
+"[COLOR FFFF0000]HARD RESET[/COLOR]\n"
+"Permanently reset @DISTRONAME@ and Kodi configuration to defaults (everything in your storage partition will be deleted)"
+msgstr ""
+"[COLOR FFFF0000]VISIŠKAS ATKŪRIMAS[/COLOR]\n"
+"Negrįžtamai atstatyti @DISTRONAME@ ir Kodi konfigūracijos numatytąsias reikšmes (viskas jūsų saugyklos skaidinyje bus ištrinta)"
 
 msgctxt "#726"
 msgid "Enable or disable support for Wireless (WLAN) networks"
-msgstr "Įjungti arba išjungti bevielių tinklų (WLAN) palaikymą"
+msgstr "Įjungti arba išjungti bevielių (WLAN) tinklų palaikymą"
 
 msgctxt "#727"
 msgid "Enable a 'tethered' Wireless Access Point. This requires your wireless card (and driver) to support bridging and access point mode. Not all cards are capable."
-msgstr "Įjungti 'susietą' bevielį prieigos tašką. Tam reikia, kad jūsų bevielio tinklo plokštė (ir tvarkyklės) palaikytų tiltinį sujungimą ir prieigos taško režimą. Tai atlikti pajėgios ne visos plokštės."
+msgstr "Įjungti 'susietą' bevielį prieigos tašką. Tam reikia, kad jūsų bevielio tinklo plokštė (ir tvarkyklės) palaikytų tiltinį sujungimą ir prieigos taško režimą. Ne visos plokštės tai gali."
 
 msgctxt "#728"
 msgid "Configure the Access Point SSID"
-msgstr "Konfigūruoti prieigos taško SSID"
+msgstr "Nustatykite pireigos taško SSID"
 
 msgctxt "#729"
 msgid "Configure the Access Point Passphrase"
-msgstr "Konfigūruoti prieigos taško slaptafrazę "
+msgstr "Nustatykite prieigos taško slaptafrazę"
 
 msgctxt "#730"
 msgid "Enable or disable support for Wired (Ethernet) networks"
@@ -154,19 +162,19 @@ msgstr "Įjungti arba išjungti laidinių (Ethernet) tinklų palaikymą"
 
 msgctxt "#732"
 msgid "Configure the 1st time (NTP) server"
-msgstr "Konfigūruoti 1-ąjį laiko (NTP) serverį"
+msgstr "Nustatykite 1-ąjį laiko (NTP) serverį"
 
 msgctxt "#733"
 msgid "Configure the 2nd time (NTP) server"
-msgstr "Konfigūruoti 2-ąjį laiko (NTP) serverį"
+msgstr "Nustatykite 2-ąjį laiko (NTP) serverį"
 
 msgctxt "#734"
 msgid "Configure the 3rd time (NTP) server"
-msgstr "Konfigūruoti 3-ąjį laiko (NTP) serverį"
+msgstr "Nustatykite 3-iąjį laiko (NTP) serverį"
 
 msgctxt "#736"
 msgid "Set to ON to delay Kodi startup until the network is available. Use this if the OS is booting into Kodi before the network is up and central MySQL databases are accessible."
-msgstr "Nustatykite ĮJUNGTA, jei norite uždelsti Kodi paleidimą iki kol bus prieinamas tinklas. Naudokite tai, jei OS paleidžia Kodi anksčiau nei prisijungiama prie tinklo ir centrinės MySQL duomenų bazės yra pasiekiamos."
+msgstr "Nustatykite įjungta, jei norite uždelsti Kodi paleidimą, kol bus prieinamas tinklas. Naudokite šią parinktį, jei Kodi programą paleidžiama greičiau nei tinklas ir centrinė MySQL duomenų bazė būna nepasiekiama."
 
 msgctxt "#737"
 msgid "737"
@@ -174,35 +182,39 @@ msgstr "737"
 
 msgctxt "#738"
 msgid "Set to ON to enable the embedded Samba (SMB) filesharing service"
-msgstr "Nustatykite ĮJUNGTA, jei norite įjungti integruotą Samba (SMB) failų bendrinimo paslaugą"
+msgstr "Nustatykite ĮJUNGTA norėdami įjungti Samba (SMB) failų bendrinimo paslaugą"
 
 msgctxt "#739"
 msgid "Set to ON to require username/password access to local Samba fileshares"
-msgstr "Nustatykite ĮJUNGTA, kad būtų reikalingas vartotojo vardas/slaptažodis, norint pasiekti Samba bendrinamus failus"
+msgstr "Nustatykite ĮJUNGTA, jei norite, kad prieigai prie Samba bendrinamų failų būtų reikalingas vartotojo vardas/slaptažodis"
 
 msgctxt "#740"
 msgid "Set the username for Samba sharing"
-msgstr "Nustatykite vartotojo vardą Samba bendrinimui"
+msgstr "Nustatykite Samba bendrinimo vartotojo vardą"
 
 msgctxt "#741"
 msgid "Set the password for Samba sharing"
-msgstr "Nustatykite slaptažodį Samba bendrinimui"
+msgstr "Nustatykite Samba bendrinimo slaptažodį"
 
 msgctxt "#742"
 msgid "Set to ON to enable the embedded SSH server. The SSH console can be accessed with username 'root' and password '@ROOT_PASSWORD@'."
-msgstr "Nustatykite ĮJUNGTA, norėdami įgalinti vidinį SSH serverį. SSH konsolę galite pasiekti su vartotojo vardu 'root' ir slaptažodžiu '@ROOT_PASSWORD@'."
+msgstr "Nustatykite ĮJUNGTA norėdami įjungti integruotą SSH serverį. SSH konsolę galima pasiekti su vartotoj vardu 'root' ir slaptažodžiu '@ROOT_PASSWORD@'."
 
 msgctxt "#743"
 msgid "Set to ON if you have copied private SSH keys to your HTPC and would like to improve security by disabling SSH username and password authentication."
-msgstr "Nustatykite ĮJUNGTA, jei nukopijavote SSH raktus į jūsų HTPC ir norite pagerinti saugumą išjungiant SSH vartotojo vardo ir slaptažodžio autentikaciją."
+msgstr "Nustatykite ĮJUNGTA, jei nukopijavote privačius SSH raktus į HTPC ir norite pagerinti saugumą atjungdami SSH vartotojo vardo ir slaptažodžio autentifikaciją."
 
 msgctxt "#744"
 msgid "Set to ON to enable the Avahi (Zeroconf/Bonjour) network discovery service"
-msgstr "Nustatykite ĮJUNGTA, jei norite įjungti Avahi (Zeroconf.Bonjour) tinklo aptikimo paslaugą"
+msgstr "Nustatykite ĮJUNGTA norėdami įjungti Avahi (Zeroconf/Bonjour) tinklo aptikimo paslaugą"
 
 msgctxt "#745"
 msgid "Set to ON to enable the cron daemon"
-msgstr "Nustatykite ĮJUNGTA, jei norite įjungti cron tarnybą"
+msgstr "Nustatykite ĮJUNGTA norėdami įjungti Cron tarnybą"
+
+msgctxt "#746"
+msgid "Set to ON to enable the lirc daemon"
+msgstr "Nustatykite ĮJUNGTA norėdami įjungti lirc tarnybą"
 
 msgctxt "#750"
 msgid "750"
@@ -210,23 +222,39 @@ msgstr "750"
 
 msgctxt "#751"
 msgid "With OBEX filetransfer you can send files, for example movies or pictures over bluetooth to @DISTRONAME@."
-msgstr "Su OBEX filetransfer galite siųsti failus, pvz., filmus ar nuotraukas, per bluetooth į @DISTRONAME@."
+msgstr "Naudodami OBEX failų perdavimą galite siųsti failus, pvz., filmus ar nuotraukas, per Bluetooth į @DISTRONAME@."
 
 msgctxt "#752"
 msgid "Here you can set the folder location where OBEX file transfer should store incoming files"
-msgstr "Čia jūs galite nustatyti aplanko vietą, kur OBEX failų perkėlimas turėtų saugoti gaunamus failus"
+msgstr "Čia galite nustatyti aplanko vietą, kur OBEX failų perdavimas turėtų išsaugoti gaunamus failus"
 
 msgctxt "#753"
 msgid "Configure the 1st keyboard software Variant"
-msgstr "Konfigūruoti 1-ąjį klaviatūros programinės įrangos variantą"
+msgstr "Nustatykite 1-ąjį klaviatūros programinį variantą"
 
 msgctxt "#754"
 msgid "Configure the 2nd keyboard software Variant"
-msgstr "Konfigūruoti 2-ąjį klaviatūros programinės įrangos variantą"
+msgstr "Nustatykite 2-ąjį klaviatūros programinį variantą"
 
 msgctxt "#755"
 msgid "Auto share external drives / partitions"
-msgstr "Automatiškai bendrinti išorinius diskus / skirsnius"
+msgstr "Automatiškai bendrinti išorinius diskus / skaidinius"
+
+msgctxt "#760"
+msgid "Select an update channel"
+msgstr "Pasirinkite atnaujinimo kanalą"
+
+msgctxt "#761"
+msgid "Enable to allow entering a custom update url"
+msgstr "Įjunkite norėdami leisti įvesti savą atnaujinimo URL"
+
+msgctxt "#762"
+msgid "Enter a custom update url (url should be the root of the update files)"
+msgstr "Įveskite savą atnaujinimo URL (URL turi būti šakninė atnaujinimo failų vieta)"
+
+msgctxt "#770"
+msgid "Select an available version"
+msgstr "Pasirinkite prieinamą versiją"
 
 msgctxt "#32001"
 msgid "Services"
@@ -250,7 +278,7 @@ msgstr "Klaviatūros išdėstymas"
 
 msgctxt "#32012"
 msgid "Select Action"
-msgstr "Pasirinkite veiksmą"
+msgstr "Pasirinkite veikmą"
 
 msgctxt "#32013"
 msgid "Updates"
@@ -259,6 +287,30 @@ msgstr "Atnaujinimai"
 msgctxt "#32014"
 msgid "Automatic Updates"
 msgstr "Automatiniai atnaujinimai"
+
+msgctxt "#32015"
+msgid "Update Channel"
+msgstr "Atnaujinimo kanalas"
+
+msgctxt "#32016"
+msgid "Show Custom Channels"
+msgstr "Rodyti savus kanalus"
+
+msgctxt "#32017"
+msgid "  - Custom Channel 1"
+msgstr "  - Savas kanalas 1"
+
+msgctxt "#32018"
+msgid "  - Custom Channel 2"
+msgstr "  - Savas kanalas 2"
+
+msgctxt "#32019"
+msgid "  - Custom Channel 3"
+msgstr "  - Savas kanalas 3"
+
+msgctxt "#32020"
+msgid "Available Versions"
+msgstr "Prieinamos versijos"
 
 msgctxt "#32100"
 msgid "Connections"
@@ -298,7 +350,7 @@ msgstr "Prisijungti automatiškai"
 
 msgctxt "#32110"
 msgid "Connection"
-msgstr "Prijungimas"
+msgstr "Prisijungimas"
 
 msgctxt "#32111"
 msgid "IPv4"
@@ -314,7 +366,7 @@ msgstr "IP adreso metodas"
 
 msgctxt "#32114"
 msgid "IP Address"
-msgstr "IP Adresas"
+msgstr "IP adresas"
 
 msgctxt "#32115"
 msgid "Subnet Mask"
@@ -334,7 +386,7 @@ msgstr "Privatumas"
 
 msgctxt "#32119"
 msgid "DNS Servers"
-msgstr "DNS serveris"
+msgstr "DNS serveriai"
 
 msgctxt "#32120"
 msgid "Nameserver #1"
@@ -400,6 +452,10 @@ msgctxt "#32144"
 msgid "Connect"
 msgstr "Prisijungti"
 
+msgctxt "#32145"
+msgid "Pair"
+msgstr "Suporuoti"
+
 msgctxt "#32146"
 msgid "Hidden Network Name"
 msgstr "Paslėpto tinklo vardas"
@@ -430,7 +486,7 @@ msgstr "Atsiuntimo greitis"
 
 msgctxt "#32183"
 msgid "Time remaining"
-msgstr "Liko laiko"
+msgstr "Likęs laikas"
 
 msgctxt "#32184"
 msgid "Extract file"
@@ -442,11 +498,11 @@ msgstr "Išskleidimo greitis"
 
 msgctxt "#32186"
 msgid "Initialize Archive File"
-msgstr "Inicializuoti archyvo failą"
+msgstr "Inicijuojamas archyvo failas"
 
 msgctxt "#32187"
-msgid "Latest Version"
-msgstr "Naujausia versija"
+msgid "New Version"
+msgstr "Nauja versija"
 
 msgctxt "#32188"
 msgid "Current Version"
@@ -459,6 +515,10 @@ msgstr "Identifikacija"
 msgctxt "#32190"
 msgid "System Name"
 msgstr "Sistemos vardas"
+
+msgctxt "#32191"
+msgid "Invalid URL"
+msgstr "Klaidingas URL"
 
 msgctxt "#32196"
 msgid "About"
@@ -478,7 +538,7 @@ msgstr "SSH"
 
 msgctxt "#32202"
 msgid "Use Samba Password Authentication"
-msgstr "Naudoti Samba slaptažodžio autentifikavimą"
+msgstr "Naudoti Samba autentifikavimą slaptažodžiu"
 
 msgctxt "#32203"
 msgid "Disable SSH Password"
@@ -502,11 +562,11 @@ msgstr "Avahi"
 
 msgctxt "#32208"
 msgid "Hidden Wlan"
-msgstr "Paslėptas Wlan"
+msgstr "Paslėptas WLAN"
 
 msgctxt "#32212"
 msgid "Cancel"
-msgstr "Nutraukti"
+msgstr "Atšaukti"
 
 msgctxt "#32216"
 msgid "Auto-Share External Drives"
@@ -522,27 +582,27 @@ msgstr "Sveiki"
 
 msgctxt "#32302"
 msgid "This wizard will guide you through the process of setting up your new @DISTRONAME@ installation - setting your location, timezone and connecting you to the internet.[CR][CR]These settings can be changed later by navigating to Programs > @DISTRONAME@ Settings."
-msgstr "Šis vedlys padės jums pereiti @DISTRONAME@ nustatymo procesą - nustatant jūsų vietą, laiko juostą ir prijungiant jus prie interneto.[CR][CR]Šie nustatymai gali būti pakeisti vėliau, nuėjus į Programos > @DISTRONAME@ nustatymai."
+msgstr "Šis vedlys padės jums pereiti @DISTRONAME@ nustatymo procesą - nustatant jūsų vietą, laiko juostą ir prijungiant jus prie interneto.[CR][CR]Šie nustatymai gali būti pakeisti vėliau, atsidarius į Programos > @DISTRONAME@ nustatymai."
 
 msgctxt "#32303"
 msgid "Next"
-msgstr "Kitas"
+msgstr "Toliau"
 
 msgctxt "#32304"
 msgid "To be identified easily on the network, your new @DISTRONAME@ machine needs a name.[CR][CR]Try to choose something meaningful - like the room it's in - so you'll know what it is when you see it on the network.[CR][CR]This name is used when configuring network services, like file sharing using samba."
-msgstr "Kad būtų lengvai atpažįstama tinkle, jūsų @DISTRONAME@ sistemai reikalingas vardas.[CR][CR]Pasistenkite parinkti ką nors prasmingo - kaip, pavyzdžiui, kambarys kuriame ji yra - taip lengviau suprasite kas tai yra, kai pamatysite šį vardą tinkle.[CR][CR]Šis vardas naudojamas konfigūruojant tinklo paslaugas, tokias kaip bendrinimas naudojant samba."
+msgstr "Kad būtų lengvai atpažįstama tinkle, jūsų @DISTRONAME@ sistemai reikalingas vardas.[CR][CR]Pasistenkite parinkti ką nors prasmingo - kaip, pavyzdžiui, kambarys kuriame ji yra - taip lengviau suprasite kas tai yra, kai pamatysite šį vardą tinkle.[CR][CR]Šis vardas naudojamas konfigūruojant tinklo paslaugas, tokias kaip failų bendrinimas naudojant samba."
 
 msgctxt "#32305"
 msgid "Networking"
-msgstr "Tinklas"
+msgstr "Tinklai"
 
 msgctxt "#32306"
 msgid "In order to download backdrops, banners and thumbnails for your movies and TV shows and to stream online content from sites like YouTube, @DISTRONAME@ needs to be connected the Internet.[CR][CR]An Internet connection is also required for @DISTRONAME@ to automatically update itself."
-msgstr "Norint atsisiųsti foninius atvaizdus, reklamjuostes ir miniatiūras filmams ir TV laidoms bei priimti turinio transliacijas iš internetinių svetainių, tokių kaip YouTube, @DISTRONAME@ turi būti prijungtas prie interneto.[CR][CR]Interneto prisijungimas taip pat reikalingas, kad @DISTRONAME@ galėtų automatiškai atsinaujinti."
+msgstr "Jei norite atsisiųsti fonus, reklamjuostes ir miniatiūras filmams ir TV laidoms bei gauti internetinį turinį iš tinklapių, tokių kaip Youtube, @DISTRONAME@ turi būti prijungtas prie interneto.[CR][CR]Interneto prisijungimas taip pat reikalingas, kad @DISTRONAME@ galėtų atsinaujinti."
 
 msgctxt "#32308"
 msgid "Hostname:"
-msgstr "Kompiuterio vardas:"
+msgstr "Įrenginio vardas:"
 
 msgctxt "#32309"
 msgid "The following Networks are currently available:"
@@ -554,7 +614,7 @@ msgstr "Bendrinimas ir nuotolinė prieiga"
 
 msgctxt "#32312"
 msgid "@DISTRONAME@ also supports SSH for remote access. This is for advanced users who wish to interact with @DISTRONAME@'s underlying operating system. The default user is [COLOR blue]root[/COLOR] and the default password is [COLOR blue]@ROOT_PASSWORD@[/COLOR]."
-msgstr "@DISTRONAME@ taip pat palaiko SSH nuotolinei prieigai. Tai skirta pažengusiems vartotojams, kurie nori valdyti  @DISTRONAME@ pagrindą sudarančią operacinę sistemą. Numatytasis vartotojo vardas yra [COLOR blue]root[/COLOR], slaptažodis - [COLOR blue]@ROOT_PASSWORD@[/COLOR]."
+msgstr "@DISTRONAME@ taip pat palaiko SSH nuotolinę prieigą. Tai skirta pažengusiems vartotojams, kurie nori valdyti  @DISTRONAME@ pagrindą sudarančią operacinę sistemą. Numatytasis vartotojo vardas yra [COLOR blue]root[/COLOR], slaptažodis - [COLOR blue]@ROOT_PASSWORD@[/COLOR]."
 
 msgctxt "#32313"
 msgid "In order to share your files between your computers @DISTRONAME@ has incorporated a samba server. This samba server can be integrated into your local network by accessing it in a familiar way with Finder or Windows Explorer."
@@ -570,7 +630,7 @@ msgstr "Ačiū"
 
 msgctxt "#32318"
 msgid "Your @DISTRONAME@ installation is now complete and you'll now enter Kodi when you can set up your media libraries. For help with this, there is a guide available at wiki.kodi.tv[CR][CR]@DISTRONAME@ is developed by a dedicated team of developers who work purely in their spare time. Even as a volunteer project, we still have to pay for our internet bandwidth and development resources so if you find @DISTRONAME@ useful, we will always appreciate a donation of any amount.[CR][CR]Finally, we hope you enjoy using @DISTRONAME@ as much as we've enjoying building it. If you need any more help, you can find links to get help along with latest news at our website"
-msgstr "@DISTRONAME@ diegimas baigtas ir dabar bus paleistas Kodi, kur galėsite nustatyti savo media bibliotekas. Jei jums pagalbos tai atliekant, wiki.kodi.tv galite rasti gidą[CR][CR]@DISTRONAME@ yra sukurtas specialios kūrėjų komandos, kurie dirba tik savo laisvu laiku. Net ir kaip savanoriškas projektas, mes vis tiek turime mokėti už mūsų interneto srautą ir kūrimo resursus tam, kad @DISTRONAME@ būtų jums naudingas, todėl mes visada dėkingi už bet kokio dydžio auką.[CR][CR]Ir galiausiai, mes tikimės, kad taip mėgaujatės naudodami @DISTRONAME@, kaip mes mėgaujamės jį kurdami. Jei jums reikia kokios nors pagalbos, mūsų interneto svetainėje galite rasti nuorodas, kur gauti pagalbos, o taip pat sužinosite naujausias žinias."
+msgstr "@DISTRONAME@ diegimas baigtas ir dabar bus paleistas Kodi, kur galėsite nustatyti savo media bibliotekas. Jei jums reikia pagalbos tai atliekant, wiki.kodi.tv galite rasti gidą[CR][CR]@DISTRONAME@ yra sukurtas pasišventusios kūrėjų komandos, kurie dirba tik savo laisvu laiku. Net ir kaip savanoriškas projektas, mes vis tiek turime mokėti už mūsų interneto srautą ir kūrimo resursus tam, kad @DISTRONAME@ būtų jums naudingas, todėl mes visada dėkingi už bet kokio dydžio auką.[CR][CR]Ir galiausiai, mes tikimės, kad jūs taip mėgaujatės naudodami @DISTRONAME@, kaip mes mėgaujamės jį kurdami. Jei jums reikia kokios nors pagalbos, mūsų interneto svetainėje galite rasti nuorodas, kur galite gauti pagalbos, o taip pat sužinoti naujausias žinias."
 
 msgctxt "#32319"
 msgid "Cron"
@@ -594,15 +654,15 @@ msgstr "Atstatyti @DISTRONAME@ numatytąsias reikšmes"
 
 msgctxt "#32326"
 msgid "Are you sure?"
-msgstr "Ar isitikinęs?"
+msgstr "Ar įsitikinęs?"
 
 msgctxt "#32328"
 msgid "The system must reboot."
-msgstr "Sistema turi būti paleista iš naujo"
+msgstr "Reikia iš naujo paleisti sistemą."
 
 msgctxt "#32329"
 msgid "Rebooting in %d seconds"
-msgstr "Bus paleista iš naujo po %d sekundžių"
+msgstr "Paleidžiama iš naujo po %d s."
 
 msgctxt "#32330"
 msgid "Keyboard Type"
@@ -614,7 +674,7 @@ msgstr "Bluetooth"
 
 msgctxt "#32333"
 msgid "Connected: "
-msgstr "Prisijungta:"
+msgstr "Prisijungta: "
 
 msgctxt "#32334"
 msgid "Yes"
@@ -626,11 +686,11 @@ msgstr "Ne"
 
 msgctxt "#32338"
 msgid "No Bluetooth adapter found."
-msgstr "Bluetooth adapteris nerastas"
+msgstr "Nerastas joks Bluetooth adapteris."
 
 msgctxt "#32339"
 msgid "No Bluetooth device found. Please put your Bluetooth device into discovery mode[CR]and start the scan"
-msgstr "Neratas Bluetooth įrenginys. Įjunkite jūsų Bluetooth įrenginio aptikimo režimą[CR]ir paleiskite nuskaitymą"
+msgstr "Nerastas joks Bluetooth įrenginys. Įjunkite aptikimo režimą Bluetooth įrenginyje[CR]ir paleiskite nuskaitymą"
 
 msgctxt "#32343"
 msgid "Enter the following Key on your Device."
@@ -642,15 +702,15 @@ msgstr "Įjungti Bluetooth"
 
 msgctxt "#32346"
 msgid "Bluetooth is disabled"
-msgstr "Bluetooth išjungtas"
+msgstr "Bluetooth yra išjungtas"
 
 msgctxt "#32358"
 msgid "Trust and Connect"
-msgstr "Pasitikėti ir prisijungti"
+msgstr "Pasitikėti ir prisjungti"
 
 msgctxt "#32362"
 msgid "Check for updates now:"
-msgstr "Patikrinti dabar ar yra atnaujinimų:"
+msgstr "Ieškoti atnaujinimų dabar:"
 
 msgctxt "#32363"
 msgid "@DISTRONAME@"
@@ -674,11 +734,11 @@ msgstr "Atnaujinimo išskleidimas baigtas"
 
 msgctxt "#32368"
 msgid "Advanced Network Settings"
-msgstr "Išplėstiniai tinklo nustatymai"
+msgstr "Papildomi tinklo nustatymai"
 
 msgctxt "#32369"
 msgid "Wait for network before starting Kodi"
-msgstr "Palaukti tinklo prieš paleidžiant Kodi"
+msgstr "Laukti tinklo prieš paleidžiant Kodi"
 
 msgctxt "#32370"
 msgid "Maximum Wait Time (Sec.)"
@@ -694,23 +754,31 @@ msgstr "Sukurti sistemos ir Kodi atsarginę kopiją"
 
 msgctxt "#32373"
 msgid "Restore Backup"
-msgstr "Atstatyti iš atsarginės kopijos"
+msgstr "Atkurti iš atsarginės kopijos"
 
 msgctxt "#32375"
 msgid "Backup Progress"
-msgstr "Atsarginės kopijos progresas"
+msgstr "Atsarginio kopijavimo progresas"
+
+msgctxt "#32376"
+msgid "Submit Log"
+msgstr "Pateikti žurnalą"
+
+msgctxt "#32377"
+msgid "Pastebin system logs and get short URL"
+msgstr "Įkelkite sistemos žurnalus ir gaukite trumpą URL adresą"
 
 msgctxt "#32379"
 msgid "There is not enough free storage space to continue!"
-msgstr "Nepakanka laisvos vietos, kad būtų galima tęsti!"
+msgstr "Nepakanka saugyklos vietos, kad būtų galima tęsti!"
 
 msgctxt "#32380"
 msgid "Restoring system settings requires a reboot. Are you sure you want to restore?"
-msgstr "Norint atkurti sistemą iš atsarginės kopijos, reikia iš naujo paleisti sistemą. Ar tikrai norite atkurti?"
+msgstr "Sistemos nustatymų atkūrimui reikia iš naujo paleisti sistemą. Ar tikrai norite juos atkurti?"
 
 msgctxt "#32381"
 msgid "Accept incoming Bluetooth Filetransfer ?"
-msgstr "Priimti įeinantį Bluetooth failo perkėlimą ?"
+msgstr "Priimti įeinantį Bluetooth failo perdavimą?"
 
 msgctxt "#32382"
 msgid "Speed"
@@ -718,7 +786,7 @@ msgstr "Greitis"
 
 msgctxt "#32383"
 msgid "Play Files ?"
-msgstr "Atkurti failus ?"
+msgstr "Atkurti failus?"
 
 msgctxt "#32384"
 msgid "OBEX Enabled"
@@ -730,21 +798,28 @@ msgstr "OBEX įkėlimo aplankas"
 
 msgctxt "#32386"
 msgid "Keyboard Layout Variant #1"
-msgstr "Klaviatūros išdėstymo variantas #1"
+msgstr "Klaviatūros išdėstymo tipas #1"
 
 msgctxt "#32387"
 msgid "Keyboard Layout Variant #2"
-msgstr "Klaviatūros išdėstymo variantas #2"
+msgstr "Klaviatūros išdėstymo tipas #2"
 
 msgctxt "#32388"
 msgid "Enable Standby"
-msgstr "Įjungti pristabdymą"
+msgstr "Įgalinti sistemos pristabdymą"
 
 msgctxt "#32389"
 msgid "Disable Standby"
-msgstr "Išjungti pristabdymą"
+msgstr "Išjungti sistemos pristabdymą"
 
 msgctxt "#32390"
 msgid "Settings addon is not yet ready, please try again later."
-msgstr "Nustatymų priedas dar neparuoštas, pabandykite vėliau dar kartą."
+msgstr "Nustatymų priedas dar neparuoštas, pamėginkite vėliau."
 
+msgctxt "#32391"
+msgid "Lirc"
+msgstr "Lirc"
+
+msgctxt "#32392"
+msgid "Enable Lirc"
+msgstr "Įjungti Lirc"
