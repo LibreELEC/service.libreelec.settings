@@ -53,7 +53,7 @@ msgid "[B]Support:[/B][CR]Web: http://libreelec.tv[CR]Forum: http://forum.libree
 msgstr ""
 
 msgctxt "#700"
-msgid "Configure a hostname, keyboard type, perform a reset, update, or backups and restores"
+msgid "Configure a hostname, keyboard type, optional drivers, perform a reset, update, or backups and restores"
 msgstr ""
 
 msgctxt "#701"
@@ -806,4 +806,8 @@ msgstr ""
 
 msgctxt "#32392"
 msgid "Enable Lirc"
+msgstr ""
+
+msgctxt "#32393"
+msgid "Linux Kernel Drivers"
 msgstr ""
