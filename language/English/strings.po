@@ -240,6 +240,10 @@ msgctxt "#770"
 msgid "Select an available version"
 msgstr ""
 
+msgctxt "#771"
+msgid "Setting to ON enables the bleeding-edge CrazyCat DVB drivers. Use at your own risk! System has to be rebooted after changing this option"
+msgstr ""
+
 msgctxt "#32001"
 msgid "Services"
 msgstr ""
@@ -810,4 +814,8 @@ msgstr ""
 
 msgctxt "#32393"
 msgid "Linux Kernel Drivers"
+msgstr ""
+
+msgctxt "#32394"
+msgid "CrazyCat DVB drivers"
 msgstr ""

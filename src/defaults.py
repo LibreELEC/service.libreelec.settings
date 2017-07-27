@@ -102,7 +102,12 @@ system = {
     'RESTORE_DIR': '/storage/.restore/',
     'MODULE_OVERLAYS_DIR': MODULE_OVERLAYS_DIR,
     'MODULE_OVERLAYS': {
+        'media_build': {
+            'directory': 'media_build',
+            'level': 20,
+            },
         },
+    'MEDIA_BUILD_OVERLAY': 'media_build',
     }
 
 about = {'ENABLED': True}
