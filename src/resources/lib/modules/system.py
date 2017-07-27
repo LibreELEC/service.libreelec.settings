@@ -59,6 +59,7 @@ class system:
     SET_CLOCK_CMD = None
     MODULE_OVERLAYS_DIR = None
     MODULE_OVERLAYS = None
+    MEDIA_BUILD_OVERLAY= None
     menu = {'1': {
         'name': 32002,
         'menuLoader': 'load_menu',
@@ -294,7 +295,14 @@ class system:
                     'order': 10,
                     'name': 32393,
                     'settings': {
-                        # add module overlays here...
+                        'media_build': {
+                            'order': 1,
+                            'name': 32394,
+                            'value': None,
+                            'action': 'set_media_build',
+                            'type': 'bool',
+                            'InfoText': 771,
+                            }
                         }
                     }
                 }
@@ -316,6 +324,7 @@ class system:
             self.set_keyboard_layout()
             self.set_hw_clock()
             self.set_auto_update()
+            self.set_media_build()
             del self.is_service
             self.oe.dbg_log('system::start_service', 'exit_function', 0)
         except Exception, e:
@@ -1082,6 +1091,23 @@ class system:
                 continue
             elif os.path.isdir(itempath):
                 self.get_folder_size(itempath)
+
+    def set_media_build(self, listItem=None):
+        try:
+            self.oe.dbg_log('system::set_media_build', 'enter_function', 0)
+            if not listItem == None:
+                self.set_transient_value(listItem)
+
+            state = 1
+            level = self.get_overlay_level(self.MEDIA_BUILD_OVERLAY)
+            if self.struct['module_overlays']['settings'][self.MEDIA_BUILD_OVERLAY]['value'] != '1':
+                state = 0
+
+            self.oe.set_module_overlay(self.MEDIA_BUILD_OVERLAY, state, level)
+
+            self.oe.dbg_log('system::set_media_build', 'exit_function', 0)
+        except Exception, e:
+            self.oe.dbg_log('system::set_media_build', 'ERROR: (' + repr(e) + ')')
 
     def do_wizard(self):
         try:
