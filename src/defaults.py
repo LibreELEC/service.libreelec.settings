@@ -34,6 +34,7 @@ import os
 XBMC_USER_HOME = os.environ.get('XBMC_USER_HOME', '/storage/.kodi')
 CONFIG_CACHE = os.environ.get('CONFIG_CACHE', '/storage/.cache')
 USER_CONFIG = os.environ.get('USER_CONFIG', '/storage/.config')
+MODULE_OVERLAYS_DIR = os.environ.get('MODULE_OVERLAYS_DIR', '/usr/lib/module-overlays')
 
 ################################################################################
 # Connamn Module
@@ -98,6 +99,9 @@ system = {
         ],
     'BACKUP_DESTINATION': '/storage/backup/',
     'RESTORE_DIR': '/storage/.restore/',
+    'MODULE_OVERLAYS_DIR': MODULE_OVERLAYS_DIR,
+    'MODULE_OVERLAYS': {
+        },
     }
 
 about = {'ENABLED': True}
