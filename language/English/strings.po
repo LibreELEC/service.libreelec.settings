@@ -53,7 +53,7 @@ msgid "[B]Support:[/B][CR]Web: http://libreelec.tv[CR]Forum: http://forum.libree
 msgstr ""
 
 msgctxt "#700"
-msgid "Configure a hostname, keyboard type, perform a reset, update, or backups and restores"
+msgid "Configure a hostname, keyboard type, optional drivers, perform a reset, update, or backups and restores"
 msgstr ""
 
 msgctxt "#701"
@@ -238,6 +238,10 @@ msgstr ""
 
 msgctxt "#770"
 msgid "Select an available version"
+msgstr ""
+
+msgctxt "#771"
+msgid "Setting to ON enables the bleeding-edge CrazyCat DVB drivers. Use at your own risk! System has to be rebooted after changing this option"
 msgstr ""
 
 msgctxt "#32001"
@@ -806,4 +810,12 @@ msgstr ""
 
 msgctxt "#32392"
 msgid "Enable Lirc"
+msgstr ""
+
+msgctxt "#32393"
+msgid "Linux Kernel Drivers"
+msgstr ""
+
+msgctxt "#32394"
+msgid "CrazyCat DVB drivers"
 msgstr ""
