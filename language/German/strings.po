@@ -303,11 +303,11 @@ msgstr "- Benutzerdefinierter Kanal 1"
 
 msgctxt "#32018"
 msgid "  - Custom Channel 2"
-msgstr "- Benutzerdefinierter Kanal 1"
+msgstr "- Benutzerdefinierter Kanal 2"
 
 msgctxt "#32019"
 msgid "  - Custom Channel 3"
-msgstr "- Benutzerdefinierter Kanal 1"
+msgstr "- Benutzerdefinierter Kanal 3"
 
 msgctxt "#32020"
 msgid "Available Versions"
