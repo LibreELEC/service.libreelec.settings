@@ -57,6 +57,9 @@ class system:
     RESTORE_DIR = None
     GET_CPU_FLAG = None
     SET_CLOCK_CMD = None
+    MODULE_OVERLAYS_DIR = None
+    MODULE_OVERLAYS = None
+    MEDIA_BUILD_OVERLAY= None
     menu = {'1': {
         'name': 32002,
         'menuLoader': 'load_menu',
@@ -288,6 +291,20 @@ class system:
                             },
                         },
                     },
+                'module_overlays': {
+                    'order': 10,
+                    'name': 32393,
+                    'settings': {
+                        'media_build': {
+                            'order': 1,
+                            'name': 32394,
+                            'value': None,
+                            'action': 'set_media_build',
+                            'type': 'bool',
+                            'InfoText': 771,
+                            }
+                        }
+                    }
                 }
 
             self.keyboard_layouts = False
@@ -307,6 +324,7 @@ class system:
             self.set_keyboard_layout()
             self.set_hw_clock()
             self.set_auto_update()
+            self.set_media_build()
             del self.is_service
             self.oe.dbg_log('system::start_service', 'exit_function', 0)
         except Exception, e:
@@ -332,6 +350,24 @@ class system:
         self.oe.dbg_log('system::exit', 'enter_function', 0)
         self.oe.dbg_log('system::exit', 'exit_function', 0)
         pass
+
+    def get_overlay_directory(self, overlay):
+        try:
+            if self.MODULE_OVERLAYS[overlay]['directory'] != None:
+                return self.MODULE_OVERLAYS[overlay]['directory']
+            else:
+                return overlay
+        except Exception, e:
+            self.oe.dbg_log('system::get_overlay_directory', 'ERROR: (' + repr(e) + ')')
+
+    def get_overlay_level(self, overlay):
+        try:
+            if self.MODULE_OVERLAYS[overlay]['level'] != None:
+                return self.MODULE_OVERLAYS[overlay]['level']
+            else:
+                return 25
+        except Exception, e:
+            self.oe.dbg_log('system::get_overlay_level', 'ERROR: (' + repr(e) + ')')
 
     def load_values(self):
         try:
@@ -429,6 +465,23 @@ class system:
                 self.struct['update']['settings']['AutoUpdate']['value'] = 'manual'
                 self.struct['update']['settings']['UpdateNotify']['value'] = '0'
             self.oe.dbg_log('system::load_values', 'exit_function', 0)
+
+            # module overlay configuration
+            have_module_overlays = 0
+
+            for overlay in self.MODULE_OVERLAYS:
+                if overlay in self.struct['module_overlays']['settings']:
+                    overlay_directory = self.get_overlay_directory(overlay)
+                    overlay_level = self.get_overlay_level(overlay)
+                    if os.path.isdir('%s/%s' % (self.MODULE_OVERLAYS_DIR, overlay_directory)):
+                        self.struct['module_overlays']['settings'][overlay]['value'] =  self.oe.get_module_overlay_state(overlay, overlay_level)
+                        have_module_overlays = 1
+                    else:
+                        self.struct['module_overlays']['settings'][overlay]['hidden'] = 'true'
+
+            if have_module_overlays != 1:
+                self.struct['module_overlays']['hidden'] = 'true'
+
         except Exception, e:
             self.oe.dbg_log('system::load_values', 'ERROR: (' + repr(e) + ')')
 
@@ -448,6 +501,14 @@ class system:
             self.oe.dbg_log('system::set_value', 'exit_function', 0)
         except Exception, e:
             self.oe.dbg_log('system::set_value', 'ERROR: (' + repr(e) + ')')
+
+    def set_transient_value(self, listItem):
+        try:
+            self.oe.dbg_log('system::set_transient_value', 'enter_function', 0)
+            self.struct[listItem.getProperty('category')]['settings'][listItem.getProperty('entry')]['value'] = listItem.getProperty('value')
+            self.oe.dbg_log('system::set_transient_value', 'exit_function', 0)
+        except Exception, e:
+            self.oe.dbg_log('system::set_transient_value', 'ERROR: (' + repr(e) + ')')
 
     def set_keyboard_layout(self, listItem=None):
         try:
@@ -1030,6 +1091,23 @@ class system:
                 continue
             elif os.path.isdir(itempath):
                 self.get_folder_size(itempath)
+
+    def set_media_build(self, listItem=None):
+        try:
+            self.oe.dbg_log('system::set_media_build', 'enter_function', 0)
+            if not listItem == None:
+                self.set_transient_value(listItem)
+
+            state = 1
+            level = self.get_overlay_level(self.MEDIA_BUILD_OVERLAY)
+            if self.struct['module_overlays']['settings'][self.MEDIA_BUILD_OVERLAY]['value'] != '1':
+                state = 0
+
+            self.oe.set_module_overlay(self.MEDIA_BUILD_OVERLAY, state, level)
+
+            self.oe.dbg_log('system::set_media_build', 'exit_function', 0)
+        except Exception, e:
+            self.oe.dbg_log('system::set_media_build', 'ERROR: (' + repr(e) + ')')
 
     def do_wizard(self):
         try:

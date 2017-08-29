@@ -251,6 +251,38 @@ def set_service(service, options, state):
     except Exception, e:
         dbg_log('oe::set_service', 'ERROR: (' + repr(e) + ')')
 
+def get_module_overlay_state(overlay, level=20):
+    try:
+        if os.path.exists('%s/module-overlays/%02d-%s.conf' % (CONFIG_CACHE, level, overlay)):
+            return '1'
+        else:
+            return '0'
+    except Exception, e:
+        dbg_log('oe::get_module_overlay_state', 'ERROR: (' + repr(e) + ')')
+
+def set_module_overlay(overlay, state, level=20):
+    try:
+        dbg_log('oe::set_module_overlay', 'enter_function', 0)
+        dbg_log('oe::set_module_overlay::overlay', repr(overlay), 0)
+        dbg_log('oe::set_module_overlay::state', repr(state), 0)
+        dbg_log('oe::set_module_overlay::level', repr(level), 0)
+
+        cfn = '%s/module-overlays/%02d-%s.conf' % (CONFIG_CACHE, level, overlay)
+
+        if state == 1:
+            # enable overlay if not already enabled
+            if get_module_overlay_state(overlay) != '1':
+                with open(cfn, 'w') as cf:
+                    cf.write('%s' % (overlay))
+        else:
+            # disable overlay if not already disabled
+            if get_module_overlay_state(overlay) != '0':
+                os.unlink(cfn)
+
+        dbg_log('oe::set_module_overlay', 'exit_function', 0)
+    except Exception, e:
+        dbg_log('oe::set_module_overlay', 'ERROR: (' + repr(e) + ')')
+
 
 def load_file(filename):
     try:
