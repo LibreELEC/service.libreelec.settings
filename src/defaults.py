@@ -86,6 +86,8 @@ system = {
     'KERNEL_CMD': '/proc/cmdline',
     'SET_CLOCK_CMD': '/sbin/hwclock --systohc --utc',
     'UPDATE_REQUEST_URL': 'https://update.libreelec.tv/updates.php',
+    'TUF_REMOTE_REPO': 'http://raybuntu.libreelec.tv/tufrepo/',
+    'TUF_CLIENT_PATH': '/storage/.config/tufclient',
     'UPDATE_DOWNLOAD_URL': 'http://%s.libreelec.tv/%s',
     'LOCAL_UPDATE_DIR': '/storage/.update/',
     'GET_CPU_FLAG': "cat /proc/cpuinfo | grep -q 'flags.* lm ' && echo '1' || echo '0'",
