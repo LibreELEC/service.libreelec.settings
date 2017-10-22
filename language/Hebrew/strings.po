@@ -7,14 +7,15 @@ msgstr ""
 "Project-Id-Version: XBMC Addons\n"
 "Report-Msgid-Bugs-To: alanwww1@xbmc.org\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Kodi Translation Team\n"
-"Language-Team: Hebrew (http://www.transifex.com/projects/p/xbmc-addons/language/he/)\n"
+"PO-Revision-Date: 2017-10-22 10:13+0300\n"
+"Last-Translator: A. Dambledore\n"
+"Language-Team: Eng2Heb\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: he\n"
+"Language: he_IL\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
 
 msgctxt "#600"
 msgid "@DISTRONAME@ Settings"
@@ -42,22 +43,24 @@ msgstr "כתובת"
 
 msgctxt "#606"
 msgid "Distribution: "
-msgstr "הפצה:"
+msgstr "הפצה: "
 
 msgctxt "#607"
 msgid "Version: "
-msgstr "גרסה:"
+msgstr "גרסה: "
 
 msgctxt "#608"
 msgid "Architecture: "
-msgstr "ארכיטקטורה:"
+msgstr "ארכיטקטורה: "
 
 msgctxt "#609"
-msgid "Libre Embedded Linux Entertainment Center (LibreELEC) is a minimal Linux distribution purpose built for Kodi media center. LibreELEC is designed to boot fast with an installation process simple enough for anyone to convert a bare HTPC into a fully configured media machine in under 15 minutes."
-msgstr "מערכת מרכז בידור לינוקסאית משובצת ופתוחה, LibreELEC, היא הפצת לינוקס מינימלית שפותחה במיוחד עבור תוכנת מרכז בידורי Kodi.\nמערכת LibreELEC עוצבה כך שתעלה בזריזות ותציג תהליך התקנה פשוט שיאפשר לכל אחד להמיר מערכת מחשב נקייה (ללא מע' הפעלה) למערכת מדיה המוגדרת היטב תוך פחות מ-15 דקות."
+msgid "LibreELEC is a minimal Linux distribution purpose built for Kodi media center. LibreELEC is designed to boot fast with an installation process simple enough for anyone to convert a bare HTPC into a fully configured media machine in under 15 minutes."
+msgstr ""
+"מערכת מרכז בידור לינוקסאית משובצת ופתוחה, LibreELEC, היא הפצת לינוקס מינימלית שפותחה במיוחד עבור תוכנת מרכז מדיה Kodi.\n"
+"מערכת LibreELEC עוצבה כך שתעלה בזריזות ותציג תהליך התקנה פשוט שיאפשר לכל אחד להמיר מערכת מחשב נקייה (ללא מע' הפעלה) למערכת מדיה המוגדרת היטב תוך פחות מ-15 דקות."
 
 msgctxt "#610"
-msgid "[B]Support:[/B][CR]Web: http://libreelec.tv[CR]Forum: http://forum.libreelec.tv/[CR]Wiki: http://wiki.libreelec.tv[CR][CR][B]Social Media:[/B][CR]IRC: #libreelec on freenode.net (web-based chat is also available from the website)[CR]Twitter: https://twitter.com/libreelec[CR]Facebook: http://www.facebook.com/LibreELEC[CR]Google+: https://plus.google.com/+libreelec"
+msgid "[B]Support:[/B][CR]Web: http://libreelec.tv[CR]Forum: http://forum.libreelec.tv/[CR]Wiki: http://wiki.libreelec.tv[CR][CR][B]Social Media:[/B][CR]IRC: #libreelec on freenode.net (web-based chat is also available from the website)[CR]Twitter: https://twitter.com/libreelec[CR]Facebook: http://www.facebook.com/LibreELEC"
 msgstr "[B]תמיכה:[/B][CR]אתר: http://libreelec.tv[CR]פורום: http://forum.libreelec.tv/[CR]וויקי: http://wiki.libreelec.tv[CR][CR][B]מדיה חברתית:[/B][CR]IRC: #libreelec on freenode.net (דרך אתר זה ניתן לנהל צ'אט בעזרת הדפדפן)[CR]טוויטר: https://twitter.com/libreelec[CR]פייסבוק: http://www.facebook.com/LibreELEC[CR]גוגל+: https://plus.google.com/+libreelec"
 
 msgctxt "#700"
@@ -86,7 +89,7 @@ msgstr "מידע שימושי אודות פרטי גרסה וארכיטקטור�
 
 msgctxt "#710"
 msgid "Configure the Hostname of your @DISTRONAME@ system. This will be used for the HTPC \\\\hostname in Windows and SMB server name in the Mac OS Finder"
-msgstr "קביעת שם מארח למערכת @DISTRONAME@. זה הערך ב־Windows שמופיע בתבנית hostname\\\\ וב־Mac OS Finder זה יהיה שם שרת SMB."
+msgstr "קביעת שם מארח למערכת @DISTRONAME@. זה הערך ב־Windows שמופיע בתבנית hostname\\\\ וב־Mac OS Finder זה יהיה שם שרת SMB"
 
 msgctxt "#711"
 msgid "Configure the 1st keyboard software layout"
@@ -108,9 +111,9 @@ msgctxt "#715"
 msgid "Set to ON and an on-screen notification will be displayed when a new update is available"
 msgstr "יש לסמן כפעיל לשם הצגת הודעה כאשר עדכון חדש זמין"
 
-msgctxt "#716"
-msgid "Click to manually check the @DISTRONAME@ servers for an updated release"
-msgstr "יש ללחוץ לשם בדיקה ידנית בשרתי @DISTRONAME@ אם קיימת גרסה מעודכנת"
+msgctxt "#718"
+msgid "Send config.txt, cmdline.txt, shutdown.sh, autostart.sh, and kodi.log to http://sprunge.us and display the short URL"
+msgstr "שלח config.txt ', ' cmdline.txt ', ' shutdown.sh ', autostart.sh, kodi.log http://sprunge.us, והצגת ה-URL מקוצר"
 
 msgctxt "#720"
 msgid "Set to ON and Bluetooth devices will be disabled during power-saving modes"
@@ -125,12 +128,20 @@ msgid "Restore a tar archive backup previously created using the backup option a
 msgstr "שחזור גיבוי שנשמר כקובץ ארכיון מסוג tar בעבר באמצעות אפשרות הגיבוי שלעיל"
 
 msgctxt "#724"
-msgid "[COLOR FF00FF00]SOFT RESET[/COLOR]\nPermanently reset @DISTRONAME@ configuration to defaults (resets also Kodi to default including your library. your media - music/videos/etc are not touched)"
-msgstr "[COLOR FF00FF00]איפוס חלקי[/COLOR]\nמאפס לצמיתות הגדרות @DISTRONAME@ לברירות מחדל (בנוסף מאפס את Kodi לברירת מחדל כולל פרטי ספריית המדיה. קבצי המדיה - מוזיקה/וידאו/וכו' נשארים ללא שינוי)"
+msgid ""
+"[COLOR FF00FF00]SOFT RESET[/COLOR]\n"
+"Permanently reset @DISTRONAME@ configuration to defaults (resets also Kodi to default including your library. your media - music/videos/etc are not touched)"
+msgstr ""
+"[COLOR FF00FF00]איפוס חלקי[/COLOR]\n"
+"מאפס לצמיתות הגדרות @DISTRONAME@ לברירות מחדל (בנוסף מאפס את Kodi לברירת מחדל כולל פרטי ספריית המדיה. קבצי המדיה - מוזיקה/וידאו/וכו' נשארים ללא שינוי)"
 
 msgctxt "#725"
-msgid "[COLOR FFFF0000]HARD RESET[/COLOR]\nPermanently reset @DISTRONAME@ and Kodi configuration to defaults (everything in your storage partition will be deleted)"
-msgstr "[COLOR FFFF0000]איפוס מוחלט[/COLOR]\nמאפס לצמיתות הגדרות @DISTRONAME@ ו־Kodi לברירות מחדל (כל הקבצים שבמחיצת האחסון ימחקו)"
+msgid ""
+"[COLOR FFFF0000]HARD RESET[/COLOR]\n"
+"Permanently reset @DISTRONAME@ and Kodi configuration to defaults (everything in your storage partition will be deleted)"
+msgstr ""
+"[COLOR FFFF0000]איפוס מוחלט[/COLOR]\n"
+"מאפס לצמיתות הגדרות @DISTRONAME@ ו־Kodi לברירות מחדל (כל הקבצים שבמחיצת האחסון ימחקו)"
 
 msgctxt "#726"
 msgid "Enable or disable support for Wireless (WLAN) networks"
@@ -204,6 +215,10 @@ msgctxt "#745"
 msgid "Set to ON to enable the cron daemon"
 msgstr "ישל סמן כפעיל לשם הפעלת שירות Cron"
 
+msgctxt "#746"
+msgid "Set to ON to enable the lirc daemon"
+msgstr "מוגדר כפעיל כדי לאפשר את הדמון lirc"
+
 msgctxt "#750"
 msgid "750"
 msgstr "750"
@@ -227,6 +242,34 @@ msgstr "בחירת נוסח מערך מס' 2 של המקלדת"
 msgctxt "#755"
 msgid "Auto share external drives / partitions"
 msgstr "שיתוף מחיצה / כונן חיצוני אוטומטי"
+
+msgctxt "#756"
+msgid "Disable older SMB protocols by specifying the minimum supported protocol."
+msgstr "בטל פרוטוקולי SMB ישנים על-ידי ציון הפרוטוקול נתמך המינימלי."
+
+msgctxt "#757"
+msgid "Disable more recent SMB protocols for backward compatability with legacy clients."
+msgstr "בטל את הפרוטוקולים המעודכנים יותר של SMB עבור תאימות לאחור עם לקוחות מדור קודם."
+
+msgctxt "#758"
+msgid "NetBIOS group to which the server belongs. Default is WORKGROUP."
+msgstr "קבוצת ה-NetBIOS שאליה שייכת השרת. ברירת המחדל היא קבוצת העבודה."
+
+msgctxt "#760"
+msgid "Select an update channel"
+msgstr "בחר ערוץ עדכון"
+
+msgctxt "#761"
+msgid "Enable to allow entering a custom update url"
+msgstr "אפשר הזנת כתובת url מותאמת אישית"
+
+msgctxt "#762"
+msgid "Enter a custom update url (url should be the root of the update files)"
+msgstr "הזן כתובת url מותאמת אישית (השיקור צריך להיות השורש של קבצי העדכון)"
+
+msgctxt "#770"
+msgid "Select an available version"
+msgstr "בחר גירסה זמינה"
 
 msgctxt "#32001"
 msgid "Services"
@@ -260,6 +303,30 @@ msgctxt "#32014"
 msgid "Automatic Updates"
 msgstr "עדכון אוטומטי"
 
+msgctxt "#32015"
+msgid "Update Channel"
+msgstr "עדכון ערוץ"
+
+msgctxt "#32016"
+msgid "Show Custom Channels"
+msgstr "הצג ערוצים מותאמים אישית"
+
+msgctxt "#32017"
+msgid "  - Custom Channel 1"
+msgstr " - ערוץ 1 מותאם אישית"
+
+msgctxt "#32018"
+msgid "  - Custom Channel 2"
+msgstr " - ערוץ 2 מותאם אישית"
+
+msgctxt "#32019"
+msgid "  - Custom Channel 3"
+msgstr " - ערוץ 3 מותאם אישית"
+
+msgctxt "#32020"
+msgid "Available Versions"
+msgstr "גרסאות זמינות"
+
 msgctxt "#32100"
 msgid "Connections"
 msgstr "חיבורים"
@@ -290,7 +357,7 @@ msgstr "סיסמה"
 
 msgctxt "#32108"
 msgid "Enable 'tethered' Wireless Access Point"
-msgstr "הפעל נקודת גישה אלחוטית 'מגשרת' "
+msgstr "הפעל נקודת גישה אלחוטית מגשרת (tethered)"
 
 msgctxt "#32109"
 msgid "Connect Automatically"
@@ -314,7 +381,7 @@ msgstr "שיטת כתובת IP"
 
 msgctxt "#32114"
 msgid "IP Address"
-msgstr "כתובת IP"
+msgstr "כתובת"
 
 msgctxt "#32115"
 msgid "Subnet Mask"
@@ -386,7 +453,7 @@ msgstr "שמירה"
 
 msgctxt "#32141"
 msgid "Delete"
-msgstr "מחיקה"
+msgstr "מחק"
 
 msgctxt "#32142"
 msgid "Refresh"
@@ -399,6 +466,10 @@ msgstr "התנתקות"
 msgctxt "#32144"
 msgid "Connect"
 msgstr "התחברות"
+
+msgctxt "#32145"
+msgid "Pair"
+msgstr "צינוד"
 
 msgctxt "#32146"
 msgid "Hidden Network Name"
@@ -445,8 +516,8 @@ msgid "Initialize Archive File"
 msgstr "מאתחל קובץ ארכיב"
 
 msgctxt "#32187"
-msgid "Latest Version"
-msgstr "גרסה אחרונה"
+msgid "New Version"
+msgstr "גירסה חדשה"
 
 msgctxt "#32188"
 msgid "Current Version"
@@ -459,6 +530,10 @@ msgstr "זיהוי"
 msgctxt "#32190"
 msgid "System Name"
 msgstr "שם מערכת"
+
+msgctxt "#32191"
+msgid "Invalid URL"
+msgstr "כתובת לא תקפה"
 
 msgctxt "#32196"
 msgid "About"
@@ -508,9 +583,21 @@ msgctxt "#32212"
 msgid "Cancel"
 msgstr "ביטול"
 
+msgctxt "#32215"
+msgid "Workgroup name"
+msgstr "שם קבוצת העבודה"
+
 msgctxt "#32216"
 msgid "Auto-Share External Drives"
 msgstr "שתף אוטומטית כונן חיצוני"
+
+msgctxt "#32217"
+msgid "Minimum supported protocol"
+msgstr "גרסת פרוטוקול מינימלית"
+
+msgctxt "#32218"
+msgid "Maximum supported protocol"
+msgstr "גרסת פרוטוקול מקסימלית"
 
 msgctxt "#32300"
 msgid "Welcome to @DISTRONAME@"
@@ -526,7 +613,7 @@ msgstr "אשף זה ידריך אתכם בתהליך הגדרת מערכת @DIST
 
 msgctxt "#32303"
 msgid "Next"
-msgstr "הבא"
+msgstr "‎הבא"
 
 msgctxt "#32304"
 msgid "To be identified easily on the network, your new @DISTRONAME@ machine needs a name.[CR][CR]Try to choose something meaningful - like the room it's in - so you'll know what it is when you see it on the network.[CR][CR]This name is used when configuring network services, like file sharing using samba."
@@ -570,7 +657,7 @@ msgstr "תודה רבה"
 
 msgctxt "#32318"
 msgid "Your @DISTRONAME@ installation is now complete and you'll now enter Kodi when you can set up your media libraries. For help with this, there is a guide available at wiki.kodi.tv[CR][CR]@DISTRONAME@ is developed by a dedicated team of developers who work purely in their spare time. Even as a volunteer project, we still have to pay for our internet bandwidth and development resources so if you find @DISTRONAME@ useful, we will always appreciate a donation of any amount.[CR][CR]Finally, we hope you enjoy using @DISTRONAME@ as much as we've enjoying building it. If you need any more help, you can find links to get help along with latest news at our website"
-msgstr "התקנת @DISTRONAME@ הסתיימה ועתה אפשר לגשת ל־Kodi ולהגדיר את ספריות המדיה. קיים מדריך ב־wiki.kodi.tv לעזרה בזאת.[CR][CR]פיתוח @DISTRONAME@ נעשה ע\"י צוות מפתחים מסורים שעושים זאת בהתנדבות בזמנם הפנוי. גם בתור פרויקט התנדבותי, עדיין קיימות הוצאות עקב תעבורת רשת ומשאבי פיתוח נדרשים לכן אם מצאתם את @DISTRONAME@ שימושית, כל סכום שתתרמו יוערך.[CR][CR]לסיכום, אנו מקווים כי אתם נהנים להשתמש ב־@DISTRONAME@ כמו שאנו נהנים מיצירתה. אם נדרשת עזרה נוספת, ניתן למצוא קישורים שמסבירים כיצד לקבל עזרה וחדשות עדכניות באתרנו."
+msgstr "התקנת @DISTRONAME@ הסתיימה ועתה אפשר לגשת ל־Kodi ולהגדיר את ספריות המדיה. קיים מדריך ב־wiki.kodi.tv לעזרה בזאת.[CR][CR]פיתוח @DISTRONAME@ נעשה ע\"י צוות מפתחים מסורים שעושים זאת בהתנדבות בזמנם הפנוי. גם בתור פרויקט התנדבותי, עדיין קיימות הוצאות עקב תעבורת רשת ומשאבי פיתוח נדרשים לכן אם מצאתם את @DISTRONAME@ שימושית, כל סכום שתתרמו יוערך.[CR][CR]לסיכום, אנו מקווים כי אתם נהנים להשתמש ב־@DISTRONAME@ כמו שאנו נהנים מיצירתה. אם נדרשת עזרה נוספת, ניתן למצוא קישורים שמסבירים כיצד לקבל עזרה וחדשות עדכניות באתרנו"
 
 msgctxt "#32319"
 msgid "Cron"
@@ -614,7 +701,7 @@ msgstr "Bluetooth"
 
 msgctxt "#32333"
 msgid "Connected: "
-msgstr "מחובר:"
+msgstr "מחובר: "
 
 msgctxt "#32334"
 msgid "Yes"
@@ -686,7 +773,7 @@ msgstr "זמן המתנה מירבי (שניות)"
 
 msgctxt "#32371"
 msgid "Backup"
-msgstr "גיבוי"
+msgstr "גיבוי קודי"
 
 msgctxt "#32372"
 msgid "Create System and Kodi Backup"
@@ -699,6 +786,14 @@ msgstr "שחזור מגיבוי"
 msgctxt "#32375"
 msgid "Backup Progress"
 msgstr "התקדמות גיבוי"
+
+msgctxt "#32376"
+msgid "Submit Log"
+msgstr "שלח יומן אירועים"
+
+msgctxt "#32377"
+msgid "Pastebin system logs and get short URL"
+msgstr "Pastebin יומני המערכת ולקבל כתובת אתר קצרה"
 
 msgctxt "#32379"
 msgid "There is not enough free storage space to continue!"
@@ -748,3 +843,10 @@ msgctxt "#32390"
 msgid "Settings addon is not yet ready, please try again later."
 msgstr "הרחבת ההגדרות לא מוכנה, יש לנסות שנית מאוחר יותר."
 
+msgctxt "#32391"
+msgid "Lirc"
+msgstr "Lirc"
+
+msgctxt "#32392"
+msgid "Enable Lirc"
+msgstr "אפשר Lirc"
