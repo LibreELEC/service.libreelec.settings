@@ -1036,7 +1036,7 @@ class system:
             self.oe.dbg_log('system::do_pastebin', 'enter_function', 0)
             paste_dlg = xbmcgui.DialogProgress()
             paste_dlg.create('Pasting log files', 'Pasting...', ' ', ' ')
-            result = self.oe.execute('paste /storage/.kodi/temp/paste.tmp', 1)
+            result = self.oe.execute('PASTEUSR=libreelec PASTEPWD=libreelec paste /storage/.kodi/temp/paste.tmp', 1)
             if not paste_dlg.iscanceled():
                 paste_dlg.close()
                 link = result.find('http')
