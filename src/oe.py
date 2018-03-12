@@ -108,8 +108,8 @@ def _(code):
 
 
 def dbg_log(source, text, level=4):
-    if level == 0 and os.environ.get('DEBUG', 'no') == 'no':
-        return
+    #if level == 0 and os.environ.get('DEBUG', 'no') == 'no':
+    #    return
     xbmc.log('## LibreELEC Addon ## ' + source + ' ## ' + text, level)
     if level == 4:
         xbmc.log(traceback.format_exc(), level)
@@ -780,6 +780,7 @@ def get_os_release():
             distribution = os_release_info['NAME']
         if 'VERSION_ID' in os_release_info:
             version = os_release_info['VERSION_ID']
+            version_id = os_release_info['VERSION_ID']
         if 'VERSION' in os_release_info:
             version = os_release_info['VERSION']
         if 'LIBREELEC_ARCH' in os_release_info:
@@ -791,6 +792,7 @@ def get_os_release():
             version,
             architecture,
             build,
+            version_id,
             )
 
 
@@ -805,6 +807,7 @@ DISTRIBUTION = os_release_data[0]
 VERSION = os_release_data[1]
 ARCHITECTURE = os_release_data[2]
 BUILD = os_release_data[3]
+CHANNEL = os_release_data[4]
 DOWNLOAD_DIR = '/storage/downloads'
 XBMC_USER_HOME = os.environ.get('XBMC_USER_HOME', '/storage/.kodi')
 CONFIG_CACHE = os.environ.get('CONFIG_CACHE', '/storage/.cache')

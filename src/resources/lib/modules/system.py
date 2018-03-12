@@ -37,8 +37,14 @@ import oeWindows
 import threading
 import subprocess
 import shutil
+import tuf
+import tuf.conf
+#TODO: Need to fix this it's just a workaround
+tuf.conf.LOG_FILENAME = os.path.join('/storage/.config/', 'tuf.log')
+import tuf.formats
+import tuf.client.updater
 from xml.dom import minidom
-
+from natsort import natsorted
 
 class system:
 
@@ -424,7 +430,8 @@ class system:
             if not value is None:
                 self.struct['update']['settings']['CustomChannel3']['value'] = value
 
-            self.update_json = self.build_json()
+            if not hasattr(self, 'tufupdater'):
+                self.init_tufrepo()
 
             self.struct['update']['settings']['Channel']['values'] = self.get_channels()
             self.struct['update']['settings']['Build']['values'] = self.get_available_builds()
@@ -631,35 +638,25 @@ class system:
         except Exception, e:
             self.oe.dbg_log('system::set_channel', 'ERROR: (' + repr(e) + ')')
 
+    #TODO Broken by design
     def set_custom_channel(self, listItem=None):
-        try:
-            self.oe.dbg_log('system::set_custom_channel', 'enter_function', 0)
-            if not listItem == None:
-                self.set_value(listItem)
-            if listItem.getProperty('entry') != 'ShowCustomChannels':
-                if self.get_json(listItem.getProperty('value')) is None:
-                    xbmcDialog = xbmcgui.Dialog()
-                    xbmcDialog.ok('LibreELEC Update', self.oe._(32191).encode('utf-8'))
-                    xbmcDialog = None
-                    del xbmcDialog
-            self.update_json = self.build_json()
-            self.struct['update']['settings']['Channel']['values'] = self.get_channels()
-            if not self.struct['update']['settings']['Channel']['values'] is None:
-                if not self.struct['update']['settings']['Channel']['value'] in self.struct['update']['settings']['Channel']['values']:
-                    self.struct['update']['settings']['Channel']['value'] = None
-            self.struct['update']['settings']['Build']['values'] = self.get_available_builds()
-            self.oe.dbg_log('system::set_custom_channel', 'exit_function', 0)
-        except Exception, e:
-            self.oe.dbg_log('system::set_custom_channel', 'ERROR: (' + repr(e) + ')')
+        pass
 
     def get_channels(self):
         try:
             self.oe.dbg_log('system::get_channels', 'enter_function', 0)
+            if not hasattr(self, 'tufupdater'):
+                self.init_tufrepo()
+            #baserole=self.oe.BUILD
+            baserole='official'
+            self.refresh_tufrepo()
             channels = []
-            self.oe.dbg_log('system::get_channels', unicode(self.update_json), 0)
-            if not self.update_json is None:
-                for channel in self.update_json:
-                    channels.append(channel)
+            for rn in tuf.roledb.get_rolenames():
+              if re.match(r'^targets/%s/[^/]+$'%baserole, rn):
+                rn = rn.split('/')[-1]
+                channels.append(rn)
+            channels = natsorted(channels)
+            self.oe.dbg_log('system::get_channels', 'CHANNELS: %s' % repr(channels), 0)
             self.oe.dbg_log('system::get_channels', 'exit_function', 0)
             return channels
         except Exception, e:
@@ -668,19 +665,20 @@ class system:
     def do_manual_update(self, listItem=None):
         try:
             self.oe.dbg_log('system::do_manual_update', 'enter_function', 0)
-            channel = self.struct['update']['settings']['Channel']['value']
-            regex = re.compile(self.update_json[channel]['prettyname_regex'])
-            longname = '-'.join([self.oe.DISTRIBUTION, self.oe.ARCHITECTURE, self.oe.VERSION])
-            if regex.search(longname):
-                version = regex.findall(longname)[0]
-            else:
-                version = self.oe.VERSION
+
             if not listItem == None:
                 self.struct['update']['settings']['Build']['value'] = listItem.getProperty('value')
-            if self.struct['update']['settings']['Build']['value'] != '':
-                self.update_file = self.update_json[self.struct['update']['settings']['Channel']['value']]['url'] + self.get_available_builds(self.struct['update']['settings']['Build']['value'])
-                xbmcDialog = xbmcgui.Dialog()
-                answer = xbmcDialog.yesno('LibreELEC Update', self.oe._(32188).encode('utf-8') + ':  ' + version.encode('utf-8'),
+            chosen_target = self.struct['update']['settings']['Build']['value']
+            self.oe.dbg_log('system::do_manual_update', 'Chosen Target: %s'%repr(chosen_target), 0)
+            answer = False
+            if chosen_target != '':
+                for target in self.all_project_targets:
+                    prettyname = target['fileinfo']['custom']['PRETTYNAME']
+                    if prettyname == chosen_target:
+                        self.download_target=target
+                        version=target['fileinfo']['custom']['VERSION']
+                        xbmcDialog = xbmcgui.Dialog()
+                        answer = xbmcDialog.yesno('LibreELEC Update', self.oe._(32188).encode('utf-8') + ':  ' + version.encode('utf-8'),
                                       self.oe._(32187).encode('utf-8') + ':  ' + self.struct['update']['settings']['Build']['value'].encode('utf-8'),
                                       self.oe._(32180).encode('utf-8'))
                 xbmcDialog = None
@@ -693,74 +691,80 @@ class system:
         except Exception, e:
             self.oe.dbg_log('system::do_manual_update', 'ERROR: (' + repr(e) + ')')
 
-    def get_json(self, url=None):
+    def init_tufrepo(self):
         try:
-            self.oe.dbg_log('system::get_json', 'enter_function', 0)
-            if url is None:
-                url = self.UPDATE_DOWNLOAD_URL % ('releases', 'releases.json')
-            if url.split('/')[-1] != 'releases.json':
-                url = url + '/releases.json'
-            data = self.oe.load_url(url)
-            if not data is None:
-                update_json = json.loads(data)
-            else:
-                update_json = None
-            self.oe.dbg_log('system::get_json', 'exit_function', 0)
-            return update_json
+            self.oe.dbg_log('system::init_tufrepo', 'enter_function', 0)
+            tuf.formats.URL_SCHEMA.check_match(self.TUF_REMOTE_REPO)
+            tuf.conf.repository_directory = self.TUF_CLIENT_PATH
+            repository_mirrors = {'mirror': {'url_prefix': self.TUF_REMOTE_REPO,
+                                  'metadata_path': 'metadata',
+                                  'targets_path': 'targets',
+                                  'confined_target_dirs': ['']}}
+            self.tufupdater = tuf.client.updater.Updater('LibreELEC_TUF_Repository', repository_mirrors)
+            self.tufupdater.refresh()
+            self.oe.dbg_log('system::init_tufrepo', 'exit_function', 0)
         except Exception, e:
-            self.oe.dbg_log('system::get_json', 'ERROR: (' + repr(e) + ')')
+            self.oe.dbg_log('system::init_tufrepo', 'ERROR: (' + repr(e) + ')')
 
-    def build_json(self):
+    def refresh_tufrepo(self):
         try:
-            self.oe.dbg_log('system::build_json', 'enter_function', 0)
-            update_json = self.get_json()
-            if self.struct['update']['settings']['ShowCustomChannels']['value'] == '1':
-                custom_urls = []
-                for i in 1,2,3:
-                    custom_urls.append(self.struct['update']['settings']['CustomChannel' + str(i)]['value'])
-                for custom_url in custom_urls:
-                    if custom_url != '':
-                        custom_update_json = self.get_json(custom_url)
-                        if not custom_update_json is None:
-                            for channel in custom_update_json:
-                                update_json[channel] = custom_update_json[channel]
-            self.oe.dbg_log('system::build_json', 'exit_function', 0)
-            return update_json
+            self.oe.dbg_log('system::refresh_tufrepo', 'enter_function', 0)
+            if not hasattr(self, 'tufupdater'):
+                self.init_tufrepo()
+            #TODO
+            #baserole = os.path.join('targets', self.oe.BUILD, '.')
+            baserole = os.path.join('targets', 'official', '.')
+            self.tufupdater.refresh_targets_metadata_chain(baserole)
+            self.oe.dbg_log('system::refresh_tufrepo', 'exit_function', 0)
         except Exception, e:
-            self.oe.dbg_log('system::build_json', 'ERROR: (' + repr(e) + ')')
+            self.oe.dbg_log('system::refresh_tufrepo', 'ERROR: (' + repr(e) + ')')
 
-    def get_available_builds(self, shortname=None):
+    def get_available_builds(self):
         try:
-            self.oe.dbg_log('system::get_available_builds', 'enter_function', 0)
-            channel = self.struct['update']['settings']['Channel']['value']
             update_files = []
-            build = None
-            if not self.update_json is None:
-                if channel != '':
-                    if channel in self.update_json:
-                        regex = re.compile(self.update_json[channel]['prettyname_regex'])
-                        if self.oe.ARCHITECTURE in self.update_json[channel]['project']:
-                            for i in sorted(self.update_json[channel]['project'][self.oe.ARCHITECTURE]['releases'], key=int, reverse=True):
-                                if shortname is None:
-                                    update_files.append(regex.findall(self.update_json[channel]['project'][self.oe.ARCHITECTURE]['releases'][i]['file']['name'])[0].strip('.tar'))
-                                else:
-                                    build = self.update_json[channel]['project'][self.oe.ARCHITECTURE]['releases'][i]['file']['name']
-                                    if shortname in build:
-                                        break
+            self.oe.dbg_log('system::get_available_builds', 'enter_function', 0)
+            if not hasattr(self, 'tufupdater'):
+                self.init_tufrepo()
+            #TODO
+            #baserole = self.oe.BUILD
+            baserole = 'official'
+            project_role = self.oe.ARCHITECTURE
+            channel_role = self.struct['update']['settings']['Channel']['value']
+            self.oe.dbg_log('system::get_available_builds', 'CHANNEL_ROLE: %s' %repr(channel_role), 0)
+            available_channels=self.get_channels()
+            if channel_role is None or channel_role not in available_channels:
+                channel_role = self.oe.CHANNEL
+            target_role = os.path.join('targets', baserole, channel_role, project_role)
+            self.oe.dbg_log('system::get_available_builds', 'TARGET_ROLE: %s' % target_role, 0)
+
+            self.tufupdater.refresh()
+            self.refresh_tufrepo()
+            self.tufupdater.refresh_targets_metadata_chain(target_role)
+            all_project_targets = self.tufupdater.targets_of_role(target_role)
+            if len(all_project_targets) > 0:
+                self.all_project_targets = natsorted(all_project_targets,
+                        key=lambda k: k['fileinfo']['custom']['VERSION'])
+                for target in self.all_project_targets:
+                    prettyname = target['fileinfo']['custom']['PRETTYNAME']
+                    update_files.append(prettyname)
+            self.oe.dbg_log('system::get_available_builds', 'BUILDS: %s' %repr(update_files), 0)
+            update_files.reverse()
+            return update_files
+
             self.oe.dbg_log('system::get_available_builds', 'exit_function', 0)
-            if build is None:
-                return update_files
-            else:
-                return build
         except Exception, e:
             self.oe.dbg_log('system::get_available_builds', 'ERROR: (' + repr(e) + ')')
 
-    def check_updates_v2(self, force=False):
+    def check_updates(self, force=False):
         try:
-            self.oe.dbg_log('system::check_updates_v2', 'enter_function', 0)
+            self.oe.dbg_log('system::check_updates', 'enter_function', 0)
             if hasattr(self, 'update_in_progress'):
-                self.oe.dbg_log('system::check_updates_v2', 'Update in progress (exit)', 0)
+                self.oe.dbg_log('system::check_updates', 'Update in progress (exit)', 0)
                 return
+            if not hasattr(self, 'tufupdater'):
+                self.init_tufrepo()
+
+            #TODO Workaround to collect stats
             url = '%s?i=%s&d=%s&pa=%s&v=%s&l=%s' % (
                 self.UPDATE_REQUEST_URL,
                 self.oe.SYSTEMID,
@@ -769,35 +773,71 @@ class system:
                 self.oe.VERSION,
                 self.cpu_lm_flag,
                 )
-            self.oe.dbg_log('system::check_updates_v2', 'URL: %s' % url, 0)
-            update_json = self.oe.load_url(url)
-            self.oe.dbg_log('system::check_updates_v2', 'RESULT: %s' % repr(update_json), 0)
-            if update_json != '':
-                update_json = json.loads(update_json)
-                self.last_update_check = time.time()
-                if 'update' in update_json['data'] and 'folder' in update_json['data']:
-                    self.update_file = self.UPDATE_DOWNLOAD_URL % (update_json['data']['folder'], update_json['data']['update'])
-                    if self.struct['update']['settings']['UpdateNotify']['value'] == '1':
-                        self.oe.notify(self.oe._(32363).encode('utf-8'), self.oe._(32364).encode('utf-8'))
-                    if self.struct['update']['settings']['AutoUpdate']['value'] == 'auto' and force == False:
-                        self.update_in_progress = True
-                        self.do_autoupdate(None, True)
-            self.oe.dbg_log('system::check_updates_v2', 'exit_function', 0)
-        except Exception, e:
-            self.oe.dbg_log('system::check_updates_v2', 'ERROR: (' + repr(e) + ')')
+            self.oe.dbg_log('system::check_updates', 'URL: %s' % url, 0)
+            self.oe.load_url(url)
 
-    def do_autoupdate(self, listItem=None, silent=False):
+            download_target=None
+            self.get_available_builds()
+            if hasattr(self, 'all_project_targets'):
+                channel_role = self.struct['update']['settings']['Channel']['value']
+                self.oe.dbg_log('system::get_available_builds', 'CHANNEL_ROLE: %s' %repr(channel_role), 0)
+                available_channels=self.get_channels()
+                if channel_role is None or channel_role not in available_channels:
+                    channel_role = self.oe.CHANNEL
+                latest_project_target = self.all_project_targets[-1]
+                target_sha256 = latest_project_target['fileinfo']['hashes']['sha256']
+                current_sha256 = None
+                target_version = latest_project_target['fileinfo']['custom']['VERSION']
+                target_channel = latest_project_target['fileinfo']['custom']['CHANNEL']
+                latest_timestamp = float(latest_project_target['fileinfo']['custom']['TIMESTAMP'])
+                current_timestamp = time.time()
+                compare_channels = natsorted([target_channel, channel_role])
+                compare_versions = natsorted([target_version, self.oe.VERSION])
+                self.oe.dbg_log('system::check_updates', 'Target builds sha256: %s'%target_sha256, 0)
+
+                canary = False
+                inform_canary = False
+                if current_timestamp < latest_timestamp:
+                    canary = True
+
+                if channel_role != compare_channels[-1] or \
+                    self.oe.VERSION != compare_versions[-1]:
+                    if not canary:
+                        download_target = latest_project_target
+                    else:
+                        inform_canary = True
+
+                if inform_canary:
+                    self.oe.dbg_log('system::check_updates', 
+                                    'Current Version not yet available for autoupdate', 0)
+                self.oe.dbg_log('system::check_updates', 'DOWNLOAD_TARGET: %s' % repr(download_target), 0)
+
+            if download_target is not None:
+                self.last_update_check = time.time()
+                self.download_target = download_target
+                if self.struct['update']['settings']['UpdateNotify']['value'] == '1':
+                    self.oe.notify(self.oe._(32363).encode('utf-8'), self.oe._(32364).encode('utf-8'))
+                if self.struct['update']['settings']['AutoUpdate']['value'] == 'auto' and force == False:
+                    self.update_in_progress = True
+                    self.do_autoupdate(True)
+            self.oe.dbg_log('system::check_updates', 'exit_function', 0)
+        except Exception, e:
+            self.oe.dbg_log('system::check_updates', 'ERROR: (' + repr(e) + ')')
+
+    def do_autoupdate(self, silent=False):
         try:
             self.oe.dbg_log('system::do_autoupdate', 'enter_function', 0)
-            if hasattr(self, 'update_file'):
+            if hasattr(self, 'download_target'):
                 if not os.path.exists(self.LOCAL_UPDATE_DIR):
                     os.makedirs(self.LOCAL_UPDATE_DIR)
-                downloaded = self.oe.download_file(self.update_file, self.oe.TEMP + 'update_file', silent)
-                if not downloaded is None:
-                    self.update_file = self.update_file.split('/')[-1]
+                if hasattr(self, 'tufupdater'):
+                    self.tufupdater.download_target(self.download_target, self.oe.TEMP)
+                    self.oe.dbg_log('system::do_autoupdate', 'Download_Target: %s'%repr(self.download_target), 0)
+                    update_file = self.download_target['filepath']
+
                     if self.struct['update']['settings']['UpdateNotify']['value'] == '1':
                         self.oe.notify(self.oe._(32363), self.oe._(32366))
-                    shutil.move(self.oe.TEMP + 'update_file', self.LOCAL_UPDATE_DIR + self.update_file)
+                    shutil.move(self.oe.TEMP + update_file, self.LOCAL_UPDATE_DIR + update_file.split('/')[-1])
                     subprocess.call('sync', shell=True, stdin=None, stdout=None, stderr=None)
                     if silent == False:
                         self.oe.winOeMain.close()
@@ -1158,7 +1198,7 @@ class updateThread(threading.Thread):
             self.oe.dbg_log('system::updateThread::run', 'enter_function', 0)
             while self.stopped == False:
                 if not xbmc.Player().isPlaying():
-                    self.oe.dictModules['system'].check_updates_v2()
+                    self.oe.dictModules['system'].check_updates()
                 if not hasattr(self.oe.dictModules['system'], 'update_in_progress'):
                     self.wait_evt.wait(21600)
                 else:
