@@ -663,7 +663,7 @@ msgstr "Annuler"
 
 msgctxt "#32213"
 msgid "Keep Existing"
-msgstr "Continue d'exister"
+msgstr "Garder l'existant"
 
 msgctxt "#32214"
 msgid "Set Password"
@@ -751,7 +751,7 @@ msgstr "Afin de télécharger les fonds d'écran, bannières et miniatures de vo
 
 msgctxt "#32307"
 msgid "Previous"
-msgstr ""
+msgstr "Précédent"
 
 msgctxt "#32308"
 msgid "Hostname:"
@@ -1018,7 +1018,7 @@ msgstr "@DISTRONAME@ a démarré temporairement en mode sans échec en raison de
 
 msgctxt "#32395"
 msgid "Firewall"
-msgstr "Firewall"
+msgstr "Pare-feu"
 
 msgctxt "#32396"
 msgid "Custom"
