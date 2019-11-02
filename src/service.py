@@ -30,7 +30,7 @@ class service_thread(threading.Thread):
             threading.Thread.__init__(self)
             self.daemon = True
             self.oe.dbg_log('_service_::__init__', 'exit_function', 0)
-        except Exception, e:
+        except Exception as e:
             self.oe.dbg_log('_service_::__init__', 'ERROR: (' + repr(e) + ')')
 
     def stop(self):
@@ -43,7 +43,7 @@ class service_thread(threading.Thread):
             sock.close()
             self.sock.close()
             self.oe.dbg_log('_service_::stop', 'exit_function', 0)
-        except Exception, e:
+        except Exception as e:
             self.oe.dbg_log('_service_::stop', 'ERROR: (' + repr(e) + ')')
 
     def run(self):
@@ -66,7 +66,7 @@ class service_thread(threading.Thread):
                 if message == 'exit':
                     self.stopped = True
             self.oe.dbg_log('_service_::run', 'exit_function', 0)
-        except Exception, e:
+        except Exception as e:
             self.oe.dbg_log('_service_::run', 'ERROR: (' + repr(e) + ')')
 
 
