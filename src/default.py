@@ -17,5 +17,5 @@ try:
     sock.connect('/var/run/service.libreelec.settings.sock')
     sock.send('openConfigurationWindow')
     sock.close()
-except Exception, e:
+except Exception as e:
     xbmc.executebuiltin('Notification("LibreELEC", "%s", 5000, "%s/icon.png")' % (_(32390).encode('utf-8'), __media__))
