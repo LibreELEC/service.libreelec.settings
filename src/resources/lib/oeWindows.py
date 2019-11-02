@@ -92,7 +92,7 @@ class mainWindow(xbmcgui.WindowXMLDialog):
             self.setFocusId(self.guiMenList)
             self.onFocus(self.guiMenList)
             self.oe.set_busy(0)
-        except Exception, e:
+        except Exception as e:
             self.oe.set_busy(0)
             self.oe.dbg_log('oeWindows.mainWindow::onInit', 'ERROR: (' + repr(e) + ')')
 
@@ -102,7 +102,7 @@ class mainWindow(xbmcgui.WindowXMLDialog):
             for strProp in dictProperties:
                 lstItem.setProperty(strProp, unicode(dictProperties[strProp]))
             self.getControl(self.guiMenList).addItem(lstItem)
-        except Exception, e:
+        except Exception as e:
             self.oe.dbg_log('oeWindows.mainWindow::addMenuItem(' + unicode(strName) + ')', 'ERROR: (' + repr(e) + ')')
 
     def addConfigItem(self, strName, dictProperties, strType):
@@ -112,7 +112,7 @@ class mainWindow(xbmcgui.WindowXMLDialog):
                 lstItem.setProperty(strProp, unicode(dictProperties[strProp]))
             self.getControl(int(strType)).addItem(lstItem)
             return lstItem
-        except Exception, e:
+        except Exception as e:
             self.oe.dbg_log('oeWindows.mainWindow::addConfigItem(' + strName + ')', 'ERROR: (' + repr(e) + ')')
 
     def build_menu(self, struct, fltr=[], optional='0'):
@@ -166,7 +166,7 @@ class mainWindow(xbmcgui.WindowXMLDialog):
                                         m_menu.append(m_entry)
             for m_entry in m_menu:
                 self.addConfigItem(m_entry['name'], m_entry['properties'], m_entry['list'])
-        except Exception, e:
+        except Exception as e:
             self.oe.dbg_log('oeWindows.mainWindow::build_menu', 'ERROR: (' + repr(e) + ')')
 
     def showButton(self, number, name, module, action, onup=None, onleft=None):
@@ -182,7 +182,7 @@ class mainWindow(xbmcgui.WindowXMLDialog):
                 button.controlLeft(self.getControl(onleft))
             button.setVisible(True)
             self.oe.dbg_log('oeWindows::showButton', 'exit_function', 0)
-        except Exception, e:
+        except Exception as e:
             self.oe.dbg_log('oeWindows.mainWindow::showButton(' + unicode(number) + ', ' + unicode(action) + ')', 'ERROR: (' + repr(e) + ')')
 
     def onAction(self, action):
@@ -222,7 +222,7 @@ class mainWindow(xbmcgui.WindowXMLDialog):
                     self.setProperty('InfoText', nextItem.getProperty('InfoText'))
             if focusId == self.guiMenList:
                 self.setFocusId(focusId)
-        except Exception, e:
+        except Exception as e:
             self.oe.dbg_log('oeWindows.mainWindow::onAction(' + unicode(action) + ')', 'ERROR: (' + repr(e) + ')')
             if actionId in self.oe.CANCEL:
                 self.close()
@@ -335,7 +335,7 @@ class mainWindow(xbmcgui.WindowXMLDialog):
                 self.setFocusId(controlID)
                 self.getControl(controlID).selectItem(selectedPosition)
             self.oe.dbg_log('oeWindows::onClick', 'exit_function', 0)
-        except Exception, e:
+        except Exception as e:
             self.oe.dbg_log('oeWindows.mainWindow::onClick(' + unicode(controlID) + ')', 'ERROR: (' + repr(e) + ')')
 
     def onUnload(self):
@@ -380,7 +380,7 @@ class mainWindow(xbmcgui.WindowXMLDialog):
                             getattr(self.oe.dictModules[selectedMenuItem.getProperty('modul')], strMenuLoader)(selectedMenuItem)
                     self.getControl(int(selectedMenuItem.getProperty('listTyp'))).setAnimations([('conditional',
                             'effect=fade start=0 end=100 time=100 condition=true')])
-        except Exception, e:
+        except Exception as e:
             self.oe.dbg_log('oeWindows.mainWindow::onFocus(' + repr(controlID) + ')', 'ERROR: (' + repr(e) + ')')
 
     def emptyButtonLabels(self):
@@ -489,7 +489,7 @@ class wizard(xbmcgui.WindowXMLDialog):
               self.oe.winOeMain.set_wizard_button_1(cur_lang, self, 'wizard_set_language')
             self.showButton(1, 32303)
             self.setFocusId(self.buttons[1]['id'])
-        except Exception, e:
+        except Exception as e:
             self.oe.dbg_log('oeWindows.wizard::onInit()', 'ERROR: (' + repr(e) + ')')
 
     def wizard_set_language(self):
@@ -523,31 +523,31 @@ class wizard(xbmcgui.WindowXMLDialog):
                 self.showButton(1, 32303)
                 self.setFocusId(self.buttons[1]['id'])
             self.oe.dbg_log('oeWindows::wizard_set_language', 'exit_function', 0)
-        except Exception, e:
+        except Exception as e:
             self.oe.dbg_log('oeWindows::wizard_set_language', 'ERROR: (' + repr(e) + ')')
 
     def set_wizard_text(self, text):
         try:
             self.getControl(self.wizTextbox).setText(text)
-        except Exception, e:
+        except Exception as e:
             self.oe.dbg_log('oeWindows.wizard::set_wizard_text()', 'ERROR: (' + repr(e) + ')')
 
     def set_wizard_title(self, title):
         try:
             self.getControl(self.wizTitle).setLabel(title)
-        except Exception, e:
+        except Exception as e:
             self.oe.dbg_log('oeWindows.wizard::set_wizard_title()', 'ERROR: (' + repr(e) + ')')
 
     def set_wizard_button_title(self, title):
         try:
             self.getControl(self.wizBtnTitle).setLabel(title)
-        except Exception, e:
+        except Exception as e:
             self.oe.dbg_log('oeWindows.wizard::set_wizard_button_title()', 'ERROR: (' + repr(e) + ')')
 
     def set_wizard_list_title(self, title):
         try:
             self.getControl(self.wizLstTitle).setLabel(title)
-        except Exception, e:
+        except Exception as e:
             self.oe.dbg_log('oeWindows.wizard::set_wizard_list_title()', 'ERROR: (' + repr(e) + ')')
 
     def set_wizard_button_1(self, label, modul, action):
@@ -565,7 +565,7 @@ class wizard(xbmcgui.WindowXMLDialog):
                 self.getControl(self.buttons[1]['id']).controlLeft(self.getControl(self.buttons[3]['id']))
             self.getControl(self.buttons[2]['id']).controlUp(self.getControl(self.buttons[3]['id']))
             self.getControl(self.buttons[2]['id']).controlRight(self.getControl(self.buttons[1]['id']))
-        except Exception, e:
+        except Exception as e:
             self.oe.dbg_log('oeWindows.wizard::set_wizard_button_1()', 'ERROR: (' + repr(e) + ')')
 
     def set_wizard_button_2(self, label, modul, action):
@@ -582,7 +582,7 @@ class wizard(xbmcgui.WindowXMLDialog):
             self.getControl(self.buttons[2]['id']).controlUp(self.getControl(self.buttons[4]['id']))
             self.getControl(self.buttons[2]['id']).controlRight(self.getControl(self.buttons[1]['id']))
             self.getControl(self.buttons[3]['id']).controlRight(self.getControl(self.buttons[4]['id']))
-        except Exception, e:
+        except Exception as e:
             self.oe.dbg_log('oeWindows.wizard::set_wizard_button_2()', 'ERROR: (' + repr(e) + ')')
 
     def set_wizard_radiobutton_1(self, label, modul, action, selected=False):
@@ -598,7 +598,7 @@ class wizard(xbmcgui.WindowXMLDialog):
             self.getControl(self.buttons[2]['id']).controlUp(self.getControl(self.radiobuttons[1]['id']))
             self.getControl(self.buttons[2]['id']).controlRight(self.getControl(self.buttons[1]['id']))
             self.getControl(self.radiobuttons[1]['id']).setSelected(selected)
-        except Exception, e:
+        except Exception as e:
             self.oe.dbg_log('oeWindows.wizard::set_wizard_button_1()', 'ERROR: (' + repr(e) + ')')
 
     def set_wizard_radiobutton_2(self, label, modul, action, selected=False):
@@ -616,7 +616,7 @@ class wizard(xbmcgui.WindowXMLDialog):
             self.getControl(self.buttons[2]['id']).controlRight(self.getControl(self.buttons[1]['id']))
             self.getControl(self.radiobuttons[1]['id']).controlRight(self.getControl(self.radiobuttons[2]['id']))
             self.getControl(self.radiobuttons[2]['id']).setSelected(selected)
-        except Exception, e:
+        except Exception as e:
             self.oe.dbg_log('oeWindows.wizard::set_wizard_button_2()', 'ERROR: (' + repr(e) + ')')
 
     def onAction(self, action):
@@ -698,7 +698,7 @@ class wizard(xbmcgui.WindowXMLDialog):
                     self.close()
                     xbmc.executebuiltin(lang_str)
             self.oe.dbg_log('wizard::onClick(' + unicode(controlID) + ')', 'exit_function', 0)
-        except Exception, e:
+        except Exception as e:
             self.oe.dbg_log('oeWindows.wizard::onClick()', 'ERROR: (' + repr(e) + ')')
 
     def onFocus(self, controlID):
@@ -709,7 +709,7 @@ class wizard(xbmcgui.WindowXMLDialog):
             button = self.getControl(self.buttons[number]['id'])
             button.setLabel(self.oe._(name))
             button.setVisible(True)
-        except Exception, e:
+        except Exception as e:
             self.oe.dbg_log('oeWindows.wizard::showButton(' + unicode(number) + ')', 'ERROR: (' + repr(e) + ')')
 
     def addConfigItem(self, strName, dictProperties, strType):
@@ -719,5 +719,5 @@ class wizard(xbmcgui.WindowXMLDialog):
                 lstItem.setProperty(strProp, unicode(dictProperties[strProp]))
             self.getControl(int(strType)).addItem(lstItem)
             return lstItem
-        except Exception, e:
+        except Exception as e:
             self.oe.dbg_log('oeWindows.wizard::addConfigItem(' + strName + ')', 'ERROR: (' + repr(e) + ')')
