@@ -259,7 +259,7 @@ class services:
 
             self.oe = oeMain
             oeMain.dbg_log('services::__init__', 'exit_function', 0)
-        except Exception, e:
+        except Exception as e:
             self.oe.dbg_log('services::__init__', 'ERROR: (%s)' % repr(e))
 
     def start_service(self):
@@ -272,14 +272,14 @@ class services:
             self.initialize_cron(service=1)
             self.init_bluetooth(service=1)
             self.oe.dbg_log('services::start_service', 'exit_function', 0)
-        except Exception, e:
+        except Exception as e:
             self.oe.dbg_log('services::start_service', 'ERROR: (%s)' % repr(e))
 
     def stop_service(self):
         try:
             self.oe.dbg_log('services::stop_service', 'enter_function', 0)
             self.oe.dbg_log('services::stop_service', 'exit_function', 0)
-        except Exception, e:
+        except Exception as e:
             self.oe.dbg_log('services::stop_service', 'ERROR: (' + repr(e) + ')')
 
     def do_init(self):
@@ -287,7 +287,7 @@ class services:
             self.oe.dbg_log('services::do_init', 'exit_function', 0)
             self.load_values()
             self.oe.dbg_log('services::do_init', 'exit_function', 0)
-        except Exception, e:
+        except Exception as e:
             self.oe.dbg_log('services::do_init', 'ERROR: (%s)' % repr(e))
 
     def set_value(self, listItem):
@@ -295,7 +295,7 @@ class services:
             self.oe.dbg_log('services::set_value', 'enter_function', 0)
             self.struct[listItem.getProperty('category')]['settings'][listItem.getProperty('entry')]['value'] = listItem.getProperty('value')
             self.oe.dbg_log('services::set_value', 'exit_function', 0)
-        except Exception, e:
+        except Exception as e:
             self.oe.dbg_log('services::set_value', 'ERROR: (' + repr(e) + ')')
 
     def load_menu(self, focusItem):
@@ -303,7 +303,7 @@ class services:
             self.oe.dbg_log('services::load_menu', 'enter_function', 0)
             self.oe.winOeMain.build_menu(self.struct)
             self.oe.dbg_log('services::load_menu', 'exit_function', 0)
-        except Exception, e:
+        except Exception as e:
             self.oe.dbg_log('services::load_menu', 'ERROR: (%s)' % repr(e))
 
     def load_values(self):
@@ -379,7 +379,7 @@ class services:
                     self.struct['bluez']['hidden'] = 'true'
 
             self.oe.dbg_log('services::load_values', 'exit_function', 0)
-        except Exception, e:
+        except Exception as e:
             self.oe.dbg_log('services::load_values', 'ERROR: (%s)' % repr(e))
 
     def initialize_samba(self, **kwargs):
@@ -417,7 +417,7 @@ class services:
             self.oe.set_service('samba', options, state)
             self.oe.set_busy(0)
             self.oe.dbg_log('services::initialize_samba', 'exit_function', 0)
-        except Exception, e:
+        except Exception as e:
             self.oe.set_busy(0)
             self.oe.dbg_log('services::initialize_samba', 'ERROR: (%s)' % repr(e), 4)
 
@@ -442,7 +442,7 @@ class services:
             self.oe.set_service('sshd', options, state)
             self.oe.set_busy(0)
             self.oe.dbg_log('services::initialize_ssh', 'exit_function', 0)
-        except Exception, e:
+        except Exception as e:
             self.oe.set_busy(0)
             self.oe.dbg_log('services::initialize_ssh', 'ERROR: (%s)' % repr(e), 4)
 
@@ -459,7 +459,7 @@ class services:
             self.oe.set_service('avahi', options, state)
             self.oe.set_busy(0)
             self.oe.dbg_log('services::initialize_avahi', 'exit_function', 0)
-        except Exception, e:
+        except Exception as e:
             self.oe.set_busy(0)
             self.oe.dbg_log('services::initialize_avahi', 'ERROR: (%s)' % repr(e), 4)
 
@@ -476,7 +476,7 @@ class services:
             self.oe.set_service('crond', options, state)
             self.oe.set_busy(0)
             self.oe.dbg_log('services::initialize_cron', 'exit_function', 0)
-        except Exception, e:
+        except Exception as e:
             self.oe.set_busy(0)
             self.oe.dbg_log('services::initialize_cron', 'ERROR: (%s)' % repr(e), 4)
 
@@ -500,7 +500,7 @@ class services:
             self.oe.set_service('bluez', options, state)
             self.oe.set_busy(0)
             self.oe.dbg_log('services::init_bluetooth', 'exit_function', 0)
-        except Exception, e:
+        except Exception as e:
             self.oe.set_busy(0)
             self.oe.dbg_log('services::init_bluetooth', 'ERROR: (' + repr(e) + ')', 4)
 
@@ -519,7 +519,7 @@ class services:
             self.oe.set_service('obexd', options, state)
             self.oe.set_busy(0)
             self.oe.dbg_log('services::init_obex', 'exit_function', 0)
-        except Exception, e:
+        except Exception as e:
             self.oe.set_busy(0)
             self.oe.dbg_log('services::init_obex', 'ERROR: (' + repr(e) + ')', 4)
 
@@ -527,7 +527,7 @@ class services:
         try:
             self.oe.dbg_log('services::exit', 'enter_function', 0)
             self.oe.dbg_log('services::exit', 'exit_function', 0)
-        except Exception, e:
+        except Exception as e:
             self.oe.dbg_log('services::exit', 'ERROR: (%s)' % repr(e), 4)
 
     def do_wizard(self):
@@ -546,7 +546,7 @@ class services:
             self.oe.winOeMain.set_wizard_button_title(self.oe._(32316))
             self.set_wizard_buttons()
             self.oe.dbg_log('services::do_wizard', 'exit_function', 0)
-        except Exception, e:
+        except Exception as e:
             self.oe.dbg_log('services::do_wizard', 'ERROR: (%s)' % repr(e))
 
     def set_wizard_buttons(self):
@@ -562,7 +562,7 @@ class services:
                 else:
                     self.oe.winOeMain.set_wizard_radiobutton_2(self.oe._(32200), self, 'wizard_set_samba')
             self.oe.dbg_log('services::set_wizard_buttons', 'exit_function', 0)
-        except Exception, e:
+        except Exception as e:
             self.oe.dbg_log('services::set_wizard_buttons', 'ERROR: (%s)' % repr(e))
 
     def wizard_set_ssh(self):
@@ -586,7 +586,7 @@ class services:
                 self.wizard_sshpasswd()
             self.set_wizard_buttons()
             self.oe.dbg_log('services::wizard_set_ssh', 'exit_function', 0)
-        except Exception, e:
+        except Exception as e:
             self.oe.dbg_log('services::wizard_set_ssh', 'ERROR: (%s)' % repr(e))
 
     def wizard_set_samba(self):
@@ -600,7 +600,7 @@ class services:
             self.load_values()
             self.set_wizard_buttons()
             self.oe.dbg_log('services::wizard_set_samba', 'exit_function', 0)
-        except Exception, e:
+        except Exception as e:
             self.oe.dbg_log('services::wizard_set_samba', 'ERROR: (%s)' % repr(e))
 
     def wizard_sshpasswd(self):
@@ -645,5 +645,5 @@ class services:
             else:
                 self.oe.dbg_log('system::do_sshpasswd', 'user_cancelled', 0)
             return SSHchange
-        except Exception, e:
+        except Exception as e:
             self.oe.dbg_log('system::do_sshpasswd', 'ERROR: (' + repr(e) + ')')
