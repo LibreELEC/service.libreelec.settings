@@ -582,10 +582,11 @@ class system:
             restore_file_path = xbmcDialog.browse( 1,
                                                    self.oe._(32373),
                                                    'files',
-                                                   '??????????????.tar',
+                                                   '.tar|.tar.gz|.tar.bz2|.tar.xz',
                                                    False,
                                                    False,
-                                                   self.BACKUP_DESTINATION )
+                                                   self.BACKUP_DESTINATION,
+                                                   False )
 
             # Do nothing if the dialog is cancelled - path will be the backup destination
             if not os.path.isfile(restore_file_path):
@@ -593,11 +594,9 @@ class system:
 
             restore_file_name = restore_file_path.split('/')[-1]
 
-            if not os.path.exists(self.RESTORE_DIR):
-                os.makedirs(self.RESTORE_DIR)
-            else:
+            if os.path.exists(self.RESTORE_DIR):
                 self.oe.execute('rm -rf %s' % self.RESTORE_DIR)
-                os.makedirs(self.RESTORE_DIR)
+            os.makedirs(self.RESTORE_DIR)
             folder_stat = os.statvfs(self.RESTORE_DIR)
             file_size = os.path.getsize(restore_file_path)
             free_space = folder_stat.f_frsize * folder_stat.f_bavail
