@@ -542,7 +542,8 @@ class system:
                                         '',
                                         False,
                                         False,
-                                        self.BACKUP_DESTINATION )
+                                        self.BACKUP_DESTINATION,
+                                        False )
 
             if bckDir and os.path.exists(bckDir):
                 # free space check
@@ -561,8 +562,8 @@ class system:
                 self.backup_dlg.create('LibreELEC', self.oe._(32375))
                 if not os.path.exists(self.BACKUP_DESTINATION):
                     os.makedirs(self.BACKUP_DESTINATION)
-                self.backup_file = self.oe.timestamp() + '.tar'
-                tar = tarfile.open(bckDir + self.backup_file, 'w')
+                self.backup_file = self.oe.timestamp() + '.tar.gz'
+                tar = tarfile.open(bckDir + self.backup_file, 'w:gz', compresslevel=1)
                 for directory in self.BACKUP_DIRS:
                     self.tar_add_folder(tar, directory)
                 tar.close()
