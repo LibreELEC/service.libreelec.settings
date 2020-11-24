@@ -68,7 +68,7 @@ class ServiceThread(threading.Thread):
             self.oe.dbg_log('_service_::run', 'ERROR: (' + repr(e) + ')')
 
 
-class cxbmcm(xbmc.Monitor):
+class Monitor(xbmc.Monitor):
 
     def onScreensaverActivated(self):
         oe.__oe__.dbg_log('c_xbmcm::onScreensaverActivated', 'enter_function', oe.__oe__.LOGDEBUG)
@@ -83,7 +83,7 @@ class cxbmcm(xbmc.Monitor):
         oe.__oe__.dbg_log('c_xbmcm::onDPMSActivated', 'exit_function', oe.__oe__.LOGDEBUG)
 
 
-xbmcm = cxbmcm()
+xbmcm = Monitor()
 oe.load_modules()
 oe.start_service()
 service_thread = ServiceThread(oe.__oe__)
