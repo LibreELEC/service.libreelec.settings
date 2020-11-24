@@ -5,7 +5,6 @@
 
 import oe
 import xbmc
-import xbmcgui
 import time
 import threading
 import socket
