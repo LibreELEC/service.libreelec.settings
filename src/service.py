@@ -83,14 +83,14 @@ class Monitor(xbmc.Monitor):
         oe.__oe__.dbg_log('c_xbmcm::onDPMSActivated', 'exit_function', oe.__oe__.LOGDEBUG)
 
 
-xbmcm = Monitor()
+monitor = Monitor()
 oe.load_modules()
 oe.start_service()
 service_thread = ServiceThread(oe.__oe__)
 service_thread.start()
 
-while not xbmcm.abortRequested():
-    if xbmcm.waitForAbort(60):
+while not monitor.abortRequested():
+    if monitor.waitForAbort(60):
         break
 
     if not oe.__oe__.read_setting('bluetooth', 'standby'):
