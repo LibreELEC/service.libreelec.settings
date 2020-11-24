@@ -82,9 +82,6 @@ class cxbmcm(xbmc.Monitor):
             threading.Thread(target=oe.__oe__.standby_devices).start()
         oe.__oe__.dbg_log('c_xbmcm::onDPMSActivated', 'exit_function', oe.__oe__.LOGDEBUG)
 
-    def onAbortRequested(self):
-        pass
-
 
 xbmcm = cxbmcm()
 oe.load_modules()
