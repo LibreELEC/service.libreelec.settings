@@ -10,7 +10,7 @@ import socket
 import os
 
 
-class service_thread(threading.Thread):
+class ServiceThread(threading.Thread):
 
     def __init__(self, oeMain):
         try:
@@ -86,7 +86,7 @@ class cxbmcm(xbmc.Monitor):
 xbmcm = cxbmcm()
 oe.load_modules()
 oe.start_service()
-monitor = service_thread(oe.__oe__)
+monitor = ServiceThread(oe.__oe__)
 monitor.start()
 
 while not xbmcm.abortRequested():
