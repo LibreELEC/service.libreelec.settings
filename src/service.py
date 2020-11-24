@@ -16,7 +16,6 @@ class ServiceThread(threading.Thread):
         try:
             oeMain.dbg_log('_service_::__init__', 'enter_function', oeMain.LOGDEBUG)
             self.oe = oeMain
-            self.wait_evt = threading.Event()
             self.socket_file = '/var/run/service.libreelec.settings.sock'
             self.sock = socket.socket(socket.AF_UNIX, socket.SOCK_STREAM)
             self.sock.setblocking(1)
