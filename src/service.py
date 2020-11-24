@@ -4,10 +4,10 @@
 # Copyright (C) 2019-present Team LibreELEC (https://libreelec.tv)
 
 import oe
-import xbmc
-import threading
-import socket
 import os
+import socket
+import threading
+import xbmc
 
 
 class ServiceThread(threading.Thread):
@@ -29,19 +29,6 @@ class ServiceThread(threading.Thread):
             self.oe.dbg_log('_service_::__init__', 'exit_function', self.oe.LOGDEBUG)
         except Exception as e:
             self.oe.dbg_log('_service_::__init__', 'ERROR: (' + repr(e) + ')')
-
-    def stop(self):
-        try:
-            self.oe.dbg_log('_service_::stop', 'enter_function', self.oe.LOGDEBUG)
-            self.stopped = True
-            sock = socket.socket(socket.AF_UNIX, socket.SOCK_STREAM)
-            sock.connect(self.socket_file)
-            sock.send(bytes('exit', 'utf-8'))
-            sock.close()
-            self.sock.close()
-            self.oe.dbg_log('_service_::stop', 'exit_function', self.oe.LOGDEBUG)
-        except Exception as e:
-            self.oe.dbg_log('_service_::stop', 'ERROR: (' + repr(e) + ')')
 
     def run(self):
         try:
@@ -66,20 +53,33 @@ class ServiceThread(threading.Thread):
         except Exception as e:
             self.oe.dbg_log('_service_::run', 'ERROR: (' + repr(e) + ')')
 
+    def stop(self):
+        try:
+            self.oe.dbg_log('_service_::stop', 'enter_function', self.oe.LOGDEBUG)
+            self.stopped = True
+            sock = socket.socket(socket.AF_UNIX, socket.SOCK_STREAM)
+            sock.connect(self.socket_file)
+            sock.send(bytes('exit', 'utf-8'))
+            sock.close()
+            self.sock.close()
+            self.oe.dbg_log('_service_::stop', 'exit_function', self.oe.LOGDEBUG)
+        except Exception as e:
+            self.oe.dbg_log('_service_::stop', 'ERROR: (' + repr(e) + ')')
+
 
 class Monitor(xbmc.Monitor):
-
-    def onScreensaverActivated(self):
-        oe.__oe__.dbg_log('c_xbmcm::onScreensaverActivated', 'enter_function', oe.__oe__.LOGDEBUG)
-        if oe.__oe__.read_setting('bluetooth', 'standby'):
-            threading.Thread(target=oe.__oe__.standby_devices).start()
-        oe.__oe__.dbg_log('c_xbmcm::onScreensaverActivated', 'exit_function', oe.__oe__.LOGDEBUG)
 
     def onDPMSActivated(self):
         oe.__oe__.dbg_log('c_xbmcm::onDPMSActivated', 'enter_function', oe.__oe__.LOGDEBUG)
         if oe.__oe__.read_setting('bluetooth', 'standby'):
             threading.Thread(target=oe.__oe__.standby_devices).start()
         oe.__oe__.dbg_log('c_xbmcm::onDPMSActivated', 'exit_function', oe.__oe__.LOGDEBUG)
+
+    def onScreensaverActivated(self):
+        oe.__oe__.dbg_log('c_xbmcm::onScreensaverActivated', 'enter_function', oe.__oe__.LOGDEBUG)
+        if oe.__oe__.read_setting('bluetooth', 'standby'):
+            threading.Thread(target=oe.__oe__.standby_devices).start()
+        oe.__oe__.dbg_log('c_xbmcm::onScreensaverActivated', 'exit_function', oe.__oe__.LOGDEBUG)
 
 
 monitor = Monitor()
