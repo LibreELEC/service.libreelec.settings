@@ -8,7 +8,6 @@ import xbmc
 import threading
 import socket
 import os
-import xbmcaddon
 
 
 class service_thread(threading.Thread):
