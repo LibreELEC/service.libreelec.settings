@@ -70,9 +70,6 @@ class service_thread(threading.Thread):
 
 class cxbmcm(xbmc.Monitor):
 
-    def __init__(self, *args, **kwargs):
-        xbmc.Monitor.__init__(self)
-
     def onScreensaverActivated(self):
         oe.__oe__.dbg_log('c_xbmcm::onScreensaverActivated', 'enter_function', oe.__oe__.LOGDEBUG)
         if oe.__oe__.read_setting('bluetooth', 'standby'):
