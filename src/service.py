@@ -86,8 +86,8 @@ class cxbmcm(xbmc.Monitor):
 xbmcm = cxbmcm()
 oe.load_modules()
 oe.start_service()
-monitor = ServiceThread(oe.__oe__)
-monitor.start()
+service_thread = ServiceThread(oe.__oe__)
+service_thread.start()
 
 while not xbmcm.abortRequested():
     if xbmcm.waitForAbort(60):
@@ -117,4 +117,4 @@ if hasattr(oe, 'winOeMain') and hasattr(oe.winOeMain, 'visible'):
         oe.winOeMain.close()
 
 oe.stop_service()
-monitor.stop()
+service_thread.stop()
