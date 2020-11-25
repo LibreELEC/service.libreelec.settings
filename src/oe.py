@@ -29,7 +29,6 @@ import imp
 
 from xbmc import LOGDEBUG, LOGINFO, LOGWARNING, LOGERROR
 
-__author__ = 'LibreELEC'
 __scriptid__ = 'service.libreelec.settings'
 __addon__ = xbmcaddon.Addon(id=__scriptid__)
 __cwd__ = __addon__.getAddonInfo('path')
