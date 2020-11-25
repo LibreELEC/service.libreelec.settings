@@ -3,6 +3,7 @@
 # Copyright (C) 2013 Lutz Fiebach (lufie@openelec.tv)
 # Copyright (C) 2019-present Team LibreELEC (https://libreelec.tv)
 
+import le
 import oe
 import os
 import socket
@@ -12,74 +13,63 @@ import xbmc
 
 class ServiceThread(threading.Thread):
 
+    @le.log_function
     def __init__(self, oeMain):
-        try:
-            oeMain.dbg_log('_service_::__init__', 'enter_function', oeMain.LOGDEBUG)
-            self.oe = oeMain
-            self.socket_file = '/var/run/service.libreelec.settings.sock'
-            self.sock = socket.socket(socket.AF_UNIX, socket.SOCK_STREAM)
-            self.sock.setblocking(1)
-            if os.path.exists(self.socket_file):
-                os.remove(self.socket_file)
-            self.sock.bind(self.socket_file)
-            self.sock.listen(1)
-            self.stopped = False
-            threading.Thread.__init__(self)
-            self.daemon = True
-            self.oe.dbg_log('_service_::__init__', 'exit_function', self.oe.LOGDEBUG)
-        except Exception as e:
-            self.oe.dbg_log('_service_::__init__', 'ERROR: (' + repr(e) + ')')
+        self.oe = oeMain
+        self.socket_file = '/var/run/service.libreelec.settings.sock'
+        self.sock = socket.socket(socket.AF_UNIX, socket.SOCK_STREAM)
+        self.sock.setblocking(1)
+        if os.path.exists(self.socket_file):
+            os.remove(self.socket_file)
+        self.sock.bind(self.socket_file)
+        self.sock.listen(1)
+        self.stopped = False
+        threading.Thread.__init__(self)
+        self.daemon = True
 
+    @le.log_function
     def run(self):
-        try:
-            self.oe.dbg_log('_service_::run', 'enter_function', self.oe.LOGDEBUG)
-            if self.oe.read_setting('libreelec', 'wizard_completed') == None:
-                threading.Thread(target=self.oe.openWizard).start()
-            while self.stopped == False:
-                self.oe.dbg_log('_service_::run', 'WAITING:', self.oe.LOGINFO)
-                conn, addr = self.sock.accept()
-                message = (conn.recv(1024)).decode('utf-8')
-                self.oe.dbg_log('_service_::run', 'MESSAGE:' + message, self.oe.LOGINFO)
-                conn.close()
-                if message == 'openConfigurationWindow':
-                    if not hasattr(self.oe, 'winOeMain'):
-                        threading.Thread(target=self.oe.openConfigurationWindow).start()
-                    else:
-                        if self.oe.winOeMain.visible != True:
-                            threading.Thread(target=self.oe.openConfigurationWindow).start()
-                if message == 'exit':
-                    self.stopped = True
-            self.oe.dbg_log('_service_::run', 'exit_function', self.oe.LOGDEBUG)
-        except Exception as e:
-            self.oe.dbg_log('_service_::run', 'ERROR: (' + repr(e) + ')')
+        if self.oe.read_setting('libreelec', 'wizard_completed') == None:
+            threading.Thread(target=self.oe.openWizard).start()
+        while self.stopped == False:
+            self.oe.dbg_log('_service_::run', 'WAITING:', self.oe.LOGINFO)
+            conn, addr = self.sock.accept()
+            message = (conn.recv(1024)).decode('utf-8')
+            self.oe.dbg_log('_service_::run', 'MESSAGE:' +
+                            message, self.oe.LOGINFO)
+            conn.close()
+            if message == 'openConfigurationWindow':
+                if not hasattr(self.oe, 'winOeMain'):
+                    threading.Thread(
+                        target=self.oe.openConfigurationWindow).start()
+                else:
+                    if self.oe.winOeMain.visible != True:
+                        threading.Thread(
+                            target=self.oe.openConfigurationWindow).start()
+            if message == 'exit':
+                self.stopped = True
 
+    @le.log_function
     def stop(self):
-        try:
-            self.oe.dbg_log('_service_::stop', 'enter_function', self.oe.LOGDEBUG)
-            self.stopped = True
-            sock = socket.socket(socket.AF_UNIX, socket.SOCK_STREAM)
-            sock.connect(self.socket_file)
-            sock.send(bytes('exit', 'utf-8'))
-            sock.close()
-            self.sock.close()
-            self.oe.dbg_log('_service_::stop', 'exit_function', self.oe.LOGDEBUG)
-        except Exception as e:
-            self.oe.dbg_log('_service_::stop', 'ERROR: (' + repr(e) + ')')
+        self.stopped = True
+        sock = socket.socket(socket.AF_UNIX, socket.SOCK_STREAM)
+        sock.connect(self.socket_file)
+        sock.send(bytes('exit', 'utf-8'))
+        sock.close()
+        self.sock.close()
 
 
 class Monitor(xbmc.Monitor):
 
+    @le.log_function
     def onDPMSActivated(self):
-        oe.__oe__.dbg_log('c_xbmcm::onDPMSActivated', 'enter_function', oe.__oe__.LOGDEBUG)
         if oe.__oe__.read_setting('bluetooth', 'standby'):
             threading.Thread(target=oe.__oe__.standby_devices).start()
-        oe.__oe__.dbg_log('c_xbmcm::onDPMSActivated', 'exit_function', oe.__oe__.LOGDEBUG)
 
+    @le.log_function
     def onScreensaverActivated(self):
-        oe.__oe__.dbg_log('c_xbmcm::onScreensaverActivated', 'enter_function', oe.__oe__.LOGDEBUG)
         if oe.__oe__.read_setting('bluetooth', 'standby'):
             threading.Thread(target=oe.__oe__.standby_devices).start()
-        oe.__oe__.dbg_log('c_xbmcm::onScreensaverActivated', 'exit_function', oe.__oe__.LOGDEBUG)
 
 
 monitor = Monitor()
@@ -108,7 +98,8 @@ while not monitor.abortRequested():
         continue
 
     if xbmc.getGlobalIdleTime() / 60 >= timeout:
-        oe.__oe__.dbg_log('service', 'idle timeout reached', oe.__oe__.LOGDEBUG)
+        oe.__oe__.dbg_log('service', 'idle timeout reached',
+                          oe.__oe__.LOGDEBUG)
         oe.__oe__.standby_devices()
 
 if hasattr(oe, 'winOeMain') and hasattr(oe.winOeMain, 'visible'):
