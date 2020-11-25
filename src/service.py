@@ -14,8 +14,7 @@ import xbmc
 class ServiceThread(threading.Thread):
 
     @le.log_function
-    def __init__(self, oeMain):
-        self.oe = oeMain
+    def __init__(self):
         self.sock = socket.socket(socket.AF_UNIX, socket.SOCK_STREAM)
         self.sock.setblocking(1)
         if os.path.exists(le.SOCKET):
@@ -28,23 +27,23 @@ class ServiceThread(threading.Thread):
 
     @le.log_function
     def run(self):
-        if self.oe.read_setting('libreelec', 'wizard_completed') == None:
-            threading.Thread(target=self.oe.openWizard).start()
+        if oe.read_setting('libreelec', 'wizard_completed') == None:
+            threading.Thread(target=oe.openWizard).start()
         while self.stopped == False:
-            self.oe.dbg_log('_service_::run', 'WAITING:', self.oe.LOGINFO)
+            oe.dbg_log('_service_::run', 'WAITING:', oe.LOGINFO)
             conn, addr = self.sock.accept()
             message = (conn.recv(1024)).decode('utf-8')
-            self.oe.dbg_log('_service_::run', 'MESSAGE:' +
-                            message, self.oe.LOGINFO)
+            oe.dbg_log('_service_::run', 'MESSAGE:' +
+                       message, oe.LOGINFO)
             conn.close()
             if message == 'openConfigurationWindow':
-                if not hasattr(self.oe, 'winOeMain'):
+                if not hasattr(oe, 'winOeMain'):
                     threading.Thread(
-                        target=self.oe.openConfigurationWindow).start()
+                        target=oe.openConfigurationWindow).start()
                 else:
-                    if self.oe.winOeMain.visible != True:
+                    if oe.winOeMain.visible != True:
                         threading.Thread(
-                            target=self.oe.openConfigurationWindow).start()
+                            target=oe.openConfigurationWindow).start()
             if message == 'exit':
                 self.stopped = True
 
@@ -62,29 +61,29 @@ class Monitor(xbmc.Monitor):
 
     @le.log_function
     def onDPMSActivated(self):
-        if oe.__oe__.read_setting('bluetooth', 'standby'):
-            threading.Thread(target=oe.__oe__.standby_devices).start()
+        if oe.read_setting('bluetooth', 'standby'):
+            threading.Thread(target=oe.standby_devices).start()
 
     @le.log_function
     def onScreensaverActivated(self):
-        if oe.__oe__.read_setting('bluetooth', 'standby'):
-            threading.Thread(target=oe.__oe__.standby_devices).start()
+        if oe.read_setting('bluetooth', 'standby'):
+            threading.Thread(target=oe.standby_devices).start()
 
 
 monitor = Monitor()
 oe.load_modules()
 oe.start_service()
-service_thread = ServiceThread(oe.__oe__)
+service_thread = ServiceThread()
 service_thread.start()
 
 while not monitor.abortRequested():
     if monitor.waitForAbort(60):
         break
 
-    if not oe.__oe__.read_setting('bluetooth', 'standby'):
+    if not oe.read_setting('bluetooth', 'standby'):
         continue
 
-    timeout = oe.__oe__.read_setting('bluetooth', 'idle_timeout')
+    timeout = oe.read_setting('bluetooth', 'idle_timeout')
     if not timeout:
         continue
 
@@ -97,9 +96,8 @@ while not monitor.abortRequested():
         continue
 
     if xbmc.getGlobalIdleTime() / 60 >= timeout:
-        oe.__oe__.dbg_log('service', 'idle timeout reached',
-                          oe.__oe__.LOGDEBUG)
-        oe.__oe__.standby_devices()
+        oe.dbg_log('service', 'idle timeout reached', oe.LOGDEBUG)
+        oe.standby_devices()
 
 if hasattr(oe, 'winOeMain') and hasattr(oe.winOeMain, 'visible'):
     if oe.winOeMain.visible == True:
