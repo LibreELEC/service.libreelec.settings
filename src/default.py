@@ -3,8 +3,9 @@
 # Copyright (C) 2013 Lutz Fiebach (lufie@openelec.tv)
 # Copyright (C) 2019-present Team LibreELEC (https://libreelec.tv)
 
-import xbmc
+import le
 import socket
+import xbmc
 import xbmcaddon
 
 __scriptid__ = 'service.libreelec.settings'
@@ -15,7 +16,7 @@ _ = __addon__.getLocalizedString
 
 try:
     sock = socket.socket(socket.AF_UNIX, socket.SOCK_STREAM)
-    sock.connect('/var/run/service.libreelec.settings.sock')
+    sock.connect(le.SOCKET)
     sock.send(bytes('openConfigurationWindow', 'utf-8'))
     sock.close()
 except Exception as e:

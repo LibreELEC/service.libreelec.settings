@@ -3,6 +3,7 @@ import traceback
 import xbmc
 
 LOG_HEADER = '## LibreELEC Addon ##'
+SOCKET = '/var/run/service.libreelec.settings.sock'
 
 
 def log_function(function):

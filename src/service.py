@@ -16,12 +16,11 @@ class ServiceThread(threading.Thread):
     @le.log_function
     def __init__(self, oeMain):
         self.oe = oeMain
-        self.socket_file = '/var/run/service.libreelec.settings.sock'
         self.sock = socket.socket(socket.AF_UNIX, socket.SOCK_STREAM)
         self.sock.setblocking(1)
-        if os.path.exists(self.socket_file):
-            os.remove(self.socket_file)
-        self.sock.bind(self.socket_file)
+        if os.path.exists(le.SOCKET):
+            os.remove(le.SOCKET)
+        self.sock.bind(le.SOCKET)
         self.sock.listen(1)
         self.stopped = False
         threading.Thread.__init__(self)
@@ -53,7 +52,7 @@ class ServiceThread(threading.Thread):
     def stop(self):
         self.stopped = True
         sock = socket.socket(socket.AF_UNIX, socket.SOCK_STREAM)
-        sock.connect(self.socket_file)
+        sock.connect(le.SOCKET)
         sock.send(bytes('exit', 'utf-8'))
         sock.close()
         self.sock.close()
