@@ -1,9 +1,17 @@
 import os
 import traceback
 import xbmc
+import xbmcaddon
+import xbmcgui
 
 LOG_HEADER = '## LibreELEC Addon ##'
 SOCKET = '/var/run/service.libreelec.settings.sock'
+
+ADDON = xbmcaddon.Addon()
+ADDON_ICON = ADDON.getAddonInfo('icon')
+ADDON_NAME = ADDON.getAddonInfo('name')
+ADDON_PATH = ADDON.getAddonInfo('path')
+ADDON_STRING = ADDON.getLocalizedString
 
 
 def log_function(function):
@@ -17,3 +25,8 @@ def log_function(function):
             xbmc.log(f'{header} ERROR: {repr(e)}', xbmc.LOGFATAL)
             xbmc.log(traceback.format_exc(), xbmc.LOGFATAL)
     return wrapper
+
+
+@log_function
+def notification(heading, message, icon=ADDON_ICON):
+    xbmcgui.Dialog().notification(heading, message, icon)

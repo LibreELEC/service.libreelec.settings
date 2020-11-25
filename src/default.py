@@ -5,19 +5,11 @@
 
 import le
 import socket
-import xbmc
-import xbmcaddon
-
-__scriptid__ = 'service.libreelec.settings'
-__addon__ = xbmcaddon.Addon(id=__scriptid__)
-__cwd__ = __addon__.getAddonInfo('path')
-__media__ = '%s/resources/skins/Default/media' % __cwd__
-_ = __addon__.getLocalizedString
 
 try:
     sock = socket.socket(socket.AF_UNIX, socket.SOCK_STREAM)
     sock.connect(le.SOCKET)
     sock.send(bytes('openConfigurationWindow', 'utf-8'))
     sock.close()
-except Exception as e:
-    xbmc.executebuiltin('Notification("LibreELEC", "%s", 5000, "%s/icon.png")' % (_(32390), __media__))
+except:
+    le.notification(le.ADDON_NAME, le.ADDON_STRING(32390))
