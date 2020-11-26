@@ -14,10 +14,6 @@ from threading import Thread
 
 xbmcDialog = xbmcgui.Dialog()
 
-__scriptid__ = 'service.libreelec.settings'
-__addon__ = xbmcaddon.Addon(id=__scriptid__)
-__cwd__ = __addon__.getAddonInfo('path')
-
 lang_str = ""
 lang_new = ""
 strModule = ""
