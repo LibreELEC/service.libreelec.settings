@@ -4,6 +4,7 @@
 # Copyright (C) 2019-present Team LibreELEC (https://libreelec.tv)
 
 import le
+import oe
 
 class about:
 
@@ -17,7 +18,6 @@ class about:
 
     @le.log_function
     def __init__(self, oeMain):
-        self.oe = oeMain
         self.controls = {}
 
     @le.log_function
@@ -27,7 +27,7 @@ class about:
 
     @le.log_function
     def exit_addon(self):
-        self.oe.winOeMain.close()
+        oe.winOeMain.close()
 
     @le.log_function
     def init_controls(self):
@@ -37,12 +37,12 @@ class about:
     def exit(self):
         for control in self.controls:
             try:
-                self.oe.winOeMain.removeControl(self.controls[control])
+                oe.winOeMain.removeControl(self.controls[control])
             except:
                 pass
         self.controls = {}
 
     @le.log_function
     def do_wizard(self):
-        self.oe.winOeMain.set_wizard_title(self.oe._(32317))
-        self.oe.winOeMain.set_wizard_text(self.oe._(32318))
+        oe.winOeMain.set_wizard_title(oe._(32317))
+        oe.winOeMain.set_wizard_text(oe._(32318))
