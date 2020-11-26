@@ -6,6 +6,7 @@
 import le
 import oe
 
+
 class about:
 
     ENABLED = False
@@ -14,7 +15,7 @@ class about:
         'menuLoader': 'menu_loader',
         'listTyp': 'other',
         'InfoText': 705,
-        }}
+    }}
 
     @le.log_function
     def __init__(self, oeMain):
