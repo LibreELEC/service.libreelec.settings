@@ -12,8 +12,6 @@ import re
 from xml.dom import minidom
 from threading import Thread
 
-xbmcDialog = xbmcgui.Dialog()
-
 lang_str = ""
 lang_new = ""
 strModule = ""
@@ -263,9 +261,8 @@ class mainWindow(xbmcgui.WindowXMLDialog):
                             # move current on top of the list
                             items1.append(i1)
                             items2.append(i2)
-                    select_window = xbmcgui.Dialog()
                     title = selectedItem.getProperty('menuname')
-                    result = select_window.select(title, items1)
+                    result = xbmcgui.Dialog().select(title, items1)
                     if result >= 0:
                         selectedItem.setProperty('value', items2[result])
                 elif strTyp == 'text':
@@ -284,20 +281,17 @@ class mainWindow(xbmcgui.WindowXMLDialog):
                     if xbmcKeyboard.isConfirmed():
                         selectedItem.setProperty('value', xbmcKeyboard.getText())
                 elif strTyp == 'file':
-                    xbmcDialog = xbmcgui.Dialog()
-                    returnValue = xbmcDialog.browse(1, 'LibreELEC.tv', 'files', '', False, False, '/')
+                    returnValue = xbmcgui.Dialog().browse(1, 'LibreELEC.tv', 'files', '', False, False, '/')
                     if returnValue != '' and returnValue != '/':
                         selectedItem.setProperty('value', str(returnValue))
                 elif strTyp == 'folder':
-                    xbmcDialog = xbmcgui.Dialog()
-                    returnValue = xbmcDialog.browse(0, 'LibreELEC.tv', 'files', '', False, False, '/storage')
+                    returnValue = xbmcgui.Dialog().browse(0, 'LibreELEC.tv', 'files', '', False, False, '/storage')
                     if returnValue != '' and returnValue != '/':
                         selectedItem.setProperty('value', str(returnValue))
                 elif strTyp == 'ip':
                     if strValue == '':
                         strValue = '0.0.0.0'
-                    xbmcDialog = xbmcgui.Dialog()
-                    returnValue = xbmcDialog.numeric(3, 'LibreELEC.tv', strValue)
+                    returnValue = xbmcgui.Dialog().numeric(3, 'LibreELEC.tv', strValue)
                     if returnValue != '':
                         if returnValue == '0.0.0.0':
                             selectedItem.setProperty('value', '')
@@ -306,8 +300,7 @@ class mainWindow(xbmcgui.WindowXMLDialog):
                 elif strTyp == 'num':
                     if strValue == 'None' or strValue == '':
                         strValue = '0'
-                    xbmcDialog = xbmcgui.Dialog()
-                    returnValue = xbmcDialog.numeric(0, 'LibreELEC.tv', strValue)
+                    returnValue = xbmcgui.Dialog().numeric(0, 'LibreELEC.tv', strValue)
                     if returnValue != '':
                         selectedItem.setProperty('value', returnValue)
                 elif strTyp == 'bool':
@@ -505,7 +498,7 @@ class wizard(xbmcgui.WindowXMLDialog):
                     break
                 else:
                     pass
-            selLanguage = xbmcDialog.select(self.oe._(32310), languagesList, preselect=langIndex)
+            selLanguage = xbmcgui.Dialog().select(self.oe._(32310), languagesList, preselect=langIndex)
             if selLanguage >= 0:
                 langKey = languagesList[selLanguage]
                 lang_new = langCodes[langKey]
