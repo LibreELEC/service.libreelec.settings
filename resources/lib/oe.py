@@ -21,6 +21,7 @@ import subprocess
 import defaults
 import shutil
 import hashlib, binascii
+import dbus_systemd
 
 from xml.dom import minidom
 import imp
@@ -422,7 +423,7 @@ def set_service(service, options, state):
         if not __oe__.is_service:
             if service in defaults._services:
                 for svc in defaults._services[service]:
-                    execute(f'systemctl restart {svc}')
+                    dbus_systemd.restart_unit(svc)
         dbg_log('oe::set_service', 'exit_function', LOGDEBUG)
     except Exception as e:
         dbg_log('oe::set_service', f'ERROR: ({repr(e)})')

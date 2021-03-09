@@ -22,7 +22,7 @@ from xml.dom import minidom
 import datetime
 import tempfile
 from functools import cmp_to_key
-
+import dbus_systemd
 class updates(modules.Module):
 
     ENABLED = False
@@ -502,7 +502,7 @@ class updates(modules.Module):
                 if silent == False:
                     oe.winOeMain.close()
                     oe.xbmcm.waitForAbort(1)
-                    subprocess.call(['/usr/bin/systemctl', '--no-block', 'reboot'], close_fds=True)
+                    dbus_systemd.reboot()
             else:
                 delattr(self, 'update_in_progress')
 
