@@ -46,6 +46,7 @@ listObject = {
     'list': 1100,
     'netlist': 1200,
     'btlist': 1300,
+    'palist': 1600,
     'other': 1900,
     'test': 900,
     }

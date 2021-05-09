@@ -1051,3 +1051,39 @@ msgstr ""
 msgctxt "#32401"
 msgid "Syncing Disks..."
 msgstr ""
+
+msgctxt "#32500"
+msgid "Pulseaudio"
+msgstr ""
+
+msgctxt "#32501"
+msgid "Configure pulseaudio devices"
+msgstr ""
+
+msgctxt "#32502"
+msgid "Select Profile"
+msgstr ""
+
+msgctxt "#32503"
+msgid "Pulseaudio is disabled"
+msgstr ""
+
+msgctxt "#32504"
+msgid "No Pulseaudio device found."
+msgstr ""
+
+msgctxt "#32505"
+msgid "Change Profile"
+msgstr ""
+
+msgctxt "#32506"
+msgid "Driver"
+msgstr ""
+
+msgctxt "#32507"
+msgid "Current Profile"
+msgstr ""
+
+msgctxt "#32508"
+msgid "Set as Default"
+msgstr ""

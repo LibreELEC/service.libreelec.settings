@@ -1086,6 +1086,130 @@
                         </control>
                     </focusedlayout>
                 </control>
+
+               <!-- Pulseaudio Menu Content -->
+                <control type="label" id="1601">
+                    <align>center</align>
+                    <aligny>center</aligny>
+                    <width>1256</width>
+                    <height>602</height>
+                    <info />
+                    <align>center</align>
+                    <visible>String.IsEqual(Container(1000).ListItem.Property(listTyp), 1600) + String.IsEqual(Container(1600).NumItems, 0)</visible>
+                </control>
+                <control type="list" id="1600">
+                    <left>22</left>
+                    <top>22</top>
+                    <width>1256</width>
+                    <height>614</height>
+                    <onleft>1000</onleft>
+                    <onright>1500</onright>
+                    <pagecontrol>1099</pagecontrol>
+                    <scrolltime>300</scrolltime>
+                    <visible>String.IsEqual(Container(1000).ListItem.Property(listTyp), 1600)</visible>
+                    <itemlayout height="100">
+                        <!-- Card Name -->
+                        <control type="label">
+                            <left>140</left>
+                            <top>10</top>
+                            <width>900</width>
+                            <height>30</height>
+                            <font>font24_title</font>
+                            <textcolor>white</textcolor>
+                            <info>ListItem.Label</info>
+                            <visible>true</visible>
+                        </control>
+                        <!-- Card Driver -->
+                        <control type="label">
+                            <left>750</left>
+                            <top>49</top>
+                            <width>500</width>
+                            <height>20</height>
+                            <font>font12</font>
+                            <textcolor>blue</textcolor>
+                            <label>$ADDON[service.libreelec.settings 32506]: [COLOR=white]$INFO[ListItem.Property(Driver)][/COLOR]</label>
+                            <visible>!String.IsEmpty(ListItem.Property(Driver))</visible>
+                        </control>
+                        <!-- Card ActiveProfile -->
+                        <control type="label">
+                            <left>140</left>
+                            <top>49</top>
+                            <width>600</width>
+                            <height>20</height>
+                            <font>font12</font>
+                            <textcolor>blue</textcolor>
+                            <label>$ADDON[service.libreelec.settings 32507]: [COLOR=white]$INFO[ListItem.Property(ActiveProfileName)][/COLOR]</label>
+                            <visible>!String.IsEmpty(ListItem.Property(ActiveProfileName))</visible>
+                        </control>
+                        <!-- Fallback Device Symbol (Default device) -->
+                        <control type="image">
+                            <left>40</left>
+                            <top>25</top>
+                            <width>48</width>
+                            <height>48</height>
+                            <aspectratio>keep</aspectratio>
+                            <visible>String.IsEqual(ListItem.Property(FallbackSink), 1)</visible>
+                            <texture>favorite.png</texture>
+                        </control>
+                    </itemlayout>
+                    <focusedlayout height="100">
+                        <control type="image">
+                            <width>1256</width>
+                            <height>100</height>
+                            <texture border="2">separator.png</texture>
+                        </control>
+                        <control type="image">
+                            <width>1256</width>
+                            <height>100</height>
+                            <texture colordiffuse="FF12B2E7">focus.png</texture>
+                            <visible>Control.HasFocus(1600)</visible>
+                        </control>
+                        <!-- Card Name -->
+                        <control type="label">
+                            <left>140</left>
+                            <top>10</top>
+                            <width>900</width>
+                            <height>30</height>
+                            <font>font24_title</font>
+                            <textcolor>white</textcolor>
+                            <info>ListItem.Label</info>
+                            <visible>true</visible>
+                        </control>
+                        <!-- Card Driver -->
+                        <control type="label">
+                            <left>750</left>
+                            <top>49</top>
+                            <width>500</width>
+                            <height>20</height>
+                            <font>font12</font>
+                            <textcolor>blue</textcolor>
+                            <label>$ADDON[service.libreelec.settings 32506]: [COLOR=white]$INFO[ListItem.Property(Driver)][/COLOR]</label>
+                            <visible>!String.IsEmpty(ListItem.Property(Driver))</visible>
+                        </control>
+                        <!-- Card ActiveProfile -->
+                        <control type="label">
+                            <left>140</left>
+                            <top>49</top>
+                            <width>600</width>
+                            <height>20</height>
+                            <font>font12</font>
+                            <textcolor>blue</textcolor>
+                            <label>$ADDON[service.libreelec.settings 32507]: [COLOR=white]$INFO[ListItem.Property(ActiveProfileName)][/COLOR]</label>
+                            <visible>!String.IsEmpty(ListItem.Property(ActiveProfileName))</visible>
+                        </control>
+                        <!-- Fallback Device Symbol (Default device) -->
+                        <control type="image">
+                            <left>40</left>
+                            <top>25</top>
+                            <width>48</width>
+                            <height>48</height>
+                            <aspectratio>keep</aspectratio>
+                            <visible>String.IsEqual(ListItem.Property(FallbackSink), 1)</visible>
+                            <texture>favorite.png</texture>
+                        </control>
+                    </focusedlayout>
+                </control>
+
             </control>
             <control type="textbox" id="1400">
                 <left>466</left>
@@ -1224,6 +1348,36 @@
             <onclick>SetFocus(1300)</onclick>
             <onclick>PageUp(1300)</onclick>
             <visible>Container(1300).HasPrevious + Control.IsVisible(1300)</visible>
+        </control>
+
+        <!-- pulseaudio list ( 1600 ) up / down -->
+        <control type="button" id="1092">
+            <left>1141</left>
+            <top>940</top>
+            <width>48</width>
+            <height>24</height>
+            <texturefocus colordiffuse="FF12A0C7">arrowdown.png</texturefocus>
+            <texturenofocus colordiffuse="FF12A0C7">arrowdown.png</texturenofocus>
+            <animation effect="zoom" start="100,0" end="100,100" center="auto" time="200" delay="10">VisibleChange</animation>
+            <animation effect="zoom" start="100,0" end="100,100" delay="500" center="auto" time="200">WindowOpen</animation>
+            <animation effect="zoom" start="100,100" end="100,0" center="auto" time="200">WindowClose</animation>
+            <onclick>SetFocus(1600)</onclick>
+            <onclick>PageDown(1600)</onclick>
+            <visible>Container(1600).HasNext + Control.IsVisible(1600)</visible>
+        </control>
+        <control type="button" id="1093">
+            <left>1141</left>
+            <top>105</top>
+            <width>48</width>
+            <height>24</height>
+            <texturefocus colordiffuse="FF12A0C7" flipy="true">arrowdown.png</texturefocus>
+            <texturenofocus colordiffuse="FF12A0C7" flipy="true">arrowdown.png</texturenofocus>
+            <animation effect="zoom" start="100,0" end="100,100" center="auto" time="200" delay="10">VisibleChange</animation>
+            <animation effect="zoom" start="100,0" end="100,100" delay="500" center="auto" time="200">WindowOpen</animation>
+            <animation effect="zoom" start="100,100" end="100,0" center="auto" time="200">WindowClose</animation>
+            <onclick>SetFocus(1600)</onclick>
+            <onclick>PageUp(1600)</onclick>
+            <visible>Container(1600).HasPrevious + Control.IsVisible(1600)</visible>
         </control>
 
         <!-- Mouse back button -->

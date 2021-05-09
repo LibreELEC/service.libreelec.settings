@@ -33,12 +33,14 @@ class mainWindow(xbmcgui.WindowXMLDialog):
         self.guiList = 1100
         self.guiNetList = 1200
         self.guiBtList = 1300
+        self.guiPaList = 1600
         self.guiOther = 1900
         self.guiLists = [
             1000,
             1100,
             1200,
             1300,
+            1600,
             ]
         self.buttons = {
             1: {

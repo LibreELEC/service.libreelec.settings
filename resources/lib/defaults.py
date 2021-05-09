@@ -37,6 +37,16 @@ bluetooth = {
 bluetooth['ENABLED'] = bluetooth['ENABLED']()
 
 ################################################################################
+# Pulseaudio Module
+################################################################################
+
+pulseaudio = {
+    'PULSEAUDIO_DAEMON': '/usr/bin/pulseaudio',
+    'ENABLED': lambda : (True if os.path.exists(pulseaudio['PULSEAUDIO_DAEMON']) else False)
+    }
+pulseaudio['ENABLED'] = pulseaudio['ENABLED']()
+
+################################################################################
 # Service Module
 ################################################################################
 
@@ -104,4 +114,5 @@ _services = {
     'obexd': ['obex.service'],
     'crond': ['cron.service'],
     'iptables': ['iptables.service'],
+    'pulseaudio': ['pulseaudio.service'],
     }
