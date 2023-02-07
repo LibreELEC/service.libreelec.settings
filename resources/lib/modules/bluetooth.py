@@ -198,6 +198,22 @@ class bluetooth(modules.Module):
         oe.write_setting('bluetooth', 'standby', ','.join(devices))
 
     @log.log_function()
+    def enable_device_autoconnect(self, listItem=None):
+        devices = oe.read_setting('bluetooth', 'autoconnect')
+        devices = devices.split(',') if devices else []
+        if not listItem.getProperty('entry') in devices:
+            devices.append(listItem.getProperty('entry'))
+        oe.write_setting('bluetooth', 'autoconnect', ','.join(devices))
+
+    @log.log_function()
+    def disable_device_autoconnect(self, listItem=None):
+        devices = oe.read_setting('bluetooth', 'autoconnect')
+        devices = devices.split(',') if devices else []
+        if listItem.getProperty('entry') in devices:
+            devices.remove(listItem.getProperty('entry'))
+        oe.write_setting('bluetooth', 'autoconnect', ','.join(devices))
+
+    @log.log_function()
     def pair_device(self, path):
         try:
             dbus_bluez.device_pair(path)
@@ -387,10 +403,7 @@ class bluetooth(modules.Module):
                 'action': 'disconnect_device',
                 }
             devices = oe.read_setting('bluetooth', 'standby')
-            if devices is not None:
-                devices = devices.split(',')
-            else:
-                devices = []
+            devices = devices.split(',') if devices else []
             if listItem.getProperty('entry') in devices:
                 values[4] = {
                     'text': oe._(32389),
@@ -401,6 +414,20 @@ class bluetooth(modules.Module):
                     'text': oe._(32388),
                     'action': 'enable_device_standby',
                     }
+
+            devices = oe.read_setting('bluetooth', 'autoconnect')
+            devices = devices.split(',') if devices else []
+            if listItem.getProperty('entry') in devices:
+                values[7] = {
+                    'text': oe._(32391),
+                    'action': 'disable_device_autoconnect',
+                    }
+            else:
+                values[7] = {
+                    'text': oe._(32392),
+                    'action': 'enable_device_autoconnect',
+                    }
+
         elif listItem.getProperty('Paired') == '1':
             values[1] = {
                 'text': oe._(32144),
@@ -458,6 +485,18 @@ class bluetooth(modules.Module):
                     if dbus_bluez.device_get_connected(device):
                         self.disconnect_device_by_path(device)
 
+    def autoconnect_devices(self):
+        if not self.dbusBluezAdapter:
+            return
+        devices = oe.read_setting('bluetooth', 'autoconnect')
+        if not devices:
+            return
+        for path in devices.split(','):
+            if not dbus_bluez.device_get_connected(path) and dbus_bluez.device_get_trusted(path):
+                try:
+                    dbus_bluez.device_connect(path)
+                except DBusError as e:
+                    pass
 
 ####################################################################
 ## Bluez Listener class

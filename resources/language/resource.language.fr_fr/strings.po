@@ -1044,6 +1044,14 @@ msgctxt "#32390"
 msgid "Settings addon is not yet ready, please try again later."
 msgstr "Le greffon des paramètres n'est pas encore prêt, veuillez ré-essayer plus tard."
 
+msgctxt "#32391"
+msgid "Disable autoconnect"
+msgstr "Désactiver l'autoconnexion"
+
+msgctxt "#32392"
+msgid "Enable autoconnect"
+msgstr "Activer l'autoconnexion"
+
 msgctxt "#32393"
 msgid "** SAFE MODE! ** SAFE MODE! ** SAFE MODE! **"
 msgstr "** MODE SANS ÉCHEC ! ** MODE SANS ÉCHEC ! ** MODE SANS ÉCHEC ! **"

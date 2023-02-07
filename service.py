@@ -83,23 +83,24 @@ class Monitor(xbmc.Monitor):
         oe.start_service()
         service_thread = Service_Thread()
         service_thread.start()
+        oe.autoconnect_devices()
         while not self.abortRequested():
-            if self.waitForAbort(60):
+            if self.waitForAbort(30):
                 break
-            if not oe.read_setting('bluetooth', 'standby'):
-                continue
-            timeout = oe.read_setting('bluetooth', 'idle_timeout')
-            if not timeout:
-                continue
-            try:
-                timeout = int(timeout)
-            except:
-                continue
-            if timeout < 1:
-                continue
-            if xbmc.getGlobalIdleTime() / 60 >= timeout:
-                log.log(f'Idle timeout reached', log.DEBUG)
+            standby_devices = oe.read_setting('bluetooth', 'standby')
+            autoconnect_devices = oe.read_setting('bluetooth', 'autoconnect')
+            timeout = None
+            if standby_devices:
+                try:
+                    timeout = int(oe.read_setting('bluetooth', 'idle_timeout'))
+                except TypeError:
+                    pass
+            if timeout and xbmc.getGlobalIdleTime() / 60 >= timeout:
+                log.log('Idle timeout reached', log.DEBUG)
                 oe.standby_devices()
+            else:
+                log.log('Autoconnect triggered', log.DEBUG)
+                oe.autoconnect_devices()
         if hasattr(oe, 'winOeMain') and hasattr(oe.winOeMain, 'visible'):
             if oe.winOeMain.visible == True:
                 oe.winOeMain.close()

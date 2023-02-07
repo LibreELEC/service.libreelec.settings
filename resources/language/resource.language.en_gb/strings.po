@@ -1016,6 +1016,14 @@ msgctxt "#32390"
 msgid "Settings addon is not yet ready, please try again later."
 msgstr ""
 
+msgctxt "#32391"
+msgid "Disable autoconnect"
+msgstr ""
+
+msgctxt "#32392"
+msgid "Enable autoconnect"
+msgstr ""
+
 msgctxt "#32393"
 msgid "** SAFE MODE! ** SAFE MODE! ** SAFE MODE! **"
 msgstr ""

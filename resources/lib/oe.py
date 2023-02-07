@@ -639,6 +639,15 @@ def standby_devices():
     except Exception as e:
         dbg_log('oe::standby_devices', f'ERROR: ({repr(e)})')
 
+def autoconnect_devices():
+    global dictModules
+    try:
+        if 'bluetooth' in dictModules:
+            dictModules['bluetooth'].autoconnect_devices()
+    except Exception as e:
+        dbg_log('oe::autoconnect_devices', f'ERROR: ({repr(e)})')
+
+
 def load_config():
     try:
         global conf_lock

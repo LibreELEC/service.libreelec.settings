@@ -180,6 +180,10 @@ def device_get_connected(path):
     return device_get_property(path, 'Connected')
 
 
+def device_get_trusted(path):
+    return device_get_property(path, 'Trusted')
+
+
 def device_connect(path):
     return dbus_utils.run_method(BUS_NAME, path, INTERFACE_DEVICE, 'Connect')
 
