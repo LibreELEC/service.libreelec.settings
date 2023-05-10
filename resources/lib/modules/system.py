@@ -624,6 +624,13 @@ class system(modules.Module):
     def tar_add_folder(self, tar, folder):
         try:
             print_folder = log.asciify(folder)
+            try:
+                fsr = os.lstat(folder)
+            except:
+                pass
+            else:
+                if fsr.st_mode != 0o40755 or fsr.st_uid or fsr.st_gid:
+                    tar.add(folder, recursive=False)
             for item in os.listdir(folder):
                 if item == self.backup_file:
                     continue
