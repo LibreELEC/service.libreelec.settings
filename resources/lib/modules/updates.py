@@ -184,21 +184,6 @@ class updates(modules.Module):
     def exit(self):
         pass
 
-    @log.log_function()
-    def lchop(self, s, prefix):
-        """Remove prefix from string."""
-        # TODO usage may be replaced by .removeprefix() in python >=3.9
-        if prefix and s.startswith(prefix):
-            return s[len(prefix):]
-        return s
-
-    @log.log_function()
-    def rchop(self, s, suffix):
-        """Remove suffix from string."""
-        # TODO usage may be replaced by .removesuffix() in python >=3.9
-        if suffix and s.endswith(suffix):
-            return s[:-len(suffix)]
-        return s
 
     # Identify connected GPU card (card0, card1 etc.)
     @log.log_function()
@@ -479,9 +464,9 @@ class updates(modules.Module):
 
         def pretty_filename(s):
             """Make filenames prettier to users."""
-            s = self.lchop(s, f'{oe.DISTRIBUTION}-{oe.ARCHITECTURE}-')
-            s = self.rchop(s, '.tar')
-            s = self.rchop(s, '.img.gz')
+            s = s.removeprefix(f'{oe.DISTRIBUTION}-{oe.ARCHITECTURE}-')
+            s = s.removesuffix('.tar')
+            s = s.removesuffix('.img.gz')
             return s
 
         channel = self.struct['update']['settings']['Channel']['value']
