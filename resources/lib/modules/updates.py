@@ -296,15 +296,10 @@ class updates(modules.Module):
         if value:
             self.struct['update']['settings']['ShowCustomChannels']['value'] = value
 
-        value = oe.read_setting('updates', 'CustomChannel1')
-        if value:
-            self.struct['update']['settings']['CustomChannel1']['value'] = value
-        value = oe.read_setting('updates', 'CustomChannel2')
-        if value:
-            self.struct['update']['settings']['CustomChannel2']['value'] = value
-        value = oe.read_setting('updates', 'CustomChannel3')
-        if value:
-            self.struct['update']['settings']['CustomChannel3']['value'] = value
+        for i in range(1,3):
+            value = oe.read_setting('updates', f'CustomChannel{i}')
+            if value:
+                self.struct['update']['settings'][f'CustomChannel{i}']['value'] = value
 
         self.update_json = self.build_json()
 
