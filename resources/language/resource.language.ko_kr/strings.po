@@ -114,7 +114,7 @@ msgid "Configure the physical keyboard type"
 msgstr "물리 키보드 종류 설정"
 
 msgctxt "#714"
-msgid "@DISTRONAME@ can be configured for automatic or manual updates. Automatic updates are available on stable releases and stable release candidates. Automatic update self-disables on beta and development builds"
+msgid "Enable for automatic updates to @DISTRONAME@. Automatic updates are available for stable releases. Automatic update will not update to pre-release or development builds."
 msgstr "@DISTRONAME@은 자동이나 수동 업데이트로 설정할 수 있습니다. 자동 업데이트는 안정판이나 안정판 후보에서 가능합니다. 자동 업데이트는 베타나 개발 빌드에서는 가능하지 않습니다"
 
 msgctxt "#715"

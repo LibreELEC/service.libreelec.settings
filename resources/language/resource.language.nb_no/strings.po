@@ -114,7 +114,7 @@ msgid "Configure the physical keyboard type"
 msgstr "Konfigurer den fysiske tastaturtypen"
 
 msgctxt "#714"
-msgid "@DISTRONAME@ can be configured for automatic or manual updates. Automatic updates are available on stable releases and stable release candidates. Automatic update self-disables on beta and development builds"
+msgid "Enable for automatic updates to @DISTRONAME@. Automatic updates are available for stable releases. Automatic update will not update to pre-release or development builds."
 msgstr "@DISTRONAME@ kan konfigureres for automatiske eller manuelle oppdateringer. Automatiske oppdateringer er tilgjengelige på stabile versjoner og stabile slippkandidater. Automatiske oppdateringer deaktiveres på beta og versjoner under utvikling."
 
 msgctxt "#715"

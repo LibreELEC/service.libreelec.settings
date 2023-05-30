@@ -111,7 +111,7 @@ msgid "Configure the physical keyboard type"
 msgstr "Изберете типа хардуерна клавиатура"
 
 msgctxt "#714"
-msgid "@DISTRONAME@ can be configured for automatic or manual updates. Automatic updates are available on stable releases and stable release candidates. Automatic update self-disables on beta and development builds"
+msgid "Enable for automatic updates to @DISTRONAME@. Automatic updates are available for stable releases. Automatic update will not update to pre-release or development builds."
 msgstr "@DISTRONAME@ може да се актуализира автоматично или ръчно. Автоматично актуализиране се извършва само до стабилни версии или такива на които им предстои издаване. Автоматичното актуализиране е изключено за бета и развойни компилации."
 
 msgctxt "#715"

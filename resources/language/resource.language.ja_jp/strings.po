@@ -112,7 +112,7 @@ msgid "Configure the physical keyboard type"
 msgstr "物理キーボードタイプを設定します"
 
 msgctxt "#714"
-msgid "@DISTRONAME@ can be configured for automatic or manual updates. Automatic updates are available on stable releases and stable release candidates. Automatic update self-disables on beta and development builds"
+msgid "Enable for automatic updates to @DISTRONAME@. Automatic updates are available for stable releases. Automatic update will not update to pre-release or development builds."
 msgstr "@DISTRONAME@ は自動またはマニュアルによるアップデートを選択できる。 自動アップデートは安定版リリースおよび安定版リリース候補で利用可能です。自動アップデートは、ベータ版および開発版では自動で無効になります"
 
 msgctxt "#715"
