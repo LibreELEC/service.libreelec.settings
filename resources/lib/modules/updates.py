@@ -100,18 +100,6 @@ class updates(modules.Module):
                     'InfoText': 762,
                     'order': 6,
                 },
-                'CustomChannel3': {
-                    'name': 32019,
-                    'value': '',
-                    'action': 'set_custom_channel',
-                    'type': 'text',
-                    'parent': {
-                            'entry': 'ShowCustomChannels',
-                        'value': ['1'],
-                    },
-                    'InfoText': 762,
-                    'order': 7,
-                },
                 'Channel': {
                     'name': 32015,
                     'value': '',
@@ -123,7 +111,7 @@ class updates(modules.Module):
                     },
                     'values': [],
                     'InfoText': 760,
-                    'order': 8,
+                    'order': 7,
                 },
                 'Build': {
                     'name': 32020,
@@ -135,7 +123,7 @@ class updates(modules.Module):
                         'value': ['0'],
                     },
                     'InfoText': 770,
-                    'order': 9,
+                    'order': 8,
                 },
             },
         },
@@ -303,7 +291,7 @@ class updates(modules.Module):
         if value:
             self.struct['update']['settings']['ShowCustomChannels']['value'] = value
 
-        for i in range(1,3):
+        for i in range(1,2):
             value = oe.read_setting('updates', f'CustomChannel{i}')
             if value:
                 self.struct['update']['settings'][f'CustomChannel{i}']['value'] = value
@@ -464,7 +452,7 @@ class updates(modules.Module):
         update_json = self.get_json()
         if self.struct['update']['settings']['ShowCustomChannels']['value'] == '1':
             custom_urls = []
-            for i in 1,2,3:
+            for i in range(1,2):
                 custom_urls.append(self.struct['update']['settings'][f'CustomChannel{str(i)}']['value'])
             for custom_url in custom_urls:
                 if custom_url:
