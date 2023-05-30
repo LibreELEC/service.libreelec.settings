@@ -42,10 +42,9 @@ class updates(modules.Module):
             'settings': {
                 'AutoUpdate': {
                     'name': 32014,
-                    'value': 'auto',
+                    'value': '1',
                     'action': 'set_auto_update',
-                    'type': 'multivalue',
-                    'values': ['auto', 'manual'],
+                    'type': 'bool',
                     'InfoText': 714,
                     'order': 1,
                 },
@@ -72,7 +71,7 @@ class updates(modules.Module):
                     'type': 'bool',
                     'parent': {
                             'entry': 'AutoUpdate',
-                        'value': ['manual'],
+                        'value': ['0'],
                     },
                     'InfoText': 761,
                     'order': 4,
@@ -120,7 +119,7 @@ class updates(modules.Module):
                     'type': 'multivalue',
                     'parent': {
                             'entry': 'AutoUpdate',
-                        'value': ['manual'],
+                        'value': ['0'],
                     },
                     'values': [],
                     'InfoText': 760,
@@ -133,7 +132,7 @@ class updates(modules.Module):
                     'type': 'button',
                     'parent': {
                             'entry': 'AutoUpdate',
-                        'value': ['manual'],
+                        'value': ['0'],
                     },
                     'InfoText': 770,
                     'order': 9,
@@ -278,7 +277,15 @@ class updates(modules.Module):
         # AutoUpdate
         value = oe.read_setting('updates', 'AutoUpdate')
         if value:
-            self.struct['update']['settings']['AutoUpdate']['value'] = value
+            # convert old multivalue to bool
+            if value == 'auto':
+                self.struct['update']['settings']['AutoUpdate']['value'] = '1'
+                oe.write_setting('updates', 'AutoUpdate', '1')
+            elif value == 'manual':
+                self.struct['update']['settings']['AutoUpdate']['value'] = '0'
+                oe.write_setting('updates', 'AutoUpdate', '0')
+            else:
+                self.struct['update']['settings']['AutoUpdate']['value'] = value
         value = oe.read_setting('updates', 'SubmitStats')
         if value:
             self.struct['update']['settings']['SubmitStats']['value'] = value
@@ -342,7 +349,7 @@ class updates(modules.Module):
             else:
                 self.update_thread = updateThread(oe)
                 self.update_thread.start()
-            log.log(str(self.struct['update']['settings']['AutoUpdate']['value']), log.INFO)
+            log.log(f'Automatic updates set to: {"Enabled" if self.struct["update"]["settings"]["AutoUpdate"]["value"] == "1" else "Disabled"}', log.INFO)
 
     @log.log_function()
     def set_channel(self, listItem=None):
@@ -566,7 +573,7 @@ class updates(modules.Module):
                 if self.struct['update']['settings']['UpdateNotify']['value'] == '1':
                     # update available message
                     oe.notify(oe._(32363), oe._(32364))
-                if self.struct['update']['settings']['AutoUpdate']['value'] == 'auto' and force == False:
+                if self.struct['update']['settings']['AutoUpdate']['value'] == '1' and force is False:
                     self.update_in_progress = True
                     self.do_autoupdate(True)
 
