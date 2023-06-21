@@ -353,10 +353,6 @@ msgctxt "#32017"
 msgid "  - Custom Channel 1"
 msgstr "  - 自定义渠道 1"
 
-msgctxt "#32018"
-msgid "  - Custom Channel 2"
-msgstr "  - 自定义渠道 2"
-
 msgctxt "#32020"
 msgid "Available Versions"
 msgstr "可用版本"

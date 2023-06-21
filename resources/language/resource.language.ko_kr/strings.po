@@ -353,10 +353,6 @@ msgctxt "#32017"
 msgid "  - Custom Channel 1"
 msgstr "  - 사용자 채널 1"
 
-msgctxt "#32018"
-msgid "  - Custom Channel 2"
-msgstr "  - 사용자 채널 2"
-
 msgctxt "#32020"
 msgid "Available Versions"
 msgstr "사용가능한 버전"

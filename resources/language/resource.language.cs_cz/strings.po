@@ -360,10 +360,6 @@ msgctxt "#32017"
 msgid "  - Custom Channel 1"
 msgstr "  – Vlastní kanál 1"
 
-msgctxt "#32018"
-msgid "  - Custom Channel 2"
-msgstr "  – Vlastní kanál 2"
-
 msgctxt "#32020"
 msgid "Available Versions"
 msgstr "Dostupné verze"

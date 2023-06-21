@@ -353,10 +353,6 @@ msgctxt "#32017"
 msgid "  - Custom Channel 1"
 msgstr "- Egendefinert Kanal 1"
 
-msgctxt "#32018"
-msgid "  - Custom Channel 2"
-msgstr "- Egendefinert Kanal 2"
-
 msgctxt "#32020"
 msgid "Available Versions"
 msgstr "Tilgjengelige Versjoner"
