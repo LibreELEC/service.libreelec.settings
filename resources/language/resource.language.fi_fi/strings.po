@@ -361,10 +361,6 @@ msgctxt "#32018"
 msgid "  - Custom Channel 2"
 msgstr "  - Oma päivityskanava 2"
 
-msgctxt "#32019"
-msgid "  - Custom Channel 3"
-msgstr "  - Oma päivityskanava 3"
-
 msgctxt "#32020"
 msgid "Available Versions"
 msgstr "Saatavilla olevat versiot"

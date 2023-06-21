@@ -369,10 +369,6 @@ msgctxt "#32018"
 msgid "  - Custom Channel 2"
 msgstr "  - Canal Personalizado 2"
 
-msgctxt "#32019"
-msgid "  - Custom Channel 3"
-msgstr "  - Canal Personalizado 3"
-
 msgctxt "#32020"
 msgid "Available Versions"
 msgstr "Versões Disponíveis"

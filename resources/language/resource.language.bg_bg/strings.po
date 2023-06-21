@@ -358,10 +358,6 @@ msgctxt "#32018"
 msgid "  - Custom Channel 2"
 msgstr "- Персонализиран Канал 2"
 
-msgctxt "#32019"
-msgid "  - Custom Channel 3"
-msgstr "- Персонализиран Канал 3"
-
 msgctxt "#32020"
 msgid "Available Versions"
 msgstr "Налични версии"

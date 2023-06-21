@@ -358,10 +358,6 @@ msgctxt "#32018"
 msgid "  - Custom Channel 2"
 msgstr "- 2. kanal pertsonalizatua"
 
-msgctxt "#32019"
-msgid "  - Custom Channel 3"
-msgstr "- 3. kanal pertsonalizatua"
-
 msgctxt "#32020"
 msgid "Available Versions"
 msgstr "Eskuragarri dauden bertsioak"

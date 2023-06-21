@@ -357,10 +357,6 @@ msgctxt "#32018"
 msgid "  - Custom Channel 2"
 msgstr "  - Prilagođeni kanal 2"
 
-msgctxt "#32019"
-msgid "  - Custom Channel 3"
-msgstr "  - Prilagođeni kanal 3"
-
 msgctxt "#32020"
 msgid "Available Versions"
 msgstr "Dostupne inačice"
