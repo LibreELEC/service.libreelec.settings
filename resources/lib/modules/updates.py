@@ -40,13 +40,22 @@ class updates(modules.Module):
             'order': 1,
             'name': 32013,
             'settings': {
+                'ReleaseChannel': {
+                    'name': 32030,
+                    'value': 'stable',
+                    'action': 'set_release_channel',
+                    'type': 'multivalue',
+                    'values': ['stable', 'testing', 'custom'],
+                    'InfoText': 716,
+                    'order': 1,
+                },
                 'AutoUpdate': {
                     'name': 32014,
                     'value': '1',
                     'action': 'set_auto_update',
                     'type': 'bool',
                     'InfoText': 714,
-                    'order': 1,
+                    'order': 2,
                 },
                 'SubmitStats': {
                     'name': 32021,
@@ -54,7 +63,7 @@ class updates(modules.Module):
                     'action': 'set_value',
                     'type': 'bool',
                     'InfoText': 772,
-                    'order': 2,
+                    'order': 3,
                 },
                 'UpdateNotify': {
                     'name': 32365,
@@ -62,18 +71,6 @@ class updates(modules.Module):
                     'action': 'set_value',
                     'type': 'bool',
                     'InfoText': 715,
-                    'order': 3,
-                },
-                'ShowCustomChannels': {
-                    'name': 32016,
-                    'value': '0',
-                    'action': 'set_custom_channel',
-                    'type': 'bool',
-                    'parent': {
-                            'entry': 'AutoUpdate',
-                        'value': ['0'],
-                    },
-                    'InfoText': 761,
                     'order': 4,
                 },
                 'CustomChannel1': {
@@ -82,8 +79,8 @@ class updates(modules.Module):
                     'action': 'set_custom_channel',
                     'type': 'text',
                     'parent': {
-                            'entry': 'ShowCustomChannels',
-                        'value': ['1'],
+                            'entry': 'ReleaseChannel',
+                        'value': ['custom'],
                     },
                     'InfoText': 762,
                     'order': 5,
@@ -94,8 +91,8 @@ class updates(modules.Module):
                     'action': 'set_custom_channel',
                     'type': 'text',
                     'parent': {
-                            'entry': 'ShowCustomChannels',
-                        'value': ['1'],
+                            'entry': 'ReleaseChannel',
+                        'value': ['custom'],
                     },
                     'InfoText': 762,
                     'order': 6,
@@ -247,6 +244,11 @@ class updates(modules.Module):
         self.hardware_flags = self.get_hardware_flags()
         log.log(f'loaded hardware_flag {self.hardware_flags}', log.DEBUG)
 
+        # Release Channel
+        value = oe.read_setting('updates', 'ReleaseChannel')
+        if value:
+            self.struct['update']['settings']['ReleaseChannel']['value'] = value
+
         # AutoUpdate
         value = oe.read_setting('updates', 'AutoUpdate')
         if value:
@@ -272,10 +274,8 @@ class updates(modules.Module):
         value = oe.read_setting('updates', 'Channel')
         if value:
             self.struct['update']['settings']['Channel']['value'] = value
-        value = oe.read_setting('updates', 'ShowCustomChannels')
-        if value:
-            self.struct['update']['settings']['ShowCustomChannels']['value'] = value
 
+        # Custom channel
         for i in range(1,2):
             value = oe.read_setting('updates', f'CustomChannel{i}')
             if value:
@@ -311,6 +311,16 @@ class updates(modules.Module):
     def set_value(self, listItem):
         self.struct[listItem.getProperty('category')]['settings'][listItem.getProperty('entry')]['value'] = listItem.getProperty('value')
         oe.write_setting('updates', listItem.getProperty('entry'), str(listItem.getProperty('value')))
+
+    @log.log_function()
+    def set_release_channel(self, listItem):
+        if listItem:
+            self.set_value(listItem)
+        # set_custom_channel refreshes json and channel options
+        # TODO add OR to refresh if custom and url set
+        if self.struct['update']['settings']['ReleaseChannel']['value'] != 'custom':
+            self.update_json = self.build_json()
+            self.struct['update']['settings']['Channel']['values'] = self.get_channels()
 
     @log.log_function()
     def set_auto_update(self, listItem=None):
@@ -369,9 +379,10 @@ class updates(modules.Module):
     @log.log_function()
     def get_channels(self):
         channels = []
-        log.log(str(self.update_json), log.DEBUG)
+        log.log(f'{self.update_json=}', log.DEBUG)
         if self.update_json:
             for channel in self.update_json:
+                log.log(f'{channel=}', log.DEBUG)
                 # filter versions older than current; just add when unknown
                 try:
                     channel_version = channel.split('-')[1]
@@ -424,7 +435,10 @@ class updates(modules.Module):
     def get_json(self, url=None):
         """Download and extract data from a releases.json file. Complete the URL if necessary."""
         if not url:
-            url = self.UPDATE_DOWNLOAD_URL % ('releases', 'releases.json')
+            if self.struct['update']['settings']['ReleaseChannel']['value'] == 'testing':
+                url = self.UPDATE_DOWNLOAD_URL % ('test', 'releases.json')
+            else:
+                url = self.UPDATE_DOWNLOAD_URL % ('releases', 'releases.json')
         if not url.startswith(('http://', 'https://', 'file://')):
             url = f'https://{url}'
         if not url.endswith('.json'):
@@ -435,7 +449,7 @@ class updates(modules.Module):
     @log.log_function()
     def build_json(self, notify_error=False):
         update_json = self.get_json()
-        if self.struct['update']['settings']['ShowCustomChannels']['value'] == '1':
+        if self.struct['update']['settings']['ReleaseChannel']['value'] == 'custom':
             custom_urls = []
             for i in range(1,2):
                 custom_urls.append(self.struct['update']['settings'][f'CustomChannel{str(i)}']['value'])
@@ -538,6 +552,10 @@ class updates(modules.Module):
         log.log(f'URL: {url}', log.DEBUG)
         update_json = oe.load_url(url)
         log.log(f'RESULT: {repr(update_json)}', log.DEBUG)
+        # only proceed if on stable release channel
+        if self.struct['update']['settings']['ReleaseChannel']['value'] != 'stable':
+            log.log('Not on stable release channel (exit)', log.DEBUG)
+            return
         if update_json:
             update_json = json.loads(update_json)
             self.last_update_check = time.time()
