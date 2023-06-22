@@ -90,10 +90,6 @@ class updates(modules.Module):
                     'value': '',
                     'action': 'set_channel',
                     'type': 'multivalue',
-                    'parent': {
-                            'entry': 'AutoUpdate',
-                        'value': ['0'],
-                    },
                     'values': [],
                     'InfoText': 760,
                     'order': 6,
@@ -103,10 +99,6 @@ class updates(modules.Module):
                     'value': '',
                     'action': 'do_manual_update',
                     'type': 'button',
-                    'parent': {
-                            'entry': 'AutoUpdate',
-                        'value': ['0'],
-                    },
                     'InfoText': 770,
                     'order': 7,
                 },
@@ -303,11 +295,35 @@ class updates(modules.Module):
     def set_release_channel(self, listItem):
         if listItem:
             self.set_value(listItem)
+        release_channel = self.struct['update']['settings']['ReleaseChannel']['value']
+
+        # Show or hide menu elements based on selected channel
+        if release_channel == 'stable':
+            # Automatic update only on stable releases
+            if 'hidden' in self.struct['update']['settings']['AutoUpdate']:
+                del(self.struct['update']['settings']['AutoUpdate']['hidden'])
+            # Only show manual update options if automatic update disabled
+            if self.struct['update']['settings']['AutoUpdate']['value'] == '0':
+                if 'hidden' in self.struct['update']['settings']['Channel']:
+                    del(self.struct['update']['settings']['Channel']['hidden'])
+                if 'hidden' in self.struct['update']['settings']['Build']:
+                    del(self.struct['update']['settings']['Build']['hidden'])
+            else:
+                self.struct['update']['settings']['Channel']['hidden'] = 'true'
+                self.struct['update']['settings']['Build']['hidden'] = 'true'
+        else:
+            # Hide automatic update and show manual update options
+            self.struct['update']['settings']['AutoUpdate']['hidden'] = 'true'
+            if 'hidden' in self.struct['update']['settings']['Channel']:
+                del(self.struct['update']['settings']['Channel']['hidden'])
+            if 'hidden' in self.struct['update']['settings']['Build']:
+                del(self.struct['update']['settings']['Build']['hidden'])
+
         # Refresh json and available build channels if ReleaseChannel is stable, testing or custom with a custom URL set
-        if self.struct['update']['settings']['ReleaseChannel']['value'] != 'custom' or \
-            (self.struct['update']['settings']['ReleaseChannel']['value'] == 'custom' and self.struct['update']['settings']['CustomChannel1']['value']):
+        if release_channel != 'custom' or (release_channel == 'custom' and self.struct['update']['settings']['CustomChannel1']['value']):
             self.update_json = self.build_json()
             self.struct['update']['settings']['Channel']['values'] = self.get_channels()
+
 
     @log.log_function()
     def set_auto_update(self, listItem=None):
@@ -319,7 +335,17 @@ class updates(modules.Module):
             else:
                 self.update_thread = updateThread(oe)
                 self.update_thread.start()
-            log.log(f'Automatic updates set to: {"Enabled" if self.struct["update"]["settings"]["AutoUpdate"]["value"] == "1" else "Disabled"}', log.INFO)
+            auto_update_status = self.struct['update']['settings']['AutoUpdate']['value']
+            log.log(f'Automatic updates set to: {"Enabled" if auto_update_status == "1" else "Disabled"}', log.INFO)
+            if auto_update_status == '1':
+                self.struct['update']['settings']['Channel']['hidden'] = 'true'
+                self.struct['update']['settings']['Build']['hidden'] = 'true'
+            else:
+                if 'hidden' in self.struct['update']['settings']['Channel']:
+                    del(self.struct['update']['settings']['Channel']['hidden'])
+                if 'hidden' in self.struct['update']['settings']['Build']:
+                    del(self.struct['update']['settings']['Build']['hidden'])
+
 
     @log.log_function()
     def set_channel(self, listItem=None):
