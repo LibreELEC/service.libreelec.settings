@@ -85,18 +85,6 @@ class updates(modules.Module):
                     'InfoText': 762,
                     'order': 5,
                 },
-                'CustomChannel2': {
-                    'name': 32018,
-                    'value': '',
-                    'action': 'set_custom_channel',
-                    'type': 'text',
-                    'parent': {
-                            'entry': 'ReleaseChannel',
-                        'value': ['custom'],
-                    },
-                    'InfoText': 762,
-                    'order': 6,
-                },
                 'Channel': {
                     'name': 32015,
                     'value': '',
@@ -108,7 +96,7 @@ class updates(modules.Module):
                     },
                     'values': [],
                     'InfoText': 760,
-                    'order': 7,
+                    'order': 6,
                 },
                 'Build': {
                     'name': 32020,
@@ -120,7 +108,7 @@ class updates(modules.Module):
                         'value': ['0'],
                     },
                     'InfoText': 770,
-                    'order': 8,
+                    'order': 7,
                 },
             },
         },
@@ -276,10 +264,9 @@ class updates(modules.Module):
             self.struct['update']['settings']['Channel']['value'] = value
 
         # Custom channel
-        for i in range(1,2):
-            value = oe.read_setting('updates', f'CustomChannel{i}')
-            if value:
-                self.struct['update']['settings'][f'CustomChannel{i}']['value'] = value
+        value = oe.read_setting('updates', 'CustomChannel1')
+        if value:
+            self.struct['update']['settings']['CustomChannel1']['value'] = value
 
         self.update_json = self.build_json()
 
@@ -449,21 +436,17 @@ class updates(modules.Module):
     @log.log_function()
     def build_json(self, notify_error=False):
         update_json = self.get_json()
-        if self.struct['update']['settings']['ReleaseChannel']['value'] == 'custom':
-            custom_urls = []
-            for i in range(1,2):
-                custom_urls.append(self.struct['update']['settings'][f'CustomChannel{str(i)}']['value'])
-            for custom_url in custom_urls:
-                if custom_url:
-                    custom_update_json = self.get_json(custom_url)
-                    if custom_update_json:
-                        for channel in custom_update_json:
-                            update_json[channel] = custom_update_json[channel]
-                    elif notify_error:
-                        ok_window = xbmcgui.Dialog()
-                        answer = ok_window.ok(oe._(32191), f'Custom URL is invalid, or currently inaccessible.\n\n{custom_url}')
-                        if not answer:
-                            return
+        if self.struct['update']['settings']['ReleaseChannel']['value'] == 'custom' and self.struct['update']['settings']['CustomChannel1']['value']:
+            custom_url = self.struct['update']['settings']['CustomChannel1']['value']
+            custom_update_json = self.get_json(custom_url)
+            if custom_update_json:
+                for channel in custom_update_json:
+                    update_json[channel] = custom_update_json[channel]
+            elif notify_error:
+                ok_window = xbmcgui.Dialog()
+                answer = ok_window.ok(oe._(32191), f'Custom URL is invalid, or currently inaccessible.\n\n{custom_url}')
+                if not answer:
+                    return
         return update_json
 
     @log.log_function()
