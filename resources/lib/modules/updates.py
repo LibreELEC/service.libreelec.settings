@@ -303,9 +303,9 @@ class updates(modules.Module):
     def set_release_channel(self, listItem):
         if listItem:
             self.set_value(listItem)
-        # set_custom_channel refreshes json and channel options
-        # TODO add OR to refresh if custom and url set
-        if self.struct['update']['settings']['ReleaseChannel']['value'] != 'custom':
+        # Refresh json and available build channels if ReleaseChannel is stable, testing or custom with a custom URL set
+        if self.struct['update']['settings']['ReleaseChannel']['value'] != 'custom' or \
+            (self.struct['update']['settings']['ReleaseChannel']['value'] == 'custom' and self.struct['update']['settings']['CustomChannel1']['value']):
             self.update_json = self.build_json()
             self.struct['update']['settings']['Channel']['values'] = self.get_channels()
 
