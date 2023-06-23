@@ -289,10 +289,6 @@ msgctxt "#760"
 msgid "Select an update channel"
 msgstr "업데이트 채널 선택"
 
-msgctxt "#761"
-msgid "Enable to allow entering a custom update url"
-msgstr "사용자 업데이트 url 입력 허용"
-
 msgctxt "#762"
 msgid "Enter a custom update url (url should be the root of the update files)"
 msgstr "사용자 업데이트 url 입력 (url은 업데이트 파일의 루트여야 함)"
@@ -352,10 +348,6 @@ msgstr "자동 업데이트"
 msgctxt "#32015"
 msgid "Update Channel"
 msgstr "채널 업데이트"
-
-msgctxt "#32016"
-msgid "Show Custom Channels"
-msgstr "사용자 채널 보기"
 
 msgctxt "#32017"
 msgid "  - Custom Channel 1"

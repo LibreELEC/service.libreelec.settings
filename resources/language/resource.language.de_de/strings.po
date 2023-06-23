@@ -291,10 +291,6 @@ msgctxt "#760"
 msgid "Select an update channel"
 msgstr "Updatekanal auswählen"
 
-msgctxt "#761"
-msgid "Enable to allow entering a custom update url"
-msgstr "Aktiveren, um die Eingabe einer benutzerdefinierten Update-URL zu erlauben"
-
 msgctxt "#762"
 msgid "Enter a custom update url (url should be the root of the update files)"
 msgstr "Benutzerdefinierte Update-URL eingeben (URL sollte das Wurzelverzeichnis der Updatedateien sein)"
@@ -354,10 +350,6 @@ msgstr "Automatische Aktualisierungen"
 msgctxt "#32015"
 msgid "Update Channel"
 msgstr "Updatekanal"
-
-msgctxt "#32016"
-msgid "Show Custom Channels"
-msgstr "Benutzerdefinierte Kanäle anzeigen"
 
 msgctxt "#32017"
 msgid "  - Custom Channel 1"

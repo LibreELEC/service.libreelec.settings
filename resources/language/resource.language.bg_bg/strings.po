@@ -286,10 +286,6 @@ msgctxt "#760"
 msgid "Select an update channel"
 msgstr "Изберете канал за актуализацията"
 
-msgctxt "#761"
-msgid "Enable to allow entering a custom update url"
-msgstr "Включете за да въведете различен URL адрес за актуализациите."
-
 msgctxt "#762"
 msgid "Enter a custom update url (url should be the root of the update files)"
 msgstr "Въведете различена връзка за актуализациите (връзката трябва да води към основната папка)"
@@ -349,10 +345,6 @@ msgstr "Актуализиране"
 msgctxt "#32015"
 msgid "Update Channel"
 msgstr "Канал за актуализацията"
-
-msgctxt "#32016"
-msgid "Show Custom Channels"
-msgstr "Покажи персонализирани канали"
 
 msgctxt "#32017"
 msgid "  - Custom Channel 1"

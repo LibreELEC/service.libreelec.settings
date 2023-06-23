@@ -289,10 +289,6 @@ msgctxt "#760"
 msgid "Select an update channel"
 msgstr "选择一个更新渠道"
 
-msgctxt "#761"
-msgid "Enable to allow entering a custom update url"
-msgstr "启用以允许输入自定义更新网址"
-
 msgctxt "#762"
 msgid "Enter a custom update url (url should be the root of the update files)"
 msgstr "输入自定义更新url（url应该是更新文件的根目录）"
@@ -352,10 +348,6 @@ msgstr "自动升级"
 msgctxt "#32015"
 msgid "Update Channel"
 msgstr "升级渠道"
-
-msgctxt "#32016"
-msgid "Show Custom Channels"
-msgstr "显示自定义渠道"
 
 msgctxt "#32017"
 msgid "  - Custom Channel 1"

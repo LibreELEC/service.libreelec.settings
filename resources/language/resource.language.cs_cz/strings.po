@@ -296,10 +296,6 @@ msgctxt "#760"
 msgid "Select an update channel"
 msgstr "Vyberte aktualizační kanál"
 
-msgctxt "#761"
-msgid "Enable to allow entering a custom update url"
-msgstr "Umožnit zadávání vlastní URL pro aktualizaci"
-
 msgctxt "#762"
 msgid "Enter a custom update url (url should be the root of the update files)"
 msgstr "Zadejte vlastní URL pro aktualizaci (musí ukazovat do kořenové složky aktualizačních souborů)"
@@ -359,10 +355,6 @@ msgstr "Automatické aktualizace"
 msgctxt "#32015"
 msgid "Update Channel"
 msgstr "Kanál aktualizací"
-
-msgctxt "#32016"
-msgid "Show Custom Channels"
-msgstr "Ukázat vlastní kanály"
 
 msgctxt "#32017"
 msgid "  - Custom Channel 1"

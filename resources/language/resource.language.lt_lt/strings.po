@@ -289,10 +289,6 @@ msgctxt "#760"
 msgid "Select an update channel"
 msgstr "Pasirinkite atnaujinimo kanalą"
 
-msgctxt "#761"
-msgid "Enable to allow entering a custom update url"
-msgstr "Įjunkite norėdami leisti įvesti savą atnaujinimo URL"
-
 msgctxt "#762"
 msgid "Enter a custom update url (url should be the root of the update files)"
 msgstr "Įveskite savą atnaujinimo URL (URL turi būti šakninė atnaujinimo failų vieta)"
@@ -352,10 +348,6 @@ msgstr "Automatiniai atnaujinimai"
 msgctxt "#32015"
 msgid "Update Channel"
 msgstr "Atnaujinimo kanalas"
-
-msgctxt "#32016"
-msgid "Show Custom Channels"
-msgstr "Rodyti savus kanalus"
 
 msgctxt "#32017"
 msgid "  - Custom Channel 1"

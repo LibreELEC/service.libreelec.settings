@@ -286,10 +286,6 @@ msgctxt "#760"
 msgid "Select an update channel"
 msgstr "Aukeratu eguneratze-kanala"
 
-msgctxt "#761"
-msgid "Enable to allow entering a custom update url"
-msgstr "Eman eguneratze URL pertsonalizatua sartzeko baimena"
-
 msgctxt "#762"
 msgid "Enter a custom update url (url should be the root of the update files)"
 msgstr "Sartu eguneratze URL pertsonalizatua (URLa eguneratze fitxategien jatorria izan behar da)"
@@ -349,10 +345,6 @@ msgstr "Eguneratze automatikoak"
 msgctxt "#32015"
 msgid "Update Channel"
 msgstr "Eguneratze-kanala"
-
-msgctxt "#32016"
-msgid "Show Custom Channels"
-msgstr "Erakutsi kanal pertsonalizatuak"
 
 msgctxt "#32017"
 msgid "  - Custom Channel 1"

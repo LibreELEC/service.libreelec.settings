@@ -285,10 +285,6 @@ msgctxt "#760"
 msgid "Select an update channel"
 msgstr "Odaberi kanal nadopune"
 
-msgctxt "#761"
-msgid "Enable to allow entering a custom update url"
-msgstr "Omogući za dopuštanje unosa prilagođenog URL-a nadopune"
-
 msgctxt "#762"
 msgid "Enter a custom update url (url should be the root of the update files)"
 msgstr "Unesi prilagođeni URL nadopune (url treba biti korijen datoteka nadopune)"
@@ -348,10 +344,6 @@ msgstr "Automatske nadopune"
 msgctxt "#32015"
 msgid "Update Channel"
 msgstr "Kanal nadopune"
-
-msgctxt "#32016"
-msgid "Show Custom Channels"
-msgstr "Prikaži prilagođene kanale"
 
 msgctxt "#32017"
 msgid "  - Custom Channel 1"
