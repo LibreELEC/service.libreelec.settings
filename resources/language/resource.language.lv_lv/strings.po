@@ -343,7 +343,7 @@ msgid "Automatic Updates"
 msgstr "Automātiskie atjauninājumi"
 
 msgctxt "#32015"
-msgid "Update Channel"
+msgid "Release"
 msgstr "Atjauninājumu kanāls"
 
 msgctxt "#32017"

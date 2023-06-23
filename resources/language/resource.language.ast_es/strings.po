@@ -340,7 +340,7 @@ msgid "Automatic Updates"
 msgstr "Anovamientos automáticos"
 
 msgctxt "#32015"
-msgid "Update Channel"
+msgid "Release"
 msgstr "Canal d'anovamientu"
 
 msgctxt "#32017"

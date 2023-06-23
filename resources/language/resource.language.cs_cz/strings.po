@@ -353,7 +353,7 @@ msgid "Automatic Updates"
 msgstr "Automatické aktualizace"
 
 msgctxt "#32015"
-msgid "Update Channel"
+msgid "Release"
 msgstr "Kanál aktualizací"
 
 msgctxt "#32017"

@@ -348,7 +348,7 @@ msgid "Automatic Updates"
 msgstr "Otomatik Güncellemeler"
 
 msgctxt "#32015"
-msgid "Update Channel"
+msgid "Release"
 msgstr "Güncelleme Kanalı"
 
 msgctxt "#32017"

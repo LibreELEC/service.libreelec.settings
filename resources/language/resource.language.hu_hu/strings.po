@@ -349,7 +349,7 @@ msgid "Automatic Updates"
 msgstr "Automatikus frissítések"
 
 msgctxt "#32015"
-msgid "Update Channel"
+msgid "Release"
 msgstr "Frissítési csatorna"
 
 msgctxt "#32017"

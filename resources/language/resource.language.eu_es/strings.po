@@ -343,7 +343,7 @@ msgid "Automatic Updates"
 msgstr "Eguneratze automatikoak"
 
 msgctxt "#32015"
-msgid "Update Channel"
+msgid "Release"
 msgstr "Eguneratze-kanala"
 
 msgctxt "#32017"
