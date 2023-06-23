@@ -932,7 +932,7 @@ msgid "Update available"
 msgstr "アップデートが利用可能です"
 
 msgctxt "#32365"
-msgid "Show Update Notifications"
+msgid "Show Notifications"
 msgstr "アップデートの通知を見ます"
 
 msgctxt "#32366"

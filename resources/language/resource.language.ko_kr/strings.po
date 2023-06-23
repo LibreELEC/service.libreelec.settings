@@ -934,7 +934,7 @@ msgid "Update available"
 msgstr "사용가능한 업데이트"
 
 msgctxt "#32365"
-msgid "Show Update Notifications"
+msgid "Show Notifications"
 msgstr "업데이트 알림 표시"
 
 msgctxt "#32366"

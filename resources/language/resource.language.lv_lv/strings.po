@@ -931,7 +931,7 @@ msgid "Update available"
 msgstr "Pieejams atjauninājums"
 
 msgctxt "#32365"
-msgid "Show Update Notifications"
+msgid "Show Notifications"
 msgstr "Rādīt atjaunināšanas paziņojumus"
 
 msgctxt "#32366"

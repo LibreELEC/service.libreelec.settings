@@ -934,7 +934,7 @@ msgid "Update available"
 msgstr "Dostępna aktualizacja"
 
 msgctxt "#32365"
-msgid "Show Update Notifications"
+msgid "Show Notifications"
 msgstr "Powiadamiaj o nowych aktualizacjach"
 
 msgctxt "#32366"

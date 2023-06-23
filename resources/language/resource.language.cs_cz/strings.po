@@ -941,7 +941,7 @@ msgid "Update available"
 msgstr "Aktualizace k dispozici"
 
 msgctxt "#32365"
-msgid "Show Update Notifications"
+msgid "Show Notifications"
 msgstr "Zobrazit oznámení aktualizací"
 
 msgctxt "#32366"

@@ -931,7 +931,7 @@ msgid "Update available"
 msgstr "Налична е актуализация"
 
 msgctxt "#32365"
-msgid "Show Update Notifications"
+msgid "Show Notifications"
 msgstr "Показване на известие при налична актуализация"
 
 msgctxt "#32366"

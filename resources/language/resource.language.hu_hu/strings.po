@@ -937,7 +937,7 @@ msgid "Update available"
 msgstr "Frissítés elérhető"
 
 msgctxt "#32365"
-msgid "Show Update Notifications"
+msgid "Show Notifications"
 msgstr "Frissítési értesítések megjelenítése"
 
 msgctxt "#32366"

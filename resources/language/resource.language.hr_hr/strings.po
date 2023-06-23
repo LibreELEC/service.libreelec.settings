@@ -930,7 +930,7 @@ msgid "Update available"
 msgstr "Nadopuna dostupna"
 
 msgctxt "#32365"
-msgid "Show Update Notifications"
+msgid "Show Notifications"
 msgstr "Prikaži obavijesti nadopune"
 
 msgctxt "#32366"
