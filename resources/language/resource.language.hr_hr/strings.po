@@ -298,7 +298,7 @@ msgid "The firewall blocks unwanted network traffic. Home (default) allows traff
 msgstr "Vatrozid blokira neželjeni mrežni promet. Kućno (zadano) dopušta samo promet s rasponom privatnih mreža (192.168.x.x, 172.16.x.x and 10.x.x.x) . Javno blokira sav promet sa svih mreža. Prilagođeno koristi pravila u /storage/.config/iptables. Isklj onemogućava vatrozid."
 
 msgctxt "#772"
-msgid "Checking for a new version will submit the installed Distribution, Project, CPU Arch and Version to the update server. This data is also used to report basic statistics for the project. To continue checking for updates while opting-out of stats reporting, disable this option."
+msgid "Enable to share the installed distribution, version, and related device information periodically with the developers. This data is used to gather information on how distribution is used. Disable to opt out of reporting device information."
 msgstr "Provjeravanje nove inačice će prijaviti instaliranu distribuciju, projekt, CPU, Arhitekturu i inačicu na poslužitelj nadopune. Ovi podaci se koriste za prijavu osnovne statistike projekta. Za nastavak provjera nadopuna i da se izuzmete iz izvještaja statistike, onemogućite ovu mogućnost."
 
 msgctxt "#773"

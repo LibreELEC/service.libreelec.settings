@@ -304,7 +304,7 @@ msgid "The firewall blocks unwanted network traffic. Home (default) allows traff
 msgstr "De firewall blokkeert ongewenst netwerkverkeer. 'Home' (standaard) staat alleen verkeer toe van privé netwerkranges (192.168.x.x, 172.16.x.x and 10.x.x.x). 'Publiek 'blokkeert alle verkeer van alle netwerken. 'Aangepast' gebruikt regels in /storage/.config/iptables. 'Uit' schakelt de firewall uit."
 
 msgctxt "#772"
-msgid "Checking for a new version will submit the installed Distribution, Project, CPU Arch and Version to the update server. This data is also used to report basic statistics for the project. To continue checking for updates while opting-out of stats reporting, disable this option."
+msgid "Enable to share the installed distribution, version, and related device information periodically with the developers. This data is used to gather information on how distribution is used. Disable to opt out of reporting device information."
 msgstr "Controle op een nieuwe versie zal data betreffende de geïnstalleerde distributie, project, CPU Arch en versie naar de update-server doorsturen. Deze gegevens worden ook gebruikt voor simpele statistieken aangaande het project. Het uitschakelen van deze statistieken tijdens de controle op nieuwe versies kan via deze optie."
 
 msgctxt "#773"

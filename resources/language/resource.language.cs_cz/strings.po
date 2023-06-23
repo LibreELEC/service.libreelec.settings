@@ -309,7 +309,7 @@ msgid "The firewall blocks unwanted network traffic. Home (default) allows traff
 msgstr "Firewall blokuje nežádoucí síťový provoz. Domácí (výchozí) povolí provoz pouze z rozsahů místních sítí (192.168.x.x, 172.16.x.x a 10.x.x.x). Veřejný blokuje veškerý provoz ze všech sítí. Vlastní použije pravidla ze souboru /storage/.config/iptables. Vypnutý zakáže firewall."
 
 msgctxt "#772"
-msgid "Checking for a new version will submit the installed Distribution, Project, CPU Arch and Version to the update server. This data is also used to report basic statistics for the project. To continue checking for updates while opting-out of stats reporting, disable this option."
+msgid "Enable to share the installed distribution, version, and related device information periodically with the developers. This data is used to gather information on how distribution is used. Disable to opt out of reporting device information."
 msgstr "Při kontrolování nové verze se aktualizačnímu serveru odešlou informace o nainstalované distribuci, projektu, architektuře procesoru a verzi. Tato data budou použita i k získání základních statistik projektu. Zakažte tuto volbu, pokud tato data nechcete odesílat, a chcete pouze zkontrolovat novou verzi."
 
 msgctxt "#773"

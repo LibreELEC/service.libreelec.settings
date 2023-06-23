@@ -299,7 +299,7 @@ msgid "The firewall blocks unwanted network traffic. Home (default) allows traff
 msgstr "Защитната стена блокира нежелан мрежови трафик. \"Домашен режим\" (стандартен) разрешава комуникация само с частни мрежи (192.168.x.x, 172.16.x.x and 10.x.x.x). \"Публичен режим\" блокира трафика от всяка мрежа. \"Персонален режим\" ползва правилата дефинирани във файла /storage/.config/iptables. \"Изключена\" спира защитната стена."
 
 msgctxt "#772"
-msgid "Checking for a new version will submit the installed Distribution, Project, CPU Arch and Version to the update server. This data is also used to report basic statistics for the project. To continue checking for updates while opting-out of stats reporting, disable this option."
+msgid "Enable to share the installed distribution, version, and related device information periodically with the developers. This data is used to gather information on how distribution is used. Disable to opt out of reporting device information."
 msgstr "Проверката за нова версия изпраща информация за инсталираната версия, дистрибуцията, проекта и архитектурата на процесора до сървъра за актуализиране. Данните се ползват и за генериране на статистически доклади. Деактивирайте опцията ако желаете да проверявате за актуализации, но не желаете да изпращате данни за статистическите доклади."
 
 msgctxt "#773"

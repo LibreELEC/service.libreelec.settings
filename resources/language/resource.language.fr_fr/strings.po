@@ -309,7 +309,7 @@ msgid "The firewall blocks unwanted network traffic. Home (default) allows traff
 msgstr "Le pare-feu bloque le trafic réseau indésirable. \"Accueil\" (par défaut) permet le trafic à partir de plages de réseau privé (192.168.x.x.x, 172.16.x.x.x et 10.x.x.x.x.x) uniquement. \"Public\" bloque tout le trafic de tous les réseaux. \"Personnalisé\" utilise des règles dans /storage/.config/iptables. \"Éteint\" désactive le pare-feu."
 
 msgctxt "#772"
-msgid "Checking for a new version will submit the installed Distribution, Project, CPU Arch and Version to the update server. This data is also used to report basic statistics for the project. To continue checking for updates while opting-out of stats reporting, disable this option."
+msgid "Enable to share the installed distribution, version, and related device information periodically with the developers. This data is used to gather information on how distribution is used. Disable to opt out of reporting device information."
 msgstr "Vérifier qu'une nouvelle version est disponible enverra la distribution installée, le projet, le type de CPU, et la version au serveur. Ces données sont aussi utilisées pour des statistiques basiques pour le projet. Pour continuer à vérifier les mises à jour sans envoyer les statistiques, désactivez cette option."
 
 msgctxt "#773"

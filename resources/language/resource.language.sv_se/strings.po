@@ -300,7 +300,7 @@ msgid "The firewall blocks unwanted network traffic. Home (default) allows traff
 msgstr "Brandväggen blockerar oönskad trafik. Home tillåter (som standard) endast trafik från privata nätverksspan (192.168.x.x, 172.16.x.x, 10.x.x.x). Public blockerar all trafik från alla nätverk. Custom använder regler från /storage/.config/iptables. Av stänger av brandväggen."
 
 msgctxt "#772"
-msgid "Checking for a new version will submit the installed Distribution, Project, CPU Arch and Version to the update server. This data is also used to report basic statistics for the project. To continue checking for updates while opting-out of stats reporting, disable this option."
+msgid "Enable to share the installed distribution, version, and related device information periodically with the developers. This data is used to gather information on how distribution is used. Disable to opt out of reporting device information."
 msgstr "När kontrollen görs skickas information om; Installerad distribution, Projekt, CPU-arkitektur och version till uppdaterings-servern. Informationen används även för att rapportera statistik till projektet. För att uppdatera utan att skicka statistiken, kan du sätta inställningen till AV."
 
 msgctxt "#773"

@@ -302,7 +302,7 @@ msgid "The firewall blocks unwanted network traffic. Home (default) allows traff
 msgstr "방화벽은 원치 않는 네트워크 트래픽을 막습니다. 집은 (기본으로) 개인 네트워크 범위만의 트래픽을 허용합니다 (192.168.x.x, 172.16.x.x, 10.x.x.x). 공용은 모든 네트워크로부터의 트래픽을 막습니다. 사용자는 /storage/.config/iptables의 룰을 따릅니다. 끄기는 방화벽을 사용하지 않습니다."
 
 msgctxt "#772"
-msgid "Checking for a new version will submit the installed Distribution, Project, CPU Arch and Version to the update server. This data is also used to report basic statistics for the project. To continue checking for updates while opting-out of stats reporting, disable this option."
+msgid "Enable to share the installed distribution, version, and related device information periodically with the developers. This data is used to gather information on how distribution is used. Disable to opt out of reporting device information."
 msgstr "새 버전 확인은 설치된 배포판, 프로젝트, CPU 아키텍처와 버전을 업데이트 서버에 보냅니다. 이 데이터는 프로젝트를 위한 기초 통계에도 쓰입니다. 통계 보고를 하지 않고 업데이트를 계속하려면 이 옵션을 끕니다."
 
 msgctxt "#773"

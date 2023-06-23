@@ -304,7 +304,7 @@ msgid "The firewall blocks unwanted network traffic. Home (default) allows traff
 msgstr "Брандмауэр блокирует нежелательный сетевой трафик. Home (по умолчанию) разрешает трафик только из диапазонов частных сетей (192.168.x.x, 172.16.x.x и 10.x.x.x). Публичный блокирует весь трафик из всех сетей. Пользовательские правила используются в /storage/.config/iptables. Выкл отключает брандмауэр."
 
 msgctxt "#772"
-msgid "Checking for a new version will submit the installed Distribution, Project, CPU Arch and Version to the update server. This data is also used to report basic statistics for the project. To continue checking for updates while opting-out of stats reporting, disable this option."
+msgid "Enable to share the installed distribution, version, and related device information periodically with the developers. This data is used to gather information on how distribution is used. Disable to opt out of reporting device information."
 msgstr "Проверка новой версии отправит установленный дистрибутив, Project, CPU Arch и Version на сервер обновлений. Эти данные также используются для составления базовой статистики по проекту. Чтобы продолжить проверку обновлений при отключении статистики, отключите эту опцию."
 
 msgctxt "#773"

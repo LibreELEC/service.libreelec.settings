@@ -303,7 +303,7 @@ msgid "The firewall blocks unwanted network traffic. Home (default) allows traff
 msgstr "El cortafuegos bloquea tráfico de red no solicitado. Hogar (por defecto) permite tráfico de rangos de red privadas (192.168.x.x, 172.16.x.x y 10.x.x.x) únicamente. Público bloquea todo el tráfico de todas las redes. Personalizado utiliza reglas en /storage/.config/iptables. Apagado desactiva el cortafuegos."
 
 msgctxt "#772"
-msgid "Checking for a new version will submit the installed Distribution, Project, CPU Arch and Version to the update server. This data is also used to report basic statistics for the project. To continue checking for updates while opting-out of stats reporting, disable this option."
+msgid "Enable to share the installed distribution, version, and related device information periodically with the developers. This data is used to gather information on how distribution is used. Disable to opt out of reporting device information."
 msgstr "Buscar una nueva versión enviará la distribución instalada, el proyecto, la arquitectura de CPU y la versión al servidor de actualización. Estos datos también se utilizan para reportar estadísticas básicas para el proyecto. Para continuar buscando actualizaciones y desactivar el reporte de estadísticas, desactiva esta opción."
 
 msgctxt "#773"

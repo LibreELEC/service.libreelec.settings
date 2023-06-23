@@ -299,7 +299,7 @@ msgid "The firewall blocks unwanted network traffic. Home (default) allows traff
 msgstr "Firewall-ak nahi ez den sare-trafikoa blokeatzen du. Etxekoak (berezko aukera) soilik zure sare pribatuko tarteak baimentzen ditu (192.168.x.x, 172.16.x.x eta 10.x.x.x). Publikoak sare guztietako trafiko guztia blokeatzen du. Pertsonalizatuak /storage/.config/iptables kokapeneko arauak erabiliko ditu. Desgaitu funtzioak firewall-a desgaituko du."
 
 msgctxt "#772"
-msgid "Checking for a new version will submit the installed Distribution, Project, CPU Arch and Version to the update server. This data is also used to report basic statistics for the project. To continue checking for updates while opting-out of stats reporting, disable this option."
+msgid "Enable to share the installed distribution, version, and related device information periodically with the developers. This data is used to gather information on how distribution is used. Disable to opt out of reporting device information."
 msgstr "Bertsio berri bat dagoen egiaztatzeak instalatutako Distribuzioa, Proiektua, CPU arkitektura eta Bertsioa eguneraketa zerbitzarira bidaliko du. Datu hauek proiektuaren estatistiken oinarrizko txostenean ere erabiliko dira. Eguneraketak egiaztatzen jarraitu nahi baduzu estatistiken bidaltzea egin gabe, desgaitu ezazu aukera hau."
 
 msgctxt "#773"

@@ -310,7 +310,7 @@ msgid "The firewall blocks unwanted network traffic. Home (default) allows traff
 msgstr "O firewall bloqueia o tráfego de rede indesejado. Principal (padrão) permite tráfego somente de intervalos de rede privada (192.168.x.x, 172.16.x.x and 10.x.x.x). Público bloqueia todo o tráfego de todas as redes. Customizado usa regras em /storage/.config/iptables. Desativado desativa o firewall."
 
 msgctxt "#772"
-msgid "Checking for a new version will submit the installed Distribution, Project, CPU Arch and Version to the update server. This data is also used to report basic statistics for the project. To continue checking for updates while opting-out of stats reporting, disable this option."
+msgid "Enable to share the installed distribution, version, and related device information periodically with the developers. This data is used to gather information on how distribution is used. Disable to opt out of reporting device information."
 msgstr "A verificação de uma nova versão enviará a Distribuição, o Projeto, a Arquitetura da CPU e a Versão instalados para o servidor de atualizações. Esses dados também são usados para relatar estatísticas básicas do projeto. Para continuar a verificar se há atualizações enquanto desativa o relatório de estatísticas, desative esta opção."
 
 msgctxt "#773"

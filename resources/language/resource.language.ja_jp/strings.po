@@ -300,7 +300,7 @@ msgid "The firewall blocks unwanted network traffic. Home (default) allows traff
 msgstr "ファイアウォールは、不要なネットワークトラフィックを遮断します。 Home（デフォルト）は、プライベートネットワーク範囲(192.168.x.x, 172.16.x.x and 10.x.x.x)からのトラフィックのみを許可します。パブリックは、すべてのネットワークからのすべてのトラフィックをブロックします。カスタムは/storage/.config/iptablesのルールを使用します。オフはファイアウォールを無効にします。"
 
 msgctxt "#772"
-msgid "Checking for a new version will submit the installed Distribution, Project, CPU Arch and Version to the update server. This data is also used to report basic statistics for the project. To continue checking for updates while opting-out of stats reporting, disable this option."
+msgid "Enable to share the installed distribution, version, and related device information periodically with the developers. This data is used to gather information on how distribution is used. Disable to opt out of reporting device information."
 msgstr "新しいバージョンを確認すると、インストールされているDistribution、Project、CPU Arch、およびVersionがアップデートサーバーに送信されます。このデータは、プロジェクトの基本的な統計を報告するためにも使用されます。統計レポートを選択している間もアップデートの確認を続けるには、このオプションを無効にします。"
 
 msgctxt "#773"

@@ -305,7 +305,7 @@ msgid "The firewall blocks unwanted network traffic. Home (default) allows traff
 msgstr "A tűzfal blokkolja a kéretlen hálózati fogalmat. Otthoni (alapételmezett) - csak a privát hálózati tartományból (192.168.x.x, 172.16.x.x and 10.x.x.x) engedélyezi a forgalmat. A Nyilvános - minden forgalmat blokkol minden hálózatról. Egyéni - a /storage/.config/iptables fájlban lévő szabályokat alkalmazza. Kikapcsolva - letiltja a tűzfalat."
 
 msgctxt "#772"
-msgid "Checking for a new version will submit the installed Distribution, Project, CPU Arch and Version to the update server. This data is also used to report basic statistics for the project. To continue checking for updates while opting-out of stats reporting, disable this option."
+msgid "Enable to share the installed distribution, version, and related device information periodically with the developers. This data is used to gather information on how distribution is used. Disable to opt out of reporting device information."
 msgstr "Az új verziók ellenőrzése során elküldésre kerül a telepített disztribúció, projekt, CPU architektúra és verziója a frissítési kiszolgáló részére. Ezeket az adatokat a projekt alapvető statisztikák elkészítéséhez is felhasználja. Ha továbbra is szeretnéd a frissítéseket ellenőrizni, de közben letiltanád a statisztikai jelentések küldését, akkor kapcsold ki ezt a lehetőséget."
 
 msgctxt "#773"

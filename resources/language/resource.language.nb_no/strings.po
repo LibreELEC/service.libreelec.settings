@@ -302,7 +302,7 @@ msgid "The firewall blocks unwanted network traffic. Home (default) allows traff
 msgstr "Brannmuren blokkerer uønsket nettverkstrafikk. Hjem (standard) tillater trafikk fra private nettverksområder (192.168.x.x, 172.16.x.x and 10.x.x.x). Offentlig blokkerer all trafikk fra alle nettverk. Tilpassede brukerregler i /storage/.config/iptables. Av deaktiverer brannmuren."
 
 msgctxt "#772"
-msgid "Checking for a new version will submit the installed Distribution, Project, CPU Arch and Version to the update server. This data is also used to report basic statistics for the project. To continue checking for updates while opting-out of stats reporting, disable this option."
+msgid "Enable to share the installed distribution, version, and related device information periodically with the developers. This data is used to gather information on how distribution is used. Disable to opt out of reporting device information."
 msgstr "Ved å se etter en ny versjon, sendes den installerte distribusjonen, prosjektet, CPU-arken og versjonen til oppdateringsserveren. Disse dataene brukes også til å rapportere grunnleggende statistikk for prosjektet. Hvis du vil fortsette å sjekke for oppdateringer mens du velger bort statistikkrapportering, deaktiver dette alternativet."
 
 msgctxt "#773"

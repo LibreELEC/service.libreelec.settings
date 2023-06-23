@@ -302,7 +302,7 @@ msgid "The firewall blocks unwanted network traffic. Home (default) allows traff
 msgstr "Ugniasienė blokuoja nepageidaujamą tinklo turinį. „Namai“ (numatytasis) leidžia srautą tik iš privataus tinklo ruožo (192.168.x.x, 172.16.x.x and 10.x.x.x). „Viešas“ blokuoja visą srautą iš visų tinklų. „Pasirinktinis“ naudoja taisykles iš /storage/.config/iptables. „Išjungta“ išjungia ugniasienę."
 
 msgctxt "#772"
-msgid "Checking for a new version will submit the installed Distribution, Project, CPU Arch and Version to the update server. This data is also used to report basic statistics for the project. To continue checking for updates while opting-out of stats reporting, disable this option."
+msgid "Enable to share the installed distribution, version, and related device information periodically with the developers. This data is used to gather information on how distribution is used. Disable to opt out of reporting device information."
 msgstr "Tikrinant ar nėra naujos versijos į atnaujinimo serverį bus nusiųsta informacija apie įdiegtą distributyvą, projektą, CPU architektūrą ir versiją. Šie duomenys taip pat bus naudojami bendrai projekto statistikai. Norėdami tikrinti ar nėra atnaujinimų bet nenorėdami atskleisti šios informacijos išjunkite šią parinkty."
 
 msgctxt "#773"

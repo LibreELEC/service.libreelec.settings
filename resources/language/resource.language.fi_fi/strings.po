@@ -302,7 +302,7 @@ msgid "The firewall blocks unwanted network traffic. Home (default) allows traff
 msgstr "Palomuurin tarkoitus on estää ei-toivottua verkkoliikennettä. 'Koti' (oletus) sallii liikenteen vain yksityisistä verkko-osoitteista (192.168.x.x, 172.16.x.x ja 10.x.x.x). 'Julkinen' estää kaiken verkkoliikenteen. 'Mukautettu' käyttää sijainnissa /storage/.config/iptables määritettyjä sääntöjä. 'Ei käytössä' kytkee palomuurin pois päältä."
 
 msgctxt "#772"
-msgid "Checking for a new version will submit the installed Distribution, Project, CPU Arch and Version to the update server. This data is also used to report basic statistics for the project. To continue checking for updates while opting-out of stats reporting, disable this option."
+msgid "Enable to share the installed distribution, version, and related device information periodically with the developers. This data is used to gather information on how distribution is used. Disable to opt out of reporting device information."
 msgstr "Päivitystarkistus lähettää asennetun jakelun, projektin, prosessorin ja version päivityspalvelimelle. Näitä tietoja käytetään myös projektin perustilastojen keräykseen. Jos haluat jatkaa tarkistaa päivitykset ilman tilastointia, poista asetus käytöstä."
 
 msgctxt "#773"
