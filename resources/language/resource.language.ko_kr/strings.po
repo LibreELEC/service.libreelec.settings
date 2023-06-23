@@ -118,7 +118,7 @@ msgid "Enable for automatic updates to @DISTRONAME@. Automatic updates are avail
 msgstr "@DISTRONAME@은 자동이나 수동 업데이트로 설정할 수 있습니다. 자동 업데이트는 안정판이나 안정판 후보에서 가능합니다. 자동 업데이트는 베타나 개발 빌드에서는 가능하지 않습니다"
 
 msgctxt "#715"
-msgid "Set to ON and an on-screen notification will be displayed when a new update is available"
+msgid "Enable for on-screen notifications when a new update is available"
 msgstr "ON으로 설정하고 새로운 업데이트가 있으면 화면 알림이 표시됩니다"
 
 msgctxt "#716"

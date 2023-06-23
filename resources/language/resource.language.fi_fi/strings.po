@@ -118,7 +118,7 @@ msgid "Enable for automatic updates to @DISTRONAME@. Automatic updates are avail
 msgstr "@DISTRONAME@ voidaan päivittää automaattisesti tai käsin valikon kautta. Automaattiset päivitykset toimivat normaaleilla, vakailla ohjelmistoversioilla. Jos käytät beta- tai kehitysversiota on automaattinen päivitys poissa käytöstä."
 
 msgctxt "#715"
-msgid "Set to ON and an on-screen notification will be displayed when a new update is available"
+msgid "Enable for on-screen notifications when a new update is available"
 msgstr "Kytke päälle, jos haluat nähdä ruudulla ilmoituksen, kun uusi päivitys on saatavilla."
 
 msgctxt "#716"

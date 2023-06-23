@@ -114,7 +114,7 @@ msgid "Enable for automatic updates to @DISTRONAME@. Automatic updates are avail
 msgstr "@DISTRONAME@ može biti podešen za automatske ili ručne nadopune. Automatske nadopune su dostupne u stabilnim izdanjima i kandidatima za stabilna izdanja. Automatske nadopune same se onemoguće na beta i razvojnim izdanjima"
 
 msgctxt "#715"
-msgid "Set to ON and an on-screen notification will be displayed when a new update is available"
+msgid "Enable for on-screen notifications when a new update is available"
 msgstr "Postavi na UKLJ i zaslonska obavijest će biti prikazana kada je nova nadopuna dostupna"
 
 msgctxt "#716"

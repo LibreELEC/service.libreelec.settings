@@ -116,7 +116,7 @@ msgid "Enable for automatic updates to @DISTRONAME@. Automatic updates are avail
 msgstr "@DISTRONAME@ は自動またはマニュアルによるアップデートを選択できる。 自動アップデートは安定版リリースおよび安定版リリース候補で利用可能です。自動アップデートは、ベータ版および開発版では自動で無効になります"
 
 msgctxt "#715"
-msgid "Set to ON and an on-screen notification will be displayed when a new update is available"
+msgid "Enable for on-screen notifications when a new update is available"
 msgstr "ONにすると、新しいアップデートが利用可能になったときにオンスクリーン通知が表示されます"
 
 msgctxt "#716"

@@ -120,7 +120,7 @@ msgid "Enable for automatic updates to @DISTRONAME@. Automatic updates are avail
 msgstr "@DISTRONAME@ можно настроить для автоматического или ручного обновления ПО. Автоматические обновления доступны только на стабильных релизах и на кандидатах в релизы. Автоматические обновления отключены на бета-версиях и на сборках, предназначенных для разработчиков"
 
 msgctxt "#715"
-msgid "Set to ON and an on-screen notification will be displayed when a new update is available"
+msgid "Enable for on-screen notifications when a new update is available"
 msgstr "Включите, если хотите, чтобы на экране появлялись уведомления о доступности нового ПО для обновления"
 
 msgctxt "#716"

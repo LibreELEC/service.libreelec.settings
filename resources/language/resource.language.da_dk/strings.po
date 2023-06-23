@@ -112,7 +112,7 @@ msgid "Enable for automatic updates to @DISTRONAME@. Automatic updates are avail
 msgstr "@DISTRONAME@ kan konfigureres til automatiske eller manuelle opdateringer. Automatiske opdateringer er tilgængelige på stabile udgivelser og stabile udgivelseskandidater. Automatisk opdatering deaktiverer selv på beta- og udviklingsbuilds"
 
 msgctxt "#715"
-msgid "Set to ON and an on-screen notification will be displayed when a new update is available"
+msgid "Enable for on-screen notifications when a new update is available"
 msgstr "Vælg TIL, og en meddelelse på skærmen vil blive vist, når en ny opdatering er tilgængelig"
 
 msgctxt "#716"
