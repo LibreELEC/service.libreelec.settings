@@ -358,7 +358,7 @@ msgid "Available Versions"
 msgstr "Saatavilla olevat versiot"
 
 msgctxt "#32021"
-msgid "Submit Statistics"
+msgid "Share Statistics"
 msgstr "Lähetä tilastointitiedot"
 
 msgctxt "#32022"

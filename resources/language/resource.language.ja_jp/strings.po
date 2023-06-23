@@ -356,7 +356,7 @@ msgid "Available Versions"
 msgstr "入手可能なバージョン"
 
 msgctxt "#32021"
-msgid "Submit Statistics"
+msgid "Share Statistics"
 msgstr "統計データを送信します"
 
 msgctxt "#32022"

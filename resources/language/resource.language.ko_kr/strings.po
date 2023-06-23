@@ -358,7 +358,7 @@ msgid "Available Versions"
 msgstr "사용가능한 버전"
 
 msgctxt "#32021"
-msgid "Submit Statistics"
+msgid "Share Statistics"
 msgstr "통계 전송"
 
 msgctxt "#32022"

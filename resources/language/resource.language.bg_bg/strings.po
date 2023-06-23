@@ -355,7 +355,7 @@ msgid "Available Versions"
 msgstr "Налични версии"
 
 msgctxt "#32021"
-msgid "Submit Statistics"
+msgid "Share Statistics"
 msgstr "Изпращане на статистически данни"
 
 msgctxt "#32022"

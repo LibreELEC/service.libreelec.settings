@@ -360,7 +360,7 @@ msgid "Available Versions"
 msgstr "Beschikbare versies"
 
 msgctxt "#32021"
-msgid "Submit Statistics"
+msgid "Share Statistics"
 msgstr "Statistieken doorgeven"
 
 msgctxt "#32022"

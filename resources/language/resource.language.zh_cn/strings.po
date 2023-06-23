@@ -358,7 +358,7 @@ msgid "Available Versions"
 msgstr "可用版本"
 
 msgctxt "#32021"
-msgid "Submit Statistics"
+msgid "Share Statistics"
 msgstr "提交系统统计信息"
 
 msgctxt "#32022"

@@ -358,7 +358,7 @@ msgid "Available Versions"
 msgstr "Dostępne wersje"
 
 msgctxt "#32021"
-msgid "Submit Statistics"
+msgid "Share Statistics"
 msgstr "Prześlij statystyki"
 
 msgctxt "#32022"
