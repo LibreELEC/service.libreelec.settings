@@ -390,6 +390,10 @@ msgctxt "#32029"
 msgid "up to date: %s"
 msgstr ""
 
+msgctxt "#32030"
+msgid "Release Channel"
+msgstr ""
+
 msgctxt "#32100"
 msgid "Connections"
 msgstr ""
