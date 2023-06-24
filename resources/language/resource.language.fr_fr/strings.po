@@ -128,6 +128,10 @@ msgctxt "#715"
 msgid "Set to ON and an on-screen notification will be displayed when a new update is available"
 msgstr "Activer cette option affichera une notification à l'écran lorsqu'une mise à jour sera disponible"
 
+msgctxt "#716"
+msgid "Choose between stable, testing, or a custom release channel for @DISTRONAME@. Stable has releases a few times each year. Test releases are automated nightly builds of the current state of development. Testing releases receive less review than stable releases."
+msgstr ""
+
 msgctxt "#718"
 msgid "Send boot config files from /flash, kodi.log, kernel log and Samba configs to http://ix.io, and display the short URL"
 msgstr "Envoyez les fichiers de configuration de démarrage de /flash, kodi.log, les logs du kernel et la configuration Samba à http://ix.io, et affichez l'URL raccourcie"

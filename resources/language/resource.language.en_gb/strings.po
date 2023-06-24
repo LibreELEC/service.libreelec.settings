@@ -109,7 +109,7 @@ msgid "Set to ON and an on-screen notification will be displayed when a new upda
 msgstr ""
 
 msgctxt "#716"
-msgid "Choose between stable, testing or a custom release channel for @DISTRONAME@. Stable has releases a few times each year. Test releases are automated nightly builds of the current state of development. Testing releases receive less review than stable releases."
+msgid "Choose between stable, testing, or a custom release channel for @DISTRONAME@. Stable has releases a few times each year. Test releases are automated nightly builds of the current state of development. Testing releases receive less review than stable releases."
 msgstr ""
 
 msgctxt "#718"
