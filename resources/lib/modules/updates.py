@@ -323,9 +323,11 @@ class updates(modules.Module):
                     del(self.struct['update']['settings']['Build']['hidden'])
 
             # Refresh json for available build channels if ReleaseChannel is stable, testing, or custom with URL set
-            if release_channel != 'custom' or (release_channel == 'custom' and self.struct['update']['settings']['CustomChannel1']['value']):
+            if release_channel != 'custom':
                 self.update_json = self.build_json()
                 self.struct['update']['settings']['Channel']['values'] = self.get_channels()
+            elif release_channel == 'custom' and self.struct['update']['settings']['CustomChannel1']['value']:
+                self.set_custom_channel()
 
 
     @log.log_function()
