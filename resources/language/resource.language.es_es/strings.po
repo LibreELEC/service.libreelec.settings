@@ -355,7 +355,7 @@ msgid "Release"
 msgstr "Actualizar canal"
 
 msgctxt "#32017"
-msgid "  - Custom Channel 1"
+msgid "Custom Channel"
 msgstr "  - Canal personalizado 1"
 
 msgctxt "#32020"

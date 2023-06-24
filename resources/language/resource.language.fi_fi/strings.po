@@ -350,7 +350,7 @@ msgid "Release"
 msgstr "Päivityskanava"
 
 msgctxt "#32017"
-msgid "  - Custom Channel 1"
+msgid "Custom Channel"
 msgstr "  - Oma päivityskanava 1"
 
 msgctxt "#32020"

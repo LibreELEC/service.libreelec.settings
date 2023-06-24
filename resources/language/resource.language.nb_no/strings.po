@@ -350,7 +350,7 @@ msgid "Release"
 msgstr "Oppdateringskanal"
 
 msgctxt "#32017"
-msgid "  - Custom Channel 1"
+msgid "Custom Channel"
 msgstr "- Egendefinert Kanal 1"
 
 msgctxt "#32020"

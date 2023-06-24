@@ -357,7 +357,7 @@ msgid "Release"
 msgstr "Kanál aktualizací"
 
 msgctxt "#32017"
-msgid "  - Custom Channel 1"
+msgid "Custom Channel"
 msgstr "  – Vlastní kanál 1"
 
 msgctxt "#32020"

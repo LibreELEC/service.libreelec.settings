@@ -353,7 +353,7 @@ msgid "Release"
 msgstr "Frissítési csatorna"
 
 msgctxt "#32017"
-msgid "  - Custom Channel 1"
+msgid "Custom Channel"
 msgstr "  - Egyéni csatorna 1"
 
 msgctxt "#32020"

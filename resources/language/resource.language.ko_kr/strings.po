@@ -350,7 +350,7 @@ msgid "Release"
 msgstr "채널 업데이트"
 
 msgctxt "#32017"
-msgid "  - Custom Channel 1"
+msgid "Custom Channel"
 msgstr "  - 사용자 채널 1"
 
 msgctxt "#32020"

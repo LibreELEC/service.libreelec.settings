@@ -347,7 +347,7 @@ msgid "Release"
 msgstr "Eguneratze-kanala"
 
 msgctxt "#32017"
-msgid "  - Custom Channel 1"
+msgid "Custom Channel"
 msgstr "- 1. kanal pertsonalizatua"
 
 msgctxt "#32020"

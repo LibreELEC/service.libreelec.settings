@@ -330,7 +330,7 @@ msgid "Release"
 msgstr ""
 
 msgctxt "#32017"
-msgid "  - Custom Channel 1"
+msgid "Custom Channel"
 msgstr ""
 
 msgctxt "#32020"

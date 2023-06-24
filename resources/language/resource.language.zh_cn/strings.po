@@ -350,7 +350,7 @@ msgid "Release"
 msgstr "升级渠道"
 
 msgctxt "#32017"
-msgid "  - Custom Channel 1"
+msgid "Custom Channel"
 msgstr "  - 自定义渠道 1"
 
 msgctxt "#32020"

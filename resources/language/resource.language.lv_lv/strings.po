@@ -347,7 +347,7 @@ msgid "Release"
 msgstr "Atjauninājumu kanāls"
 
 msgctxt "#32017"
-msgid "  - Custom Channel 1"
+msgid "Custom Channel"
 msgstr " - 1. pielāgotais kanāls"
 
 msgctxt "#32020"
