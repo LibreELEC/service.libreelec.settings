@@ -295,7 +295,7 @@ msgid "Select an update channel"
 msgstr "Selecionar un canal de actualización"
 
 msgctxt "#762"
-msgid "Enter a custom update url (url should be the root of the update files)"
+msgid "Enter a custom update URL. URL should point directly to a json update file or a directory containing 'releases.json'."
 msgstr "Ingresa una URL de actualización personalizada (la URL debe ser la raíz del archivo de actualización)"
 
 msgctxt "#770"

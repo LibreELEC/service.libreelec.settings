@@ -290,7 +290,7 @@ msgid "Select an update channel"
 msgstr "업데이트 채널 선택"
 
 msgctxt "#762"
-msgid "Enter a custom update url (url should be the root of the update files)"
+msgid "Enter a custom update URL. URL should point directly to a json update file or a directory containing 'releases.json'."
 msgstr "사용자 업데이트 url 입력 (url은 업데이트 파일의 루트여야 함)"
 
 msgctxt "#770"

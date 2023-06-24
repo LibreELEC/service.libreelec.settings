@@ -297,7 +297,7 @@ msgid "Select an update channel"
 msgstr "Vyberte aktualizační kanál"
 
 msgctxt "#762"
-msgid "Enter a custom update url (url should be the root of the update files)"
+msgid "Enter a custom update URL. URL should point directly to a json update file or a directory containing 'releases.json'."
 msgstr "Zadejte vlastní URL pro aktualizaci (musí ukazovat do kořenové složky aktualizačních souborů)"
 
 msgctxt "#770"
