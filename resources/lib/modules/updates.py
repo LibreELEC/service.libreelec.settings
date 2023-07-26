@@ -458,7 +458,7 @@ class updates(modules.Module):
             else:
                 url = self.UPDATE_DOWNLOAD_URL % ('releases', 'releases.json')
         if not url.startswith(('http://', 'https://', 'file://')):
-            url = f'https://{url}'
+            url = f'file://{url}' if os.path.exists(url) else f'https://{url}'
         if not url.endswith('.json'):
             url = f'{url}/releases.json'
         data = oe.load_url(url)
