@@ -21,6 +21,11 @@ import modules
 import oe
 import os_tools
 
+if os.path.isfile('/usr/bin/update-system'):
+    update_system = os_tools.import_from_file('update_system', '/usr/bin/update-system')
+else:
+    log.log('No client side update script found; feature will be disabled', log.DEBUG)
+
 
 class updates(modules.Module):
 
@@ -55,7 +60,7 @@ class updates(modules.Module):
                     'action': 'set_custom_channel',
                     'type': 'text',
                     'parent': {
-                            'entry': 'ReleaseChannel',
+                        'entry': 'ReleaseChannel',
                         'value': ['custom'],
                     },
                     'InfoText': 762,
@@ -69,6 +74,14 @@ class updates(modules.Module):
                     'InfoText': 714,
                     'order': 3,
                 },
+                'ClientSideUpdate': {
+                    'name': 32016,
+                    'value': '0',
+                    'action': 'set_value',
+                    'type': 'bool',
+                    'InfoText': 717,
+                    'order': 4,
+                },
                 'Channel': {
                     'name': 32015,
                     'value': '',
@@ -76,7 +89,7 @@ class updates(modules.Module):
                     'type': 'multivalue',
                     'values': [],
                     'InfoText': 760,
-                    'order': 4,
+                    'order': 5,
                 },
                 'Build': {
                     'name': 32020,
@@ -84,7 +97,7 @@ class updates(modules.Module):
                     'action': 'do_manual_update',
                     'type': 'button',
                     'InfoText': 770,
-                    'order': 5,
+                    'order': 6,
                 },
                 'UpdateNotify': {
                     'name': 32365,
@@ -92,7 +105,7 @@ class updates(modules.Module):
                     'action': 'set_value',
                     'type': 'bool',
                     'InfoText': 715,
-                    'order': 6,
+                    'order': 7,
                 },
                 'SubmitStats': {
                     'name': 32021,
@@ -100,7 +113,7 @@ class updates(modules.Module):
                     'action': 'set_value',
                     'type': 'bool',
                     'InfoText': 772,
-                    'order': 7,
+                    'order': 8,
                 },
             },
         },
@@ -135,6 +148,7 @@ class updates(modules.Module):
         self.is_service = False
         self.last_update_check = 0
         self.update_file = None
+        self.update_checksum = None
         self.update_in_progress = False
         self.update_json = None
         self.update_thread = None
@@ -250,6 +264,15 @@ class updates(modules.Module):
         if os.path.isfile(f'{self.LOCAL_UPDATE_DIR}/SYSTEM'):
             self.update_in_progress = True
 
+        # Client Side Update
+        if not os.path.isfile('/usr/bin/update-system'):
+            self.struct['update']['settings']['ClientSideUpdate']['value'] = '0'
+            self.struct['update']['settings']['ClientSideUpdate']['hidden'] = 'true'
+        else:
+            value = oe.read_setting('updates', 'ClientSideUpdate')
+            if value:
+                self.struct['update']['settings']['ClientSideUpdate']['value'] = value
+
         # Manual Update
         value = oe.read_setting('updates', 'Channel')
         if value:
@@ -305,6 +328,9 @@ class updates(modules.Module):
                 # Automatic update only on stable releases
                 if 'hidden' in self.struct['update']['settings']['AutoUpdate']:
                     del(self.struct['update']['settings']['AutoUpdate']['hidden'])
+                # Client side update only available on stable channel
+                if 'hidden' in self.struct['update']['settings']['ClientSideUpdate'] and os.path.isfile('/usr/bin/update-system'):
+                    del(self.struct['update']['settings']['ClientSideUpdate']['hidden'])
                 # Only show manual update options if automatic update disabled
                 if self.struct['update']['settings']['AutoUpdate']['value'] == '0':
                     if 'hidden' in self.struct['update']['settings']['Channel']:
@@ -315,8 +341,9 @@ class updates(modules.Module):
                     self.struct['update']['settings']['Channel']['hidden'] = 'true'
                     self.struct['update']['settings']['Build']['hidden'] = 'true'
             else:
-                # Hide automatic update and show manual update options
+                # Hide automatic update and client side update, while showing manual update options
                 self.struct['update']['settings']['AutoUpdate']['hidden'] = 'true'
+                self.struct['update']['settings']['ClientSideUpdate']['hidden'] = 'true'
                 if 'hidden' in self.struct['update']['settings']['Channel']:
                     del(self.struct['update']['settings']['Channel']['hidden'])
                 if 'hidden' in self.struct['update']['settings']['Build']:
@@ -570,7 +597,28 @@ class updates(modules.Module):
         if self.struct['update']['settings']['ReleaseChannel']['value'] != 'stable':
             log.log('Not on stable release channel (exit)', log.DEBUG)
             return
-        if update_json:
+        if os.path.isfile('/usr/bin/update-system') and \
+            self.struct['update']['settings']['ClientSideUpdate']['value'] == '1':
+            # Discard server response
+            update_json = None
+            self.last_update_check = time.time()
+            client_update_check = update_system.UpdateSystem()
+            update_available, update_major, update_url, update_checksum = client_update_check.check_for_update()
+            if update_available:
+                if update_url:
+                    log.log(f'Found update: {update_url}', log.INFO)
+                    self.update_file = update_url
+                if update_checksum:
+                    log.log(f'JSON update checksum: {update_checksum}', log.DEBUG)
+                    self.update_checksum = update_checksum
+                # On screen notification
+                if self.struct['update']['settings']['UpdateNotify']['value'] == '1':
+                    oe.notify(oe._(32363), oe._(32364))
+                # Automatic update if enabled and not a major release
+                if not update_major and (self.struct['update']['settings']['AutoUpdate']['value'] == '1' and force is False):
+                    self.update_in_progress = True
+                    self.do_autoupdate(True)
+        elif update_json:
             update_json = json.loads(update_json)
             self.last_update_check = time.time()
             if 'update' in update_json['data'] and 'folder' in update_json['data']:
