@@ -307,8 +307,8 @@ class updates(modules.Module):
         self.struct['update']['settings']['Channel']['values'] = self.get_channels()
         self.struct['update']['settings']['Build']['values'] = self.get_available_builds()
 
-        # RPi4 EEPROM updating
-        if oe.RPI_CPU_VER == '3':
+        # RPi4/RPi400 EEPROM updating
+        if config.RPI_DEVICE_TYPE in ['11', '13']:
             self.rpi_flashing_state = self.get_rpi_flashing_state()
             if self.rpi_flashing_state['incompatible']:
                 self.struct['rpieeprom']['hidden'] = 'true'
