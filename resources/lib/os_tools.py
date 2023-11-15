@@ -50,3 +50,19 @@ def execute(command, get_result=False, output_err_msg=True):
         return '' if get_result else None
     # return output if requested, otherwise return None
     return cmd_status.stdout.decode() if get_result else None
+
+
+def get_rpi_device_type():
+    '''Ask kernel for RPi revision to get device type'''
+    if os.path.isfile('/proc/device-tree/system/linux,revision'):
+        with open('/proc/device-tree/system/linux,revision', mode='rb') as data:
+            revision = int(data.read().hex(), 16)
+        new_revision_format = (revision >> 23) & 0x1
+        if new_revision_format:
+            device_type = str((revision >> 4) & 0xff)
+            return device_type
+        else:
+            # old style revision format means older than RPi2; noop for now as no firmware for this hardware
+            # if needed in future, see: https://github.com/raspberrypi/documentation/blob/develop/documentation/asciidoc/computers/raspberry-pi/revision-codes.adoc
+            return None
+    return None
