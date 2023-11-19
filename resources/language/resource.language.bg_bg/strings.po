@@ -122,6 +122,10 @@ msgctxt "#716"
 msgid "Choose between stable, testing, or a custom release channel for @DISTRONAME@. Stable has releases a few times each year. Test releases are automated nightly builds of the current state of development. Testing releases receive less review than stable releases."
 msgstr ""
 
+msgctxt "#717"
+msgid "Enable to determine if a system update is available locally instead of requesting this information from the distribution's servers"
+msgstr ""
+
 msgctxt "#718"
 msgid "Send boot config files from /flash, kodi.log, kernel log and Samba configs to http://ix.io, and display the short URL"
 msgstr "Изпраща конфигурационните файлове от /flash, журналите kodi.log, kernel, и конфигурацията на Samba в http://ix.io. След това показва кратък URL адрес за достъп до качените данни"
