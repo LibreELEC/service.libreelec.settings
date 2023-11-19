@@ -347,6 +347,10 @@ msgctxt "#32015"
 msgid "Release"
 msgstr "アップデートチャンネル"
 
+msgctxt "#32016"
+msgid "Client Side Update"
+msgstr ""
+
 msgctxt "#32017"
 msgid "Custom Channel"
 msgstr "- カスタムチャンネル 1"

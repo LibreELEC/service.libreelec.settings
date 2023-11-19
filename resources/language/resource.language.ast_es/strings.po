@@ -343,6 +343,10 @@ msgctxt "#32015"
 msgid "Release"
 msgstr "Canal d'anovamientu"
 
+msgctxt "#32016"
+msgid "Client Side Update"
+msgstr ""
+
 msgctxt "#32017"
 msgid "Custom Channel"
 msgstr "- Canal personalizáu 1"

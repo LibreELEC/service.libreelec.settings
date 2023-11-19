@@ -349,6 +349,10 @@ msgctxt "#32015"
 msgid "Release"
 msgstr "Atnaujinimo kanalas"
 
+msgctxt "#32016"
+msgid "Client Side Update"
+msgstr ""
+
 msgctxt "#32017"
 msgid "Custom Channel"
 msgstr "  - Savas kanalas 1"
