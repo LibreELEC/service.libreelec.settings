@@ -973,6 +973,10 @@ msgctxt "#32373"
 msgid "Restore Backup"
 msgstr "Atkurti iš atsarginės kopijos"
 
+msgctxt "#32374"
+msgid "Error: Invalid backup file. Filename must end in: .tar, .tar.gz, .tar.bz2, or .tar.xz"
+msgstr ""
+
 msgctxt "#32375"
 msgid "Backup Progress"
 msgstr "Atsarginio kopijavimo progresas"
