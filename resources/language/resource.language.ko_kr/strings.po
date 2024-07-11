@@ -93,6 +93,10 @@ msgctxt "#707"
 msgid "Configure updates"
 msgstr "업데이트 설정"
 
+msgctxt "#709"
+msgid "Select the timezone for this device."
+msgstr ""
+
 msgctxt "#710"
 msgid "Configure the Hostname of your @DISTRONAME@ system. This will be used for the HTPC \\\\hostname in Windows and SMB server name in the Mac OS Finder"
 msgstr "사용자의 @DISTRONAME@ 시스템의 호스트이름을 설정합니다. 이것은 윈도의 HTPC \\\\호스트이름 그리고 맥 OS 파인더의 SMB 서버명에 쓰입니다"
@@ -598,7 +602,7 @@ msgid "Current Version"
 msgstr "현재 버전"
 
 msgctxt "#32189"
-msgid "Identification"
+msgid "OS Configuration"
 msgstr "확인"
 
 msgctxt "#32190"
@@ -1115,4 +1119,8 @@ msgstr ""
 
 msgctxt "#32419"
 msgid "Error sending log files. Please try again."
+msgstr ""
+
+msgctxt "#32420"
+msgid "Timezone"
 msgstr ""

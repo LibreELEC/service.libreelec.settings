@@ -13,14 +13,8 @@ def get_hostname():
 
 def set_hostname(hostname):
     # network-base.service handles user created persistent settings
-    if os.path.isfile(config.HOSTNAME):
-        with open(config.HOSTNAME, mode='r', encoding='utf-8') as in_file:
-            current_hostname = in_file.read().strip()
-        if current_hostname != hostname:
-            with open(config.HOSTNAME, mode='w', encoding='utf-8') as out_file:
-                out_file.write(f'{hostname}\n')
-            os_tools.execute('systemctl restart network-base')
-    else:
+    current_hostname = get_hostname()
+    if current_hostname != hostname or not os.path.isfile(config.HOSTNAME):
         with open(config.HOSTNAME, mode='w', encoding='utf-8') as out_file:
             out_file.write(f'{hostname}\n')
         os_tools.execute('systemctl restart network-base')

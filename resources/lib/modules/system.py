@@ -18,6 +18,7 @@ import log
 import modules
 import oe
 import os_tools
+import timezone
 
 
 xbmcDialog = xbmcgui.Dialog()
@@ -58,15 +59,25 @@ class system(modules.Module):
             'ident': {
                 'order': 1,
                 'name': 32189,
-                'settings': {'hostname': {
-                    'order': 1,
-                    'name': 32190,
-                    'value': '',
-                    'action': 'set_hostname',
-                    'type': 'text',
-                    'validate': '^([a-zA-Z0-9](?:[a-zA-Z0-9-\.]*[a-zA-Z0-9]))$',
-                    'InfoText': 710,
-                    }},
+                'settings': {
+                    'hostname': {
+                        'order': 1,
+                        'name': 32190,
+                        'value': '',
+                        'action': 'set_hostname',
+                        'type': 'text',
+                        'validate': '^([a-zA-Z0-9](?:[a-zA-Z0-9-\.]*[a-zA-Z0-9]))$',
+                        'InfoText': 710,
+                        },
+                    'timezone': {
+                        'order': 2,
+                        'name': 32420,
+                        'value': '',
+                        'action': 'set_timezone',
+                        'type': 'button',
+                        'InfoText': 709,
+                        },
+                    },
                 },
             'keyboard': {
                 'order': 2,
@@ -145,9 +156,8 @@ class system(modules.Module):
                         },
                     },
                 },
-
             'backup': {
-                'order': 7,
+                'order': 4,
                 'name': 32371,
                 'settings': {
                     'backup': {
@@ -169,7 +179,7 @@ class system(modules.Module):
                     },
                 },
             'reset': {
-                'order': 8,
+                'order': 5,
                 'name': 32323,
                 'settings': {
                     'xbmc_reset': {
@@ -191,7 +201,7 @@ class system(modules.Module):
                     },
                 },
             'debug': {
-                'order': 9,
+                'order': 6,
                 'name': 32376,
                 'settings': {
                     'paste_system': {
@@ -213,7 +223,7 @@ class system(modules.Module):
                     },
                 },
             'journal': {
-                'order': 10,
+                'order': 7,
                 'name': 32410,
                 'settings': {
                     'journal_persistent': {
@@ -260,7 +270,6 @@ class system(modules.Module):
     def start_service(self):
         self.is_service = True
         self.load_values()
-        self.set_hostname()
         self.set_keyboard_layout()
         self.set_hw_clock()
         del self.is_service
@@ -308,6 +317,9 @@ class system(modules.Module):
             self.nox_keyboard_layouts = True
         # Hostname
         self.struct['ident']['settings']['hostname']['value'] = hostname.get_hostname()
+        # Timezone
+        self.struct['ident']['settings']['timezone']['value'] = timezone.get_timezone()
+        self.struct['ident']['settings']['timezone']['name'] = f"{oe._(32420)} ({self.struct['ident']['settings']['timezone']['value']})"
         # PIN Lock
         self.struct['pinlock']['settings']['pinlock_enable']['value'] = '1' if oe.PIN.isEnabled() else '0'
 
@@ -388,11 +400,25 @@ class system(modules.Module):
 
     @log.log_function()
     def set_hostname(self, listItem=None):
-        if listItem is not None:
-            self.set_value(listItem)
         value = self.struct['ident']['settings']['hostname']['value']
         if value is not None and value != '':
             hostname.set_hostname(value)
+
+
+    @log.log_function()
+    def set_timezone(self, listItem=None):
+        timezones = timezone.list_timezones()
+        xbmcDialog = xbmcgui.Dialog()
+        timezone_select = xbmcDialog.select(oe._(32420), timezones)
+        if timezone_select > -1:
+            listItem = timezones[timezone_select]
+            self.struct['ident']['settings']['timezone']['value'] = listItem
+            self.struct['ident']['settings']['timezone']['name'] = f"{oe._(32420)} ({listItem})"
+            log.log(f'Setting timezone to: {timezone}', log.DEBUG)
+            timezone.set_timezone(listItem)
+        xbmcDialog = None
+        del xbmcDialog
+
 
     @log.log_function()
     def get_keyboard_layouts(self):

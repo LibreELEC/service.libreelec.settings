@@ -100,6 +100,10 @@ msgctxt "#707"
 msgid "Configure updates"
 msgstr "Konfigurace aktualizací"
 
+msgctxt "#709"
+msgid "Select the timezone for this device."
+msgstr ""
+
 msgctxt "#710"
 msgid "Configure the Hostname of your @DISTRONAME@ system. This will be used for the HTPC \\\\hostname in Windows and SMB server name in the Mac OS Finder"
 msgstr "Nastavení názvu systému @DISTRONAME@. Tento název bude použit v adresním řádku průzkumníku Windows a také jako název SMB serveru v Mac OS Finderu"
@@ -605,7 +609,7 @@ msgid "Current Version"
 msgstr "Stávající verze"
 
 msgctxt "#32189"
-msgid "Identification"
+msgid "OS Configuration"
 msgstr "Identifikace"
 
 msgctxt "#32190"
@@ -1122,4 +1126,8 @@ msgstr ""
 
 msgctxt "#32419"
 msgid "Error sending log files. Please try again."
+msgstr ""
+
+msgctxt "#32420"
+msgid "Timezone"
 msgstr ""

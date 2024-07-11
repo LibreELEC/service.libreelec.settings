@@ -16,3 +16,5 @@ HOSTS_CONF = os.path.join(USER_CONFIG, 'hosts.conf')
 
 REGDOMAIN_CONF = os.path.join(CONFIG_CACHE, 'regdomain.conf')
 SETREGDOMAIN = '/usr/lib/iw/setregdomain'
+
+TIMEZONE = os.path.join(CONFIG_CACHE, 'timezone')

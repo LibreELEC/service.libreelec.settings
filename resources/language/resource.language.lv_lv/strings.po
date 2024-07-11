@@ -90,6 +90,10 @@ msgctxt "#707"
 msgid "Configure updates"
 msgstr "Atjauninājumu konfigurēšana"
 
+msgctxt "#709"
+msgid "Select the timezone for this device."
+msgstr ""
+
 msgctxt "#710"
 msgid "Configure the Hostname of your @DISTRONAME@ system. This will be used for the HTPC \\\\hostname in Windows and SMB server name in the Mac OS Finder"
 msgstr "@DISTRONAME@ sistēmas resursdatora nosaukuma konfigurēšana. Tas tiks izmantots Windows HTPC \\\\hostname un Mac OS Finder SMB servera nosaukumā"
@@ -595,7 +599,7 @@ msgid "Current Version"
 msgstr "Pašreizējā versija"
 
 msgctxt "#32189"
-msgid "Identification"
+msgid "OS Configuration"
 msgstr "Identifikācija"
 
 msgctxt "#32190"
@@ -1112,4 +1116,8 @@ msgstr ""
 
 msgctxt "#32419"
 msgid "Error sending log files. Please try again."
+msgstr ""
+
+msgctxt "#32420"
+msgid "Timezone"
 msgstr ""

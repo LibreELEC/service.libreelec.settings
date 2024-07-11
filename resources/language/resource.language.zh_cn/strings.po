@@ -93,6 +93,10 @@ msgctxt "#707"
 msgid "Configure updates"
 msgstr "配置更新源"
 
+msgctxt "#709"
+msgid "Select the timezone for this device."
+msgstr ""
+
 msgctxt "#710"
 msgid "Configure the Hostname of your @DISTRONAME@ system. This will be used for the HTPC \\\\hostname in Windows and SMB server name in the Mac OS Finder"
 msgstr "配置@DISTRONAME@ 系统的主机名。 这将用于Windows中的HTPC \\\\主机名和Mac OS Finder中的SMB服务器名称"
@@ -598,7 +602,7 @@ msgid "Current Version"
 msgstr "当前版本"
 
 msgctxt "#32189"
-msgid "Identification"
+msgid "OS Configuration"
 msgstr "鉴定"
 
 msgctxt "#32190"
@@ -1115,4 +1119,8 @@ msgstr ""
 
 msgctxt "#32419"
 msgid "Error sending log files. Please try again."
+msgstr ""
+
+msgctxt "#32420"
+msgid "Timezone"
 msgstr ""

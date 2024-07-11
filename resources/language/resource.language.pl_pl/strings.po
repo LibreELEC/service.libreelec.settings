@@ -93,6 +93,10 @@ msgctxt "#707"
 msgid "Configure updates"
 msgstr "Konfiguruj aktualizacje"
 
+msgctxt "#709"
+msgid "Select the timezone for this device."
+msgstr ""
+
 msgctxt "#710"
 msgid "Configure the Hostname of your @DISTRONAME@ system. This will be used for the HTPC \\\\hostname in Windows and SMB server name in the Mac OS Finder"
 msgstr "Skonfiguruj nazwę hosta systemu @DISTRONAME@ . Będzie to używane dla nazwy \\\\hosta HTPC w systemie Windows i nazwy serwera SMB w Finderze Mac OS"
@@ -598,7 +602,7 @@ msgid "Current Version"
 msgstr "Aktualna wersja"
 
 msgctxt "#32189"
-msgid "Identification"
+msgid "OS Configuration"
 msgstr "Identyfikacja"
 
 msgctxt "#32190"
@@ -1115,4 +1119,8 @@ msgstr ""
 
 msgctxt "#32419"
 msgid "Error sending log files. Please try again."
+msgstr ""
+
+msgctxt "#32420"
+msgid "Timezone"
 msgstr ""
