@@ -93,9 +93,7 @@ msgstr ""
 
 msgctxt "#710"
 msgid "Configure the Hostname of your @DISTRONAME@ system. This will be used for the HTPC \\\\hostname in Windows and SMB server name in the Mac OS Finder"
-msgstr ""
-"Podesite naziv računala vašeg @DISTRONAME@ sustava. Ovo će biti korišteno za HTPC \\\\n"
-"aziv-računala u Windowsima i SMB nazivu poslužitelja u Mac OS Finderu"
+msgstr "Podesite naziv računala vašeg @DISTRONAME@ sustava. Ovo će biti korišteno za HTPC \\\\naziv-računala u Windowsima i SMB nazivu poslužitelja u Mac OS Finderu"
 
 msgctxt "#711"
 msgid "Configure the 1st keyboard software layout"
