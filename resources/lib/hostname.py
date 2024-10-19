@@ -20,7 +20,9 @@ def set_hostname(hostname):
             with open(config.HOSTNAME, mode='w', encoding='utf-8') as out_file:
                 out_file.write(f'{hostname}\n')
             os_tools.execute('systemctl restart network-base')
+            os_tools.execute('systemctl try-restart avahi-daemon wsdd2')
     else:
         with open(config.HOSTNAME, mode='w', encoding='utf-8') as out_file:
             out_file.write(f'{hostname}\n')
         os_tools.execute('systemctl restart network-base')
+        os_tools.execute('systemctl try-restart avahi-daemon wsdd2')
