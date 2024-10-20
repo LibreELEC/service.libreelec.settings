@@ -14,14 +14,6 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 4.9.1\n"
 
-msgctxt "Addon Summary"
-msgid "@DISTRONAME@ Configuration"
-msgstr "Configuración de @DISTRONAME@"
-
-msgctxt "Addon Description"
-msgid "Use this addon to manage your @DISTRONAME@ system's underlying operating system. From here you can manage the entire system so you don't have to worry about what runs under the hood.[CR][CR]From here you can change your network connectivity, your keyboard layout and language and enable/disable remote access including Samba and SSH."
-msgstr "Usa este complemento para configurar el sistema operativo de tu @DISTRONAME@. Desde aquí puedes administrar todo el sistema fácilmente.[CR][CR]Desde aquí puedes cambiar la configuración de red, distribución del teclado, lenguaje del sistema y configurar Samba y SSH para controlar el acceso remoto al sistema."
-
 msgctxt "#600"
 msgid "@DISTRONAME@ Settings"
 msgstr "Configuración de @DISTRONAME@"
@@ -1129,3 +1121,15 @@ msgstr ""
 msgctxt "#32420"
 msgid "Timezone"
 msgstr ""
+
+#~ msgctxt "Addon Summary"
+#~ msgid "@DISTRONAME@ Configuration"
+#~ msgstr "Configuración de @DISTRONAME@"
+
+#~ msgctxt "Addon Description"
+#~ msgid "Use this addon to manage your @DISTRONAME@ system's underlying operating system. From here you can manage the entire system so you don't have to worry about what runs under the hood.[CR][CR]From here you can change your network connectivity, your keyboard layout and language and enable/disable remote access including Samba and SSH."
+#~ msgstr "Usa este complemento para configurar el sistema operativo de tu @DISTRONAME@. Desde aquí puedes administrar todo el sistema fácilmente.[CR][CR]Desde aquí puedes cambiar la configuración de red, distribución del teclado, lenguaje del sistema y configurar Samba y SSH para controlar el acceso remoto al sistema."
+
+#~ msgctxt "#32189"
+#~ msgid "Identification"
+#~ msgstr "Identificación"
