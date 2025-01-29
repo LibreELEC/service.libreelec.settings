@@ -25,14 +25,6 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
 "X-Generator: Weblate 4.11.2\n"
 
-msgctxt "Addon Summary"
-msgid "@DISTRONAME@ Configuration"
-msgstr "Configuration d'@DISTRONAME@"
-
-msgctxt "Addon Description"
-msgid "Use this addon to manage your @DISTRONAME@ system's underlying operating system. From here you can manage the entire system so you don't have to worry about what runs under the hood.[CR][CR]From here you can change your network connectivity, your keyboard layout and language and enable/disable remote access including Samba and SSH."
-msgstr "Utilisez cet addiciel pour gérer le système d'exploitation sous-jacent de votre système @DISTRONAME@. D'ici vous pouvez gérer votre système au complet sans vous soucier de ce qui tourne sous la capot.[CR][CR]D'ici vous pouvez changer vos paramètres de connexion réseau, l'agencement et la langue de votre clavier et activer/désactiver l'accès distant incluant Samba et SSH."
-
 msgctxt "#600"
 msgid "@DISTRONAME@ Settings"
 msgstr "Paramètres @DISTRONAME@"
@@ -1140,3 +1132,15 @@ msgstr ""
 msgctxt "#32420"
 msgid "Timezone"
 msgstr ""
+
+#~ msgctxt "Addon Summary"
+#~ msgid "@DISTRONAME@ Configuration"
+#~ msgstr "Configuration d'@DISTRONAME@"
+
+#~ msgctxt "Addon Description"
+#~ msgid "Use this addon to manage your @DISTRONAME@ system's underlying operating system. From here you can manage the entire system so you don't have to worry about what runs under the hood.[CR][CR]From here you can change your network connectivity, your keyboard layout and language and enable/disable remote access including Samba and SSH."
+#~ msgstr "Utilisez cet addiciel pour gérer le système d'exploitation sous-jacent de votre système @DISTRONAME@. D'ici vous pouvez gérer votre système au complet sans vous soucier de ce qui tourne sous la capot.[CR][CR]D'ici vous pouvez changer vos paramètres de connexion réseau, l'agencement et la langue de votre clavier et activer/désactiver l'accès distant incluant Samba et SSH."
+
+#~ msgctxt "#32189"
+#~ msgid "Identification"
+#~ msgstr "Identification"
