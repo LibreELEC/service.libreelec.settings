@@ -9,19 +9,19 @@ msgid ""
 msgstr ""
 "Project-Id-Version: LibreELEC Settings Add-on\n"
 "Report-Msgid-Bugs-To: translations@kodi.tv\n"
-"PO-Revision-Date: 2022-11-14 10:27+0000\n"
-"Last-Translator: Enol P. <enolp@softastur.org>\n"
+"PO-Revision-Date: 2024-08-10 16:26+0000\n"
+"Last-Translator: \"Enol P.\" <enolp@softastur.org>\n"
 "Language-Team: Asturian (Spain) <https://kodi.weblate.cloud/projects/kodi-add-ons-services/service-libreelec-settings/ast_es/>\n"
 "Language: ast_es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.14.2\n"
+"X-Generator: Weblate 5.6.2\n"
 
 msgctxt "#600"
 msgid "@DISTRONAME@ Settings"
-msgstr "Axustes de: @DISTRONAME@"
+msgstr ""
 
 msgctxt "#601"
 msgid "Interface"
@@ -65,23 +65,23 @@ msgstr ""
 
 msgctxt "#700"
 msgid "Configure a hostname, keyboard type, perform a reset, update, or backups and restores"
-msgstr "Configura un agospiador, el tipu de tecláu, anueva, fai copies de seguranza o restáurales"
+msgstr ""
 
 msgctxt "#701"
 msgid "Configure network startup options, NTP and VPNs"
-msgstr "Configura les opciones d'aniciu de la rede, el NTP y les VPNs"
+msgstr ""
 
 msgctxt "#702"
 msgid "Manage the Ethernet, Wireless and VPN connections available to the system"
-msgstr "Xestiona les conexones ethernet, inalámbriques y VPN disponibles nel sistema"
+msgstr ""
 
 msgctxt "#703"
 msgid "Configure system services like Samba, SSH, Cron, Avahi and Syslog"
-msgstr "Configura servicios del sistema como SAMBA, SSH, cron, avahi y syslog"
+msgstr ""
 
 msgctxt "#704"
 msgid "Configure and pair Bluetooth devices"
-msgstr "Configura y empareya preseos Bluetooh"
+msgstr ""
 
 msgctxt "#705"
 msgid "Useful information like version and architecture details, support and documentation links, and how to donate and support the project."
@@ -97,7 +97,7 @@ msgstr ""
 
 msgctxt "#710"
 msgid "Configure the Hostname of your @DISTRONAME@ system. This will be used for the HTPC \\\\hostname in Windows and SMB server name in the Mac OS Finder"
-msgstr "Configura'l nome d'agospiu del to sistema d'@DISTRONAME@. Esto usaráse pal \\\\nome_agospiu del HTPC en Windows y el nome del sirvidor SMB nel Finder de MacOS"
+msgstr ""
 
 msgctxt "#711"
 msgid "Configure the 1st keyboard software layout"
@@ -113,7 +113,7 @@ msgstr ""
 
 msgctxt "#714"
 msgid "@DISTRONAME@ can be configured for automatic or manual updates. Automatic updates are available on stable releases and stable release candidates. Automatic update self-disables on beta and development builds"
-msgstr "@DISTRONAME@ pue configurase pa anovamientos automáticos o manuales. L'anovamientu automáticu ta disponible en llanzamientos y versiones candidates estables. L'anovamientu automáticu deshabilitase en versiones beta y de desendolcu"
+msgstr ""
 
 msgctxt "#715"
 msgid "Set to ON and an on-screen notification will be displayed when a new update is available"
@@ -133,7 +133,7 @@ msgstr ""
 
 msgctxt "#722"
 msgid "Create a tar archive containing all @DISTRONAME@ and Kodi configuration settings, databases and thumbnail content. Backup files will be stored in /storage/backup/"
-msgstr "Crea un ficheru tar con tolos axustes de configuración d'@DISTRONAME@ y Kodi, bases de datos y conteníu de miniatures. Los ficheros de respaldu atroxaránse en /storage/backup/"
+msgstr ""
 
 msgctxt "#723"
 msgid "Restore a tar archive backup previously created using the backup option above"
@@ -245,11 +245,11 @@ msgstr "750"
 
 msgctxt "#751"
 msgid "With OBEX filetransfer you can send files, for example movies or pictures over bluetooth to @DISTRONAME@."
-msgstr "Cola tresferencia de ficheros OBEX pues unviar ficheros como por exemplu, películes o semeyes per bluetooth a @DISTRONAME@."
+msgstr ""
 
 msgctxt "#752"
 msgid "Here you can set the folder location where OBEX file transfer should store incoming files"
-msgstr "Equí pues afitar la carpeta u les trasferencies OBEX de ficheros deberíen atroxar los ficheros entrantes"
+msgstr ""
 
 msgctxt "#753"
 msgid "Configure the 1st keyboard software Variant"
@@ -325,7 +325,7 @@ msgstr "Tecláu"
 
 msgctxt "#32010"
 msgid "Keyboard Layout"
-msgstr "Distribución de tecláu"
+msgstr ""
 
 msgctxt "#32012"
 msgid "Select Action"
@@ -337,11 +337,11 @@ msgstr ""
 
 msgctxt "#32014"
 msgid "Automatic Updates"
-msgstr "Anovamientos automáticos"
+msgstr ""
 
 msgctxt "#32015"
 msgid "Update Channel"
-msgstr "Canal d'anovamientu"
+msgstr ""
 
 msgctxt "#32016"
 msgid "Show Custom Channels"
@@ -349,19 +349,19 @@ msgstr ""
 
 msgctxt "#32017"
 msgid "  - Custom Channel 1"
-msgstr "- Canal personalizáu 1"
+msgstr ""
 
 msgctxt "#32018"
 msgid "  - Custom Channel 2"
-msgstr "- Canal personalizáu 2"
+msgstr ""
 
 msgctxt "#32019"
 msgid "  - Custom Channel 3"
-msgstr "- Canal personalizáu 3"
+msgstr ""
 
 msgctxt "#32020"
 msgid "Available Versions"
-msgstr "Versiones disponibles"
+msgstr ""
 
 msgctxt "#32021"
 msgid "Submit Statistics"
@@ -405,15 +405,15 @@ msgstr "Conexones"
 
 msgctxt "#32101"
 msgid "Network"
-msgstr "Rede"
+msgstr ""
 
 msgctxt "#32102"
 msgid "Wireless Networks"
-msgstr "Redes inalámbriques"
+msgstr "Redes ensin filos"
 
 msgctxt "#32103"
 msgid "Wired Networks"
-msgstr "Redes alámbriques"
+msgstr ""
 
 msgctxt "#32105"
 msgid "Active"
@@ -425,7 +425,7 @@ msgstr "Nome d'usuariu"
 
 msgctxt "#32107"
 msgid "Passphrase"
-msgstr "Fras de pasu"
+msgstr "Clave d'accesu"
 
 msgctxt "#32108"
 msgid "Enable 'tethered' Wireless Access Point"
@@ -433,7 +433,7 @@ msgstr ""
 
 msgctxt "#32109"
 msgid "Connect Automatically"
-msgstr "Auto-coneutar"
+msgstr ""
 
 msgctxt "#32110"
 msgid "Connection"
@@ -449,7 +449,7 @@ msgstr "IPv6"
 
 msgctxt "#32113"
 msgid "IP Address Method"
-msgstr "Métodu de direición IP"
+msgstr ""
 
 msgctxt "#32114"
 msgid "IP Address"
@@ -461,11 +461,11 @@ msgstr "Mazcara de sorrede"
 
 msgctxt "#32116"
 msgid "Default Gateway"
-msgstr "Pasera por defeutu"
+msgstr "Pasera predeterminada"
 
 msgctxt "#32117"
 msgid "Prefix Length"
-msgstr "Llargor de prefixu"
+msgstr ""
 
 msgctxt "#32118"
 msgid "Privacy"
@@ -477,31 +477,31 @@ msgstr "Sirvidores DNS"
 
 msgctxt "#32120"
 msgid "Nameserver #1"
-msgstr "Sirvidornomes #1"
+msgstr ""
 
 msgctxt "#32121"
 msgid "Nameserver #2"
-msgstr "Sirvidornomes #2"
+msgstr ""
 
 msgctxt "#32122"
 msgid "Nameserver #3"
-msgstr "Sirvidornomes #3"
+msgstr ""
 
 msgctxt "#32123"
 msgid "NTP Servers"
-msgstr "Sirvidor NTP"
+msgstr "Sirvidores NTP"
 
 msgctxt "#32124"
 msgid "Timeserver #1"
-msgstr "SirvidorHora #1"
+msgstr ""
 
 msgctxt "#32125"
 msgid "Timeserver #2"
-msgstr "SirvidorHora #2"
+msgstr ""
 
 msgctxt "#32126"
 msgid "Timeserver #3"
-msgstr "SirvidorHora #3"
+msgstr ""
 
 msgctxt "#32127"
 msgid "DNS Domains"
@@ -521,59 +521,59 @@ msgstr "Dominiu #3"
 
 msgctxt "#32140"
 msgid "Save"
-msgstr "Guardar"
+msgstr ""
 
 msgctxt "#32141"
 msgid "Delete"
-msgstr "Desaniciar"
+msgstr ""
 
 msgctxt "#32142"
 msgid "Refresh"
-msgstr "Refrescar"
+msgstr ""
 
 msgctxt "#32143"
 msgid "Disconnect"
-msgstr "Desconeutar"
+msgstr ""
 
 msgctxt "#32144"
 msgid "Connect"
-msgstr "Coneutar"
+msgstr ""
 
 msgctxt "#32145"
 msgid "Pair"
-msgstr "Empareyar"
+msgstr ""
 
 msgctxt "#32146"
 msgid "Hidden Network Name"
-msgstr "Nome de rede anubrida"
+msgstr ""
 
 msgctxt "#32147"
 msgid "Wireless Network Passphrase"
-msgstr "Contraseña de rede inalámbrica"
+msgstr ""
 
 msgctxt "#32148"
 msgid "Wireless Network Username"
-msgstr "Nome d'usuariu de rede inalámbrica"
+msgstr ""
 
 msgctxt "#32150"
 msgid "Edit"
-msgstr "Editar"
+msgstr ""
 
 msgctxt "#32180"
 msgid "Would you like to update @DISTRONAME@ now?"
-msgstr "¿Prestaríate anovar @DISTRONAME@ agora?"
+msgstr ""
 
 msgctxt "#32181"
 msgid "Filename"
-msgstr "Nome de ficheru"
+msgstr ""
 
 msgctxt "#32182"
 msgid "Download speed"
-msgstr "Velocidá de descarga"
+msgstr ""
 
 msgctxt "#32183"
 msgid "Time remaining"
-msgstr "Tiempu restante"
+msgstr ""
 
 msgctxt "#32184"
 msgid "Extract file"
@@ -581,7 +581,7 @@ msgstr ""
 
 msgctxt "#32185"
 msgid "Extract speed"
-msgstr "Velocidá d'estraición"
+msgstr ""
 
 msgctxt "#32186"
 msgid "Initialize Archive File"
@@ -589,11 +589,11 @@ msgstr ""
 
 msgctxt "#32187"
 msgid "New Version"
-msgstr "Versión nueva"
+msgstr ""
 
 msgctxt "#32188"
 msgid "Current Version"
-msgstr "Versión actual"
+msgstr ""
 
 msgctxt "#32189"
 msgid "OS Configuration"
@@ -601,11 +601,11 @@ msgstr "Identificación"
 
 msgctxt "#32190"
 msgid "System Name"
-msgstr "Nome del sistema"
+msgstr ""
 
 msgctxt "#32191"
 msgid "Invalid URL"
-msgstr "URL non válida"
+msgstr ""
 
 msgctxt "#32192"
 msgid "PIN lock"
@@ -621,7 +621,7 @@ msgstr ""
 
 msgctxt "#32196"
 msgid "About"
-msgstr "Tocante a"
+msgstr ""
 
 msgctxt "#32198"
 msgid "SSID"
@@ -649,11 +649,11 @@ msgstr ""
 
 msgctxt "#32205"
 msgid "Enable SSH"
-msgstr "Habilitar SSH"
+msgstr ""
 
 msgctxt "#32206"
 msgid "Enable Avahi (Zeroconf)"
-msgstr "Habilitar Avahi (Zeroconf)"
+msgstr ""
 
 msgctxt "#32207"
 msgid "Avahi"
@@ -673,7 +673,7 @@ msgstr ""
 
 msgctxt "#32212"
 msgid "Cancel"
-msgstr "Encboxar"
+msgstr ""
 
 msgctxt "#32213"
 msgid "Keep Existing"
@@ -781,19 +781,19 @@ msgstr ""
 
 msgctxt "#32300"
 msgid "Welcome to @DISTRONAME@"
-msgstr "Bienllegáu/ada @DISTRONAME@"
+msgstr ""
 
 msgctxt "#32301"
 msgid "Welcome"
-msgstr "Bienllegáu/ada"
+msgstr ""
 
 msgctxt "#32302"
 msgid "This wizard will guide you through the process of setting up your new @DISTRONAME@ installation - setting your location, timezone and connecting you to the internet.[CR][CR]These settings can be changed later by navigating to Programs > @DISTRONAME@ Settings."
-msgstr "Esti encontu empobinaráte pel procesu de configurar la to instalación nueva d'@DISTRONAME@ - configurando'l to allugamientu, fusu horariu y coneutándote a internet.[CR][CR]Estos axustes puen camudase más sero diendo a Programes > Axustes d'@DISTRONAME@"
+msgstr ""
 
 msgctxt "#32303"
 msgid "Next"
-msgstr "Siguiente"
+msgstr ""
 
 msgctxt "#32304"
 msgid "To be identified easily on the network, your new @DISTRONAME@ machine needs a name.[CR][CR]Try to choose something meaningful - like the room it's in - so you'll know what it is when you see it on the network.[CR][CR]This name is used when configuring network services, like file sharing using samba."
@@ -801,7 +801,7 @@ msgstr ""
 
 msgctxt "#32305"
 msgid "Networking"
-msgstr "Rede"
+msgstr ""
 
 msgctxt "#32306"
 msgid "In order to download backdrops, banners and thumbnails for your movies and TV shows and to stream online content from sites like YouTube, @DISTRONAME@ needs to be connected the Internet.[CR][CR]An Internet connection is also required for @DISTRONAME@ to automatically update itself."
@@ -813,11 +813,11 @@ msgstr ""
 
 msgctxt "#32308"
 msgid "Hostname:"
-msgstr "Nome d'agospiu"
+msgstr ""
 
 msgctxt "#32309"
 msgid "The following Networks are currently available:"
-msgstr "Anguaño tán disponibles les redes de darréu:"
+msgstr ""
 
 msgctxt "#32310"
 msgid "Language:"
@@ -825,19 +825,19 @@ msgstr ""
 
 msgctxt "#32311"
 msgid "Sharing and Remote Access"
-msgstr "Compartición y accesu remotu"
+msgstr ""
 
 msgctxt "#32312"
 msgid "@DISTRONAME@ also supports SSH for remote access. This is for advanced users who wish to interact with @DISTRONAME@'s underlying operating system. The default user is [COLOR blue]root[/COLOR] and the default password is [COLOR blue]@ROOT_PASSWORD@[/COLOR]."
-msgstr "@DISTRONAME@ tamién sofita SSH p'accesu remotu. Esto ye pa usuarios avanzaos que deseen interactuar col sistema soxacente d'@DISTRONAME@. L'usuariu por defeutu ye [COLOR blue]root[/COLOR] cola contraseña [COLOR blue]@ROOT_PASSWORD@[/COLOR]."
+msgstr ""
 
 msgctxt "#32313"
 msgid "In order to share your files between your computers @DISTRONAME@ has incorporated a samba server. This samba server can be integrated into your local network by accessing it in a familiar way with Finder or Windows Explorer."
-msgstr "Pa compartir ficheros ente los tos ordenadores, @DISTRONAME@ incorporó un sirvidor SAMBA. Esti sirvidor SAMBA pue integrase na to rede llocal accediendo a elli d'un mou familiar con Finder o'l Esplorador de Windows."
+msgstr ""
 
 msgctxt "#32316"
 msgid "Configure Services:"
-msgstr "Configurar servicios:"
+msgstr ""
 
 msgctxt "#32317"
 msgid "Thank you"
@@ -865,23 +865,23 @@ msgstr ""
 
 msgctxt "#32325"
 msgid "Reset @DISTRONAME@ to defaults"
-msgstr "Reafita @DISTRONAME@"
+msgstr ""
 
 msgctxt "#32326"
 msgid "Are you sure?"
-msgstr "¿Tas seguru?"
+msgstr ""
 
 msgctxt "#32328"
 msgid "The system must reboot."
-msgstr "Ha reaniciase'l sistema."
+msgstr ""
 
 msgctxt "#32329"
 msgid "Rebooting in %d seconds"
-msgstr "Reaniciando en %d segundos"
+msgstr ""
 
 msgctxt "#32330"
 msgid "Keyboard Type"
-msgstr "Triba de tecláu"
+msgstr ""
 
 msgctxt "#32331"
 msgid "Bluetooth"
@@ -901,15 +901,15 @@ msgstr "Non"
 
 msgctxt "#32338"
 msgid "No Bluetooth adapter found."
-msgstr "Nun s'alcontraron adautadores Bluetooth."
+msgstr ""
 
 msgctxt "#32339"
 msgid "No Bluetooth device found. Please put your Bluetooth device into discovery mode[CR]and start the scan"
-msgstr "Nun s'alcontraron preseos bluetooth. Pon el to preséu Bluetooth en mou descubrición[CR]y anicia l'escanéu"
+msgstr ""
 
 msgctxt "#32343"
 msgid "Enter the following Key on your Device."
-msgstr "Introduz la clave de darréu nel to preséu."
+msgstr ""
 
 msgctxt "#32344"
 msgid "Enable Bluetooth"
@@ -917,15 +917,15 @@ msgstr ""
 
 msgctxt "#32346"
 msgid "Bluetooth is disabled"
-msgstr "El Bluetooth ta deshabilitáu"
+msgstr ""
 
 msgctxt "#32358"
 msgid "Trust and Connect"
-msgstr "Enfotar y coneutar"
+msgstr ""
 
 msgctxt "#32362"
 msgid "Check for updates now:"
-msgstr "Comprobar agora anovamientos:"
+msgstr ""
 
 msgctxt "#32363"
 msgid "@DISTRONAME@"
@@ -933,7 +933,7 @@ msgstr "@DISTRONAME@"
 
 msgctxt "#32364"
 msgid "Update available"
-msgstr "Anovamientu disponible"
+msgstr ""
 
 msgctxt "#32365"
 msgid "Show Update Notifications"
@@ -941,23 +941,23 @@ msgstr ""
 
 msgctxt "#32366"
 msgid "Update Download Completed"
-msgstr "Completóse la descarga l'anovamientu"
+msgstr ""
 
 msgctxt "#32367"
 msgid "Update Extract Complete"
-msgstr "Completóse la estraición l'anovamientu"
+msgstr ""
 
 msgctxt "#32368"
 msgid "Advanced Network Settings"
-msgstr "Axustes avanzaos de rede"
+msgstr ""
 
 msgctxt "#32369"
 msgid "Wait for network before starting Kodi"
-msgstr "Esperar pola rede enantes d'aniciar Kodi"
+msgstr ""
 
 msgctxt "#32370"
 msgid "Maximum Wait Time (Sec.)"
-msgstr "Tiempu máximu d'espera (seg)"
+msgstr ""
 
 msgctxt "#32371"
 msgid "Backup"
@@ -977,11 +977,11 @@ msgstr ""
 
 msgctxt "#32375"
 msgid "Backup Progress"
-msgstr "Progresu del respaldu"
+msgstr ""
 
 msgctxt "#32376"
 msgid "Submit Log"
-msgstr "Unviar rexistru"
+msgstr ""
 
 msgctxt "#32377"
 msgid "Upload latest Kodi log and configs, and view the short URL"
@@ -993,15 +993,15 @@ msgstr ""
 
 msgctxt "#32379"
 msgid "There is not enough free storage space to continue!"
-msgstr "¡Nun hai espaciu llibre d'almacenamientu abondo pa siguir!"
+msgstr ""
 
 msgctxt "#32380"
 msgid "Restoring system settings requires a reboot. Are you sure you want to restore?"
-msgstr "Restaurar los axustes del sistema rique un reaniciu. ¿De xuru que quies restaurar?"
+msgstr ""
 
 msgctxt "#32381"
 msgid "Accept incoming Bluetooth Filetransfer ?"
-msgstr "¿Aceutar tresferencies Bluetooth entrantes de ficheros?"
+msgstr ""
 
 msgctxt "#32382"
 msgid "Speed"
@@ -1009,7 +1009,7 @@ msgstr "Velocidá"
 
 msgctxt "#32383"
 msgid "Play Files ?"
-msgstr "¿Reproducir ficheros?"
+msgstr ""
 
 msgctxt "#32384"
 msgid "OBEX Enabled"
@@ -1017,15 +1017,15 @@ msgstr ""
 
 msgctxt "#32385"
 msgid "OBEX Upload Folder"
-msgstr "Carpeta de xuba OBEX"
+msgstr ""
 
 msgctxt "#32386"
 msgid "Keyboard Layout Variant #1"
-msgstr "Variante de distribución de tecláu #1"
+msgstr ""
 
 msgctxt "#32387"
 msgid "Keyboard Layout Variant #2"
-msgstr "Variante de distribución de tecláu #2"
+msgstr ""
 
 msgctxt "#32388"
 msgid "Enable Standby"
@@ -1037,7 +1037,7 @@ msgstr ""
 
 msgctxt "#32390"
 msgid "Settings addon is not yet ready, please try again later."
-msgstr "L'add-on d'axustes entá nun ta preparáu, volvi tentalo más sero."
+msgstr ""
 
 msgctxt "#32393"
 msgid "** SAFE MODE! ** SAFE MODE! ** SAFE MODE! **"
