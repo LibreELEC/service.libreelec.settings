@@ -747,24 +747,26 @@ class system(modules.Module):
         if not listItem == None:
             self.set_value(listItem)
             if self.struct['journal']['settings']['journal_persistent']['value'] == '0':
-                try:
+                if os.path.isfile(self.JOURNALD_CONFIG_FILE):
                     os.remove(self.JOURNALD_CONFIG_FILE)
-                except:
-                    pass
             else:
-                config_file = open(self.JOURNALD_CONFIG_FILE, 'w')
-                config_file.write("# SPDX-License-Identifier: GPL-2.0-or-later\n" +
-                                  "# Copyright (C) 2021-present Team LibreELEC (https://libreelec.tv)\n\n" +
-                                  "# This file is generated automatically, don't modify.\n\n" +
-                                  "[Journal]\n")
-
                 size = self.struct['journal']['settings']['journal_size']['value'].replace(' MiB', 'M')
-                config_file.write(f"SystemMaxUse={size}\n" +
-                                  "MaxRetentionSec=0\n")
-                if self.struct['journal']['settings']['journal_rate_limit']['value'] == '1':
-                    config_file.write("RateLimitInterval=0\n" +
-                                      "RateLimitBurst=0\n")
-                config_file.close()
+                journal_config = f"""\
+# SPDX-License-Identifier: GPL-2.0-only
+# Copyright (C) 2021-present Team LibreELEC (https://libreelec.tv)
+
+# This file is generated automatically. Do not modify.
+
+[Journal]
+SystemMaxUse={size}
+MaxRetentionSec=0
+{'RateLimitInterval=0' if self.struct['journal']['settings']['journal_rate_limit']['value'] == '1' else ''}
+{'RateLimitBurst=0' if self.struct['journal']['settings']['journal_rate_limit']['value'] == '1' else ''}
+"""
+                # remove trailing whitespace, then add one new line
+                journal_config = f'{journal_config.rstrip()}{chr(10)}'
+                with open(self.JOURNALD_CONFIG_FILE, 'w') as config_file:
+                    config_file.write(journal_config)
 
     @log.log_function()
     def do_wizard(self):
