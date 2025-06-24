@@ -179,10 +179,7 @@ class bluetooth(modules.Module):
     @log.log_function()
     def enable_device_standby(self, listItem=None):
         devices = oe.read_setting('bluetooth', 'standby')
-        if devices is not None:
-            devices = devices.split(',')
-        else:
-            devices = []
+        devices = devices.split(',') if devices else []
         if not listItem.getProperty('entry') in devices:
             devices.append(listItem.getProperty('entry'))
         oe.write_setting('bluetooth', 'standby', ','.join(devices))
@@ -190,10 +187,7 @@ class bluetooth(modules.Module):
     @log.log_function()
     def disable_device_standby(self, listItem=None):
         devices = oe.read_setting('bluetooth', 'standby')
-        if devices is not None:
-            devices = devices.split(',')
-        else:
-            devices = []
+        devices = devices.split(',') if devices else []
         if listItem.getProperty('entry') in devices:
             devices.remove(listItem.getProperty('entry'))
         oe.write_setting('bluetooth', 'standby', ','.join(devices))
@@ -440,9 +434,9 @@ class bluetooth(modules.Module):
             }
         items = []
         actions = []
-        for key in list(values.keys()):
-            items.append(values[key]['text'])
-            actions.append(values[key]['action'])
+        for key, value in values.items():
+            items.append(value['text'])
+            actions.append(value['action'])
         select_window = xbmcgui.Dialog()
         title = oe._(32012)
         result = select_window.select(title, items)
