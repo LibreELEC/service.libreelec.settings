@@ -9,15 +9,16 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: LibreELEC Settings Add-on\n"
-"PO-Revision-Date: 2022-01-13 09:13+0000\n"
-"Last-Translator: Luna Jernberg <droidbittin@gmail.com>\n"
+"Report-Msgid-Bugs-To: translations@kodi.tv\n"
+"PO-Revision-Date: 2025-04-22 10:43+0000\n"
+"Last-Translator: Daniel Nylander <daniel@danielnylander.se>\n"
 "Language-Team: Swedish <https://kodi.weblate.cloud/projects/kodi-add-ons-services/service-libreelec-settings/sv_se/>\n"
 "Language: sv_se\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.10.1\n"
+"X-Generator: Weblate 5.11\n"
 
 msgctxt "#600"
 msgid "@DISTRONAME@ Settings"
@@ -45,15 +46,15 @@ msgstr "Adress"
 
 msgctxt "#606"
 msgid "Distribution: "
-msgstr "Distribution:"
+msgstr "Distribution: "
 
 msgctxt "#607"
 msgid "Version: "
-msgstr "Version:"
+msgstr "Version: "
 
 msgctxt "#608"
 msgid "Architecture: "
-msgstr "Arkitektur:"
+msgstr "Arkitektur: "
 
 msgctxt "#609"
 msgid "LibreELEC is created by a global team of Linux and Kodi enthusiasts who contribute time and effort to manage the project, write code, and provide support. We have fun making it. We hope you have fun using it!"
@@ -93,7 +94,7 @@ msgstr "Konfigurera uppdateringar"
 
 msgctxt "#709"
 msgid "Select the timezone for this device."
-msgstr ""
+msgstr "Välj tidszonen för denna enhet."
 
 msgctxt "#710"
 msgid "Configure the Hostname of your @DISTRONAME@ system. This will be used for the HTPC \\\\hostname in Windows and SMB server name in the Mac OS Finder"
@@ -113,7 +114,7 @@ msgstr "Konfigurera den fysiska tangentbordstypen"
 
 msgctxt "#714"
 msgid "@DISTRONAME@ can be configured for automatic or manual updates. Automatic updates are available on stable releases and stable release candidates. Automatic update self-disables on beta and development builds"
-msgstr "@DISTRONAME@ kan konfigureras för att uppdateras automatiskt eller manuellt. Automatiska uppdateringar är tillgängliga för stabila releaser samt releasekandidater. Automatiska uppdateringar är inte tillgängliga för beta- och utvecklarversioner."
+msgstr "@DISTRONAME@ kan konfigureras för att uppdateras automatiskt eller manuellt. Automatiska uppdateringar är tillgängliga för stabila releaser samt releasekandidater. Automatiska uppdateringar är inte tillgängliga för beta- och utvecklarversioner"
 
 msgctxt "#715"
 msgid "Set to ON and an on-screen notification will be displayed when a new update is available"
@@ -137,7 +138,7 @@ msgstr "Skapa ett tar-arkiv som innehåller alla @DISTRONAME@- och Kodi-inställ
 
 msgctxt "#723"
 msgid "Restore a tar archive backup previously created using the backup option above"
-msgstr "Återställer ett tidigare skapat tar-arkiv, som är skapad med backup-alternativet ovan."
+msgstr "Återställer ett tidigare skapat tar-arkiv, som är skapad med backup-alternativet ovan"
 
 msgctxt "#724"
 msgid ""
@@ -193,7 +194,7 @@ msgstr "När inställningen är PÅ fördröjs uppstarten av Kodi tills dess att
 
 msgctxt "#737"
 msgid "Time in seconds to wait for an established network connection."
-msgstr "Tid i sekunder att vänta på nätverksanslutning"
+msgstr "Tid i sekunder att vänta på nätverksanslutning."
 
 msgctxt "#738"
 msgid "Set to ON to enable the embedded Samba (SMB) filesharing service"
@@ -241,7 +242,7 @@ msgstr "Ändra PIN-kodslås för åtkomst till @DISTRONAME@-inställningar"
 
 msgctxt "#749"
 msgid "Overrride the Wireless Regulatory Domain so radio properties (channels and transmit power) comply with local laws or match the country configuration of your router."
-msgstr "Åsidosätt regelverk för trådlösa radioegenskaper (kanaler och sändningsstyrka) för att matcha landets lagar eller din routerkonfiguration"
+msgstr "Åsidosätt regelverk för trådlösa radioegenskaper (kanaler och sändningsstyrka) för att matcha landets lagar eller din routerkonfiguration."
 
 msgctxt "#750"
 msgid "750"
@@ -353,15 +354,15 @@ msgstr "Visa alternativa kanaler"
 
 msgctxt "#32017"
 msgid "  - Custom Channel 1"
-msgstr "- Alternativ kanal 1"
+msgstr "  - Anpassad kanal 1"
 
 msgctxt "#32018"
 msgid "  - Custom Channel 2"
-msgstr "- Alternativ kanal 2"
+msgstr "  - Anpassad kanal 2"
 
 msgctxt "#32019"
 msgid "  - Custom Channel 3"
-msgstr "- Alternativ kanal 3"
+msgstr "  - Anpassad kanal 3"
 
 msgctxt "#32020"
 msgid "Available Versions"
@@ -389,7 +390,7 @@ msgstr "Uppdatera Raspberry Pi's bootloader EEPROM till senaste versionen. Denna
 
 msgctxt "#32026"
 msgid "VIA USB3 Firmware"
-msgstr "VIA USB3 Firmware"
+msgstr "VIA USB3-firmware"
 
 msgctxt "#32027"
 msgid "Update the Raspberry Pi VIA USB3 firmware to the latest version. This option is automatically disabled after rebooting. Reboot the system to apply the update."
@@ -421,7 +422,7 @@ msgstr "Trådanslutet nätverk"
 
 msgctxt "#32105"
 msgid "Active"
-msgstr "Aktiverad"
+msgstr "Aktiv"
 
 msgctxt "#32106"
 msgid "Username"
@@ -673,9 +674,7 @@ msgstr "SSH lösenord"
 
 msgctxt "#32210"
 msgid "The default SSH password is widely known and considered insecure.[CR][CR]Setting a personal password is recommended."
-msgstr ""
-"Standardlösenordet för SSH är vida känt och skall betraktas som osäkert.[CR]\n"
-"[CR]Att ange ett personligt lösenord rekommenderas."
+msgstr "Standardlösenordet för SSH är allmänt känt och anses vara osäkert.[CR][CR] Det rekommenderas att du anger ett personligt lösenord."
 
 msgctxt "#32212"
 msgid "Cancel"
@@ -767,7 +766,7 @@ msgstr "Fel PIN-kod!"
 
 msgctxt "#32235"
 msgid " attempts remaining."
-msgstr "försök kvarstår."
+msgstr " försök kvarstår."
 
 msgctxt "#32236"
 msgid "You have entered an incorrect PIN too many times.[CR][CR]You will need to wait 5 minutes before trying again."
@@ -895,7 +894,7 @@ msgstr "Bluetooth"
 
 msgctxt "#32333"
 msgid "Connected: "
-msgstr "Ansluten:"
+msgstr "Ansluten: "
 
 msgctxt "#32334"
 msgid "Yes"
@@ -907,7 +906,7 @@ msgstr "Nej"
 
 msgctxt "#32338"
 msgid "No Bluetooth adapter found."
-msgstr "Hittade ingen Bluetooth-adapter"
+msgstr "Hittade ingen Bluetooth-adapter."
 
 msgctxt "#32339"
 msgid "No Bluetooth device found. Please put your Bluetooth device into discovery mode[CR]and start the scan"
@@ -947,7 +946,7 @@ msgstr "Visa meddelande om uppdateringar"
 
 msgctxt "#32366"
 msgid "Update Download Completed"
-msgstr "Nedladdning av uppdatering klar."
+msgstr "Hämtning av uppdatering klar"
 
 msgctxt "#32367"
 msgid "Update Extract Complete"
@@ -979,7 +978,7 @@ msgstr "Återställ backup"
 
 msgctxt "#32374"
 msgid "Error: Invalid backup file. Filename must end in: .tar, .tar.gz, .tar.bz2, or .tar.xz"
-msgstr ""
+msgstr "Fel:: Ogiltig säkerhetskopieringsfil. Filnamnet måste sluta på: .tar, .tar.gz, .tar.bz2 eller .tar.xz"
 
 msgctxt "#32375"
 msgid "Backup Progress"
@@ -1007,7 +1006,7 @@ msgstr "Återställning av systeminställningar kräver en omstart. Är du säke
 
 msgctxt "#32381"
 msgid "Accept incoming Bluetooth Filetransfer ?"
-msgstr "Acceptera inkommande Bluetooth-filöverföring"
+msgstr "Acceptera inkommande Bluetooth-filöverföring?"
 
 msgctxt "#32382"
 msgid "Speed"
@@ -1059,7 +1058,7 @@ msgstr "Brandvägg"
 
 msgctxt "#32396"
 msgid "Custom"
-msgstr "Custom"
+msgstr "Anpassad"
 
 msgctxt "#32397"
 msgid "Off"
@@ -1107,7 +1106,7 @@ msgstr "Ställ in max. storleken på ihållande journal. Starta om för att till
 
 msgctxt "#32415"
 msgid "Disable journald Rate Limit"
-msgstr ""
+msgstr "Inaktivera frekvensbegränsning för journald"
 
 msgctxt "#32416"
 msgid "Reboot to apply changes."
@@ -1115,16 +1114,16 @@ msgstr "Starta om för att tillämpa ändringar."
 
 msgctxt "#32417"
 msgid "Sending..."
-msgstr ""
+msgstr "Skickar..."
 
 msgctxt "#32418"
 msgid "Log files sent to:"
-msgstr ""
+msgstr "Loggfiler skickade till:"
 
 msgctxt "#32419"
 msgid "Error sending log files. Please try again."
-msgstr ""
+msgstr "Fel vid sändning av loggfiler. Försök igen."
 
 msgctxt "#32420"
 msgid "Timezone"
-msgstr ""
+msgstr "Tidszon"

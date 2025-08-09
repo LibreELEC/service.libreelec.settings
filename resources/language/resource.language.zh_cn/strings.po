@@ -11,15 +11,16 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: LibreELEC Settings Add-on\n"
-"PO-Revision-Date: 2021-10-18 04:30+0000\n"
-"Last-Translator: taxigps <taxigps@sina.com>\n"
-"Language-Team: Chinese (China) <https://kodi.weblate.cloud/projects/kodi-add-ons-services/service-libreelec-settings/zh_cn/>\n"
+"Report-Msgid-Bugs-To: translations@kodi.tv\n"
+"PO-Revision-Date: 2025-06-25 03:29+0000\n"
+"Last-Translator: wabisabi926 <liwenliang926@163.com>\n"
+"Language-Team: Chinese (Simplified Han script) <https://kodi.weblate.cloud/projects/kodi-add-ons-services/service-libreelec-settings/zh_Hans/>\n"
 "Language: zh_cn\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.8\n"
+"X-Generator: Weblate 5.12.2\n"
 
 msgctxt "#600"
 msgid "@DISTRONAME@ Settings"
@@ -95,7 +96,7 @@ msgstr "配置更新源"
 
 msgctxt "#709"
 msgid "Select the timezone for this device."
-msgstr ""
+msgstr "选择此设备的时区。"
 
 msgctxt "#710"
 msgid "Configure the Hostname of your @DISTRONAME@ system. This will be used for the HTPC \\\\hostname in Windows and SMB server name in the Mac OS Finder"
@@ -855,11 +856,11 @@ msgstr "您的 @DISTRONAME@ 现已安装完成，您将进入 Kodi，可以设�
 
 msgctxt "#32319"
 msgid "Cron"
-msgstr "Cron"
+msgstr "计划任务"
 
 msgctxt "#32320"
 msgid "Enable Cron"
-msgstr "启用Cron"
+msgstr "启用计划任务"
 
 msgctxt "#32323"
 msgid "Reset to Defaults"
@@ -979,7 +980,7 @@ msgstr "恢复备份"
 
 msgctxt "#32374"
 msgid "Error: Invalid backup file. Filename must end in: .tar, .tar.gz, .tar.bz2, or .tar.xz"
-msgstr ""
+msgstr "错误：备份文件无效。文件必须以.tar、.tar.gz、.tar.bz2或. tar.xz结尾"
 
 msgctxt "#32375"
 msgid "Backup Progress"
@@ -1067,7 +1068,7 @@ msgstr "关"
 
 msgctxt "#32398"
 msgid "Home"
-msgstr "Home"
+msgstr "主屏幕"
 
 msgctxt "#32399"
 msgid "Public"
@@ -1115,16 +1116,16 @@ msgstr "重新启动以应用更改。"
 
 msgctxt "#32417"
 msgid "Sending..."
-msgstr ""
+msgstr "正在发送..."
 
 msgctxt "#32418"
 msgid "Log files sent to:"
-msgstr ""
+msgstr "日志文件发送到："
 
 msgctxt "#32419"
 msgid "Error sending log files. Please try again."
-msgstr ""
+msgstr "发送日志文件时出错。请重试。"
 
 msgctxt "#32420"
 msgid "Timezone"
-msgstr ""
+msgstr "时区"

@@ -4,15 +4,16 @@
 # Addon Provider: LibreELEC
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-02-25 19:10+0000\n"
-"Last-Translator: Christian Gade <gade@kodi.tv>\n"
+"Report-Msgid-Bugs-To: translations@kodi.tv\n"
+"PO-Revision-Date: 2025-01-11 02:57+0000\n"
+"Last-Translator: Heiko Berner <berner.h@gmail.com>\n"
 "Language-Team: Afrikaans (South Africa) <https://kodi.weblate.cloud/projects/kodi-add-ons-services/service-libreelec-settings/af_za/>\n"
 "Language: af_za\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.11\n"
+"X-Generator: Weblate 5.9.2\n"
 
 msgctxt "#600"
 msgid "@DISTRONAME@ Settings"
@@ -288,7 +289,7 @@ msgstr ""
 
 msgctxt "#771"
 msgid "The firewall blocks unwanted network traffic. Home (default) allows traffic from private network ranges (192.168.x.x, 172.16.x.x and 10.x.x.x) only. Public blocks all traffic from all networks. Custom uses rules in /storage/.config/iptables. Off disables the firewall."
-msgstr ""
+msgstr "Die brandmuur blok ongewenste netwerk verkeer. Tuis (verstek) laat slegs verkeer vanaf private netwerk reekse (192.168.x.x, 172.16.x.x en10.x.x.x) toe. Publiek blok alle verkeer vanaf alle netwerke. Pasgemaak gebruik reëls in /storage/.config/iptables. Af deaktiveer die brandmuur."
 
 msgctxt "#772"
 msgid "Checking for a new version will submit the installed Distribution, Project, CPU Arch and Version to the update server. This data is also used to report basic statistics for the project. To continue checking for updates while opting-out of stats reporting, disable this option."
@@ -1044,7 +1045,7 @@ msgstr ""
 
 msgctxt "#32395"
 msgid "Firewall"
-msgstr ""
+msgstr "Brandmuur"
 
 msgctxt "#32396"
 msgid "Custom"

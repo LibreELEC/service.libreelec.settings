@@ -4,14 +4,20 @@
 # Addon Provider: LibreELEC
 msgid ""
 msgstr ""
+"Report-Msgid-Bugs-To: translations@kodi.tv\n"
+"PO-Revision-Date: 2025-04-22 01:17+0000\n"
+"Last-Translator: rimasx <riks_12@hot.ee>\n"
+"Language-Team: Estonian <https://kodi.weblate.cloud/projects/kodi-add-ons-services/service-libreelec-settings/et_ee/>\n"
 "Language: et_ee\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.11\n"
 
 msgctxt "#600"
 msgid "@DISTRONAME@ Settings"
-msgstr ""
+msgstr "@DISTRONAME@ seaded"
 
 msgctxt "#601"
 msgid "Interface"
@@ -19,35 +25,35 @@ msgstr ""
 
 msgctxt "#602"
 msgid "Address"
-msgstr ""
+msgstr "Aadress"
 
 msgctxt "#603"
 msgid "Type"
-msgstr ""
+msgstr "Tüüp"
 
 msgctxt "#604"
 msgid "State"
-msgstr ""
+msgstr "Olek"
 
 msgctxt "#605"
 msgid "Address"
-msgstr ""
+msgstr "Aadress"
 
 msgctxt "#606"
 msgid "Distribution: "
-msgstr ""
+msgstr "Distributsioon: "
 
 msgctxt "#607"
 msgid "Version: "
-msgstr ""
+msgstr "Versioon: "
 
 msgctxt "#608"
 msgid "Architecture: "
-msgstr ""
+msgstr "Arhitektuur: "
 
 msgctxt "#609"
 msgid "LibreELEC is created by a global team of Linux and Kodi enthusiasts who contribute time and effort to manage the project, write code, and provide support. We have fun making it. We hope you have fun using it!"
-msgstr ""
+msgstr "LibreELEC on ülemaailmne Linuxi ja Kodi entusiastide meeskonna projekt. Arendajad panustavad aega ja vaeva projekti haldamiseks, koodi kirjutamiseks ja toe pakkumiseks. Meil on tore seda teha. Loodame, et selle kasutamine pakub sulle rõõmu!"
 
 msgctxt "#610"
 msgid "[B]Support[/B] is provided via our forum:[CR]https://forum.libreelec.tv[CR][CR][B]Documentation[/B] can be read in our wiki:[CR]https://libreelec.wiki[CR][CR][B]Code[/B] can be found on GitHub:[CR]https://github.com/LibreELEC[CR][CR][B]Donations[/B] towards project expenses are accepted via OpenCollective:[CR]https://opencollective.com/libreelec/donate"

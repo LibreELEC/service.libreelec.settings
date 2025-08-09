@@ -11,23 +11,16 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: LibreELEC Settings Add-on\n"
-"PO-Revision-Date: 2021-11-29 20:59+0000\n"
-"Last-Translator: Fabio Ihle <fabioihle+kodi@alunos.utfpr.edu.br>\n"
+"Report-Msgid-Bugs-To: translations@kodi.tv\n"
+"PO-Revision-Date: 2025-08-09 13:19+0000\n"
+"Last-Translator: Havok Dan <havokdan@yahoo.com.br>\n"
 "Language-Team: Portuguese (Brazil) <https://kodi.weblate.cloud/projects/kodi-add-ons-services/service-libreelec-settings/pt_br/>\n"
 "Language: pt_br\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 4.9.1\n"
-
-msgctxt "Addon Summary"
-msgid "@DISTRONAME@ Configuration"
-msgstr "Configuração do @DISTRONAME@"
-
-msgctxt "Addon Description"
-msgid "Use this addon to manage your @DISTRONAME@ system's underlying operating system. From here you can manage the entire system so you don't have to worry about what runs under the hood.[CR][CR]From here you can change your network connectivity, your keyboard layout and language and enable/disable remote access including Samba and SSH."
-msgstr "Utilize este addon para gerenciar o sistema operacional do @DISTRONAME@. Aqui você pode gerenciar todo o sistema, para não ter de se preocupar com aquilo que se passa nos bastidores.[CR][CR] Daqui, você pode alterar as suas conexões de rede, configurações do teclado e idiomas. Também pode ativar/desativar acesso remoto, incluindo compartilhamento de rede do Windows e SSH."
+"X-Generator: Weblate 5.12.2\n"
 
 msgctxt "#600"
 msgid "@DISTRONAME@ Settings"
@@ -103,7 +96,7 @@ msgstr "Configurar atualizações"
 
 msgctxt "#709"
 msgid "Select the timezone for this device."
-msgstr ""
+msgstr "Selecionar o fuso horário para este dispositivo."
 
 msgctxt "#710"
 msgid "Configure the Hostname of your @DISTRONAME@ system. This will be used for the HTPC \\\\hostname in Windows and SMB server name in the Mac OS Finder"
@@ -987,7 +980,7 @@ msgstr "Restaurar Backup"
 
 msgctxt "#32374"
 msgid "Error: Invalid backup file. Filename must end in: .tar, .tar.gz, .tar.bz2, or .tar.xz"
-msgstr ""
+msgstr "Erro: Arquivo de backup inválido. O nome do arquivo deve terminar em: .tar, .tar.gz, .tar.bz2, or .tar.xz"
 
 msgctxt "#32375"
 msgid "Backup Progress"
@@ -1123,16 +1116,28 @@ msgstr "Reinicialize para aplicar as alterações."
 
 msgctxt "#32417"
 msgid "Sending..."
-msgstr ""
+msgstr "Enviando..."
 
 msgctxt "#32418"
 msgid "Log files sent to:"
-msgstr ""
+msgstr "Arquivos de log enviados para:"
 
 msgctxt "#32419"
 msgid "Error sending log files. Please try again."
-msgstr ""
+msgstr "Erro ao enviar arquivos de log. Por favor, tente novamente."
 
 msgctxt "#32420"
 msgid "Timezone"
-msgstr ""
+msgstr "Fuso horário"
+
+#~ msgctxt "Addon Summary"
+#~ msgid "@DISTRONAME@ Configuration"
+#~ msgstr "Configuração do @DISTRONAME@"
+
+#~ msgctxt "Addon Description"
+#~ msgid "Use this addon to manage your @DISTRONAME@ system's underlying operating system. From here you can manage the entire system so you don't have to worry about what runs under the hood.[CR][CR]From here you can change your network connectivity, your keyboard layout and language and enable/disable remote access including Samba and SSH."
+#~ msgstr "Utilize este addon para gerenciar o sistema operacional do @DISTRONAME@. Aqui você pode gerenciar todo o sistema, para não ter de se preocupar com aquilo que se passa nos bastidores.[CR][CR] Daqui, você pode alterar as suas conexões de rede, configurações do teclado e idiomas. Também pode ativar/desativar acesso remoto, incluindo compartilhamento de rede do Windows e SSH."
+
+#~ msgctxt "#32189"
+#~ msgid "Identification"
+#~ msgstr "Identificação"

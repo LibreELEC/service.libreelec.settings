@@ -4,7 +4,7 @@
 # Addon Provider: LibreELEC
 msgid ""
 msgstr ""
-"Language: en_nz\n"
+"Language: fa_AF\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -130,15 +130,11 @@ msgid "Restore a tar archive backup previously created using the backup option a
 msgstr ""
 
 msgctxt "#724"
-msgid ""
-"[COLOR FF00FF00]SOFT RESET[/COLOR]\n"
-"Permanently reset @DISTRONAME@ configuration to defaults (resets also Kodi to default including your library. your media - music/videos/etc are not touched)"
+msgid "[COLOR FF00FF00]SOFT RESET[/COLOR]\nPermanently reset @DISTRONAME@ configuration to defaults (resets also Kodi to default including your library. your media - music/videos/etc are not touched)"
 msgstr ""
 
 msgctxt "#725"
-msgid ""
-"[COLOR FFFF0000]HARD RESET[/COLOR]\n"
-"Permanently reset @DISTRONAME@ and Kodi configuration to defaults (everything in your storage partition will be deleted)"
+msgid "[COLOR FFFF0000]HARD RESET[/COLOR]\nPermanently reset @DISTRONAME@ and Kodi configuration to defaults (everything in your storage partition will be deleted)"
 msgstr ""
 
 msgctxt "#726"
@@ -1112,11 +1108,3 @@ msgstr ""
 msgctxt "#32420"
 msgid "Timezone"
 msgstr ""
-
-#~ msgctxt "Addon Summary"
-#~ msgid "@DISTRONAME@ Configuration"
-#~ msgstr "@DISTRONAME@ Configuration"
-
-#~ msgctxt "Addon Description"
-#~ msgid "Use this addon to manage your @DISTRONAME@ system's underlying operating system. From here you can manage the entire system so you don't have to worry about what runs under the hood.[CR][CR]From here you can change your network connectivity, your keyboard layout and language and enable/disable remote access including Samba and SSH."
-#~ msgstr "Use this addon to manage your @DISTRONAME@ system's underlying operating system. From here you can manage the entire system so you don't have to worry about what runs under the hood.[CR][CR]From here you can change your network connectivity, your keyboard layout and language and enable/disable remote access including Samba and SSH."
