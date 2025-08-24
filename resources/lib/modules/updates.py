@@ -21,10 +21,10 @@ import modules
 import oe
 import os_tools
 
-if os.path.isfile('/usr/bin/update-system'):
-    update_system = os_tools.import_from_file('update_system', '/usr/bin/update-system')
+if os.path.isfile('/usr/lib/libreelec/update_lib.py'):
+    update_system = os_tools.import_from_file('update_lib', '/usr/lib/libreelec/update_lib.py')
 else:
-    log.log('No client side update script found; feature will be disabled', log.DEBUG)
+    log.log('No client side update support found; feature disabled', log.DEBUG)
 
 
 class updates(modules.Module):
@@ -265,7 +265,7 @@ class updates(modules.Module):
             self.update_in_progress = True
 
         # Client Side Update
-        if not os.path.isfile('/usr/bin/update-system'):
+        if not os.path.isfile('/usr/lib/libreelec/update_lib.py'):
             self.struct['update']['settings']['ClientSideUpdate']['value'] = '0'
             self.struct['update']['settings']['ClientSideUpdate']['hidden'] = 'true'
         else:
@@ -329,7 +329,7 @@ class updates(modules.Module):
                 if 'hidden' in self.struct['update']['settings']['AutoUpdate']:
                     del(self.struct['update']['settings']['AutoUpdate']['hidden'])
                 # Client side update only available on stable channel
-                if 'hidden' in self.struct['update']['settings']['ClientSideUpdate'] and os.path.isfile('/usr/bin/update-system'):
+                if 'hidden' in self.struct['update']['settings']['ClientSideUpdate'] and os.path.isfile('/usr/lib/libreelec/update_lib.py'):
                     del(self.struct['update']['settings']['ClientSideUpdate']['hidden'])
                 # Only show manual update options if automatic update disabled
                 if self.struct['update']['settings']['AutoUpdate']['value'] == '0':
@@ -502,6 +502,7 @@ class updates(modules.Module):
                     update_json[channel] = custom_update_json[channel]
             elif notify_error:
                 ok_window = xbmcgui.Dialog()
+                # FIXME localize
                 answer = ok_window.ok(oe._(32191), f'Custom URL is invalid, or currently inaccessible.\n\n{custom_url}')
                 if not answer:
                     return
@@ -579,6 +580,7 @@ class updates(modules.Module):
 
         return build if build else update_files
 
+
     @log.log_function()
     def check_updates_v2(self, force=False):
         if self.update_in_progress:
@@ -597,27 +599,35 @@ class updates(modules.Module):
         if self.struct['update']['settings']['ReleaseChannel']['value'] != 'stable':
             log.log('Not on stable release channel (exit)', log.DEBUG)
             return
-        if os.path.isfile('/usr/bin/update-system') and \
+        # Client side update
+        if os.path.isfile('/usr/lib/libreelec/update_lib.py') and \
             self.struct['update']['settings']['ClientSideUpdate']['value'] == '1':
             # Discard server response
-            update_json = None
+            del update_json
             self.last_update_check = time.time()
-            client_update_check = update_system.UpdateSystem()
-            update_available, update_major, update_url, update_checksum = client_update_check.check_for_update()
-            if update_available:
-                if update_url:
-                    log.log(f'Found update: {update_url}', log.INFO)
-                    self.update_file = update_url
-                if update_checksum:
-                    log.log(f'JSON update checksum: {update_checksum}', log.DEBUG)
-                    self.update_checksum = update_checksum
+            client_update = update_lib.UpdateSystem(json_data=self.update_json)
+            # Check for bugfix updates
+            client_update.check_for_bugfix()
+            if not client_update.update_available:
+                # Check for majro updates
+                client_update.check_for_major()
+            if client_update.update_available:
+                log.log(f'Found update: {client_update.update_url}', log.INFO)
+                self.update_file = client_update.update_url
+                log.log(f'Update file checksum: {client_update.candidate["sha256"]}', log.DEBUG)
+                self.update_checksum = client_update.candidate['sha256']
                 # On screen notification
                 if self.struct['update']['settings']['UpdateNotify']['value'] == '1':
-                    oe.notify(oe._(32363), oe._(32364))
-                # Automatic update if enabled and not a major release
-                if not update_major and (self.struct['update']['settings']['AutoUpdate']['value'] == '1' and force is False):
+                    if client_update.update_major:
+                        # FIXME localize
+                        oe.notify(oe._(32363), f'Update available to {oe.DISTRIBUTION} {client_update.candidate["version_major"]}. See https://libreelec.tv for details.')
+                    else:
+                        oe.notify(oe._(32363), oe._(32364))
+                # Bugfix update and autoupdate enabled
+                if not client_update.update_major and (self.struct['update']['settings']['AutoUpdate']['value'] == '1' and force is False):
                     self.update_in_progress = True
                     self.do_autoupdate(True)
+        # Server side update check
         elif update_json:
             update_json = json.loads(update_json)
             self.last_update_check = time.time()
@@ -629,6 +639,7 @@ class updates(modules.Module):
                 if self.struct['update']['settings']['AutoUpdate']['value'] == '1' and force is False:
                     self.update_in_progress = True
                     self.do_autoupdate(True)
+
 
     @log.log_function()
     def do_autoupdate(self, silent=False):
