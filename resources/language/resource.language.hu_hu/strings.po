@@ -125,7 +125,7 @@ msgid "Configure the physical keyboard type"
 msgstr "A fizikai billentyűzet típusának beállítása"
 
 msgctxt "#714"
-msgid "@DISTRONAME@ can be configured for automatic or manual updates. Automatic updates are available on stable releases and stable release candidates. Automatic update self-disables on beta and development builds"
+msgid "Enable for automatic updates to @DISTRONAME@. Automatic updates are available for stable releases. Automatic update will not update to pre-release or development builds."
 msgstr "A(z) @DISTRONAME@ beállítható automatikus vagy kézi frissítésre. Az automatikus frissítés a stabil kiadásokban és a kiadásra jelölt stabil verziók esetében érhető el. Az automatikus frissítés a béta és a fejlesztői állapotú verzióknál letiltásra kerül"
 
 msgctxt "#715"
@@ -371,10 +371,6 @@ msgstr "  - Egyéni csatorna 1"
 msgctxt "#32018"
 msgid "  - Custom Channel 2"
 msgstr "  - Egyéni csatorna 2"
-
-msgctxt "#32019"
-msgid "  - Custom Channel 3"
-msgstr "  - Egyéni csatorna 3"
 
 msgctxt "#32020"
 msgid "Available Versions"

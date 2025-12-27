@@ -123,7 +123,7 @@ msgid "Configure the physical keyboard type"
 msgstr "配置物理键盘类型"
 
 msgctxt "#714"
-msgid "@DISTRONAME@ can be configured for automatic or manual updates. Automatic updates are available on stable releases and stable release candidates. Automatic update self-disables on beta and development builds"
+msgid "Enable for automatic updates to @DISTRONAME@. Automatic updates are available for stable releases. Automatic update will not update to pre-release or development builds."
 msgstr "@DISTRONAME@ 可以配置为自动或手动更新。 自动更新可用于稳定版本和稳定版本候选版本。 自动更新在测试版和开发版本上自行禁用"
 
 msgctxt "#715"
@@ -369,10 +369,6 @@ msgstr "  - 自定义渠道 1"
 msgctxt "#32018"
 msgid "  - Custom Channel 2"
 msgstr "  - 自定义渠道 2"
-
-msgctxt "#32019"
-msgid "  - Custom Channel 3"
-msgstr "  - 自定义渠道 3"
 
 msgctxt "#32020"
 msgid "Available Versions"
