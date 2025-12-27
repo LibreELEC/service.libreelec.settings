@@ -123,12 +123,16 @@ msgid "Configure the physical keyboard type"
 msgstr "配置物理键盘类型"
 
 msgctxt "#714"
-msgid "@DISTRONAME@ can be configured for automatic or manual updates. Automatic updates are available on stable releases and stable release candidates. Automatic update self-disables on beta and development builds"
+msgid "Enable for automatic updates to @DISTRONAME@. Automatic updates are available for stable releases. Automatic update will not update to pre-release or development builds."
 msgstr "@DISTRONAME@ 可以配置为自动或手动更新。 自动更新可用于稳定版本和稳定版本候选版本。 自动更新在测试版和开发版本上自行禁用"
 
 msgctxt "#715"
-msgid "Set to ON and an on-screen notification will be displayed when a new update is available"
+msgid "Enable for on-screen notifications when a new update is available"
 msgstr "设置为“开启”，当新的更新可用时，将在屏幕上显示通知"
+
+msgctxt "#716"
+msgid "Choose between stable, testing, or a custom release channel for @DISTRONAME@. Stable has releases a few times each year. Test releases are automated nightly builds of the current state of development. Testing releases receive less review than stable releases."
+msgstr ""
 
 msgctxt "#718"
 msgid "Send boot config files from /flash, kodi.log, kernel log and Samba configs to http://ix.io, and display the short URL"
@@ -294,12 +298,8 @@ msgctxt "#760"
 msgid "Select an update channel"
 msgstr "选择一个更新渠道"
 
-msgctxt "#761"
-msgid "Enable to allow entering a custom update url"
-msgstr "启用以允许输入自定义更新链接"
-
 msgctxt "#762"
-msgid "Enter a custom update url (url should be the root of the update files)"
+msgid "Enter a custom update URL. URL should point directly to a json update file or a directory containing 'releases.json'."
 msgstr "输入自定义更新链接（链接应该是更新文件的根目录）"
 
 msgctxt "#770"
@@ -311,7 +311,7 @@ msgid "The firewall blocks unwanted network traffic. Home (default) allows traff
 msgstr "防火墙阻止不需要的网络流量。 主页（默认）仅允许来自专用网络范围（192.168.x.x，172.16.x.x和10.x.x.x）的流量。 公共阻止来自所有网络的所有流量。 自定义使用 /storage/.config/iptables 中的规则。 关闭将禁用防火墙。"
 
 msgctxt "#772"
-msgid "Checking for a new version will submit the installed Distribution, Project, CPU Arch and Version to the update server. This data is also used to report basic statistics for the project. To continue checking for updates while opting-out of stats reporting, disable this option."
+msgid "Enable to share the installed distribution, version, and related device information periodically with the developers. This data is used to gather information on how distribution is used. Disable to opt out of reporting device information."
 msgstr "检查新版本会将已安装的分发，项目，CPU Arch 和版本提交给更新服务器。此数据还用于报告项目的基本统计信息。要在选择退出统计信息报告时继续检查更新，请禁用此选项。"
 
 msgctxt "#773"
@@ -355,31 +355,19 @@ msgid "Automatic Updates"
 msgstr "自动升级"
 
 msgctxt "#32015"
-msgid "Update Channel"
+msgid "Release"
 msgstr "升级渠道"
 
-msgctxt "#32016"
-msgid "Show Custom Channels"
-msgstr "显示自定义渠道"
-
 msgctxt "#32017"
-msgid "  - Custom Channel 1"
+msgid "Custom Channel"
 msgstr "  - 自定义渠道 1"
-
-msgctxt "#32018"
-msgid "  - Custom Channel 2"
-msgstr "  - 自定义渠道 2"
-
-msgctxt "#32019"
-msgid "  - Custom Channel 3"
-msgstr "  - 自定义渠道 3"
 
 msgctxt "#32020"
 msgid "Available Versions"
 msgstr "可用版本"
 
 msgctxt "#32021"
-msgid "Submit Statistics"
+msgid "Share Statistics"
 msgstr "提交系统统计信息"
 
 msgctxt "#32022"
@@ -413,6 +401,10 @@ msgstr "从 %s 更新到 %s"
 msgctxt "#32029"
 msgid "up to date: %s"
 msgstr "更新到: %s"
+
+msgctxt "#32030"
+msgid "Release Channel"
+msgstr ""
 
 msgctxt "#32100"
 msgid "Connections"
@@ -951,7 +943,7 @@ msgid "Update available"
 msgstr "更新可用"
 
 msgctxt "#32365"
-msgid "Show Update Notifications"
+msgid "Show Notifications"
 msgstr "显示更新通知"
 
 msgctxt "#32366"
