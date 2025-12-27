@@ -965,7 +965,7 @@ msgid "Restore Backup"
 msgstr ""
 
 msgctxt "#32374"
-msgid "Error: Invalid backup file. Filename must end in: .tar, .tar.gz, .tar.bz2, or .tar.xz"
+msgid "Error: Invalid backup file. Filename must end in: .tar, .tar.bz2, .tar.gz, .tar.xz, or .tar.zst"
 msgstr ""
 
 msgctxt "#32375"
