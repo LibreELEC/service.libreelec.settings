@@ -602,7 +602,7 @@ class system(modules.Module):
             if not os.path.isfile(restore_file_path):
                 return
             # file selected that won't trigger busybox's backup restoration
-            if not restore_file_path.endswith(('.tar', '.tar.gz', '.tar.bz2', '.tar.xz')):
+            if not restore_file_path.endswith(('.tar', '.tar.bz2', '.tar.gz', '.tar.xz', '.tar.zst')):
                 log.log(f'Error: Invalid backup file: {restore_file_path}', log.ERROR)
                 xbmcDialog.ok(oe._(32373), oe._(32374))
                 return
