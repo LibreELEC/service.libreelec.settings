@@ -106,6 +106,8 @@ class Monitor(xbmc.Monitor):
         oe.stop_service()
         service_thread.stop()
         dbus_utils.LOOP_THREAD.stop()
+        # workaround a crash on shutdown
+        del dbus_utils.BUS
 
 
 if __name__ == '__main__':
