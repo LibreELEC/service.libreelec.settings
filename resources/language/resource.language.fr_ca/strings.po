@@ -126,7 +126,7 @@ msgid "Configure the physical keyboard type"
 msgstr "Configuration du type physique de clavier"
 
 msgctxt "#714"
-msgid "@DISTRONAME@ can be configured for automatic or manual updates. Automatic updates are available on stable releases and stable release candidates. Automatic update self-disables on beta and development builds"
+msgid "Enable for automatic updates to @DISTRONAME@. Automatic updates are available for stable releases. Automatic update will not update to pre-release or development builds."
 msgstr "@DISTRONAME@ peut être configuré pour une mise à jour automatique ou manuelle. Les mises à jour automatiques sont disponibles sur les versions stables et les versions candidates. Les mises à jour sont automatiquement désactivées sur les version beta et de développement"
 
 msgctxt "#715"
@@ -372,10 +372,6 @@ msgstr "- Canal personnalisé 1"
 msgctxt "#32018"
 msgid "  - Custom Channel 2"
 msgstr "- Canal personnalisé 2"
-
-msgctxt "#32019"
-msgid "  - Custom Channel 3"
-msgstr "- Canal personnalisé 3"
 
 msgctxt "#32020"
 msgid "Available Versions"

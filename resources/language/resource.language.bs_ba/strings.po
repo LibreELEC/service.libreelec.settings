@@ -116,7 +116,7 @@ msgid "Configure the physical keyboard type"
 msgstr "Konfigurišite tip fizičke tastature"
 
 msgctxt "#714"
-msgid "@DISTRONAME@ can be configured for automatic or manual updates. Automatic updates are available on stable releases and stable release candidates. Automatic update self-disables on beta and development builds"
+msgid "Enable for automatic updates to @DISTRONAME@. Automatic updates are available for stable releases. Automatic update will not update to pre-release or development builds."
 msgstr "@DISTRONAME@ se može konfigurirati za automatska ili ručna ažuriranja. Automatska ažuriranja su dostupna na stabilnim izdanjima i kandidatima za stabilna izdanja. Automatsko ažuriranje se samoisključuje na beta i razvojnim verzijama"
 
 msgctxt "#715"
@@ -362,10 +362,6 @@ msgstr "  - Prilagođeni kanal 1"
 msgctxt "#32018"
 msgid "  - Custom Channel 2"
 msgstr "  - Prilagođeni kanal 2"
-
-msgctxt "#32019"
-msgid "  - Custom Channel 3"
-msgstr "  - Prilagođeni kanal 3"
 
 msgctxt "#32020"
 msgid "Available Versions"
