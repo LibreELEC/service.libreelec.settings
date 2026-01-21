@@ -119,12 +119,21 @@ msgid "Configure the physical keyboard type"
 msgstr "Налаштування типу фізичної клавіатури"
 
 msgctxt "#714"
-msgid "@DISTRONAME@ can be configured for automatic or manual updates. Automatic updates are available on stable releases and stable release candidates. Automatic update self-disables on beta and development builds"
+msgid "Enable for automatic updates to @DISTRONAME@. Automatic updates are available for stable releases. Automatic update will not update to pre-release or development builds."
 msgstr "@DISTRONAME@ можна налаштувати на автоматичне або ручне отримання оновлень. Автоматичні оновлення доступні для стабільних випусків та стабільних реліз-кандидатів. Автоматичне оновлення вимикається для бета-версій та розробницьких збірок"
+msgstr ""
 
 msgctxt "#715"
-msgid "Set to ON and an on-screen notification will be displayed when a new update is available"
+msgid "Enable for on-screen notifications when a new update is available"
 msgstr "Якщо увімкнути, на екрані будуть з'являтись повідомлення про доступність нових оновлень"
+
+msgctxt "#716"
+msgid "Choose between stable, testing, or a custom release channel for @DISTRONAME@. Stable has releases a few times each year. Test releases are automated nightly builds of the current state of development. Testing releases receive less review than stable releases."
+msgstr ""
+
+msgctxt "#717"
+msgid "Enable to determine if a system update is available locally instead of requesting this information from the distribution's servers"
+msgstr ""
 
 msgctxt "#718"
 msgid "Send boot config files from /flash, kodi.log, kernel log and Samba configs to http://ix.io, and display the short URL"
@@ -290,12 +299,8 @@ msgctxt "#760"
 msgid "Select an update channel"
 msgstr "Вибір каналу оновлення"
 
-msgctxt "#761"
-msgid "Enable to allow entering a custom update url"
-msgstr "Увімкніть, щоб можна було ввести власну URL-адресу для оновлення"
-
 msgctxt "#762"
-msgid "Enter a custom update url (url should be the root of the update files)"
+msgid "Enter a custom update URL. URL should point directly to a json update file or a directory containing 'releases.json'."
 msgstr "Введіть власну URL-адресу для оновлення (має вказувати на кореневу теку з файлами оновлень)"
 
 msgctxt "#770"
@@ -307,7 +312,7 @@ msgid "The firewall blocks unwanted network traffic. Home (default) allows traff
 msgstr "Брандмауер блокує небажаний мережевий трафік. \"Вдома\" (за замовчуванням) дозволяє трафік з тільки приватних мереж (192.168.x.x, 172.16.x.x та 10.x.x.x) only. \"Публічний\" блокує трафік з усіх мереж. \"Власний\" використовує правила з файлу /storage/.config/iptables. \"Вимкнено\" вимикає брандмауер."
 
 msgctxt "#772"
-msgid "Checking for a new version will submit the installed Distribution, Project, CPU Arch and Version to the update server. This data is also used to report basic statistics for the project. To continue checking for updates while opting-out of stats reporting, disable this option."
+msgid "Enable to share the installed distribution, version, and related device information periodically with the developers. This data is used to gather information on how distribution is used. Disable to opt out of reporting device information."
 msgstr "Під час перевірки версії на сервер оновлень буде надіслано наступні відомості: встановлений дистрибутив, проект, архітектура процесора та версія."
 
 msgctxt "#773"
@@ -351,31 +356,23 @@ msgid "Automatic Updates"
 msgstr "Автоматичне оновлення"
 
 msgctxt "#32015"
-msgid "Update Channel"
+msgid "Release"
 msgstr "Канал оновлень"
 
 msgctxt "#32016"
-msgid "Show Custom Channels"
-msgstr "Показати користувацькі канали"
+msgid "Client Side Update"
+msgstr ""
 
 msgctxt "#32017"
-msgid "  - Custom Channel 1"
-msgstr "  - користувацький канал 1"
-
-msgctxt "#32018"
-msgid "  - Custom Channel 2"
-msgstr "  - користувацький канал 2"
-
-msgctxt "#32019"
-msgid "  - Custom Channel 3"
-msgstr "  - користувацький канал 3"
+msgid "Custom Channel"
+msgstr "користувацький канал"
 
 msgctxt "#32020"
 msgid "Available Versions"
 msgstr "Доступні версії"
 
 msgctxt "#32021"
-msgid "Submit Statistics"
+msgid "Share Statistics"
 msgstr "Надсилати статистику"
 
 msgctxt "#32022"
@@ -409,6 +406,10 @@ msgstr "оновлення з %s до %s"
 msgctxt "#32029"
 msgid "up to date: %s"
 msgstr "актуальний стан: %s"
+
+msgctxt "#32030"
+msgid "Release Channel"
+msgstr ""
 
 msgctxt "#32100"
 msgid "Connections"
@@ -947,7 +948,7 @@ msgid "Update available"
 msgstr "Доступно оновлення"
 
 msgctxt "#32365"
-msgid "Show Update Notifications"
+msgid "Show Notifications"
 msgstr "Показувати сповіщення про оновлення"
 
 msgctxt "#32366"
