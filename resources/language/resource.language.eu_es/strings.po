@@ -119,12 +119,16 @@ msgid "Configure the physical keyboard type"
 msgstr "Konfiguratu teklatu fisikoaren diseinua"
 
 msgctxt "#714"
-msgid "@DISTRONAME@ can be configured for automatic or manual updates. Automatic updates are available on stable releases and stable release candidates. Automatic update self-disables on beta and development builds"
+msgid "Enable for automatic updates to @DISTRONAME@. Automatic updates are available for stable releases. Automatic update will not update to pre-release or development builds."
 msgstr "@DISTRONAME@ konfiguratu daiteke eskuz edo modu automatikoan eguneratzeko. Eguneratze automatikoak bertsio egonkorretan (stable) eta bertsio egonkorren hautagaietan (release candidate) daude eskuragarri. Beta bertsioetan eta garapenerako bertsioetan eguneratze automatikoa desgaituta dago."
 
 msgctxt "#715"
-msgid "Set to ON and an on-screen notification will be displayed when a new update is available"
+msgid "Enable for on-screen notifications when a new update is available"
 msgstr "Aukeratu ON pantailan jakinarazpen bat erakusteko bertsio berri bat eskuragarri dagoenean"
+
+msgctxt "#716"
+msgid "Choose between stable, testing, or a custom release channel for @DISTRONAME@. Stable has releases a few times each year. Test releases are automated nightly builds of the current state of development. Testing releases receive less review than stable releases."
+msgstr ""
 
 msgctxt "#718"
 msgid "Send boot config files from /flash, kodi.log, kernel log and Samba configs to http://ix.io, and display the short URL"
@@ -290,12 +294,8 @@ msgctxt "#760"
 msgid "Select an update channel"
 msgstr "Aukeratu eguneratze-kanala"
 
-msgctxt "#761"
-msgid "Enable to allow entering a custom update url"
-msgstr "Eman eguneratze URL pertsonalizatua sartzeko baimena"
-
 msgctxt "#762"
-msgid "Enter a custom update url (url should be the root of the update files)"
+msgid "Enter a custom update URL. URL should point directly to a json update file or a directory containing 'releases.json'."
 msgstr "Sartu eguneratze URL pertsonalizatua (URLa eguneratze fitxategien jatorria izan behar da)"
 
 msgctxt "#770"
@@ -307,7 +307,7 @@ msgid "The firewall blocks unwanted network traffic. Home (default) allows traff
 msgstr "Firewall-ak nahi ez den sare-trafikoa blokeatzen du. Etxekoak (berezko aukera) soilik zure sare pribatuko tarteak baimentzen ditu (192.168.x.x, 172.16.x.x eta 10.x.x.x). Publikoak sare guztietako trafiko guztia blokeatzen du. Pertsonalizatuak /storage/.config/iptables kokapeneko arauak erabiliko ditu. Desgaitu funtzioak firewall-a desgaituko du."
 
 msgctxt "#772"
-msgid "Checking for a new version will submit the installed Distribution, Project, CPU Arch and Version to the update server. This data is also used to report basic statistics for the project. To continue checking for updates while opting-out of stats reporting, disable this option."
+msgid "Enable to share the installed distribution, version, and related device information periodically with the developers. This data is used to gather information on how distribution is used. Disable to opt out of reporting device information."
 msgstr "Bertsio berri bat dagoen egiaztatzeak instalatutako Distribuzioa, Proiektua, CPU arkitektura eta Bertsioa eguneraketa zerbitzarira bidaliko du. Datu hauek proiektuaren estatistiken oinarrizko txostenean ere erabiliko dira. Eguneraketak egiaztatzen jarraitu nahi baduzu estatistiken bidaltzea egin gabe, desgaitu ezazu aukera hau."
 
 msgctxt "#773"
@@ -351,31 +351,19 @@ msgid "Automatic Updates"
 msgstr "Eguneratze automatikoak"
 
 msgctxt "#32015"
-msgid "Update Channel"
+msgid "Release"
 msgstr "Eguneratze-kanala"
 
-msgctxt "#32016"
-msgid "Show Custom Channels"
-msgstr "Erakutsi kanal pertsonalizatuak"
-
 msgctxt "#32017"
-msgid "  - Custom Channel 1"
+msgid "Custom Channel"
 msgstr "- 1. kanal pertsonalizatua"
-
-msgctxt "#32018"
-msgid "  - Custom Channel 2"
-msgstr "- 2. kanal pertsonalizatua"
-
-msgctxt "#32019"
-msgid "  - Custom Channel 3"
-msgstr "- 3. kanal pertsonalizatua"
 
 msgctxt "#32020"
 msgid "Available Versions"
 msgstr "Eskuragarri dauden bertsioak"
 
 msgctxt "#32021"
-msgid "Submit Statistics"
+msgid "Share Statistics"
 msgstr "Bidali Estatistikak"
 
 msgctxt "#32022"
@@ -408,6 +396,10 @@ msgstr ""
 
 msgctxt "#32029"
 msgid "up to date: %s"
+msgstr ""
+
+msgctxt "#32030"
+msgid "Release Channel"
 msgstr ""
 
 msgctxt "#32100"
@@ -947,7 +939,7 @@ msgid "Update available"
 msgstr "Eguneratzea eskuragarri"
 
 msgctxt "#32365"
-msgid "Show Update Notifications"
+msgid "Show Notifications"
 msgstr "Erakutsi Eguneratze-Jakinarazpenak"
 
 msgctxt "#32366"

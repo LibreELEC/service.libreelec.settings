@@ -123,12 +123,16 @@ msgid "Configure the physical keyboard type"
 msgstr "물리 키보드 종류 설정"
 
 msgctxt "#714"
-msgid "@DISTRONAME@ can be configured for automatic or manual updates. Automatic updates are available on stable releases and stable release candidates. Automatic update self-disables on beta and development builds"
+msgid "Enable for automatic updates to @DISTRONAME@. Automatic updates are available for stable releases. Automatic update will not update to pre-release or development builds."
 msgstr "@DISTRONAME@은 자동이나 수동 업데이트로 설정할 수 있습니다. 자동 업데이트는 안정판이나 안정판 후보에서 가능합니다. 자동 업데이트는 베타나 개발 빌드에서는 가능하지 않습니다"
 
 msgctxt "#715"
-msgid "Set to ON and an on-screen notification will be displayed when a new update is available"
+msgid "Enable for on-screen notifications when a new update is available"
 msgstr "ON으로 설정하고 새로운 업데이트가 있으면 화면 알림이 표시됩니다"
+
+msgctxt "#716"
+msgid "Choose between stable, testing, or a custom release channel for @DISTRONAME@. Stable has releases a few times each year. Test releases are automated nightly builds of the current state of development. Testing releases receive less review than stable releases."
+msgstr ""
 
 msgctxt "#718"
 msgid "Send boot config files from /flash, kodi.log, kernel log and Samba configs to http://ix.io, and display the short URL"
@@ -294,12 +298,8 @@ msgctxt "#760"
 msgid "Select an update channel"
 msgstr "업데이트 채널 선택"
 
-msgctxt "#761"
-msgid "Enable to allow entering a custom update url"
-msgstr "사용자 업데이트 url 입력 허용"
-
 msgctxt "#762"
-msgid "Enter a custom update url (url should be the root of the update files)"
+msgid "Enter a custom update URL. URL should point directly to a json update file or a directory containing 'releases.json'."
 msgstr "사용자 업데이트 url 입력 (url은 업데이트 파일의 루트여야 함)"
 
 msgctxt "#770"
@@ -311,7 +311,7 @@ msgid "The firewall blocks unwanted network traffic. Home (default) allows traff
 msgstr "방화벽은 원치 않는 네트워크 트래픽을 막습니다. 집은 (기본으로) 개인 네트워크 범위만의 트래픽을 허용합니다 (192.168.x.x, 172.16.x.x, 10.x.x.x). 공용은 모든 네트워크로부터의 트래픽을 막습니다. 사용자는 /storage/.config/iptables의 룰을 따릅니다. 끄기는 방화벽을 사용하지 않습니다."
 
 msgctxt "#772"
-msgid "Checking for a new version will submit the installed Distribution, Project, CPU Arch and Version to the update server. This data is also used to report basic statistics for the project. To continue checking for updates while opting-out of stats reporting, disable this option."
+msgid "Enable to share the installed distribution, version, and related device information periodically with the developers. This data is used to gather information on how distribution is used. Disable to opt out of reporting device information."
 msgstr "새 버전 확인은 설치된 배포판, 프로젝트, CPU 아키텍처와 버전을 업데이트 서버에 보냅니다. 이 데이터는 프로젝트를 위한 기초 통계에도 쓰입니다. 통계 보고를 하지 않고 업데이트를 계속하려면 이 옵션을 끕니다."
 
 msgctxt "#773"
@@ -355,31 +355,19 @@ msgid "Automatic Updates"
 msgstr "자동 업데이트"
 
 msgctxt "#32015"
-msgid "Update Channel"
+msgid "Release"
 msgstr "채널 업데이트"
 
-msgctxt "#32016"
-msgid "Show Custom Channels"
-msgstr "사용자 채널 보기"
-
 msgctxt "#32017"
-msgid "  - Custom Channel 1"
+msgid "Custom Channel"
 msgstr "  - 사용자 채널 1"
-
-msgctxt "#32018"
-msgid "  - Custom Channel 2"
-msgstr "  - 사용자 채널 2"
-
-msgctxt "#32019"
-msgid "  - Custom Channel 3"
-msgstr "  - 사용자 채널 3"
 
 msgctxt "#32020"
 msgid "Available Versions"
 msgstr "사용가능한 버전"
 
 msgctxt "#32021"
-msgid "Submit Statistics"
+msgid "Share Statistics"
 msgstr "통계 전송"
 
 msgctxt "#32022"
@@ -413,6 +401,10 @@ msgstr "%s에서%s로 업데이트"
 msgctxt "#32029"
 msgid "up to date: %s"
 msgstr "최신: %s"
+
+msgctxt "#32030"
+msgid "Release Channel"
+msgstr ""
 
 msgctxt "#32100"
 msgid "Connections"
@@ -951,7 +943,7 @@ msgid "Update available"
 msgstr "사용가능한 업데이트"
 
 msgctxt "#32365"
-msgid "Show Update Notifications"
+msgid "Show Notifications"
 msgstr "업데이트 알림 표시"
 
 msgctxt "#32366"
