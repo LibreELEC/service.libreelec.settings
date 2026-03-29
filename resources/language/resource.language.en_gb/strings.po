@@ -392,6 +392,10 @@ msgctxt "#32029"
 msgid "up to date: %s"
 msgstr ""
 
+msgctxt "#32031"
+msgid "Working..."
+msgstr ""
+
 msgctxt "#32100"
 msgid "Connections"
 msgstr ""
