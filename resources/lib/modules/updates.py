@@ -672,7 +672,7 @@ class updates(modules.Module):
                     xbmcgui.Dialog().ok(oe._(32022), oe._(32023))
                     value = 'true'
             else:
-                xbmcgui.Dialog().ok('Update RPi Firmware', 'Firmware is up to date.')
+                xbmcgui.Dialog().ok(oe._(32022), oe._(32032))
         # user chose no but bootloader update already queued
         elif listItem.getProperty('entry') == 'bootloader' and os.path.isfile('/flash/pieeprom.upd'):
             value = 'true'
