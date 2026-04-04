@@ -872,7 +872,7 @@
                         <!-- Connection Name -->
                         <control type="label">
                             <left>140</left>
-                            <top>10</top>
+                            <top>25</top>
                             <width>490</width>
                             <height>30</height>
                             <font>font24_title</font>
@@ -883,7 +883,7 @@
                         <!-- Connection Address -->
                         <control type="label">
                             <left>650</left>
-                            <top>49</top>
+                            <top>48</top>
                             <width>340</width>
                             <height>20</height>
                             <font>font12</font>
@@ -893,7 +893,7 @@
                         <!-- Connected State -->
                         <control type="label">
                             <left>650</left>
-                            <top>20</top>
+                            <top>19</top>
                             <width>340</width>
                             <height>20</height>
                             <font>font12</font>
@@ -1090,7 +1090,7 @@
                         <!-- Connection Name -->
                         <control type="label">
                             <left>140</left>
-                            <top>10</top>
+                            <top>25</top>
                             <width>490</width>
                             <height>30</height>
                             <font>font24_title</font>
@@ -1101,7 +1101,7 @@
                         <!-- Connection Address -->
                         <control type="label">
                             <left>650</left>
-                            <top>49</top>
+                            <top>48</top>
                             <width>340</width>
                             <height>20</height>
                             <font>font12</font>
@@ -1111,7 +1111,7 @@
                         <!-- Connected State -->
                         <control type="label">
                             <left>650</left>
-                            <top>20</top>
+                            <top>19</top>
                             <width>340</width>
                             <height>20</height>
                             <font>font12</font>
