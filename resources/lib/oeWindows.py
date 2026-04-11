@@ -10,6 +10,7 @@ import xbmc
 import xbmcgui
 import xbmcaddon
 
+import defaults
 import log
 import oe
 
@@ -633,7 +634,22 @@ class wizard(xbmcgui.WindowXMLDialog):
             if strModule == 'connman':
                 xbmc.executebuiltin('UpdateAddonRepos')
 
-            for module in sorted(oe.dictModules, key=lambda x: list(oe.dictModules[x].menu.keys())):
+            # Load wizards in order as they appear in defaults.py
+            wizard_order = defaults.wizard['order']
+
+            # Add modules with wizards after those set in wizard order
+            for m in oe.dictModules:
+                if m not in wizard_order:
+                    wizard_order.append(m)
+
+            # Move "About" wizard to last position
+            if 'about' in wizard_order:
+                wizard_order.remove('about')
+                wizard_order.append('about')
+
+# XXX: One day this will set the wizard order based on the name of each module's menu entry.
+#            for module in sorted(oe.dictModules, key=lambda x: list(oe.dictModules[x].menu.keys())):
+            for module in wizard_order:
                 strModule = module
                 if hasattr(oe.dictModules[strModule], 'do_wizard') and oe.dictModules[strModule].ENABLED:
                     if strModule == self.last_wizard:
