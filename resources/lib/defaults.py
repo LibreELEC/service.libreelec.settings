@@ -14,6 +14,15 @@ XBMC_USER_HOME = os.environ.get('XBMC_USER_HOME', '/storage/.kodi')
 CONFIG_CACHE = os.environ.get('CONFIG_CACHE', '/storage/.cache')
 USER_CONFIG = os.environ.get('USER_CONFIG', '/storage/.config')
 
+wizard = {
+    "order": [
+        "connman",
+        "system",
+        "services",
+        "about"
+    ]
+}
+
 ################################################################################
 # Connamn Module
 ################################################################################
