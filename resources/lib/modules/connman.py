@@ -432,7 +432,7 @@ class connman(modules.Module):
                         'entry': 'Tethering',
                         'value': ['1'],
                     },
-                    'validate': '^([a-zA-Z0-9](?:[a-zA-Z0-9-\.]*[a-zA-Z0-9]))$',
+                    'validate': r'^([a-zA-Z0-9](?:[a-zA-Z0-9-\.]*[a-zA-Z0-9]))$',
                     'InfoText': 728,
                 },
                 'TetheringPassphrase': {
@@ -488,7 +488,7 @@ class connman(modules.Module):
                     'value': '',
                     'action': 'set_timeservers',
                     'type': 'text',
-                    'validate': '^([a-zA-Z0-9](?:[a-zA-Z0-9-\.]*[a-zA-Z0-9]))$|^$',
+                    'validate': r'^([a-zA-Z0-9](?:[a-zA-Z0-9-\.]*[a-zA-Z0-9]))$|^$',
                     'InfoText': 732,
                 },
                 '1': {
@@ -497,7 +497,7 @@ class connman(modules.Module):
                     'value': '',
                     'action': 'set_timeservers',
                     'type': 'text',
-                    'validate': '^([a-zA-Z0-9](?:[a-zA-Z0-9-\.]*[a-zA-Z0-9]))$|^$',
+                    'validate': r'^([a-zA-Z0-9](?:[a-zA-Z0-9-\.]*[a-zA-Z0-9]))$|^$',
                     'InfoText': 733,
                 },
                 '2': {
@@ -506,7 +506,7 @@ class connman(modules.Module):
                     'value': '',
                     'action': 'set_timeservers',
                     'type': 'text',
-                    'validate': '^([a-zA-Z0-9](?:[a-zA-Z0-9-\.]*[a-zA-Z0-9]))$|^$',
+                    'validate': r'^([a-zA-Z0-9](?:[a-zA-Z0-9-\.]*[a-zA-Z0-9]))$|^$',
                     'InfoText': 734,
                 },
             },

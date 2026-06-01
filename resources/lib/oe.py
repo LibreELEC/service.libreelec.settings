@@ -681,7 +681,7 @@ def timestamp():
 
 def split_dialog_text(text):
     ret = [''] * 3
-    txt = re.findall('.{1,60}(?:\W|$)', text)
+    txt = re.findall(r'.{1,60}(?:\W|$)', text)
     for x in range(0, 2):
         if len(txt) > x:
             ret[x] = txt[x]
