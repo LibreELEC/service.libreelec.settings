@@ -502,6 +502,18 @@ class Bluez_Listener(dbus_bluez.Listener):
         super().__init__()
 
     @log.log_function()
+    def rssi_to_percentage(self, rssi):
+        min_rssi = -100  # Worst possible signal
+        max_rssi = -30    # Best possible signal
+        if rssi <= min_rssi:
+            return 0
+        elif rssi >= max_rssi:
+            return 100
+        ratio = (rssi - min_rssi) / (max_rssi - min_rssi)
+
+        return round((ratio ** 1.8) * 100)
+
+    @log.log_function()
     def on_interfaces_added(self, path, interfaces):
         if dbus_bluez.INTERFACE_ADAPTER in interfaces:
             self.parent.dbusBluezAdapter = path
