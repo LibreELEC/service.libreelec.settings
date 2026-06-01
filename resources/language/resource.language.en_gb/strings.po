@@ -392,6 +392,14 @@ msgctxt "#32029"
 msgid "up to date: %s"
 msgstr ""
 
+msgctxt "#32031"
+msgid "Working..."
+msgstr ""
+
+msgctxt "#32032"
+msgid "Firmware is up to date."
+msgstr ""
+
 msgctxt "#32100"
 msgid "Connections"
 msgstr ""
