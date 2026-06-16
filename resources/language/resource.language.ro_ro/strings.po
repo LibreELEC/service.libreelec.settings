@@ -119,11 +119,19 @@ msgid "Configure the physical keyboard type"
 msgstr ""
 
 msgctxt "#714"
-msgid "@DISTRONAME@ can be configured for automatic or manual updates. Automatic updates are available on stable releases and stable release candidates. Automatic update self-disables on beta and development builds"
+msgid "Enable for automatic updates to @DISTRONAME@. Automatic updates are available for stable releases. Automatic update will not update to pre-release or development builds."
 msgstr ""
 
 msgctxt "#715"
-msgid "Set to ON and an on-screen notification will be displayed when a new update is available"
+msgid "Enable for on-screen notifications when a new update is available"
+msgstr ""
+
+msgctxt "#716"
+msgid "Choose between stable, testing, or a custom release channel for @DISTRONAME@. Stable has releases a few times each year. Test releases are automated nightly builds of the current state of development. Testing releases receive less review than stable releases."
+msgstr ""
+
+msgctxt "#717"
+msgid "Enable to determine if a system update is available locally instead of requesting this information from the distribution's servers"
 msgstr ""
 
 msgctxt "#718"
@@ -286,12 +294,8 @@ msgctxt "#760"
 msgid "Select an update channel"
 msgstr "Selectează un canal pentru actualizări"
 
-msgctxt "#761"
-msgid "Enable to allow entering a custom update url"
-msgstr "Bifează pentru a permite modificarea URL-ului pentru actualizare"
-
 msgctxt "#762"
-msgid "Enter a custom update url (url should be the root of the update files)"
+msgid "Enter a custom update URL. URL should point directly to a json update file or a directory containing 'releases.json'."
 msgstr ""
 
 msgctxt "#770"
@@ -303,7 +307,7 @@ msgid "The firewall blocks unwanted network traffic. Home (default) allows traff
 msgstr ""
 
 msgctxt "#772"
-msgid "Checking for a new version will submit the installed Distribution, Project, CPU Arch and Version to the update server. This data is also used to report basic statistics for the project. To continue checking for updates while opting-out of stats reporting, disable this option."
+msgid "Enable to share the installed distribution, version, and related device information periodically with the developers. This data is used to gather information on how distribution is used. Disable to opt out of reporting device information."
 msgstr ""
 
 msgctxt "#773"
@@ -347,31 +351,23 @@ msgid "Automatic Updates"
 msgstr "Actualizări automate"
 
 msgctxt "#32015"
-msgid "Update Channel"
+msgid "Release"
 msgstr ""
 
 msgctxt "#32016"
-msgid "Show Custom Channels"
-msgstr "Afișează canale personalizate"
+msgid "Client Side Update"
+msgstr ""
 
 msgctxt "#32017"
-msgid "  - Custom Channel 1"
+msgid "Custom Channel"
 msgstr "- Canal personalizat 1"
-
-msgctxt "#32018"
-msgid "  - Custom Channel 2"
-msgstr "- Canal personalizat 2"
-
-msgctxt "#32019"
-msgid "  - Custom Channel 3"
-msgstr "- Canal personalizat 3"
 
 msgctxt "#32020"
 msgid "Available Versions"
 msgstr "Versiuni disponibile"
 
 msgctxt "#32021"
-msgid "Submit Statistics"
+msgid "Share Statistics"
 msgstr "Trimite statistici"
 
 msgctxt "#32022"
@@ -404,6 +400,10 @@ msgstr ""
 
 msgctxt "#32029"
 msgid "up to date: %s"
+msgstr ""
+
+msgctxt "#32030"
+msgid "Release Channel"
 msgstr ""
 
 msgctxt "#32100"
@@ -943,7 +943,7 @@ msgid "Update available"
 msgstr "Actualizare disponibilă"
 
 msgctxt "#32365"
-msgid "Show Update Notifications"
+msgid "Show Notifications"
 msgstr ""
 
 msgctxt "#32366"

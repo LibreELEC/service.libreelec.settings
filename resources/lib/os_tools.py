@@ -8,13 +8,31 @@ Support functions are grouped by purpose:
 2. System access: executing system commands
 '''
 
+import importlib.machinery
+import importlib.util
 import os
 import subprocess
+import sys
 
 import log
 
 
 ### FILE ACCESS ###
+def import_from_file(module_name, file_path):
+    '''Import python source code module from file path.'''
+    if module_name not in sys.modules:
+        spec = importlib.util.spec_from_loader(
+            module_name,
+            importlib.machinery.SourceFileLoader(module_name, file_path)
+            )
+        module = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(module)
+        sys.modules[module_name] = module
+        return module
+    log.log(f'Module: {module_name} already loaded', log.DEBUG)
+    return None
+
+
 def read_shell_setting(file, default=None):
     '''Read the first line of a file as the setting'''
     setting = default if default else ''
