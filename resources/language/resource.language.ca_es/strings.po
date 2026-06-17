@@ -115,7 +115,7 @@ msgid "Configure the physical keyboard type"
 msgstr "Configura el tipus de teclat físic"
 
 msgctxt "#714"
-msgid "@DISTRONAME@ can be configured for automatic or manual updates. Automatic updates are available on stable releases and stable release candidates. Automatic update self-disables on beta and development builds"
+msgid "Enable for automatic updates to @DISTRONAME@. Automatic updates are available for stable releases. Automatic update will not update to pre-release or development builds."
 msgstr "@DISTRONAME@ es pot configurar per a actualitzacions automàtiques o manuals. Les actualitzacions automàtiques estan disponibles per a versions estables i candidats a versió estable. L'actualització automàtica es desactiva per versions beta i en desenvolupament"
 
 msgctxt "#715"
@@ -360,10 +360,6 @@ msgstr ""
 
 msgctxt "#32018"
 msgid "  - Custom Channel 2"
-msgstr ""
-
-msgctxt "#32019"
-msgid "  - Custom Channel 3"
 msgstr ""
 
 msgctxt "#32020"
