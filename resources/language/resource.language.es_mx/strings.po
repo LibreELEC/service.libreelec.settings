@@ -115,12 +115,16 @@ msgid "Configure the physical keyboard type"
 msgstr "Configura el tipo de teclado físico"
 
 msgctxt "#714"
-msgid "@DISTRONAME@ can be configured for automatic or manual updates. Automatic updates are available on stable releases and stable release candidates. Automatic update self-disables on beta and development builds"
+msgid "Enable for automatic updates to @DISTRONAME@. Automatic updates are available for stable releases. Automatic update will not update to pre-release or development builds."
 msgstr "@DISTRONAME@ puede configurarse para actualizaciones automáticas o manuales. Las actualizaciones automáticas están disponibles para las versiones estables y estables RC (release candidates). Las actualizaciones automáticas se desactivana utomáticamente en distribuciones beta y de desarrollo"
 
 msgctxt "#715"
-msgid "Set to ON and an on-screen notification will be displayed when a new update is available"
+msgid "Enable for on-screen notifications when a new update is available"
 msgstr "Establece a ACTIVAR y se mostrará una notificaión en pantalla cuando haya una actualización disponible"
+
+msgctxt "#716"
+msgid "Choose between stable, testing, or a custom release channel for @DISTRONAME@. Stable has releases a few times each year. Test releases are automated nightly builds of the current state of development. Testing releases receive less review than stable releases."
+msgstr ""
 
 msgctxt "#718"
 msgid "Send boot config files from /flash, kodi.log, kernel log and Samba configs to http://ix.io, and display the short URL"
@@ -286,12 +290,8 @@ msgctxt "#760"
 msgid "Select an update channel"
 msgstr "Selecciona un canal de actualización"
 
-msgctxt "#761"
-msgid "Enable to allow entering a custom update url"
-msgstr "Activa para permitir ingresar una URL de actualización personalizada"
-
 msgctxt "#762"
-msgid "Enter a custom update url (url should be the root of the update files)"
+msgid "Enter a custom update URL. URL should point directly to a json update file or a directory containing 'releases.json'."
 msgstr "Ingresa una URL de actualización personalizada (debe ser la raíz de los ficheros de actualización)"
 
 msgctxt "#770"
@@ -303,7 +303,7 @@ msgid "The firewall blocks unwanted network traffic. Home (default) allows traff
 msgstr "El cortafuegos bloquea tráfico de red no solicitado. Hogar (por defecto) permite tráfico de rangos de red privadas (192.168.x.x, 172.16.x.x y 10.x.x.x) únicamente. Público bloquea todo el tráfico de todas las redes. Personalizado utiliza reglas en /storage/.config/iptables. Apagado desactiva el cortafuegos."
 
 msgctxt "#772"
-msgid "Checking for a new version will submit the installed Distribution, Project, CPU Arch and Version to the update server. This data is also used to report basic statistics for the project. To continue checking for updates while opting-out of stats reporting, disable this option."
+msgid "Enable to share the installed distribution, version, and related device information periodically with the developers. This data is used to gather information on how distribution is used. Disable to opt out of reporting device information."
 msgstr "Buscar una nueva versión enviará la distribución instalada, el proyecto, la arquitectura de CPU y la versión al servidor de actualización. Estos datos también se utilizan para reportar estadísticas básicas para el proyecto. Para continuar buscando actualizaciones y desactivar el reporte de estadísticas, desactiva esta opción."
 
 msgctxt "#773"
@@ -347,31 +347,19 @@ msgid "Automatic Updates"
 msgstr "Actualizaciones automáticas"
 
 msgctxt "#32015"
-msgid "Update Channel"
+msgid "Release"
 msgstr "Canal de actualización"
 
-msgctxt "#32016"
-msgid "Show Custom Channels"
-msgstr "Mostrar canales personalizados"
-
 msgctxt "#32017"
-msgid "  - Custom Channel 1"
+msgid "Custom Channel"
 msgstr "  - Canal personalizado 1"
-
-msgctxt "#32018"
-msgid "  - Custom Channel 2"
-msgstr "  - Canal personalizado 2"
-
-msgctxt "#32019"
-msgid "  - Custom Channel 3"
-msgstr "  - Canal personalizado 3"
 
 msgctxt "#32020"
 msgid "Available Versions"
 msgstr "Versiones disponibles"
 
 msgctxt "#32021"
-msgid "Submit Statistics"
+msgid "Share Statistics"
 msgstr "Enviar estadísticas"
 
 msgctxt "#32022"
@@ -405,6 +393,10 @@ msgstr "actualizar de %s a %s"
 msgctxt "#32029"
 msgid "up to date: %s"
 msgstr "actualizado: %s"
+
+msgctxt "#32030"
+msgid "Release Channel"
+msgstr ""
 
 msgctxt "#32100"
 msgid "Connections"
@@ -943,7 +935,7 @@ msgid "Update available"
 msgstr "Actualización disponible"
 
 msgctxt "#32365"
-msgid "Show Update Notifications"
+msgid "Show Notifications"
 msgstr "Mostrar otificación de actualización"
 
 msgctxt "#32366"

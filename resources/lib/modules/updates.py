@@ -40,42 +40,14 @@ class updates(modules.Module):
             'order': 1,
             'name': 32013,
             'settings': {
-                'AutoUpdate': {
-                    'name': 32014,
-                    'value': 'auto',
-                    'action': 'set_auto_update',
+                'ReleaseChannel': {
+                    'name': 32030,
+                    'value': 'stable',
+                    'action': 'set_release_channel',
                     'type': 'multivalue',
-                    'values': ['auto', 'manual'],
-                    'InfoText': 714,
+                    'values': ['stable', 'testing', 'custom'],
+                    'InfoText': 716,
                     'order': 1,
-                },
-                'SubmitStats': {
-                    'name': 32021,
-                    'value': '1',
-                    'action': 'set_value',
-                    'type': 'bool',
-                    'InfoText': 772,
-                    'order': 2,
-                },
-                'UpdateNotify': {
-                    'name': 32365,
-                    'value': '1',
-                    'action': 'set_value',
-                    'type': 'bool',
-                    'InfoText': 715,
-                    'order': 3,
-                },
-                'ShowCustomChannels': {
-                    'name': 32016,
-                    'value': '0',
-                    'action': 'set_custom_channel',
-                    'type': 'bool',
-                    'parent': {
-                            'entry': 'AutoUpdate',
-                        'value': ['manual'],
-                    },
-                    'InfoText': 761,
-                    'order': 4,
                 },
                 'CustomChannel1': {
                     'name': 32017,
@@ -83,60 +55,52 @@ class updates(modules.Module):
                     'action': 'set_custom_channel',
                     'type': 'text',
                     'parent': {
-                            'entry': 'ShowCustomChannels',
-                        'value': ['1'],
+                            'entry': 'ReleaseChannel',
+                        'value': ['custom'],
                     },
                     'InfoText': 762,
-                    'order': 5,
+                    'order': 2,
                 },
-                'CustomChannel2': {
-                    'name': 32018,
-                    'value': '',
-                    'action': 'set_custom_channel',
-                    'type': 'text',
-                    'parent': {
-                            'entry': 'ShowCustomChannels',
-                        'value': ['1'],
-                    },
-                    'InfoText': 762,
-                    'order': 6,
-                },
-                'CustomChannel3': {
-                    'name': 32019,
-                    'value': '',
-                    'action': 'set_custom_channel',
-                    'type': 'text',
-                    'parent': {
-                            'entry': 'ShowCustomChannels',
-                        'value': ['1'],
-                    },
-                    'InfoText': 762,
-                    'order': 7,
+                'AutoUpdate': {
+                    'name': 32014,
+                    'value': '1',
+                    'action': 'set_auto_update',
+                    'type': 'bool',
+                    'InfoText': 714,
+                    'order': 3,
                 },
                 'Channel': {
                     'name': 32015,
                     'value': '',
                     'action': 'set_channel',
                     'type': 'multivalue',
-                    'parent': {
-                            'entry': 'AutoUpdate',
-                        'value': ['manual'],
-                    },
                     'values': [],
                     'InfoText': 760,
-                    'order': 8,
+                    'order': 4,
                 },
                 'Build': {
                     'name': 32020,
                     'value': '',
                     'action': 'do_manual_update',
                     'type': 'button',
-                    'parent': {
-                            'entry': 'AutoUpdate',
-                        'value': ['manual'],
-                    },
                     'InfoText': 770,
-                    'order': 9,
+                    'order': 5,
+                },
+                'UpdateNotify': {
+                    'name': 32365,
+                    'value': '1',
+                    'action': 'set_value',
+                    'type': 'bool',
+                    'InfoText': 715,
+                    'order': 6,
+                },
+                'SubmitStats': {
+                    'name': 32021,
+                    'value': '1',
+                    'action': 'set_value',
+                    'type': 'bool',
+                    'InfoText': 772,
+                    'order': 7,
                 },
             },
         },
@@ -167,21 +131,26 @@ class updates(modules.Module):
     @log.log_function()
     def __init__(self, oeMain):
         super().__init__()
-        self.keyboard_layouts = False
-        self.nox_keyboard_layouts = False
+        self.hardware_flags = None
+        self.is_service = False
         self.last_update_check = 0
-        self.arrVariants = {}
+        self.update_file = None
+        self.update_in_progress = False
+        self.update_json = None
+        self.update_thread = None
+        self.rpi_flashing_state = None
+
 
     @log.log_function()
     def start_service(self):
-            self.is_service = True
-            self.load_values()
-            self.set_auto_update()
-            del self.is_service
+        self.is_service = True
+        self.load_values()
+        self.set_auto_update()
+        del self.is_service
 
     @log.log_function()
     def stop_service(self):
-        if hasattr(self, 'update_thread'):
+        if self.update_thread:
             self.update_thread.stop()
 
     @log.log_function()
@@ -192,32 +161,17 @@ class updates(modules.Module):
     def exit(self):
         pass
 
-    @log.log_function()
-    def lchop(self, s, prefix):
-        """Remove prefix from string."""
-        # TODO usage may be replaced by .removeprefix() in python >=3.9
-        if prefix and s.startswith(prefix):
-            return s[len(prefix):]
-        return s
-
-    @log.log_function()
-    def rchop(self, s, suffix):
-        """Remove suffix from string."""
-        # TODO usage may be replaced by .removesuffix() in python >=3.9
-        if suffix and s.endswith(suffix):
-            return s[:-len(suffix)]
-        return s
 
     # Identify connected GPU card (card0, card1 etc.)
     @log.log_function()
     def get_gpu_card(self):
         for root, dirs, files in os.walk("/sys/class/drm", followlinks=False):
-            for dir in dirs:
+            for directory in dirs:
                 try:
-                    with open(os.path.join(root, dir, 'status'), 'r') as infile:
+                    with open(os.path.join(root, directory, 'status'), encoding='utf-8', mode='r') as infile:
                         for line in [x for x in infile if x.replace('\n', '') == 'connected']:
-                            return dir.split("-")[0]
-                except:
+                            return directory.split("-")[0]
+                except Exception:
                     pass
             break
         return 'card0'
@@ -259,11 +213,10 @@ class updates(modules.Module):
     def get_hardware_flags(self):
         if oe.PROJECT == "Generic":
             return self.get_hardware_flags_x86_64()
-        elif oe.ARCHITECTURE.split('.')[1] in ['aarch64', 'arm' ]:
+        if oe.ARCHITECTURE.split('.')[1] in ['aarch64', 'arm' ]:
             return self.get_hardware_flags_dtflag()
-        else:
-            log.log(f'Project is {oe.PROJECT}, no hardware flag available', log.DEBUG)
-            return ''
+        log.log(f'Project is {oe.PROJECT}, no hardware flag available', log.DEBUG)
+        return ''
 
     @log.log_function()
     def load_values(self):
@@ -271,10 +224,23 @@ class updates(modules.Module):
         self.hardware_flags = self.get_hardware_flags()
         log.log(f'loaded hardware_flag {self.hardware_flags}', log.DEBUG)
 
+        # Release Channel
+        value = oe.read_setting('updates', 'ReleaseChannel')
+        if value:
+            self.struct['update']['settings']['ReleaseChannel']['value'] = value
+
         # AutoUpdate
         value = oe.read_setting('updates', 'AutoUpdate')
         if value:
-            self.struct['update']['settings']['AutoUpdate']['value'] = value
+            # convert old multivalue to bool
+            if value == 'auto':
+                self.struct['update']['settings']['AutoUpdate']['value'] = '1'
+                oe.write_setting('updates', 'AutoUpdate', '1')
+            elif value == 'manual':
+                self.struct['update']['settings']['AutoUpdate']['value'] = '0'
+                oe.write_setting('updates', 'AutoUpdate', '0')
+            else:
+                self.struct['update']['settings']['AutoUpdate']['value'] = value
         value = oe.read_setting('updates', 'SubmitStats')
         if value:
             self.struct['update']['settings']['SubmitStats']['value'] = value
@@ -288,19 +254,11 @@ class updates(modules.Module):
         value = oe.read_setting('updates', 'Channel')
         if value:
             self.struct['update']['settings']['Channel']['value'] = value
-        value = oe.read_setting('updates', 'ShowCustomChannels')
-        if value:
-            self.struct['update']['settings']['ShowCustomChannels']['value'] = value
 
+        # Custom channel
         value = oe.read_setting('updates', 'CustomChannel1')
         if value:
             self.struct['update']['settings']['CustomChannel1']['value'] = value
-        value = oe.read_setting('updates', 'CustomChannel2')
-        if value:
-            self.struct['update']['settings']['CustomChannel2']['value'] = value
-        value = oe.read_setting('updates', 'CustomChannel3')
-        if value:
-            self.struct['update']['settings']['CustomChannel3']['value'] = value
 
         self.update_json = self.build_json()
 
@@ -334,16 +292,65 @@ class updates(modules.Module):
         oe.write_setting('updates', listItem.getProperty('entry'), str(listItem.getProperty('value')))
 
     @log.log_function()
+    def set_release_channel(self, listItem):
+        if 'value' in self.struct['update']['settings']['ReleaseChannel']:
+            old_release_channel = self.struct['update']['settings']['ReleaseChannel']['value']
+        self.set_value(listItem)
+        release_channel = self.struct['update']['settings']['ReleaseChannel']['value']
+
+        # Only do work if ReleaseChannel changed
+        if release_channel != old_release_channel:
+            # Show or hide menu elements based on selected channel
+            if release_channel == 'stable':
+                # Automatic update only on stable releases
+                if 'hidden' in self.struct['update']['settings']['AutoUpdate']:
+                    del(self.struct['update']['settings']['AutoUpdate']['hidden'])
+                # Only show manual update options if automatic update disabled
+                if self.struct['update']['settings']['AutoUpdate']['value'] == '0':
+                    if 'hidden' in self.struct['update']['settings']['Channel']:
+                        del(self.struct['update']['settings']['Channel']['hidden'])
+                    if 'hidden' in self.struct['update']['settings']['Build']:
+                        del(self.struct['update']['settings']['Build']['hidden'])
+                else:
+                    self.struct['update']['settings']['Channel']['hidden'] = 'true'
+                    self.struct['update']['settings']['Build']['hidden'] = 'true'
+            else:
+                # Hide automatic update and show manual update options
+                self.struct['update']['settings']['AutoUpdate']['hidden'] = 'true'
+                if 'hidden' in self.struct['update']['settings']['Channel']:
+                    del(self.struct['update']['settings']['Channel']['hidden'])
+                if 'hidden' in self.struct['update']['settings']['Build']:
+                    del(self.struct['update']['settings']['Build']['hidden'])
+
+            # Refresh json for available build channels if ReleaseChannel is stable, testing, or custom with URL set
+            if release_channel != 'custom':
+                self.update_json = self.build_json()
+                self.struct['update']['settings']['Channel']['values'] = self.get_channels()
+            elif release_channel == 'custom' and self.struct['update']['settings']['CustomChannel1']['value']:
+                self.set_custom_channel()
+
+
+    @log.log_function()
     def set_auto_update(self, listItem=None):
         if listItem:
             self.set_value(listItem)
         if not hasattr(self, 'update_disabled'):
-            if hasattr(self, 'update_thread'):
+            if self.update_thread:
                 self.update_thread.wait_evt.set()
             else:
                 self.update_thread = updateThread(oe)
                 self.update_thread.start()
-            log.log(str(self.struct['update']['settings']['AutoUpdate']['value']), log.INFO)
+            auto_update_status = self.struct['update']['settings']['AutoUpdate']['value']
+            log.log(f'Automatic updates set to: {"Enabled" if auto_update_status == "1" else "Disabled"}', log.INFO)
+            if auto_update_status == '1':
+                self.struct['update']['settings']['Channel']['hidden'] = 'true'
+                self.struct['update']['settings']['Build']['hidden'] = 'true'
+            else:
+                if 'hidden' in self.struct['update']['settings']['Channel']:
+                    del(self.struct['update']['settings']['Channel']['hidden'])
+                if 'hidden' in self.struct['update']['settings']['Build']:
+                    del(self.struct['update']['settings']['Build']['hidden'])
+
 
     @log.log_function()
     def set_channel(self, listItem=None):
@@ -370,29 +377,30 @@ class updates(modules.Module):
         a_builder = a_items[0]
         b_builder = b_items[0]
 
-        if (a_builder == b_builder):
-          try:
-            a_float = float(a_items[1])
-          except:
-            log.log(f"invalid channel name: '{a}'", log.WARNING)
-            a_float = 0
-          try:
-            b_float = float(b_items[1])
-          except:
-            log.log(f"invalid channel name: '{b}'", log.WARNING)
-            b_float = 0
-          return (b_float - a_float)
-        elif (a_builder < b_builder):
-          return -1
-        elif (a_builder > b_builder):
-          return +1
+        if a_builder == b_builder:
+            try:
+                a_float = float(a_items[1])
+            except ValueError:
+                log.log(f"invalid channel name: '{a}'", log.WARNING)
+                a_float = 0
+            try:
+                b_float = float(b_items[1])
+            except ValueError:
+                log.log(f"invalid channel name: '{b}'", log.WARNING)
+                b_float = 0
+            return b_float - a_float
+        if a_builder < b_builder:
+            return -1
+        if a_builder > b_builder:
+            return +1
 
     @log.log_function()
     def get_channels(self):
         channels = []
-        log.log(str(self.update_json), log.DEBUG)
+        log.log(f'{self.update_json=}', log.DEBUG)
         if self.update_json:
             for channel in self.update_json:
+                log.log(f'{channel=}', log.DEBUG)
                 # filter versions older than current; just add when unknown
                 try:
                     channel_version = channel.split('-')[1]
@@ -445,7 +453,10 @@ class updates(modules.Module):
     def get_json(self, url=None):
         """Download and extract data from a releases.json file. Complete the URL if necessary."""
         if not url:
-            url = self.UPDATE_DOWNLOAD_URL % ('releases', 'releases.json')
+            if self.struct['update']['settings']['ReleaseChannel']['value'] == 'testing':
+                url = self.UPDATE_DOWNLOAD_URL % ('test', 'releases.json')
+            else:
+                url = self.UPDATE_DOWNLOAD_URL % ('releases', 'releases.json')
         if not url.startswith(('http://', 'https://', 'file://')):
             url = f'https://{url}'
         if not url.endswith('.json'):
@@ -456,21 +467,17 @@ class updates(modules.Module):
     @log.log_function()
     def build_json(self, notify_error=False):
         update_json = self.get_json()
-        if self.struct['update']['settings']['ShowCustomChannels']['value'] == '1':
-            custom_urls = []
-            for i in 1,2,3:
-                custom_urls.append(self.struct['update']['settings'][f'CustomChannel{str(i)}']['value'])
-            for custom_url in custom_urls:
-                if custom_url:
-                    custom_update_json = self.get_json(custom_url)
-                    if custom_update_json:
-                        for channel in custom_update_json:
-                            update_json[channel] = custom_update_json[channel]
-                    elif notify_error:
-                        ok_window = xbmcgui.Dialog()
-                        answer = ok_window.ok(oe._(32191), f'Custom URL is invalid, or currently inaccessible.\n\n{custom_url}')
-                        if not answer:
-                            return
+        if self.struct['update']['settings']['ReleaseChannel']['value'] == 'custom' and self.struct['update']['settings']['CustomChannel1']['value']:
+            custom_url = self.struct['update']['settings']['CustomChannel1']['value']
+            custom_update_json = self.get_json(custom_url)
+            if custom_update_json:
+                for channel in custom_update_json:
+                    update_json[channel] = custom_update_json[channel]
+            elif notify_error:
+                ok_window = xbmcgui.Dialog()
+                answer = ok_window.ok(oe._(32191), f'Custom URL is invalid, or currently inaccessible.\n\n{custom_url}')
+                if not answer:
+                    return
         return update_json
 
     @log.log_function()
@@ -485,9 +492,9 @@ class updates(modules.Module):
 
         def pretty_filename(s):
             """Make filenames prettier to users."""
-            s = self.lchop(s, f'{oe.DISTRIBUTION}-{oe.ARCHITECTURE}-')
-            s = self.rchop(s, '.tar')
-            s = self.rchop(s, '.img.gz')
+            s = s.removeprefix(f'{oe.DISTRIBUTION}-{oe.ARCHITECTURE}-')
+            s = s.removesuffix('.tar')
+            s = s.removesuffix('.img.gz')
             return s
 
         channel = self.struct['update']['settings']['Channel']['value']
@@ -547,24 +554,22 @@ class updates(modules.Module):
 
     @log.log_function()
     def check_updates_v2(self, force=False):
-        if hasattr(self, 'update_in_progress'):
+        if self.update_in_progress:
             log.log('Update in progress (exit)', log.DEBUG)
             return
-        if self.struct['update']['settings']['SubmitStats']['value'] == '1':
-            systemid = oe.SYSTEMID
-        else:
-            systemid = "NOSTATS"
-        if oe.BUILDER_VERSION:
-            version = oe.BUILDER_VERSION
-        else:
-            version = oe.VERSION
+        systemid = oe.SYSTEMID if self.struct['update']['settings']['SubmitStats']['value'] == '1' else 'NOSTATS'
+        version = oe.BUILDER_VERSION if oe.BUILDER_VERSION else oe.VERSION
         url = f'{self.UPDATE_REQUEST_URL}?i={oe.url_quote(systemid)}&d={oe.url_quote(oe.DISTRIBUTION)}&pa={oe.url_quote(oe.ARCHITECTURE)}&v={oe.url_quote(version)}&f={oe.url_quote(self.hardware_flags)}'
         if oe.BUILDER_NAME:
-           url += f'&b={oe.url_quote(oe.BUILDER_NAME)}'
+            url += f'&b={oe.url_quote(oe.BUILDER_NAME)}'
 
         log.log(f'URL: {url}', log.DEBUG)
         update_json = oe.load_url(url)
         log.log(f'RESULT: {repr(update_json)}', log.DEBUG)
+        # only proceed if on stable release channel
+        if self.struct['update']['settings']['ReleaseChannel']['value'] != 'stable':
+            log.log('Not on stable release channel (exit)', log.DEBUG)
+            return
         if update_json:
             update_json = json.loads(update_json)
             self.last_update_check = time.time()
@@ -573,13 +578,13 @@ class updates(modules.Module):
                 if self.struct['update']['settings']['UpdateNotify']['value'] == '1':
                     # update available message
                     oe.notify(oe._(32363), oe._(32364))
-                if self.struct['update']['settings']['AutoUpdate']['value'] == 'auto' and force == False:
+                if self.struct['update']['settings']['AutoUpdate']['value'] == '1' and force is False:
                     self.update_in_progress = True
-                    self.do_autoupdate(None, True)
+                    self.do_autoupdate(True)
 
     @log.log_function()
-    def do_autoupdate(self, listItem=None, silent=False):
-        if hasattr(self, 'update_file'):
+    def do_autoupdate(self, silent=False):
+        if self.update_file:
             if not os.path.exists(self.LOCAL_UPDATE_DIR):
                 os.makedirs(self.LOCAL_UPDATE_DIR)
             downloaded = oe.download_file(self.update_file, oe.TEMP + 'update_file', silent)
@@ -590,12 +595,12 @@ class updates(modules.Module):
                     oe.notify(oe._(32363), oe._(32366))
                 shutil.move(oe.TEMP + 'update_file', self.LOCAL_UPDATE_DIR + self.update_file)
                 os.sync()
-                if silent == False:
+                if silent is False:
                     oe.winOeMain.close()
                     oe.xbmcm.waitForAbort(1)
                     os_tools.execute('/usr/bin/systemctl --no-block reboot')
             else:
-                delattr(self, 'update_in_progress')
+                self.update_in_progress = False
 
 
     def get_rpi_flashing_state(self):
@@ -691,10 +696,10 @@ class updateThread(threading.Thread):
 
     @log.log_function()
     def run(self):
-        while self.stopped == False:
+        while self.stopped is False:
             if not xbmc.Player().isPlaying():
                 oe.dictModules['updates'].check_updates_v2()
-            if not hasattr(oe.dictModules['updates'], 'update_in_progress'):
+            if not getattr(oe.dictModules['updates'], 'update_in_progress'):
                 self.wait_evt.wait(21600)
             else:
                 # TODO this should check if update notifications are enabled too?
