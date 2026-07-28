@@ -418,18 +418,35 @@ class updates(modules.Module):
         self.update_json = update_json
         builds = self.get_available_builds()
         self.struct['update']['settings']['Build']['values'] = builds
+
+        # Derive the installed version string before showing the selection dialog so it
+        # can be used to mark the matching entry in the list.
+        channel = self.struct['update']['settings']['Channel']['value']
+        regex = re.compile(self.update_json[channel]['prettyname_regex'])
+        longname = '-'.join([oe.DISTRIBUTION, oe.ARCHITECTURE, oe.VERSION])
+        if regex.search(longname):
+            version = regex.findall(longname)[0]
+        else:
+            version = oe.VERSION
+
+        # Build a parallel display list that marks the currently installed version with
+        # an asterisk.  A build entry may carry a channel prefix (e.g. "13.0-nightly-…")
+        # while oe.VERSION only contains the bare version token, so both an exact match
+        # and a hyphen-separated suffix match are checked.
+        builds_display = []
+        for b in builds:
+            if version and (b == version or b.endswith(f'-{version}')):
+                builds_display.append(f'{b} ★')
+            else:
+                builds_display.append(b)
+
         xbmcDialog = xbmcgui.Dialog()
-        buildSel = xbmcDialog.select(oe._(32020), builds)
+        buildSel = xbmcDialog.select(oe._(32020), builds_display)
         if buildSel > -1:
+            # Use the undecorated builds list so that the asterisk never leaks into
+            # the value that is passed to the download and confirmation logic.
             listItem = builds[buildSel]
             self.struct['update']['settings']['Build']['value'] = listItem
-            channel = self.struct['update']['settings']['Channel']['value']
-            regex = re.compile(self.update_json[channel]['prettyname_regex'])
-            longname = '-'.join([oe.DISTRIBUTION, oe.ARCHITECTURE, oe.VERSION])
-            if regex.search(longname):
-                version = regex.findall(longname)[0]
-            else:
-                version = oe.VERSION
             if self.struct['update']['settings']['Build']['value']:
                 self.update_file = self.update_json[self.struct['update']['settings']['Channel']['value']]['url'] + self.get_available_builds(self.struct['update']['settings']['Build']['value'])
                 message = f"{oe._(32188)}: {version}\n{oe._(32187)}: {self.struct['update']['settings']['Build']['value']}\n{oe._(32180)}"
