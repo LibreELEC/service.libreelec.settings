@@ -204,6 +204,31 @@ class mainWindow(xbmcgui.WindowXMLDialog):
             if actionId in oe.CANCEL:
                 self.visible = False
                 self.close()
+            if focusId == self.guiList:
+                curPos = self.getControl(focusId).getSelectedPosition()
+                listSize = self.getControl(focusId).size()
+                newPos = curPos
+                nextItem = self.getControl(focusId).getListItem(newPos)
+                if (curPos != self.lastGuiList or nextItem.getProperty('typ') == 'separator') and actionId in [
+                    2,
+                    3,
+                    4,
+                    ]:
+                    while nextItem.getProperty('typ') == 'separator':
+                        if actionId == 2:
+                            newPos = newPos + 1
+                        if actionId == 3:
+                            newPos = newPos - 1
+                        if actionId == 4:
+                            newPos = newPos + 1
+                        if newPos <= 0:
+                            newPos = listSize - 1
+                        if newPos >= listSize:
+                            newPos = 0
+                        nextItem = self.getControl(focusId).getListItem(newPos)
+                    self.lastGuiList = newPos
+                    self.getControl(focusId).selectItem(newPos)
+                    self.setProperty('InfoText', nextItem.getProperty('InfoText'))
             if focusId == self.guiMenList:
                 self.setFocusId(focusId)
         except Exception:
