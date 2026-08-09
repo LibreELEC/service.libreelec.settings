@@ -47,17 +47,20 @@ class mainWindow(xbmcgui.WindowXMLDialog):
                 'id': 1500,
                 'modul': '',
                 'action': '',
+                'wrap_down': None,
                 },
             2: {
                 'id': 1501,
                 'modul': '',
                 'action': '',
+                'wrap_down': None,
                 },
             }
 
         self.isChild = False
         self.lastGuiList = -1
         self.lastListType = -1
+        self.lastActionFocusId = -1
         if 'isChild' in kwargs:
             self.isChild = True
         pass
@@ -161,7 +164,8 @@ class mainWindow(xbmcgui.WindowXMLDialog):
             self.addConfigItem(m_entry['name'], m_entry['properties'], m_entry['list'])
 
     @log.log_function()
-    def showButton(self, number, name, module, action, onup=None, onleft=None):
+    def showButton(self, number, name, module, action, onup=None, ondown=None,
+                   onleft=None, wrap_down=False):
         log.log('enter_function', log.DEBUG)
         button = self.getControl(self.buttons[number]['id'])
         self.buttons[number]['modul'] = module
@@ -169,8 +173,14 @@ class mainWindow(xbmcgui.WindowXMLDialog):
         button.setLabel(oe._(name))
         if onup != None:
             button.controlUp(self.getControl(onup))
+        if ondown != None:
+            if wrap_down:
+                button.controlDown(button)
+            else:
+                button.controlDown(self.getControl(ondown))
         if onleft != None:
             button.controlLeft(self.getControl(onleft))
+        self.buttons[number]['wrap_down'] = ondown if wrap_down else None
         button.setVisible(True)
         log.log('exit_function', log.DEBUG)
 
@@ -179,37 +189,21 @@ class mainWindow(xbmcgui.WindowXMLDialog):
         try:
             focusId = self.getFocusId()
             actionId = int(action.getId())
+            previousFocusId = self.lastActionFocusId
+            self.lastActionFocusId = focusId
+            for button in self.buttons.values():
+                if (previousFocusId == button['id'] and actionId == 4
+                        and focusId == button['id']
+                        and button['wrap_down'] is not None):
+                    target = self.getControl(button['wrap_down'])
+                    target.selectItem(0)
+                    self.setFocusId(button['wrap_down'])
             if focusId == 2222:
                 if actionId == 61453:
                     return
             if actionId in oe.CANCEL:
                 self.visible = False
                 self.close()
-            if focusId == self.guiList:
-                curPos = self.getControl(focusId).getSelectedPosition()
-                listSize = self.getControl(focusId).size()
-                newPos = curPos
-                nextItem = self.getControl(focusId).getListItem(newPos)
-                if (curPos != self.lastGuiList or nextItem.getProperty('typ') == 'separator') and actionId in [
-                    2,
-                    3,
-                    4,
-                    ]:
-                    while nextItem.getProperty('typ') == 'separator':
-                        if actionId == 2:
-                            newPos = newPos + 1
-                        if actionId == 3:
-                            newPos = newPos - 1
-                        if actionId == 4:
-                            newPos = newPos + 1
-                        if newPos <= 0:
-                            newPos = listSize - 1
-                        if newPos >= listSize:
-                            newPos = 0
-                        nextItem = self.getControl(focusId).getListItem(newPos)
-                    self.lastGuiList = newPos
-                    self.getControl(focusId).selectItem(newPos)
-                    self.setProperty('InfoText', nextItem.getProperty('InfoText'))
             if focusId == self.guiMenList:
                 self.setFocusId(focusId)
         except Exception:
