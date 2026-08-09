@@ -296,6 +296,10 @@ msgctxt "#773"
 msgid "Set the idle timeout (in minutes) before devices will be disconnected (defaults to 0 for no timeout). Applies to devices where \"Enable Standby\" has been activated in the LibreELEC device connection context menu."
 msgstr ""
 
+msgctxt "#774"
+msgid "Continues monitoring Bluetooth audio after the mandatory 90-second startup recovery period. Detected degradation is automatically recovered only while playback is paused or stopped. This setting does not disable startup recovery or the manual reset action."
+msgstr ""
+
 msgctxt "#32001"
 msgid "Services"
 msgstr ""
@@ -1114,4 +1118,20 @@ msgstr ""
 
 msgctxt "#32420"
 msgid "Timezone"
+msgstr ""
+
+msgctxt "#32421"
+msgid "Scan for devices"
+msgstr ""
+
+msgctxt "#32422"
+msgid "Reset audio connection"
+msgstr ""
+
+msgctxt "#32423"
+msgid "Scanning may degrade or disconnect active Bluetooth audio.[CR][CR]Bose headphones are especially sensitive and may restart, but other Bluetooth audio devices can also be affected. Continue?"
+msgstr ""
+
+msgctxt "#32424"
+msgid "Continuous audio auto-recovery"
 msgstr ""

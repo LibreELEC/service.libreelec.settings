@@ -184,6 +184,11 @@ def device_connect(path):
     return dbus_utils.run_method(BUS_NAME, path, INTERFACE_DEVICE, 'Connect')
 
 
+def device_connect_profile(path, uuid):
+    return dbus_utils.run_method(BUS_NAME, path, INTERFACE_DEVICE,
+                                 'ConnectProfile', uuid)
+
+
 def device_disconnect(path):
     return dbus_utils.call_method(BUS_NAME, path, INTERFACE_DEVICE, 'Disconnect')
 
