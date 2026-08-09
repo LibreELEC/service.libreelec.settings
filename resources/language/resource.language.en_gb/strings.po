@@ -1129,7 +1129,7 @@ msgid "Reset audio connection"
 msgstr ""
 
 msgctxt "#32423"
-msgid "Scanning may degrade or disconnect active Bluetooth audio.[CR][CR]Bose headphones are especially sensitive and may restart, but other Bluetooth audio devices can also be affected. Continue scanning?"
+msgid "Scanning may degrade or disconnect active Bluetooth audio.[CR][CR]Bose headphones are especially sensitive and may restart, but other Bluetooth audio devices can also be affected. Continue?"
 msgstr ""
 
 msgctxt "#32424"
