@@ -810,7 +810,7 @@ msgid "Previous"
 msgstr ""
 
 msgctxt "#32308"
-msgid "Hostname:"
+msgid "Set Hostname and Timezone:"
 msgstr ""
 
 msgctxt "#32309"

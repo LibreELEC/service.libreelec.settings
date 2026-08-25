@@ -824,8 +824,8 @@ msgid "Previous"
 msgstr ""
 
 msgctxt "#32308"
-msgid "Hostname:"
-msgstr "ホスト名:"
+msgid "Set Hostname and Timezone:"
+msgstr ""
 
 msgctxt "#32309"
 msgid "The following Networks are currently available:"
@@ -1134,3 +1134,7 @@ msgstr ""
 msgctxt "#32420"
 msgid "Timezone"
 msgstr ""
+
+#~ msgctxt "#32308"
+#~ msgid "Hostname:"
+#~ msgstr "ホスト名:"

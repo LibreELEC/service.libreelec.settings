@@ -826,8 +826,8 @@ msgid "Previous"
 msgstr "Anterior"
 
 msgctxt "#32308"
-msgid "Hostname:"
-msgstr "Nome da máquina:"
+msgid "Set Hostname and Timezone:"
+msgstr ""
 
 msgctxt "#32309"
 msgid "The following Networks are currently available:"
@@ -1136,3 +1136,7 @@ msgstr "Erro ao enviar arquivos de log. Por favor, tente novamente."
 msgctxt "#32420"
 msgid "Timezone"
 msgstr "Fuso horário"
+
+#~ msgctxt "#32308"
+#~ msgid "Hostname:"
+#~ msgstr "Nome da máquina:"
