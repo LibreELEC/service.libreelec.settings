@@ -13,15 +13,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: LibreELEC Settings Add-on\n"
 "Report-Msgid-Bugs-To: translations@kodi.tv\n"
-"PO-Revision-Date: 2025-10-01 06:29+0000\n"
-"Last-Translator: Alexey <signfinder@gmail.com>\n"
+"PO-Revision-Date: 2026-08-25 01:16+0000\n"
+"Last-Translator: Andrei Stepanov <adem4ik@gmail.com>\n"
 "Language-Team: Russian <https://kodi.weblate.cloud/projects/kodi-add-ons-services/service-libreelec-settings/ru_ru/>\n"
 "Language: ru_ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n%100>=11 && n%100<=14)? 2 : 3);\n"
-"X-Generator: Weblate 5.13.3\n"
+"X-Generator: Weblate 2026.8.1\n"
 
 msgctxt "Addon Summary"
 msgid "@DISTRONAME@ Configuration"
@@ -225,7 +225,7 @@ msgstr "Укажите пароль для доступа к файловым р
 
 msgctxt "#742"
 msgid "Set to ON to enable the embedded SSH server. The SSH console can be accessed with username 'root' and password '@ROOT_PASSWORD@'."
-msgstr "Включение встроенного SSH-сервера. Пользователь и пароли по-умолчанию для SSH: пользователь: 'root', пароль: '@ROOT_PASSWORD@'."
+msgstr "Включение встроенного SSH-сервера. Пользователь и пароли по умолчанию для SSH: пользователь: 'root', пароль: '@ROOT_PASSWORD@'."
 
 msgctxt "#743"
 msgid "Set to ON if you have copied private SSH keys to your HTPC and would like to improve security by disabling SSH username and password authentication."
@@ -313,7 +313,7 @@ msgstr "Брандмауэр блокирует нежелательный се�
 
 msgctxt "#772"
 msgid "Checking for a new version will submit the installed Distribution, Project, CPU Arch and Version to the update server. This data is also used to report basic statistics for the project. To continue checking for updates while opting-out of stats reporting, disable this option."
-msgstr "Проверка новой версии отправит установленный дистрибутив, Project, CPU Arch и Version на сервер обновлений. Эти данные также используются для составления базовой статистики по проекту. Чтобы продолжить проверку обновлений при отключении статистики, отключите эту опцию."
+msgstr "Проверка новой версии отправит на сервер обновлений информацию об установленном дистрибутиве, проекте, архитектуре ЦП и версии. Эти данные также используются для сбора базовой статистики по проекту. Чтобы продолжать проверять обновления, отказавшись от передачи статистики, отключите эту опцию."
 
 msgctxt "#773"
 msgid "Set the idle timeout (in minutes) before devices will be disconnected (defaults to 0 for no timeout). Applies to devices where \"Enable Standby\" has been activated in the LibreELEC device connection context menu."
@@ -477,7 +477,7 @@ msgstr "Маска подсети"
 
 msgctxt "#32116"
 msgid "Default Gateway"
-msgstr "Шлюз по-умолчанию"
+msgstr "Шлюз по умолчанию"
 
 msgctxt "#32117"
 msgid "Prefix Length"
@@ -828,8 +828,8 @@ msgid "Previous"
 msgstr "Назад"
 
 msgctxt "#32308"
-msgid "Hostname:"
-msgstr "Имя хоста:"
+msgid "Set Hostname and Timezone:"
+msgstr "Установить имя хоста и часовой пояс:"
 
 msgctxt "#32309"
 msgid "The following Networks are currently available:"
@@ -845,7 +845,7 @@ msgstr "Общие ресурсы и удаленный доступ"
 
 msgctxt "#32312"
 msgid "@DISTRONAME@ also supports SSH for remote access. This is for advanced users who wish to interact with @DISTRONAME@'s underlying operating system. The default user is [COLOR blue]root[/COLOR] and the default password is [COLOR blue]@ROOT_PASSWORD@[/COLOR]."
-msgstr "@DISTRONAME@ так же поддерживает SSH для удаленного доступа. Это необходимо опытным пользователям, которые хотят взаимодействовать с операционной системой @DISTRONAME@ напрямую. Пользователь по-умолчанию [COLOR blue]root[/COLOR] пароль по-умолчанию [COLOR blue]@ROOT_PASSWORD@[/COLOR]."
+msgstr "@DISTRONAME@ так же поддерживает SSH для удалённого доступа. Это необходимо опытным пользователям, которые хотят взаимодействовать с операционной системой @DISTRONAME@ напрямую. Пользователь по умолчанию [COLOR blue]root[/COLOR] пароль по умолчанию [COLOR blue]@ROOT_PASSWORD@[/COLOR]."
 
 msgctxt "#32313"
 msgid "In order to share your files between your computers @DISTRONAME@ has incorporated a samba server. This samba server can be integrated into your local network by accessing it in a familiar way with Finder or Windows Explorer."
@@ -873,15 +873,15 @@ msgstr "Включить Cron"
 
 msgctxt "#32323"
 msgid "Reset to Defaults"
-msgstr "Сбросить в настройки по-умолчанию"
+msgstr "Сброс к значениям по умолчанию"
 
 msgctxt "#32324"
 msgid "Reset System Settings to defaults"
-msgstr "Сбросить системные настройки по-умолчанию"
+msgstr "Восстановить настройки системы по умолчанию"
 
 msgctxt "#32325"
 msgid "Reset @DISTRONAME@ to defaults"
-msgstr "Сбросить @DISTRONAME@ в настройки по-умолчанию"
+msgstr "Сбросить @DISTRONAME@ в настройки по умолчанию"
 
 msgctxt "#32326"
 msgid "Are you sure?"
@@ -1073,7 +1073,7 @@ msgstr "Собственные"
 
 msgctxt "#32397"
 msgid "Off"
-msgstr "Выкл"
+msgstr "Откл"
 
 msgctxt "#32398"
 msgid "Home"
@@ -1138,3 +1138,7 @@ msgstr "Ошибка при отправке файлов журнала. Поп
 msgctxt "#32420"
 msgid "Timezone"
 msgstr "Часовой пояс"
+
+#~ msgctxt "#32308"
+#~ msgid "Hostname:"
+#~ msgstr "Имя хоста:"
