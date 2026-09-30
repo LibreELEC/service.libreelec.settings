@@ -277,6 +277,18 @@ class services(modules.Module):
                             },
                         'InfoText': 773,
                         },
+                    'audio_watchdog': {
+                        'order': 5,
+                        'name': 32424,
+                        'value': '1',
+                        'action': 'audio_watchdog',
+                        'type': 'bool',
+                        'parent': {
+                            'entry': 'enabled',
+                            'value': ['1'],
+                            },
+                        'InfoText': 774,
+                        },
                     },
                 },
             }
@@ -361,7 +373,12 @@ class services(modules.Module):
                 value = oe.read_setting('bluetooth', 'idle_timeout')
                 if not value:
                     value = '0'
-                self.struct['bluez']['settings']['idle_timeout']['value'] = oe.read_setting('bluetooth', 'idle_timeout')
+                self.struct['bluez']['settings']['idle_timeout']['value'] = value
+
+                value = oe.read_setting('bluetooth', 'audio_watchdog')
+                if value not in ('0', '1'):
+                    value = '1'
+                self.struct['bluez']['settings']['audio_watchdog']['value'] = value
             else:
                 self.struct['bluez']['hidden'] = 'true'
 
@@ -471,6 +488,16 @@ class services(modules.Module):
         if 'listItem' in kwargs:
             self.set_value(kwargs['listItem'])
         oe.write_setting('bluetooth', 'idle_timeout', self.struct['bluez']['settings']['idle_timeout']['value'])
+
+    @log.log_function()
+    def audio_watchdog(self, **kwargs):
+        if 'listItem' in kwargs:
+            self.set_value(kwargs['listItem'])
+        enabled = self.struct['bluez']['settings']['audio_watchdog']['value']
+        oe.write_setting('bluetooth', 'audio_watchdog', enabled)
+        bluetooth_module = oe.dictModules.get('bluetooth')
+        if bluetooth_module is not None:
+            bluetooth_module.set_audio_watchdog_enabled(enabled == '1')
 
     @log.log_function()
     def do_wizard(self):

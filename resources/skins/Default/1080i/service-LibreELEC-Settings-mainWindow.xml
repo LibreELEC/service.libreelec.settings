@@ -725,6 +725,7 @@
                     <height>614</height>
                     <onleft>1000</onleft>
                     <onright>1500</onright>
+                    <ondown>1500</ondown>
                     <pagecontrol>1099</pagecontrol>
                     <scrolltime>300</scrolltime>
                     <visible>String.IsEqual(Container(1000).ListItem.Property(listTyp), 1300)</visible>
@@ -1160,7 +1161,20 @@
                 <top>782</top>
                 <width>1150</width>
                 <height>116</height>
+                <label>$INFO[Container(1100).ListItem.Property(InfoText)]</label>
+                <visible>Control.HasFocus(1100)</visible>
+                <align>left</align>
+                <font>font10</font>
+                <textcolor>white</textcolor>
+                <shadowcolor>black</shadowcolor>
+            </control>
+            <control type="textbox" id="1401">
+                <left>466</left>
+                <top>782</top>
+                <width>1150</width>
+                <height>116</height>
                 <label>$INFO[Window.Property(InfoText)]</label>
+                <visible>!Control.HasFocus(1100)</visible>
                 <align>left</align>
                 <font>font10</font>
                 <textcolor>white</textcolor>
