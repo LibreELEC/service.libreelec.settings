@@ -361,7 +361,7 @@ class services(modules.Module):
                 value = oe.read_setting('bluetooth', 'idle_timeout')
                 if not value:
                     value = '0'
-                self.struct['bluez']['settings']['idle_timeout']['value'] = oe.read_setting('bluetooth', 'idle_timeout')
+                self.struct['bluez']['settings']['idle_timeout']['value'] = value
             else:
                 self.struct['bluez']['hidden'] = 'true'
 

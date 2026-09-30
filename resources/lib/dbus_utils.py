@@ -58,15 +58,6 @@ class Agent(object):
         pass
 
 
-class Bool(int):
-
-    def __new__(cls, value):
-        return int.__new__(cls, bool(value))
-
-    def __str__(self):
-        return '1' if self == True else '0'
-
-
 class LoopThread(threading.Thread):
 
     def __init__(self, loop):
@@ -96,7 +87,7 @@ def list_names():
 
 def convert_from_dbussy(data):
     if isinstance(data, bool):
-        return Bool(data)
+        return str(int(data))
     if isinstance(data, dict):
         return {key: convert_from_dbussy(data[key]) for key in data.keys()}
     if isinstance(data, list):
