@@ -167,7 +167,7 @@ class connmanService(object):
                     'type': 'multivalue',
                     'parent': {
                         'entry': 'Method',
-                        'value': ['manual'],
+                        'value': ['auto'],
                     },
                     'values': [
                         'disabled',
